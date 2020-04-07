@@ -1,1 +1,2 @@
 khlee test1
+khlee test2 macbook
