@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="forms_plus.MenuPage"
+             NavigationPage.HasNavigationBar="False">       <!--kindbiny_20200415 mainpage 타이틀바 삭제-->
+    
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <!--kindbiny_20200415 grid column 7 생성-->
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <!--kindbiny_20200415 grid row 20 생성-->
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!--kindbiny_20200415 버튼 추가-->
+            <Button Text="Learn" 
+                Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4" 
+                />
+            <Button Text="Test" 
+                Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4"  
+                />
+            <Button Text="Ranking" 
+                Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4"  
+                />
+            <Button Text="Todo" 
+                Grid.Column="4" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4"  
+                />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

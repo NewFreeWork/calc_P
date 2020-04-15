@@ -17,5 +17,13 @@ namespace forms_plus
         {
             InitializeComponent();
         }
+
+        //kindbiny_20200415 버튼 이벤트 추가
+        private async void Btn_Menupage_Go(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MenuPage());           
+        }
+
+
     }
 }

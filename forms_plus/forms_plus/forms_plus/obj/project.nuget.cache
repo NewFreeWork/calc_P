@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TXNFoIIKWEVOhXlXmUp2mjStyW8A6HKtmLGqmZnQfEju4Ra1n2ORstU2Lwj9IfmL2ELiVtt55mzAdq4Lp0RC/g==",
+  "dgSpecHash": "a3IzLwHSdW+DMVFvhDe6HpGbuJUN1vb2AUm3Z0ET7KODn1die2Dq29xtDONopsiMKIrHWiK6gC0X/DnnvwKc8A==",
   "success": true,
-  "projectFilePath": "D:\\Work\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
+  "projectFilePath": "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
