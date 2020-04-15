@@ -1,0 +1,14 @@
+D:\Work\forms_plus\forms_plus\forms_plus\bin\Debug\netstandard2.0\forms_plus.deps.json
+D:\Work\forms_plus\forms_plus\forms_plus\bin\Debug\netstandard2.0\forms_plus.dll
+D:\Work\forms_plus\forms_plus\forms_plus\bin\Debug\netstandard2.0\ref\forms_plus.dll
+D:\Work\forms_plus\forms_plus\forms_plus\bin\Debug\netstandard2.0\forms_plus.pdb
+D:\Work\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.csprojAssemblyReference.cache
+D:\Work\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Work\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\Work\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.csproj.CoreCompileInputs.cache
+D:\Work\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.AssemblyInfoInputs.cache
+D:\Work\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.AssemblyInfo.cs
+D:\Work\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Work\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.dll
+D:\Work\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\ref\forms_plus.dll
+D:\Work\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.pdb
