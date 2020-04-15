@@ -12,3 +12,13 @@ D:\Work\xamarin_form_plus\xamarin_form_plus\xamarin_form_plus\obj\Debug\netstand
 D:\Work\xamarin_form_plus\xamarin_form_plus\xamarin_form_plus\obj\Debug\netstandard2.0\xamarin_form_plus.dll
 D:\Work\xamarin_form_plus\xamarin_form_plus\xamarin_form_plus\obj\Debug\netstandard2.0\ref\xamarin_form_plus.dll
 D:\Work\xamarin_form_plus\xamarin_form_plus\xamarin_form_plus\obj\Debug\netstandard2.0\xamarin_form_plus.pdb
+D:\Work\Github\calc_P\xamarin_form_plus\xamarin_form_plus\xamarin_form_plus\obj\Debug\netstandard2.0\xamarin_form_plus.csprojAssemblyReference.cache
+D:\Work\Github\calc_P\xamarin_form_plus\xamarin_form_plus\xamarin_form_plus\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Work\Github\calc_P\xamarin_form_plus\xamarin_form_plus\xamarin_form_plus\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\Work\Github\calc_P\xamarin_form_plus\xamarin_form_plus\xamarin_form_plus\obj\Debug\netstandard2.0\MenuPage.xaml.g.cs
+D:\Work\Github\calc_P\xamarin_form_plus\xamarin_form_plus\xamarin_form_plus\obj\Debug\netstandard2.0\xamarin_form_plus.csproj.CoreCompileInputs.cache
+D:\Work\Github\calc_P\xamarin_form_plus\xamarin_form_plus\xamarin_form_plus\obj\Debug\netstandard2.0\xamarin_form_plus.AssemblyInfoInputs.cache
+D:\Work\Github\calc_P\xamarin_form_plus\xamarin_form_plus\xamarin_form_plus\obj\Debug\netstandard2.0\xamarin_form_plus.AssemblyInfo.cs
+D:\Work\Github\calc_P\xamarin_form_plus\xamarin_form_plus\xamarin_form_plus\obj\Debug\netstandard2.0\xamarin_form_plus.dll
+D:\Work\Github\calc_P\xamarin_form_plus\xamarin_form_plus\xamarin_form_plus\obj\Debug\netstandard2.0\ref\xamarin_form_plus.dll
+D:\Work\Github\calc_P\xamarin_form_plus\xamarin_form_plus\xamarin_form_plus\obj\Debug\netstandard2.0\xamarin_form_plus.pdb

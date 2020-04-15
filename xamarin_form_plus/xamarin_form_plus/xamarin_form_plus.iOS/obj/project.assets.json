@@ -1024,11 +1024,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.iOS\\xamarin_form_plus.iOS.csproj",
+      "projectUniqueName": "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.iOS\\xamarin_form_plus.iOS.csproj",
       "projectName": "xamarin_form_plus.iOS",
-      "projectPath": "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.iOS\\xamarin_form_plus.iOS.csproj",
+      "projectPath": "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.iOS\\xamarin_form_plus.iOS.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.iOS\\obj\\",
+      "outputPath": "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1049,8 +1049,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.csproj": {
-              "projectPath": "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.csproj"
+            "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.csproj": {
+              "projectPath": "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.csproj"
             }
           }
         }

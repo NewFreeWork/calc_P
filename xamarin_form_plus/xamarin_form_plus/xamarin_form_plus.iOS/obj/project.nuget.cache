@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YZmApweGREMuBwoxf/arLVmyl+BqLA+tvNNgAixsOCCIahj/lQLXsDINa2jSpxi3fnitXVavlJGmP29SM4gZNg==",
+  "dgSpecHash": "0q43cuP/xQ2fQeqvCd+3re9gktapfcflBii7W8c9f8dr5G2vQC6z7hjt1OWgSzThJLz5JZ9Q2vezN3aOh1gYYQ==",
   "success": true,
-  "projectFilePath": "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.iOS\\xamarin_form_plus.iOS.csproj",
+  "projectFilePath": "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.iOS\\xamarin_form_plus.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",

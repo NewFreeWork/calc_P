@@ -575,11 +575,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.csproj",
+      "projectUniqueName": "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.csproj",
       "projectName": "xamarin_form_plus",
-      "projectPath": "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.csproj",
+      "projectPath": "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\obj\\",
+      "outputPath": "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
