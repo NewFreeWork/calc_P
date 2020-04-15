@@ -20,7 +20,7 @@ namespace xamarin_form_plus
         
         private async void Btn_Start_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MenuPage());   
+            await Navigation.PushAsync(new MenuPage());       
         }
 
     }

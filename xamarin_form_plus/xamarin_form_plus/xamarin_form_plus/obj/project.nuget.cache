@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qRcYjPMacMwAojxlmoQQ6ZHH1bLYA3P1RSDFUom/vSn6En1TgViwJjBM3GNMMhstbfuJyGrKOJp1qsVv82RQ5Q==",
+  "dgSpecHash": "Hm9RbdktNK6QDcxuuCzUiCYwSKRMszJar8PBDWC4gyuoMp0/ukh8u3c4o/ANXHO5tXvAvl7cC2xCitto2sYyUA==",
   "success": true,
-  "projectFilePath": "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.csproj",
+  "projectFilePath": "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

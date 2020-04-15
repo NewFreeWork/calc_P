@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.Android\\xamarin_form_plus.Android.csproj": {}
+    "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.Android\\xamarin_form_plus.Android.csproj": {}
   },
   "projects": {
-    "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.Android\\xamarin_form_plus.Android.csproj": {
+    "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.Android\\xamarin_form_plus.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.Android\\xamarin_form_plus.Android.csproj",
+        "projectUniqueName": "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.Android\\xamarin_form_plus.Android.csproj",
         "projectName": "xamarin_form_plus.Android",
-        "projectPath": "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.Android\\xamarin_form_plus.Android.csproj",
+        "projectPath": "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.Android\\xamarin_form_plus.Android.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.Android\\obj\\",
+        "outputPath": "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.csproj": {
-                "projectPath": "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.csproj"
+              "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.csproj": {
+                "projectPath": "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.csproj"
               }
             }
           }
@@ -54,14 +54,14 @@
         }
       }
     },
-    "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.csproj": {
+    "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.csproj",
+        "projectUniqueName": "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.csproj",
         "projectName": "xamarin_form_plus",
-        "projectPath": "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.csproj",
+        "projectPath": "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Work\\Github\\calc_P\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\obj\\",
+        "outputPath": "D:\\Work\\xamarin_form_plus\\xamarin_form_plus\\xamarin_form_plus\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
