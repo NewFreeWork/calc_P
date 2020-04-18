@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="forms_plus.LearnSettingPage"
+             NavigationPage.HasNavigationBar="False">
+    <!--kindbiny_20200415 mainpage 타이틀바 삭제-->
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <!--kindbiny_20200415 grid column 7 생성-->
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <!--kindbiny_20200415 grid row 20 생성-->
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!--kindbiny_20200415 버튼 추가-->
+            <!--jscho_20200418 Clicked 추가-->
+            <Label Text="자리수 선택:" 
+                   Grid.Row="2" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+                   FontSize="Body"></Label>
+            <Label Text="받아 올림 선택:" 
+                   Grid.Row="4" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+                   FontSize="Body"></Label>
+            <Label Text="문제수 선택:" 
+                   Grid.Row="6" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+                   FontSize="Body"></Label>
+            <Entry x:Name="EntryNdigit"
+                   Placeholder="(1, 2, 3) 중 하나를 입력."
+                   Grid.Row="2" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="3" 
+                   FontSize="12"></Entry>
+            <Entry x:Name="EntryUp"
+                   Placeholder="(O 또는 X)를 입력"
+                   Grid.Row="4" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="3" 
+                   FontSize="12"></Entry>
+            <Entry x:Name="EntryQNum"
+                   Placeholder="(최소1, 최대10)를 입력"
+                   Grid.Row="6" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="3" 
+                   FontSize="12"></Entry>
+            <Button x:Name="BtnStart"
+                    Text="시작"
+                    Grid.Row="10" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="3"
+                    Clicked="StartLearn_Clicked"></Button>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

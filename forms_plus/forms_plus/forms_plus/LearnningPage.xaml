@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="forms_plus.LearnningPage"
+             NavigationPage.HasNavigationBar="False">
+    <!--kindbiny_20200415 mainpage 타이틀바 삭제-->
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <!--kindbiny_20200415 grid column 7 생성-->
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <!--kindbiny_20200415 grid row 20 생성-->
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!--kindbiny_20200415 버튼 추가-->
+            <!--jscho_20200418 Clicked 추가-->
+            <Button 
+                x:Name="Btn_Up100s"
+                Text="0" 
+                Grid.Row="2" Grid.RowSpan="2" Grid.Column="3"                 
+                FontSize="20" FontAttributes="Bold"
+                BackgroundColor="Transparent"
+                Clicked="BtnUp100s_Clicked"
+                ></Button>
+            <Button 
+                x:Name="Btn_Up10s"
+                Text="0" 
+                Grid.Row="2" Grid.RowSpan="2" Grid.Column="4"                 
+                FontSize="20" FontAttributes="Bold"
+                BackgroundColor="Transparent"
+                Clicked="BtnUp10s_Clicked"
+                ></Button>
+            <Label 
+                x:Name="Label_FirstNum100s"
+                Text="3" 
+                Grid.Row="4" Grid.RowSpan="2" Grid.Column="3"
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                FontSize="40" FontAttributes="Bold"
+                ></Label>
+            <Label 
+                x:Name="Label_FirstNum10s"
+                Text="2" 
+                Grid.Row="4" Grid.RowSpan="2" Grid.Column="4" 
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                FontSize="40" FontAttributes="Bold"
+                ></Label>
+            <Label 
+                x:Name="Label_FirstNum1s"
+                Text="1" 
+                Grid.Row="4" Grid.RowSpan="2" Grid.Column="5" 
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                FontSize="40" FontAttributes="Bold"
+                ></Label>
+            <Label 
+                x:Name="Label_SecNum100s"
+                Text="6" 
+                Grid.Row="6" Grid.RowSpan="2" Grid.Column="3" 
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                FontSize="40" FontAttributes="Bold"
+                ></Label>
+            <Label 
+                x:Name="Label_SecNum10s"
+                Text="5" 
+                Grid.Row="6" Grid.RowSpan="2" Grid.Column="4" 
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                FontSize="40" FontAttributes="Bold"
+                ></Label>
+            <Label 
+                x:Name="Label_SecNum1s"
+                Text="4" 
+                Grid.Row="6" Grid.RowSpan="2" Grid.Column="5" 
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                FontSize="40" FontAttributes="Bold"
+                ></Label>
+            <Label 
+                x:Name="Lable_Plus"
+                Text="+" 
+                Grid.Row="6" Grid.RowSpan="2" Grid.Column="2"
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                FontSize="40" FontAttributes="Bold"                
+                ></Label>
+            <BoxView 
+                Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="4"                 
+                BackgroundColor="Black"
+                ScaleY="0.5"></BoxView>
+            <Button
+                x:Name="Btn1000s"
+                Grid.Row="9" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="1"
+                Text="" Font="30" FontAttributes="Bold"               
+                BackgroundColor="Transparent"
+                Clicked="Btn1000s_Clicked" 
+                ></Button>
+            <Button
+                x:Name="Btn100s"
+                Grid.Row="9" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="1"
+                Text="" Font="30" FontAttributes="Bold"               
+                BackgroundColor="Transparent"
+                Clicked="Btn100s_Clicked" 
+                ></Button>
+            <Button
+                x:Name="Btn10s"
+                Grid.Row="9" Grid.RowSpan="2" Grid.Column="4" Grid.ColumnSpan="1"
+                Text="" Font="30" FontAttributes="Bold"               
+                BackgroundColor="Transparent"
+                Clicked="Btn10s_Clicked"
+                ></Button>
+            <Button
+                x:Name="Btn1s"
+                Grid.Row="9" Grid.RowSpan="2" Grid.Column="5" Grid.ColumnSpan="1"
+                Text="" Font="30" FontAttributes="Bold"           
+                BackgroundColor="Transparent"
+                Clicked="Btn1s_Clicked"
+                ></Button>
+
+
+            <Button x:Name="AnswerButton1" Clicked="AnswerButton_Clicked" 
+                Grid.Row="14" Grid.RowSpan="2" Grid.Column="1"  BackgroundColor="Brown" Text="1" TextColor="Gold" FontSize="32" FontAttributes="Bold" ></Button>
+            <Button x:Name="AnswerButton2" Clicked="AnswerButton_Clicked"
+                Grid.Row="14" Grid.RowSpan="2"  Grid.Column="2" BackgroundColor="Black" Text="2" TextColor="Gold" FontSize="32" FontAttributes="Bold" ></Button>
+            <Button x:Name="AnswerButton3" Clicked="AnswerButton_Clicked" 
+                Grid.Row="14" Grid.RowSpan="2" Grid.Column="3"  BackgroundColor="Brown" Text="3" TextColor="Gold" FontSize="32" FontAttributes="Bold" ></Button>
+            <Button x:Name="AnswerButton4" Clicked="AnswerButton_Clicked"
+                Grid.Row="14" Grid.RowSpan="2"  Grid.Column="4" BackgroundColor="Black" Text="4" TextColor="Gold" FontSize="32" FontAttributes="Bold" ></Button>
+            <Button x:Name="AnswerButton5" Clicked="AnswerButton_Clicked"
+                Grid.Row="14" Grid.RowSpan="2"  Grid.Column="5" BackgroundColor="Brown" Text="5" TextColor="Gold" FontSize="32" FontAttributes="Bold" ></Button>
+
+            <Button x:Name="AnswerButton6" Clicked="AnswerButton_Clicked" 
+                Grid.Row="16" Grid.RowSpan="2" Grid.Column="1"  BackgroundColor="Black" Text="6" TextColor="Gold" FontSize="32" FontAttributes="Bold" ></Button>
+            <Button x:Name="AnswerButton7" Clicked="AnswerButton_Clicked"
+                Grid.Row="16" Grid.RowSpan="2"  Grid.Column="2" BackgroundColor="Brown" Text="7" TextColor="Gold" FontSize="32" FontAttributes="Bold" ></Button>
+            <Button x:Name="AnswerButton8" Clicked="AnswerButton_Clicked" 
+                Grid.Row="16" Grid.RowSpan="2" Grid.Column="3"  BackgroundColor="Black" Text="8" TextColor="Gold" FontSize="32" FontAttributes="Bold" ></Button>
+            <Button x:Name="AnswerButton9" Clicked="AnswerButton_Clicked"
+                Grid.Row="16" Grid.RowSpan="2"  Grid.Column="4" BackgroundColor="Brown" Text="9" TextColor="Gold" FontSize="32" FontAttributes="Bold" ></Button>
+            <Button x:Name="AnswerButton0" Clicked="AnswerButton_Clicked"
+                Grid.Row="16" Grid.RowSpan="2"  Grid.Column="5" BackgroundColor="Black" Text="0" TextColor="Gold" FontSize="32" FontAttributes="Bold" ></Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
