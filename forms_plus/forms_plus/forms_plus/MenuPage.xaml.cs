@@ -16,5 +16,10 @@ namespace forms_plus
         {
             InitializeComponent();
         }
+
+        private async void Learn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LearnSettingPage());
+        }
     }
 }

@@ -44,14 +44,15 @@
             </Grid.RowDefinitions>
 
             <!--kindbiny_20200415 버튼 추가-->
+            <!--jscho_20200418 Clicked 추가-->
             <Button Text="Learn" 
-                Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4" 
+                Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="Learn_Clicked" 
                 />
             <Button Text="Test" 
-                Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4"  
+                Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4" 
                 />
             <Button Text="Ranking" 
-                Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4"  
+                Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4" 
                 />
             <Button Text="Todo" 
                 Grid.Column="4" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4"  

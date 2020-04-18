@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus.Android\\forms_plus.Android.csproj": {}
+    "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus.Android\\forms_plus.Android.csproj": {}
   },
   "projects": {
-    "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus.Android\\forms_plus.Android.csproj": {
+    "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus.Android\\forms_plus.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus.Android\\forms_plus.Android.csproj",
+        "projectUniqueName": "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus.Android\\forms_plus.Android.csproj",
         "projectName": "forms_plus.Android",
-        "projectPath": "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus.Android\\forms_plus.Android.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus.Android\\obj\\",
+        "projectPath": "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus.Android\\forms_plus.Android.csproj",
+        "packagesPath": "C:\\Users\\dream\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dream\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj": {
-                "projectPath": "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj"
+              "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj": {
+                "projectPath": "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj"
               }
             }
           }
@@ -54,20 +54,20 @@
         }
       }
     },
-    "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj": {
+    "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
+        "projectUniqueName": "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
         "projectName": "forms_plus",
-        "projectPath": "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus\\obj\\",
+        "projectPath": "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
+        "packagesPath": "C:\\Users\\dream\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dream\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -117,7 +117,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
