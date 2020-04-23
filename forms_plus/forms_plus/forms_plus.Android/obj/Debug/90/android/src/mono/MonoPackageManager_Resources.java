@@ -1,8 +1,8 @@
 package mono;
 public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
-		/* We need to ensure that "forms_plus.Android.dll" comes first in this list. */
-		"forms_plus.Android.dll",
+		/* We need to ensure that "PlusGame.Android.dll" comes first in this list. */
+		"PlusGame.Android.dll",
 		"FormsViewGroup.dll",
 		"forms_plus.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",

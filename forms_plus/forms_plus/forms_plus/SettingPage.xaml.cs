@@ -35,11 +35,6 @@ namespace forms_plus
             }
             else
             {
-                pickerSelectUPOnOff = false;
-                pickerSelectUPDisp = false;
-                pickerSelectNdigit = false;
-                pickerSelectQNum = false;
-
                 await Navigation.PushAsync(new LearnningPage());
             }
         }

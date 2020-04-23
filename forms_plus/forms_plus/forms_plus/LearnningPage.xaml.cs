@@ -44,11 +44,11 @@ namespace forms_plus
             btnUp10s_flag = false;
 
             Btn1000s.TextColor = Color.Red;
-            Btn100s.TextColor = Color.Black;
-            Btn10s.TextColor = Color.Black;
-            Btn1s.TextColor = Color.Black;
-            Btn_Up100s.TextColor = Color.Black;
-            Btn_Up10s.TextColor = Color.Black;
+            Btn100s.TextColor = Color.White;
+            Btn10s.TextColor = Color.White;
+            Btn1s.TextColor = Color.White;
+            Btn_Up100s.TextColor = Color.White;
+            Btn_Up10s.TextColor = Color.White;
         }
         private void Btn100s_Clicked(object sender, EventArgs e)
         {
@@ -59,12 +59,12 @@ namespace forms_plus
             btnUp100s_flag = false;
             btnUp10s_flag = false;
 
-            Btn1000s.TextColor = Color.Black;
+            Btn1000s.TextColor = Color.White;
             Btn100s.TextColor = Color.Red;
-            Btn10s.TextColor = Color.Black;
-            Btn1s.TextColor = Color.Black;
-            Btn_Up100s.TextColor = Color.Black;
-            Btn_Up10s.TextColor = Color.Black;
+            Btn10s.TextColor = Color.White;
+            Btn1s.TextColor = Color.White;
+            Btn_Up100s.TextColor = Color.White;
+            Btn_Up10s.TextColor = Color.White;
         }
         private void Btn10s_Clicked(object sender, EventArgs e)
         {
@@ -75,12 +75,12 @@ namespace forms_plus
             btnUp100s_flag = false;
             btnUp10s_flag = false;
 
-            Btn1000s.TextColor = Color.Black;
-            Btn100s.TextColor = Color.Black;
+            Btn1000s.TextColor = Color.White;
+            Btn100s.TextColor = Color.White;
             Btn10s.TextColor = Color.Red;
-            Btn1s.TextColor = Color.Black;
-            Btn_Up100s.TextColor = Color.Black;
-            Btn_Up10s.TextColor = Color.Black;
+            Btn1s.TextColor = Color.White;
+            Btn_Up100s.TextColor = Color.White;
+            Btn_Up10s.TextColor = Color.White;
         }
         private void Btn1s_Clicked(object sender, EventArgs e)
         {
@@ -91,12 +91,12 @@ namespace forms_plus
             btnUp100s_flag = false;
             btnUp10s_flag = false;
 
-            Btn1000s.TextColor = Color.Black;
-            Btn100s.TextColor = Color.Black;
-            Btn10s.TextColor = Color.Black;
+            Btn1000s.TextColor = Color.White;
+            Btn100s.TextColor = Color.White;
+            Btn10s.TextColor = Color.White;
             Btn1s.TextColor = Color.Red;
-            Btn_Up100s.TextColor = Color.Black;
-            Btn_Up10s.TextColor = Color.Black;
+            Btn_Up100s.TextColor = Color.White;
+            Btn_Up10s.TextColor = Color.White;
         }
         private void BtnUp100s_Clicked(object sender, EventArgs e)
         {
@@ -107,12 +107,12 @@ namespace forms_plus
             btnUp100s_flag = true;
             btnUp10s_flag = false;
 
-            Btn1000s.TextColor = Color.Black;
-            Btn100s.TextColor = Color.Black;
-            Btn10s.TextColor = Color.Black;
-            Btn1s.TextColor = Color.Black;
+            Btn1000s.TextColor = Color.White;
+            Btn100s.TextColor = Color.White;
+            Btn10s.TextColor = Color.White;
+            Btn1s.TextColor = Color.White;
             Btn_Up100s.TextColor = Color.Red;
-            Btn_Up10s.TextColor = Color.Black;
+            Btn_Up10s.TextColor = Color.White;
         }
         private void BtnUp10s_Clicked(object sender, EventArgs e)
         {
@@ -123,11 +123,11 @@ namespace forms_plus
             btnUp100s_flag = false;
             btnUp10s_flag = true;
 
-            Btn1000s.TextColor = Color.Black;
-            Btn100s.TextColor = Color.Black;
-            Btn10s.TextColor = Color.Black;
-            Btn1s.TextColor = Color.Black;
-            Btn_Up100s.TextColor = Color.Black;
+            Btn1000s.TextColor = Color.White;
+            Btn100s.TextColor = Color.White;
+            Btn10s.TextColor = Color.White;
+            Btn1s.TextColor = Color.White;
+            Btn_Up100s.TextColor = Color.White;
             Btn_Up10s.TextColor = Color.Red;
         }
 

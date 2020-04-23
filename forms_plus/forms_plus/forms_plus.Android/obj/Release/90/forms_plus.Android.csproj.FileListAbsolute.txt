@@ -1,7 +1,9 @@
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\bin\Release\PlusGame.Android.dll
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\bin\Release\PlusGame.Android.pdb
-C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\bin\Release\forms_plus.dll
-C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\bin\Release\forms_plus.pdb
+C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\bin\Release\com.companyname.Plus.apk
+C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\bin\Release\com.companyname.Plus.aab
+C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\bin\Release\com.companyname.Plus-Signed.aab
+C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\bin\Release\com.companyname.Plus-Signed.apk
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\build.props
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\adb.props
@@ -39,7 +41,10 @@ C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\forms_plus.Android.csproj.CopyComplete
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\PlusGame.Android.dll
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\PlusGame.Android.pdb
+C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\bin\com.companyname.Plus.apk
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\bin\base.zip
+C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\bin\com.companyname.Plus.aab
+C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\bin\com.companyname.Plus.apks
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\res\layout\tabbar.xml
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\res\layout\toolbar.xml
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\res\values\styles.xml
@@ -61,8 +66,6 @@ C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\link.flag
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\assets\FormsViewGroup.dll
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\assets\FormsViewGroup.pdb
-C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\assets\forms_plus.dll
-C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\assets\forms_plus.pdb
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\assets\Java.Interop.dll
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\assets\Mono.Android.dll
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\assets\Mono.Android.pdb
@@ -366,6 +369,7 @@ C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\src\mono\android\support\v7\widget\Toolbar_OnMenuItemClickListenerImplementor.java
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\src\mono\MonoPackageManager_Resources.java
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\bin\packaged_resources
+C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\src\com\companyname\plus\R.java
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\typemap.jm.armeabi-v7a.o
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\typemap.mj.armeabi-v7a.o
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\typemap.jm.arm64-v8a.o
@@ -383,11 +387,7 @@ C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\bin\Release\com.companyname.Plus.apk
-C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\bin\Release\com.companyname.Plus.aab
-C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\bin\Release\com.companyname.Plus-Signed.aab
-C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\bin\Release\com.companyname.Plus-Signed.apk
-C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\bin\com.companyname.Plus.apk
-C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\bin\com.companyname.Plus.aab
-C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\bin\com.companyname.Plus.apks
-C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\src\com\companyname\plus\R.java
+C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\bin\Release\forms_plus.dll
+C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\bin\Release\forms_plus.pdb
+C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\assets\forms_plus.dll
+C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\android\assets\forms_plus.pdb

@@ -2,8 +2,8 @@
 	.section	.rodata..L.str.1,"aMS",@progbits,1
 	.type	.L.str.1, @object
 .L.str.1:
-	.asciz	"com.companyname.forms_plus"
-	.size	.L.str.1, 27
+	.asciz	"com.companyname.Plus"
+	.size	.L.str.1, 21
 	.section	.data.application_config,"aw",@progbits
 	.type	application_config, @object
 	.p2align	3
@@ -69,7 +69,7 @@ mono_aot_mode_name:
 	.section	.rodata..L.str.8,"aMS",@progbits,1
 	.type	.L.str.8, @object
 .L.str.8:
-	.asciz	"fa1c31db-2cc8-43e7-87fb-d2cfb28ebf09"
+	.asciz	"8e0304e4-06e8-422d-ac49-f1080b2d1c63"
 	.size	.L.str.8, 37
 	.section	.rodata..L.str.9,"aMS",@progbits,1
 	.type	.L.str.9, @object
