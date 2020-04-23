@@ -19,7 +19,7 @@ namespace forms_plus
 
         private async void Learn_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new LearnSettingPage());
+            await Navigation.PushAsync(new SettingPage());
         }
     }
 }

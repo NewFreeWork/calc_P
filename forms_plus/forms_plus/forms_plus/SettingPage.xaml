@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="forms_plus.SettingPage"
+             BackgroundColor="Gray"
+             NavigationPage.HasNavigationBar="False">
+    <!--kindbiny_20200415 mainpage 타이틀바 삭제-->
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <!--kindbiny_20200415 grid column 7 생성-->
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <!--kindbiny_20200415 grid row 20 생성-->
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Label Text="받아 올림 선택:"
+               Grid.Column ="0" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="3"
+               VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+               FontSize="Body" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+               TextColor="Gold"
+               ></Label>
+        <Label Text="받아 올림 표시 선택:"
+               Grid.Column ="0" Grid.Row="5" Grid.RowSpan="2" Grid.ColumnSpan="3"
+               VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+               FontSize="Body" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+               TextColor="Gold"
+               ></Label>
+        <Label Text="자리수 선택:"
+               Grid.Column ="0" Grid.Row="8" Grid.RowSpan="2" Grid.ColumnSpan="3"
+               VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+               FontSize="Body" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+               TextColor="Gold"
+               ></Label>
+        <Label Text="문제수 선택:"
+               Grid.Column ="0" Grid.Row="11" Grid.RowSpan="2" Grid.ColumnSpan="3"
+               VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+               FontSize="Body" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+               TextColor="Gold"
+               ></Label>
+        <Picker x:Name="PickerUpOnOff"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                SelectedIndexChanged="OnPickerSelectedIndexChanged_UP_OnOff">
+                <Picker.Items>
+                    <x:String>ON</x:String>
+                    <x:String>OFF</x:String>
+                </Picker.Items>
+        </Picker>
+        <Picker x:Name="PickerUpDisp"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                Grid.Column="3" Grid.Row="5" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                SelectedIndexChanged="OnPickerSelectedIndexChanged_UP_Display">
+            <Picker.Items>
+                <x:String>ON</x:String>
+                <x:String>OFF</x:String>
+            </Picker.Items>
+        </Picker>
+        <Picker x:Name="PickerNdigit"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                Grid.Column="3" Grid.Row="8" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                SelectedIndexChanged="OnPickerSelectedIndexChanged_Ndigit">
+            <Picker.Items>
+                <x:String>1</x:String>
+                <x:String>2</x:String>
+                <x:String>3</x:String>
+            </Picker.Items>
+        </Picker>
+        <Picker x:Name="PickerQNum"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                Grid.Column="3" Grid.Row="11" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                SelectedIndexChanged="OnPickerSelectedIndexChanged_QNum">
+            <Picker.Items>
+                <x:String>1</x:String>
+                <x:String>2</x:String>
+                <x:String>3</x:String>
+                <x:String>4</x:String>
+                <x:String>5</x:String>
+                <x:String>6</x:String>
+                <x:String>7</x:String>
+                <x:String>8</x:String>
+                <x:String>9</x:String>
+                <x:String>10</x:String>
+            </Picker.Items>
+        </Picker>
+        <Button x:Name="BtnStart"
+                Text="시 작"
+                Grid.Column="2" Grid.Row="15" Grid.RowSpan="2" Grid.ColumnSpan="3"
+                FontSize="30"
+                BackgroundColor="Gold" BorderColor="White" BorderWidth="2"
+                Clicked="StartLearn_Clicked" CornerRadius="15"
+                FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+                ></Button>
+    </Grid>
+
+</ContentPage>

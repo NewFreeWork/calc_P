@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             BackgroundColor="Black"
              x:Class="forms_plus.LearnSettingPage"
              NavigationPage.HasNavigationBar="False">
     <!--kindbiny_20200415 mainpage 타이틀바 삭제-->
@@ -46,33 +47,50 @@
 
             <!--kindbiny_20200415 버튼 추가-->
             <!--jscho_20200418 Clicked 추가-->
-            <Label Text="자리수 선택:" 
-                   Grid.Row="2" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="End"
-                   FontSize="Body"></Label>
             <Label Text="받아 올림 선택:" 
-                   Grid.Row="4" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"
+                   TextColor="Gold"
+                   Grid.Row="2" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="3"
                    VerticalTextAlignment="Center" HorizontalTextAlignment="End"
-                   FontSize="Body"></Label>
+                   FontSize="Body"
+                   FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+                   ></Label>
+            <Label Text="받아 올림 표시 선택:" 
+                   TextColor="Gold"
+                   Grid.Row="4" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="3"
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+                   FontSize="Body"
+                   FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+                   ></Label>
+            <Label Text="자리수 선택:" 
+                   TextColor="Gold"
+                   Grid.Row="6" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="3"
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+                   FontSize="Body"
+                   FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+                   ></Label>
             <Label Text="문제수 선택:" 
-                   Grid.Row="6" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"
+                   TextColor="Gold"
+                   Grid.Row="8" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="3"
                    VerticalTextAlignment="Center" HorizontalTextAlignment="End"
-                   FontSize="Body"></Label>
-            <Entry x:Name="EntryNdigit"
-                   Placeholder="(1, 2, 3) 중 하나를 입력."
+                   FontSize="Body"
+                   FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+                   ></Label>
+            <Picker x:Name="PickerUpOnOff"
                    Grid.Row="2" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="3" 
-                   FontSize="12"></Entry>
-            <Entry x:Name="EntryUp"
-                   Placeholder="(O 또는 X)를 입력"
+                   FontSize="12"></Picker>
+            <Picker x:Name="PickerUpDisp"
+                   Grid.Row="2" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="3" 
+                   FontSize="12"></Picker>
+            <Picker x:Name="PickerNdigit"                   
                    Grid.Row="4" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="3" 
-                   FontSize="12"></Entry>
-            <Entry x:Name="EntryQNum"
-                   Placeholder="(최소1, 최대10)를 입력"
+                   FontSize="12"></Picker>
+            <Picker x:Name="PickerQNum"                   
                    Grid.Row="6" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="3" 
-                   FontSize="12"></Entry>
+                   FontSize="12"></Picker>
             <Button x:Name="BtnStart"
-                    Text="시작"
-                    Grid.Row="10" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="3"
+                    Text="시 작" BackgroundColor="Gold" FontSize="20"
+                    Grid.Row="12" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="3"
+                    FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
                     Clicked="StartLearn_Clicked"></Button>
             
         </Grid>

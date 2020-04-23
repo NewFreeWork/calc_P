@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="Black"
+             x:Class="forms_plus.LearnResultPage"
+             NavigationPage.HasNavigationBar="False">
+    <!--kindbiny_20200415 mainpage 타이틀바 삭제-->
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <!--kindbiny_20200415 grid column 7 생성-->
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <!--kindbiny_20200415 grid row 20 생성-->
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!--kindbiny_20200415 버튼 추가-->
+            <!--jscho_20200418 Clicked 추가-->
+            <BoxView x:Name="BoxView_Q1s" Grid.Column="5" Grid.Row="4" Grid.RowSpan="7" Grid.ColumnSpan="1" BackgroundColor="Gray" Opacity="1"></BoxView>
+            <BoxView x:Name="BoxView_Q10s" Grid.Column="4" Grid.Row="4" Grid.RowSpan="7" Grid.ColumnSpan="1" BackgroundColor="Gray" Opacity="1"></BoxView>
+            <BoxView x:Name="BoxView_Q100s" Grid.Column="2" Grid.Row="4" Grid.RowSpan="7" Grid.ColumnSpan="2" BackgroundColor="Gray" Opacity="1"></BoxView>
+
+            <BoxView x:Name="BoxView_S100s" Grid.Column="0" Grid.Row="12" Grid.RowSpan="2" Grid.ColumnSpan="7" BackgroundColor="Gray" Opacity="1" ScaleY="0.9"></BoxView>
+            <BoxView x:Name="BoxView_S10s" Grid.Column="0" Grid.Row="14" Grid.RowSpan="2" Grid.ColumnSpan="7" BackgroundColor="Gray" Opacity="1" ScaleY="0.9"></BoxView>
+            <BoxView x:Name="BoxView_S1s" Grid.Column="0" Grid.Row="16" Grid.RowSpan="2" Grid.ColumnSpan="7" BackgroundColor="Gray" Opacity="1" ScaleY="0.9"></BoxView>
+
+            <Label 
+                x:Name="Label_Up100s"
+                Text="0" TextColor="White"
+                Grid.Column="3" Grid.Row="2" Grid.RowSpan="2"
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                FontSize="30" FontAttributes="Bold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                ></Label>
+            <Label 
+                x:Name="Label_Up10s"
+                Text="0" TextColor="White"
+                Grid.Column="4" Grid.Row="2" Grid.RowSpan="2"
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                FontSize="30" FontAttributes="Bold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                ></Label>
+            <Label 
+                x:Name="Label_FirstNum100s"
+                Text="3" TextColor="Gold"
+                Grid.Column="3" Grid.Row="4" Grid.RowSpan="2"
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                FontSize="40" FontAttributes="Bold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                ></Label>
+            <Label 
+                x:Name="Label_FirstNum10s"
+                Text="2" TextColor="Gold"
+                Grid.Column="4" Grid.Row="4" Grid.RowSpan="2"
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                FontSize="40" FontAttributes="Bold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                ></Label>
+            <Label 
+                x:Name="Label_FirstNum1s"
+                Text="1" TextColor="Gold"
+                Grid.Column="5" Grid.Row="4" Grid.RowSpan="2"
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                FontSize="40" FontAttributes="Bold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                ></Label>
+            <Label 
+                x:Name="Label_SecNum100s"
+                Text="3" TextColor="Gold"
+                Grid.Column="3" Grid.Row="6" Grid.RowSpan="2"
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                FontSize="40" FontAttributes="Bold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                ></Label>
+            <Label 
+                x:Name="Label_SecNum10s"
+                Text="3" TextColor="Gold"
+                Grid.Column="4" Grid.Row="6" Grid.RowSpan="2"
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                FontSize="40" FontAttributes="Bold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                ></Label>
+            <Label 
+                x:Name="Label_SecNum1s"
+                Text="3" TextColor="Gold"
+                Grid.Column="5" Grid.Row="6" Grid.RowSpan="2"
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                FontSize="40" FontAttributes="Bold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                ></Label>
+            <Label 
+                x:Name="Label_Plus"
+                Text="+" TextColor="Gold"
+                Grid.Column="2" Grid.Row="6" Grid.RowSpan="2"
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                FontSize="40" FontAttributes="Bold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                ></Label>
+            <BoxView Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="4"
+                     BackgroundColor="Gold" ScaleY="0.5"></BoxView>
+
+            <Label 
+                Text="정답 풀이:" TextColor="Gold"
+                Grid.Column="0" Grid.Row="11" Grid.RowSpan="1" Grid.ColumnSpan="4"
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                FontSize="20" FontAttributes="Bold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                ></Label>
+            <Label 
+                x:Name="Label_1000s"
+                Text="0" TextColor="White"
+                Grid.Column="2" Grid.Row="9" Grid.RowSpan="2" Grid.ColumnSpan="1"
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                FontSize="40" FontAttributes="Bold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                ></Label>
+            <Label 
+                x:Name="Label_100s"
+                Text="0" TextColor="White"
+                Grid.Column="3" Grid.Row="9" Grid.RowSpan="2" Grid.ColumnSpan="1"
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                FontSize="40" FontAttributes="Bold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                ></Label>
+            <Label 
+                x:Name="Label_10s"
+                Text="0" TextColor="White"
+                Grid.Column="4" Grid.Row="9" Grid.RowSpan="2" Grid.ColumnSpan="1"
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                FontSize="40" FontAttributes="Bold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                ></Label>
+            <Label 
+                x:Name="Label_1s"
+                Text="0" TextColor="White"
+                Grid.Column="5" Grid.Row="9" Grid.RowSpan="2" Grid.ColumnSpan="1"
+                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                FontSize="40" FontAttributes="Bold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                ></Label>
+
+            
+            
+            <Label 
+                x:Name="Label_Solve_100s"
+                Text="( 1 ) + 6 + 5 = 12" TextColor="White"
+                Grid.Column="0" Grid.Row="12" Grid.RowSpan="2" Grid.ColumnSpan="6"
+                VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+                FontSize="40" FontAttributes="Bold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                ></Label>
+
+            <Label 
+                x:Name="Label_Solve_10s"
+                Text="( 1 ) + 6 + 5 = 12" TextColor="White"
+                Grid.Column="0" Grid.Row="14" Grid.RowSpan="2" Grid.ColumnSpan="6"
+                VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+                FontSize="40" FontAttributes="Bold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                ></Label>
+            <Label 
+                x:Name="Label_Solve_1s"
+                Text="( 1 ) + 6 + 5 = 12" TextColor="White"
+                Grid.Column="0" Grid.Row="16" Grid.RowSpan="2" Grid.ColumnSpan="6"
+                VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+                FontSize="40" FontAttributes="Bold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                ></Label>
+            <Button x:Name="Button_ResultON"
+                    Text="정답! 계속하시려면 여기를 눌러주세요."
+                    Grid.Column="0" Grid.Row="18" Grid.RowSpan="2" Grid.ColumnSpan="7"
+                    FontSize="18" BackgroundColor="Gold" BorderColor="White" BorderWidth="3"
+                    FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                    Clicked="Next_Clicked"
+                    ></Button>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

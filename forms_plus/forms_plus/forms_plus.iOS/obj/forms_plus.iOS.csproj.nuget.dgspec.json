@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj": {}
+    "C:\\Users\\dream\\Documents\\Git\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj": {
+    "C:\\Users\\dream\\Documents\\Git\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\dream\\Documents\\Git\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj",
         "projectName": "forms_plus.iOS",
-        "projectPath": "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj",
+        "projectPath": "C:\\Users\\dream\\Documents\\Git\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj",
         "packagesPath": "C:\\Users\\dream\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\obj\\",
+        "outputPath": "C:\\Users\\dream\\Documents\\Git\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj": {
-                "projectPath": "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj"
+              "C:\\Users\\dream\\Documents\\Git\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj": {
+                "projectPath": "C:\\Users\\dream\\Documents\\Git\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj"
               }
             }
           }
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj": {
+    "C:\\Users\\dream\\Documents\\Git\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
+        "projectUniqueName": "C:\\Users\\dream\\Documents\\Git\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
         "projectName": "forms_plus",
-        "projectPath": "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
+        "projectPath": "C:\\Users\\dream\\Documents\\Git\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
         "packagesPath": "C:\\Users\\dream\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus\\obj\\",
+        "outputPath": "C:\\Users\\dream\\Documents\\Git\\calc_P\\forms_plus\\forms_plus\\forms_plus\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

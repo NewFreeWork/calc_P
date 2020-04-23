@@ -575,11 +575,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
+      "projectUniqueName": "C:\\Users\\dream\\Documents\\Git\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
       "projectName": "forms_plus",
-      "projectPath": "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
+      "projectPath": "C:\\Users\\dream\\Documents\\Git\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
       "packagesPath": "C:\\Users\\dream\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dream\\Documents\\calc_P\\forms_plus\\forms_plus\\forms_plus\\obj\\",
+      "outputPath": "C:\\Users\\dream\\Documents\\Git\\calc_P\\forms_plus\\forms_plus\\forms_plus\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

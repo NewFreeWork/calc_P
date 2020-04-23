@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="forms_plus.MenuPage"
+             BackgroundColor="Black"
              NavigationPage.HasNavigationBar="False">       <!--kindbiny_20200415 mainpage 타이틀바 삭제-->
     
     <ContentPage.Content>
@@ -46,17 +47,21 @@
             <!--kindbiny_20200415 버튼 추가-->
             <!--jscho_20200418 Clicked 추가-->
             <Button Text="Learn" 
-                Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="Learn_Clicked" 
-                />
+                    FontSize="18" BackgroundColor="Gold"
+                    Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="Learn_Clicked" 
+                    FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
             <Button Text="Test" 
-                Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4" 
-                />
+                    FontSize="18" BackgroundColor="Gold"
+                    Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4" 
+                    FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
             <Button Text="Ranking" 
-                Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4" 
-                />
+                    FontSize="18" BackgroundColor="Gold"
+                    Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4" 
+                    FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
             <Button Text="Todo" 
-                Grid.Column="4" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4"  
-                />
+                    FontSize="18" BackgroundColor="Gold"
+                    Grid.Column="4" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4"  
+                    FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
