@@ -1487,8 +1487,6 @@ C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\resolvedassemblies.hash
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\assets\FormsViewGroup.dll
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\assets\FormsViewGroup.pdb
-C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\assets\forms_plus.Android.dll
-C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\assets\forms_plus.Android.pdb
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\assets\forms_plus.dll
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\assets\forms_plus.pdb
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\assets\Java.Interop.dll
@@ -1808,7 +1806,6 @@ C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\SensorListener.java
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\SingleLocationListener.java
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\TextToSpeechImplementation.java
-C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\src\crc64a383c5c00d875c35\MainActivity.java
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\src\crc64a98abb514ffad9f1\CustomTabsServiceConnectionImpl.java
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\src\crc64a98abb514ffad9f1\KeepAliveService.java
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\src\crc64ee486da937c010f4\ButtonRenderer.java
@@ -1869,7 +1866,6 @@ C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\src\mono\MonoPackageManager_Resources.java
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\src\xamarin\essentials\fileProvider.java
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\bin\packaged_resources
-C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\src\com\companyname\forms_plus\R.java
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\typemap.jm.arm64-v8a.o
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\typemap.mj.arm64-v8a.o
 C:\Users\dream\Documents\Git\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Debug\90\android\typemap.jm.armeabi-v7a.o

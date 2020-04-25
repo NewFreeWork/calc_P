@@ -53,8 +53,12 @@ namespace forms_plus
 
             if (LearnSetSington.Instance.setUpONOFF == true)
             {
-                question_first1s = rnd.Next(1, 10);
-                question_sec1s = rnd.Next(1, 10);
+                do
+                {
+                    question_first1s = rnd.Next(1, 10);
+                    question_sec1s = rnd.Next(1, 10);
+                                        
+                } while (question_first1s + question_sec1s < 10);
             }
             else
             {
@@ -102,6 +106,12 @@ namespace forms_plus
                 {
                     question_first1s = rnd.Next(1, 10);
                     question_sec1s = rnd.Next(1, 10);
+
+                    if (question_first1s + question_sec1s < 10)
+                    {
+                        loopIdx--;
+                        continue;
+                    }
                 }
                 else 
                 {
