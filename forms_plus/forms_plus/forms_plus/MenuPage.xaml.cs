@@ -21,5 +21,11 @@ namespace forms_plus
         {
             await Navigation.PushAsync(new SettingPage());
         }
+
+        private async void LearnStage_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SettingPage_Stage());
+        }
     }
+    
 }

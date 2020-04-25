@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="forms_plus.SettingPage_Stage"
+             BackgroundColor="Gray"
+             NavigationPage.HasNavigationBar="False">
+    <!--kindbiny_20200415 mainpage 타이틀바 삭제-->
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <!--kindbiny_20200415 grid column 7 생성-->
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <!--kindbiny_20200415 grid row 20 생성-->
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="BtnStep1"
+                Text="1단계" BackgroundColor="Gold"
+                Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="5" Grid.RowSpan="2"
+                FontSize="28" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+                CornerRadius="15" BorderColor="White" BorderWidth="3"
+                Clicked="BtnStep1_Clicked"
+                ></Button>
+
+        <Button x:Name="BtnStep2"
+                Text="2단계" BackgroundColor="Gold"
+                Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="5" Grid.RowSpan="2"
+                FontSize="28" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+                CornerRadius="15" BorderColor="White" BorderWidth="3"
+                Clicked="BtnStep2_Clicked"
+                ></Button>
+
+        <Button x:Name="BtnStep3"
+                Text="3단계" BackgroundColor="Gold"
+                Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="5" Grid.RowSpan="2"
+                FontSize="28" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+                CornerRadius="15" BorderColor="White" BorderWidth="3"
+                Clicked="BtnStep3_Clicked"
+                ></Button>
+
+        <Button x:Name="BtnStep4"
+                Text="4단계" BackgroundColor="Gold"
+                Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="5" Grid.RowSpan="2"
+                FontSize="28" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+                CornerRadius="15" BorderColor="White" BorderWidth="3"
+                Clicked="BtnStep4_Clicked"
+                ></Button>
+
+        <Button x:Name="BtnStep5"
+                Text="5단계" BackgroundColor="Gold"
+                Grid.Column="1" Grid.Row="13" Grid.ColumnSpan="5" Grid.RowSpan="2"
+                FontSize="28" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+                CornerRadius="15" BorderColor="White" BorderWidth="3"
+                Clicked="BtnStep5_Clicked"
+                ></Button>
+    </Grid>
+
+</ContentPage>

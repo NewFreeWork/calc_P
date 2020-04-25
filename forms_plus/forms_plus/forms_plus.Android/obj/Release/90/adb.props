@@ -1,2 +1,2 @@
-AdbTarget=
+AdbTarget=-s R3CMA048L0T
 AdbOptions=

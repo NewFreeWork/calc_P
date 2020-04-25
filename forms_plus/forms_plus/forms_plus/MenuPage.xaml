@@ -46,19 +46,19 @@
 
             <!--kindbiny_20200415 버튼 추가-->
             <!--jscho_20200418 Clicked 추가-->
-            <Button Text="Learn" 
+            <Button Text="Learn  Custom" 
                     FontSize="18" BackgroundColor="Gold"
                     Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="Learn_Clicked" 
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
-            <Button Text="Test" 
+            <Button Text="LEARN STAGE" 
                     FontSize="18" BackgroundColor="Gold"
-                    Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4" 
+                    Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4" Clicked="LearnStage_Clicked" 
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
-            <Button Text="Ranking" 
+            <Button Text="TEST" 
                     FontSize="18" BackgroundColor="Gold"
                     Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4" 
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
-            <Button Text="Todo" 
+            <Button Text="RANKING" 
                     FontSize="18" BackgroundColor="Gold"
                     Grid.Column="4" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4"  
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
