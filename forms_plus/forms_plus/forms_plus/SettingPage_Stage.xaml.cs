@@ -46,7 +46,7 @@ namespace forms_plus
             LearnSetSington.Instance.setNdigit = 2;
             LearnSetSington.Instance.setQ_Num = 10;
 
-            await Navigation.PushAsync(new LearnningMultipleChoicePage());
+            await Navigation.PushAsync(new LearnningPage());
         }
         private async void BtnStep4_Clicked(object sender, EventArgs e)
         {
@@ -55,7 +55,7 @@ namespace forms_plus
             LearnSetSington.Instance.setNdigit = 3;
             LearnSetSington.Instance.setQ_Num = 10;
 
-            await Navigation.PushAsync(new LearnningMultipleChoicePage());
+            await Navigation.PushAsync(new LearnningPage());
         }
         private async void BtnStep5_Clicked(object sender, EventArgs e)
         {
@@ -64,7 +64,7 @@ namespace forms_plus
             LearnSetSington.Instance.setNdigit = 3;
             LearnSetSington.Instance.setQ_Num = 10;
 
-            await Navigation.PushAsync(new LearnningMultipleChoicePage());
+            await Navigation.PushAsync(new LearnningPage());
         }
     }
 }
