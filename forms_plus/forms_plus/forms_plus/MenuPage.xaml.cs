@@ -19,12 +19,20 @@ namespace forms_plus
 
         private async void Learn_Clicked(object sender, EventArgs e)
         {
+            LearnSetSington.Instance.IsTest = false;
             await Navigation.PushAsync(new SettingPage());
         }
 
         private async void LearnStage_Clicked(object sender, EventArgs e)
         {
+            LearnSetSington.Instance.IsTest = false;
             await Navigation.PushAsync(new SettingPage_Stage());
+        }
+
+        private async void Test_Clicked(object sender, EventArgs e)
+        {
+            LearnSetSington.Instance.IsTest = true;
+            await Navigation.PushAsync(new SettingPage());
         }
     }
     

@@ -24,7 +24,7 @@ namespace forms_plus
             InitializeComponent();
         }
 
-        private async void StartLearn_Clicked(object sender, EventArgs e)
+        private async void Start_Clicked(object sender, EventArgs e)
         {
             if ((pickerSelectUPOnOff == false)
                 || (pickerSelectUPDisp == false)
@@ -35,7 +35,14 @@ namespace forms_plus
             }
             else
             {
-                await Navigation.PushAsync(new LearnningPage());
+                if (LearnSetSington.Instance.IsTest == true)
+                {
+                    await Navigation.PushAsync(new TestPage());
+                }
+                else
+                {
+                    await Navigation.PushAsync(new LearnningPage());
+                }
             }
         }
 
@@ -116,29 +123,5 @@ namespace forms_plus
         }
     }
 
-    public class LearnSetSington
-    {
-
-        private static LearnSetSington instance = null;
-        public static LearnSetSington Instance
-        {
-            get
-            {
-                if (instance == null)
-                {
-                    instance = new LearnSetSington();
-                }
-                return instance;
-            }
-        }
-
-        private LearnSetSington()
-        {
-        }
-
-        public int setNdigit; // 선언할 변수들 
-        public bool setUpONOFF; // 선언할 변수들 
-        public bool setUpDispOnOff; // 선언할 변수들 
-        public int setQ_Num; // 선언할 변수들 
-    }
+   
 }

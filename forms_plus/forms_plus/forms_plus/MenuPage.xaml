@@ -56,7 +56,7 @@
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
             <Button Text="TEST" 
                     FontSize="18" BackgroundColor="Gold"
-                    Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4" 
+                    Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4" Clicked="Test_Clicked" 
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
             <Button Text="RANKING" 
                     FontSize="18" BackgroundColor="Gold"

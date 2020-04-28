@@ -247,47 +247,5 @@ namespace forms_plus
 
     }
 
-    public class ResultData
-    {
-        private static ResultData instance = null;
-        public static ResultData Instance
-        {
-            get 
-            {
-                if (instance == null)
-                {
-                    instance = new ResultData();
-                }
-                return instance;
-            }
-        }
-
-        private ResultData()
-        { 
-        
-        }
-        public int input1000s;
-        public int input100s;
-        public int input10s;
-        public int input1s;
-        public int inputUp100s;
-        public int inputUp10s;
-        public int inputSum;
-
-        public int rightAnswer1000s;
-        public int rightAnswer100s;
-        public int rightAnswer10s;
-        public int rightAnswer1s;
-        public int rightAnswerUp100s;
-        public int rightAnswerUp10s;
-        public int rightSum;
-
-        public int question_first100s;
-        public int question_first10s;
-        public int question_first1s;
-        public int question_sec100s;
-        public int question_sec10s;
-        public int question_sec1s;
-
-    }
+   
 }
