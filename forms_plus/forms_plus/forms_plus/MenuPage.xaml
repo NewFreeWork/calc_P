@@ -49,18 +49,22 @@
             <Button Text="Learn  Custom" 
                     FontSize="18" BackgroundColor="Gold"
                     Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="Learn_Clicked" 
+                    BorderColor="White" BorderWidth="3"
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
             <Button Text="LEARN STAGE" 
                     FontSize="18" BackgroundColor="Gold"
                     Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4" Clicked="LearnStage_Clicked" 
+                    BorderColor="White" BorderWidth="3"
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
             <Button Text="TEST" 
                     FontSize="18" BackgroundColor="Gold"
                     Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4" Clicked="Test_Clicked" 
+                    BorderColor="White" BorderWidth="3"
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
             <Button Text="RANKING" 
                     FontSize="18" BackgroundColor="Gold"
                     Grid.Column="4" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4"  
+                    BorderColor="White" BorderWidth="3"
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
         </Grid>
     </ContentPage.Content>

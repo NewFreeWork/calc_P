@@ -20,12 +20,12 @@ namespace forms_plus
             PrintData();
         }
 
-        private Color Is_RightAnswer(int rightAnswer, int myAnswer)
+        private Color Is_RightAnswer(int rightAnswer, int myAnswer, int rightUp, int myUp)
         {
-            if (rightAnswer == myAnswer)
-                return Color.Blue;
-            else
+            if ((rightAnswer != myAnswer)||(rightUp != myUp))
                 return Color.Red;
+            else
+                return Color.Blue;
         }
 
         private void PrintData()
@@ -36,8 +36,8 @@ namespace forms_plus
 
             if (AnswerSheetsData.Instance.Q_first1 != 0)
             {
-                Label_Q1.Text = AnswerSheetsData.Instance.Q_first1.ToString() + " + " + AnswerSheetsData.Instance.Q_sec1.ToString() + " = " + AnswerSheetsData.Instance.Q_RightAnswer1.ToString();
-                Label_Q1.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer1, AnswerSheetsData.Instance.MyAnswer1);
+                Label_Q1.Text = AnswerSheetsData.Instance.Q_first1.ToString() + " + " + AnswerSheetsData.Instance.Q_sec1.ToString() + " = " + AnswerSheetsData.Instance.MyAnswer1.ToString();
+                Label_Q1.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer1, AnswerSheetsData.Instance.MyAnswer1, AnswerSheetsData.Instance.Q_RightUp1, AnswerSheetsData.Instance.MyUpAnswer1);
                 if (Label_Q1.TextColor == Color.Blue)
                 {
                     Button_Q1.Text = "O";
@@ -64,8 +64,8 @@ namespace forms_plus
 
             if (AnswerSheetsData.Instance.Q_first2 != 0)
             {
-                Label_Q2.Text = AnswerSheetsData.Instance.Q_first2.ToString() + " + " + AnswerSheetsData.Instance.Q_sec2.ToString() + " = " + AnswerSheetsData.Instance.Q_RightAnswer2.ToString();
-                Label_Q2.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer2, AnswerSheetsData.Instance.MyAnswer2);
+                Label_Q2.Text = AnswerSheetsData.Instance.Q_first2.ToString() + " + " + AnswerSheetsData.Instance.Q_sec2.ToString() + " = " + AnswerSheetsData.Instance.MyAnswer2.ToString();
+                Label_Q2.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer2, AnswerSheetsData.Instance.MyAnswer2, AnswerSheetsData.Instance.Q_RightUp2, AnswerSheetsData.Instance.MyUpAnswer2);
                 if (Label_Q2.TextColor == Color.Blue)
                 {
                     Button_Q2.Text = "O";
@@ -92,8 +92,8 @@ namespace forms_plus
 
             if (AnswerSheetsData.Instance.Q_first3 != 0)
             {
-                Label_Q3.Text = AnswerSheetsData.Instance.Q_first3.ToString() + " + " + AnswerSheetsData.Instance.Q_sec3.ToString() + " = " + AnswerSheetsData.Instance.Q_RightAnswer3.ToString();
-                Label_Q3.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer3, AnswerSheetsData.Instance.MyAnswer3);
+                Label_Q3.Text = AnswerSheetsData.Instance.Q_first3.ToString() + " + " + AnswerSheetsData.Instance.Q_sec3.ToString() + " = " + AnswerSheetsData.Instance.MyAnswer3.ToString();
+                Label_Q3.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer3, AnswerSheetsData.Instance.MyAnswer3, AnswerSheetsData.Instance.Q_RightUp3, AnswerSheetsData.Instance.MyUpAnswer3);
                 if (Label_Q3.TextColor == Color.Blue)
                 {
                     Button_Q3.Text = "O";
@@ -120,8 +120,8 @@ namespace forms_plus
 
             if (AnswerSheetsData.Instance.Q_first4 != 0)
             {
-                Label_Q4.Text = AnswerSheetsData.Instance.Q_first4.ToString() + " + " + AnswerSheetsData.Instance.Q_sec4.ToString() + " = " + AnswerSheetsData.Instance.Q_RightAnswer4.ToString();
-                Label_Q4.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer4, AnswerSheetsData.Instance.MyAnswer4);
+                Label_Q4.Text = AnswerSheetsData.Instance.Q_first4.ToString() + " + " + AnswerSheetsData.Instance.Q_sec4.ToString() + " = " + AnswerSheetsData.Instance.MyAnswer4.ToString();
+                Label_Q4.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer4, AnswerSheetsData.Instance.MyAnswer4, AnswerSheetsData.Instance.Q_RightUp4, AnswerSheetsData.Instance.MyUpAnswer4);
                 if (Label_Q4.TextColor == Color.Blue)
                 {
                     Button_Q4.Text = "O";
@@ -148,8 +148,8 @@ namespace forms_plus
 
             if (AnswerSheetsData.Instance.Q_first5 != 0)
             {
-                Label_Q5.Text = AnswerSheetsData.Instance.Q_first5.ToString() + " + " + AnswerSheetsData.Instance.Q_sec5.ToString() + " = " + AnswerSheetsData.Instance.Q_RightAnswer5.ToString();
-                Label_Q5.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer5, AnswerSheetsData.Instance.MyAnswer5);
+                Label_Q5.Text = AnswerSheetsData.Instance.Q_first5.ToString() + " + " + AnswerSheetsData.Instance.Q_sec5.ToString() + " = " + AnswerSheetsData.Instance.MyAnswer5.ToString();
+                Label_Q5.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer5, AnswerSheetsData.Instance.MyAnswer5, AnswerSheetsData.Instance.Q_RightUp5, AnswerSheetsData.Instance.MyUpAnswer5);
                 if (Label_Q5.TextColor == Color.Blue)
                 {
                     Button_Q5.Text = "O";
@@ -176,8 +176,8 @@ namespace forms_plus
 
             if (AnswerSheetsData.Instance.Q_first6 != 0)
             {
-                Label_Q6.Text = AnswerSheetsData.Instance.Q_first6.ToString() + " + " + AnswerSheetsData.Instance.Q_sec6.ToString() + " = " + AnswerSheetsData.Instance.Q_RightAnswer6.ToString();
-                Label_Q6.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer6, AnswerSheetsData.Instance.MyAnswer6);
+                Label_Q6.Text = AnswerSheetsData.Instance.Q_first6.ToString() + " + " + AnswerSheetsData.Instance.Q_sec6.ToString() + " = " + AnswerSheetsData.Instance.MyAnswer6.ToString();
+                Label_Q6.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer6, AnswerSheetsData.Instance.MyAnswer6, AnswerSheetsData.Instance.Q_RightUp6, AnswerSheetsData.Instance.MyUpAnswer6);
                 if (Label_Q6.TextColor == Color.Blue)
                 {
                     Button_Q6.Text = "O";
@@ -204,8 +204,8 @@ namespace forms_plus
 
             if (AnswerSheetsData.Instance.Q_first7 != 0)
             {
-                Label_Q7.Text = AnswerSheetsData.Instance.Q_first7.ToString() + " + " + AnswerSheetsData.Instance.Q_sec7.ToString() + " = " + AnswerSheetsData.Instance.Q_RightAnswer7.ToString();
-                Label_Q7.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer7, AnswerSheetsData.Instance.MyAnswer7);
+                Label_Q7.Text = AnswerSheetsData.Instance.Q_first7.ToString() + " + " + AnswerSheetsData.Instance.Q_sec7.ToString() + " = " + AnswerSheetsData.Instance.MyAnswer7.ToString();
+                Label_Q7.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer7, AnswerSheetsData.Instance.MyAnswer7, AnswerSheetsData.Instance.Q_RightUp7, AnswerSheetsData.Instance.MyUpAnswer7);
                 if (Label_Q7.TextColor == Color.Blue)
                 {
                     Button_Q7.Text = "O";
@@ -232,8 +232,8 @@ namespace forms_plus
 
             if (AnswerSheetsData.Instance.Q_first8 != 0)
             {
-                Label_Q8.Text = AnswerSheetsData.Instance.Q_first8.ToString() + " + " + AnswerSheetsData.Instance.Q_sec8.ToString() + " = " + AnswerSheetsData.Instance.Q_RightAnswer8.ToString();
-                Label_Q8.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer8, AnswerSheetsData.Instance.MyAnswer8);
+                Label_Q8.Text = AnswerSheetsData.Instance.Q_first8.ToString() + " + " + AnswerSheetsData.Instance.Q_sec8.ToString() + " = " + AnswerSheetsData.Instance.MyAnswer8.ToString();
+                Label_Q8.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer8, AnswerSheetsData.Instance.MyAnswer8, AnswerSheetsData.Instance.Q_RightUp8, AnswerSheetsData.Instance.MyUpAnswer8);
                 if (Label_Q8.TextColor == Color.Blue)
                 {
                     Button_Q8.Text = "O";
@@ -260,8 +260,8 @@ namespace forms_plus
 
             if (AnswerSheetsData.Instance.Q_first9 != 0)
             {
-                Label_Q9.Text = AnswerSheetsData.Instance.Q_first9.ToString() + " + " + AnswerSheetsData.Instance.Q_sec9.ToString() + " = " + AnswerSheetsData.Instance.Q_RightAnswer9.ToString();
-                Label_Q9.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer9, AnswerSheetsData.Instance.MyAnswer9);
+                Label_Q9.Text = AnswerSheetsData.Instance.Q_first9.ToString() + " + " + AnswerSheetsData.Instance.Q_sec9.ToString() + " = " + AnswerSheetsData.Instance.MyAnswer9.ToString();
+                Label_Q9.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer9, AnswerSheetsData.Instance.MyAnswer9, AnswerSheetsData.Instance.Q_RightUp9, AnswerSheetsData.Instance.MyUpAnswer9);
                 if (Label_Q9.TextColor == Color.Blue)
                 {
                     Button_Q9.Text = "O";
@@ -288,8 +288,8 @@ namespace forms_plus
 
             if (AnswerSheetsData.Instance.Q_first10 != 0)
             {
-                Label_Q10.Text = AnswerSheetsData.Instance.Q_first10.ToString() + " + " + AnswerSheetsData.Instance.Q_sec10.ToString() + " = " + AnswerSheetsData.Instance.Q_RightAnswer10.ToString();
-                Label_Q10.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer10, AnswerSheetsData.Instance.MyAnswer10);
+                Label_Q10.Text = AnswerSheetsData.Instance.Q_first10.ToString() + " + " + AnswerSheetsData.Instance.Q_sec10.ToString() + " = " + AnswerSheetsData.Instance.MyAnswer10.ToString();
+                Label_Q10.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer10, AnswerSheetsData.Instance.MyAnswer10, AnswerSheetsData.Instance.Q_RightUp10, AnswerSheetsData.Instance.MyUpAnswer10);
                 if (Label_Q1.TextColor == Color.Blue)
                 {
                     Button_Q10.Text = "O";

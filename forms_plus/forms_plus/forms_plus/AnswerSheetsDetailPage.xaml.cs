@@ -16,9 +16,59 @@ namespace forms_plus
         {
             InitializeComponent();
 
+            DrawLayout();
             PrintDetailData();
         }
 
+        private void DrawLayout()
+        {
+            switch (LearnSetSington.Instance.setNdigit)
+            {
+                case 1:
+                    Label_FirstNum100s.IsVisible = false;
+                    Label_FirstNum10s.IsVisible = false;
+                    Label_SecNum100s.IsVisible = false;
+                    Label_SecNum10s.IsVisible = false;
+                    Label_Up100s.IsVisible = false;
+                    Label_Up10s.IsVisible = false;
+                    Label_RightUp100s.IsVisible = false;
+                    Label_RightUp10s.IsVisible = false;
+                    Label_1000s.IsVisible = false;
+                    Label_100s.IsVisible = false;
+                    break;
+                case 2:
+                    Label_FirstNum100s.IsVisible = false;
+                    Label_SecNum100s.IsVisible = false;
+
+                    if (LearnSetSington.Instance.setUpONOFF == false)
+                    {
+                        Label_Up100s.IsVisible = false;
+                        Label_Up10s.IsVisible = false;
+                        Label_RightUp100s.IsVisible = false;
+                        Label_RightUp10s.IsVisible = false;
+                    }
+                    else
+                    {
+                        Label_Up100s.IsVisible = false;
+                        Label_RightUp100s.IsVisible = false;                        
+                    }
+
+                    Label_1000s.IsVisible = false;
+                    break;
+
+                case 3:
+                    if (LearnSetSington.Instance.setUpONOFF == false)
+                    {
+                        Label_Up100s.IsVisible = false;
+                        Label_Up10s.IsVisible = false;
+                        Label_RightUp100s.IsVisible = false;
+                        Label_RightUp10s.IsVisible = false;
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
         private void PrintDetailData()
         {
             string QuestionFirstLineString;
@@ -39,97 +89,106 @@ namespace forms_plus
             int strBufIdx = 0;
             int right_sum = 0;
 
+            Label_1000s.IsVisible = true;
+            Label_100s.IsVisible = true;
+            Label_10s.IsVisible = true;
+            Label_1s.IsVisible = true;
+            Label_Right1000s.IsVisible = true;
+            Label_Right100s.IsVisible = true;
+            Label_Right10s.IsVisible = true;
+            Label_Right1s.IsVisible = true;
+
             switch (AnswerSheetsData.Instance.DetailPageIndex)
             {
                 case 1:
-                    QuestionFirstLineString = AnswerSheetsData.Instance.Q_first1.ToString();
-                    QuestionSecLineString = AnswerSheetsData.Instance.Q_sec1.ToString();
-                    RightAnswerString = AnswerSheetsData.Instance.Q_RightAnswer1.ToString();
-                    RightUpString = AnswerSheetsData.Instance.Q_RightUp1.ToString();
-                    MyAnswerString = AnswerSheetsData.Instance.MyAnswer1.ToString();
-                    MyUpString = AnswerSheetsData.Instance.MyUpAnswer1.ToString();
+                    QuestionFirstLineString = Convert.ToString(AnswerSheetsData.Instance.Q_first1);
+                    QuestionSecLineString = Convert.ToString(AnswerSheetsData.Instance.Q_sec1);
+                    RightAnswerString = Convert.ToString(AnswerSheetsData.Instance.Q_RightAnswer1);
+                    RightUpString = Convert.ToString(AnswerSheetsData.Instance.Q_RightUp1);
+                    MyAnswerString = Convert.ToString(AnswerSheetsData.Instance.MyAnswer1);
+                    MyUpString = Convert.ToString(AnswerSheetsData.Instance.MyUpAnswer1);
                     right_sum = AnswerSheetsData.Instance.Q_RightAnswer1;
                     break;
                 case 2:
-                    QuestionFirstLineString = AnswerSheetsData.Instance.Q_first2.ToString();
-                    QuestionSecLineString = AnswerSheetsData.Instance.Q_sec2.ToString();
-                    RightAnswerString = AnswerSheetsData.Instance.Q_RightAnswer2.ToString();
-                    RightUpString = AnswerSheetsData.Instance.Q_RightUp2.ToString();
-                    MyAnswerString = AnswerSheetsData.Instance.MyAnswer2.ToString();
-                    MyUpString = AnswerSheetsData.Instance.MyUpAnswer2.ToString();
+                    QuestionFirstLineString = Convert.ToString(AnswerSheetsData.Instance.Q_first2);
+                    QuestionSecLineString = Convert.ToString(AnswerSheetsData.Instance.Q_sec2);
+                    RightAnswerString = Convert.ToString(AnswerSheetsData.Instance.Q_RightAnswer2);
+                    RightUpString = Convert.ToString(AnswerSheetsData.Instance.Q_RightUp2);
+                    MyAnswerString = Convert.ToString(AnswerSheetsData.Instance.MyAnswer2);
+                    MyUpString = Convert.ToString(AnswerSheetsData.Instance.MyUpAnswer2);
                     right_sum = AnswerSheetsData.Instance.Q_RightAnswer2;
                     break;
                 case 3:
-                    QuestionFirstLineString = AnswerSheetsData.Instance.Q_first3.ToString();
-                    QuestionSecLineString = AnswerSheetsData.Instance.Q_sec3.ToString();
-                    RightAnswerString = AnswerSheetsData.Instance.Q_RightAnswer3.ToString();
-                    RightUpString = AnswerSheetsData.Instance.Q_RightUp3.ToString();
-                    MyAnswerString = AnswerSheetsData.Instance.MyAnswer3.ToString();
-                    MyUpString = AnswerSheetsData.Instance.MyUpAnswer3.ToString();
+                    QuestionFirstLineString = Convert.ToString(AnswerSheetsData.Instance.Q_first3);
+                    QuestionSecLineString = Convert.ToString(AnswerSheetsData.Instance.Q_sec3);
+                    RightAnswerString = Convert.ToString(AnswerSheetsData.Instance.Q_RightAnswer3);
+                    RightUpString = Convert.ToString(AnswerSheetsData.Instance.Q_RightUp3);
+                    MyAnswerString = Convert.ToString(AnswerSheetsData.Instance.MyAnswer3);
+                    MyUpString = Convert.ToString(AnswerSheetsData.Instance.MyUpAnswer3);
                     right_sum = AnswerSheetsData.Instance.Q_RightAnswer3;
                     break;
                 case 4:
-                    QuestionFirstLineString = AnswerSheetsData.Instance.Q_first4.ToString();
-                    QuestionSecLineString = AnswerSheetsData.Instance.Q_sec4.ToString();
-                    RightAnswerString = AnswerSheetsData.Instance.Q_RightAnswer4.ToString();
-                    RightUpString = AnswerSheetsData.Instance.Q_RightUp4.ToString();
-                    MyAnswerString = AnswerSheetsData.Instance.MyAnswer4.ToString();
-                    MyUpString = AnswerSheetsData.Instance.MyUpAnswer4.ToString();
+                    QuestionFirstLineString = Convert.ToString(AnswerSheetsData.Instance.Q_first4);
+                    QuestionSecLineString = Convert.ToString(AnswerSheetsData.Instance.Q_sec4);
+                    RightAnswerString = Convert.ToString(AnswerSheetsData.Instance.Q_RightAnswer4);
+                    RightUpString = Convert.ToString(AnswerSheetsData.Instance.Q_RightUp4);
+                    MyAnswerString = Convert.ToString(AnswerSheetsData.Instance.MyAnswer4);
+                    MyUpString = Convert.ToString(AnswerSheetsData.Instance.MyUpAnswer4);
                     right_sum = AnswerSheetsData.Instance.Q_RightAnswer4;
                     break;
                 case 5:
-                    QuestionFirstLineString = AnswerSheetsData.Instance.Q_first5.ToString();
-                    QuestionSecLineString = AnswerSheetsData.Instance.Q_sec5.ToString();
-                    RightAnswerString = AnswerSheetsData.Instance.Q_RightAnswer5.ToString();
-                    RightUpString = AnswerSheetsData.Instance.Q_RightUp5.ToString();
-                    MyAnswerString = AnswerSheetsData.Instance.MyAnswer5.ToString();
-                    MyUpString = AnswerSheetsData.Instance.MyUpAnswer5.ToString();
+                    QuestionFirstLineString = Convert.ToString(AnswerSheetsData.Instance.Q_first5);
+                    QuestionSecLineString = Convert.ToString(AnswerSheetsData.Instance.Q_sec5);
+                    RightAnswerString = Convert.ToString(AnswerSheetsData.Instance.Q_RightAnswer5);
+                    RightUpString = Convert.ToString(AnswerSheetsData.Instance.Q_RightUp5);
+                    MyAnswerString = Convert.ToString(AnswerSheetsData.Instance.MyAnswer5);
+                    MyUpString = Convert.ToString(AnswerSheetsData.Instance.MyUpAnswer5);
                     right_sum = AnswerSheetsData.Instance.Q_RightAnswer5;
                     break;
                 case 6:
-                    QuestionFirstLineString = AnswerSheetsData.Instance.Q_first6.ToString();
-                    QuestionSecLineString = AnswerSheetsData.Instance.Q_sec6.ToString();
-                    RightAnswerString = AnswerSheetsData.Instance.Q_RightAnswer6.ToString();
-                    RightUpString = AnswerSheetsData.Instance.Q_RightUp6.ToString();
-                    MyAnswerString = AnswerSheetsData.Instance.MyAnswer6.ToString();
-                    MyUpString = AnswerSheetsData.Instance.MyUpAnswer6.ToString();
+                    QuestionFirstLineString = Convert.ToString(AnswerSheetsData.Instance.Q_first6);
+                    QuestionSecLineString = Convert.ToString(AnswerSheetsData.Instance.Q_sec6);
+                    RightAnswerString = Convert.ToString(AnswerSheetsData.Instance.Q_RightAnswer6);
+                    RightUpString = Convert.ToString(AnswerSheetsData.Instance.Q_RightUp6);
+                    MyAnswerString = Convert.ToString(AnswerSheetsData.Instance.MyAnswer6);
+                    MyUpString = Convert.ToString(AnswerSheetsData.Instance.MyUpAnswer6);
                     right_sum = AnswerSheetsData.Instance.Q_RightAnswer6;
                     break;
                 case 7:
-                    QuestionFirstLineString = AnswerSheetsData.Instance.Q_first7.ToString();
-                    QuestionSecLineString = AnswerSheetsData.Instance.Q_sec7.ToString();
-                    RightAnswerString = AnswerSheetsData.Instance.Q_RightAnswer7.ToString();
-                    RightUpString = AnswerSheetsData.Instance.Q_RightUp7.ToString();
-                    MyAnswerString = AnswerSheetsData.Instance.MyAnswer7.ToString();
-                    MyUpString = AnswerSheetsData.Instance.MyUpAnswer7.ToString();
+                    QuestionFirstLineString = Convert.ToString(AnswerSheetsData.Instance.Q_first7);
+                    QuestionSecLineString = Convert.ToString(AnswerSheetsData.Instance.Q_sec7);
+                    RightAnswerString = Convert.ToString(AnswerSheetsData.Instance.Q_RightAnswer7);
+                    RightUpString = Convert.ToString(AnswerSheetsData.Instance.Q_RightUp7);
+                    MyAnswerString = Convert.ToString(AnswerSheetsData.Instance.MyAnswer7);
+                    MyUpString = Convert.ToString(AnswerSheetsData.Instance.MyUpAnswer7);
                     right_sum = AnswerSheetsData.Instance.Q_RightAnswer7;
                     break;
                 case 8:
-                    QuestionFirstLineString = AnswerSheetsData.Instance.Q_first8.ToString();
-                    QuestionSecLineString = AnswerSheetsData.Instance.Q_sec8.ToString();
-                    RightAnswerString = AnswerSheetsData.Instance.Q_RightAnswer8.ToString();
-                    RightUpString = AnswerSheetsData.Instance.Q_RightUp8.ToString();
-                    MyAnswerString = AnswerSheetsData.Instance.MyAnswer8.ToString();
-                    MyUpString = AnswerSheetsData.Instance.MyUpAnswer8.ToString();
+                    QuestionFirstLineString = Convert.ToString(AnswerSheetsData.Instance.Q_first8);
+                    QuestionSecLineString = Convert.ToString(AnswerSheetsData.Instance.Q_sec8);
+                    RightAnswerString = Convert.ToString(AnswerSheetsData.Instance.Q_RightAnswer8);
+                    RightUpString = Convert.ToString(AnswerSheetsData.Instance.Q_RightUp8);
+                    MyAnswerString = Convert.ToString(AnswerSheetsData.Instance.MyAnswer8);
+                    MyUpString = Convert.ToString(AnswerSheetsData.Instance.MyUpAnswer8);
                     right_sum = AnswerSheetsData.Instance.Q_RightAnswer8;
                     break;
                 case 9:
-                    QuestionFirstLineString = AnswerSheetsData.Instance.Q_first9.ToString();
-                    QuestionSecLineString = AnswerSheetsData.Instance.Q_sec9.ToString();
-                    RightAnswerString = AnswerSheetsData.Instance.Q_RightAnswer9.ToString();
-                    RightUpString = AnswerSheetsData.Instance.Q_RightUp9.ToString();
-                    MyAnswerString = AnswerSheetsData.Instance.MyAnswer9.ToString();
-                    MyUpString = AnswerSheetsData.Instance.MyUpAnswer9.ToString();
+                    QuestionFirstLineString = Convert.ToString(AnswerSheetsData.Instance.Q_first9);
+                    QuestionSecLineString = Convert.ToString(AnswerSheetsData.Instance.Q_sec9);
+                    RightAnswerString = Convert.ToString(AnswerSheetsData.Instance.Q_RightAnswer9);
+                    RightUpString = Convert.ToString(AnswerSheetsData.Instance.Q_RightUp9);
+                    MyAnswerString = Convert.ToString(AnswerSheetsData.Instance.MyAnswer9);
+                    MyUpString = Convert.ToString(AnswerSheetsData.Instance.MyUpAnswer9);
                     right_sum = AnswerSheetsData.Instance.Q_RightAnswer9;
                     break;
                 case 10:
                 default:
-                    QuestionFirstLineString = AnswerSheetsData.Instance.Q_first10.ToString();
-                    QuestionSecLineString = AnswerSheetsData.Instance.Q_sec10.ToString();
-                    RightAnswerString = AnswerSheetsData.Instance.Q_RightAnswer10.ToString();
-                    RightUpString = AnswerSheetsData.Instance.Q_RightUp10.ToString();
-                    MyAnswerString = AnswerSheetsData.Instance.MyAnswer10.ToString();
-                    MyUpString = AnswerSheetsData.Instance.MyUpAnswer10.ToString();
+                    QuestionFirstLineString = Convert.ToString(AnswerSheetsData.Instance.Q_first10);
+                    QuestionSecLineString = Convert.ToString(AnswerSheetsData.Instance.Q_sec10);
+                    RightAnswerString = Convert.ToString(AnswerSheetsData.Instance.Q_RightAnswer10);
+                    RightUpString = Convert.ToString(AnswerSheetsData.Instance.Q_RightUp10);
+                    MyAnswerString = Convert.ToString(AnswerSheetsData.Instance.MyAnswer10);
+                    MyUpString = Convert.ToString(AnswerSheetsData.Instance.MyUpAnswer10);
                     right_sum = AnswerSheetsData.Instance.Q_RightAnswer10;
                     break;
             }
@@ -161,23 +220,23 @@ namespace forms_plus
 
             Label_SecNum1s.Text = qSecbuf[0].ToString();
             Label_SecNum10s.Text = qSecbuf[1].ToString();
-            Label_SecNum100s.Text = qSecbuf[2].ToString();
+            Label_SecNum100s.Text =qSecbuf[2].ToString();
 
-            Label_RightUp10s.Text = qRightUpBuf[0].ToString();
-            Label_RightUp100s.Text = qRightUpBuf[1].ToString();
+            Label_RightUp10s.Text =qRightUpBuf[0].ToString();
+            Label_RightUp100s.Text =qRightUpBuf[1].ToString();
 
-            Label_Right1s.Text = qRightAnswerBuf[0].ToString();
-            Label_Right10s.Text = qRightAnswerBuf[1].ToString();
-            Label_Right100s.Text = qRightAnswerBuf[2].ToString();
-            Label_Right1000s.Text = qRightAnswerBuf[3].ToString();
+            Label_Right1s.Text =qRightAnswerBuf[0].ToString();
+            Label_Right10s.Text =qRightAnswerBuf[1].ToString();
+            Label_Right100s.Text =qRightAnswerBuf[2].ToString();
+            Label_Right1000s.Text =qRightAnswerBuf[3].ToString();
 
-            Label_Up10s.Text = myAnswerUpBuf[0].ToString();
-            Label_Up100s.Text = myAnswerUpBuf[1].ToString();
+            Label_Up10s.Text =myAnswerUpBuf[0].ToString();
+            Label_Up100s.Text =myAnswerUpBuf[1].ToString();
 
-            Label_1s.Text = myAnswerBuf[0].ToString();
-            Label_10s.Text = myAnswerBuf[1].ToString();
-            Label_100s.Text = myAnswerBuf[2].ToString();
-            Label_1000s.Text = myAnswerBuf[3].ToString();
+            Label_1s.Text =myAnswerBuf[0].ToString();
+            Label_10s.Text =myAnswerBuf[1].ToString();
+            Label_100s.Text =myAnswerBuf[2].ToString();
+            Label_1000s.Text =myAnswerBuf[3].ToString();
 
             if (Label_RightUp10s.Text == Label_Up10s.Text)
             {
@@ -233,30 +292,40 @@ namespace forms_plus
                 Label_1000s.TextColor = Color.Red;
             }
 
-            if (LearnSetSington.Instance.setUpDispOnOff == false)
+            if (LearnSetSington.Instance.setUpDispOnOff == true && Label_RightUp100s.Text == "1")
             {
-                Label_RightUp100s.IsVisible = false;
-                Label_RightUp10s.IsVisible = false;
-                Label_Up100s.IsVisible = false;
-                Label_Up10s.IsVisible = false;
+                Label_RightUp100s.IsVisible = true;              
+                Label_Up100s.IsVisible = true;                
             }
             else
             {
-                Label_RightUp100s.IsVisible = true;
-                Label_RightUp10s.IsVisible = true;
-                Label_Up100s.IsVisible = true;
-                Label_Up10s.IsVisible = true;
+                Label_RightUp100s.IsVisible = false;
+                Label_Up100s.IsVisible = false;
+                Label_RightUp100s.Text = "0";
+                Label_Up100s.Text = "0";             
             }
 
-            Label_1000s.IsVisible = true;
-            Label_100s.IsVisible = true;
-            Label_10s.IsVisible = true;
-            Label_1s.IsVisible = true;
-            Label_Right1000s.IsVisible = true;
-            Label_Right100s.IsVisible = true;
-            Label_Right10s.IsVisible = true;
-            Label_Right1s.IsVisible = true;
+            if (LearnSetSington.Instance.setUpDispOnOff == true && Label_RightUp10s.Text == "1")
+            {
+                Label_RightUp10s.IsVisible = true;
+                Label_Up10s.IsVisible = true;                
+            }
+            else
+            {
+                Label_RightUp10s.IsVisible = false;
+                Label_Up10s.IsVisible = false;
+                Label_RightUp10s.Text = "0";
+                Label_Up10s.Text = "0";                
+            }
 
+            if (Label_Up10s.IsVisible == false && Label_Up100s.IsVisible == false)
+            {
+                Label_UpName.IsVisible = false;
+            }
+            else 
+            {
+                Label_UpName.IsVisible = true;
+            }
 
             if (right_sum < 10)
             {
@@ -267,6 +336,14 @@ namespace forms_plus
                 Label_Right100s.IsVisible = false;
                 Label_Right10s.IsVisible = false;
 
+
+                Label_1000s.Text = "0";
+                Label_100s.Text = "0";
+                Label_10s.Text = "0";
+                Label_Right1000s.Text = "0";
+                Label_Right100s.Text = "0";
+                Label_Right10s.Text = "0";
+
             }
             else if (right_sum < 100)
             {
@@ -274,11 +351,19 @@ namespace forms_plus
                 Label_100s.IsVisible = false;
                 Label_Right1000s.IsVisible = false;
                 Label_Right100s.IsVisible = false;
+
+                Label_1000s.Text = "0";
+                Label_100s.Text = "0";
+                Label_Right1000s.Text = "0";
+                Label_Right100s.Text = "0";
             }
             else if (right_sum < 1000)
             {
                 Label_1000s.IsVisible = false;
                 Label_Right1000s.IsVisible = false;
+
+                Label_1000s.Text = "0";
+                Label_Right1000s.Text = "0";
             }
             else 
             {

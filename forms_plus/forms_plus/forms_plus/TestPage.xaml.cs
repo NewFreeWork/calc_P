@@ -127,7 +127,7 @@ namespace forms_plus
             Btn1000s.TextColor = Color.White;
             Btn100s.TextColor = Color.White;
             Btn10s.TextColor = Color.Red;
-            Btn1s.TextColor = Color.White;
+            Btn1s.TextColor = Color.White;            
             Btn_Up100s.TextColor = Color.White;
             Btn_Up10s.TextColor = Color.White;
         }
@@ -266,9 +266,9 @@ namespace forms_plus
 
                 if (PassQuestionNum < LearnSetSington.Instance.setQ_Num)
                 {
+                    PassQuestionNum++;
                     Init_Question();
                     MakeQuestion();
-                    PassQuestionNum++;
                 }
                 else
                 {
@@ -295,7 +295,7 @@ namespace forms_plus
                 Btn1s.TextColor = Color.White;
                 btn1s_flag = false;
 
-                if (LearnSetSington.Instance.setUpDispOnOff == true)
+                if ((LearnSetSington.Instance.setUpDispOnOff == true) && (LearnSetSington.Instance.setNdigit != 1))
                 {
                     btnUp10s_flag = true;
                     Btn_Up10s.TextColor = Color.Red;
@@ -314,7 +314,7 @@ namespace forms_plus
                 Btn10s.TextColor = Color.White;
                 btn10s_flag = false;
 
-                if (LearnSetSington.Instance.setUpDispOnOff == true)
+                if (LearnSetSington.Instance.setUpDispOnOff == true && (LearnSetSington.Instance.setNdigit == 3))
                 {
                     btnUp100s_flag = true;
                     Btn_Up100s.TextColor = Color.Red;
