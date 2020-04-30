@@ -33,8 +33,9 @@ namespace forms_plus
             InitializeComponent();
 
             stopwatch = new Stopwatch();
-            
+
             AnswerSheetsData.Instance.ClearAnswerSheetsData();
+
             DrawLayout();
             Init_Question();
             MakeQuestion();
@@ -186,58 +187,35 @@ namespace forms_plus
                 ResultData.Instance.input1000s = Int32.Parse(Btn1000s.Text);
                 ResultData.Instance.inputSum += (ResultData.Instance.input1000s * 1000);
             }
-            else
-            {
-                ResultData.Instance.input1000s = -1;
-            }
-
+           
             if (Btn100s.IsVisible == true)
             {
                 ResultData.Instance.input100s = Int32.Parse(Btn100s.Text);
                 ResultData.Instance.inputSum += (ResultData.Instance.input100s * 100);
             }
-            else
-            {
-                ResultData.Instance.input100s = -1;
-            }
-
+          
             if (Btn10s.IsVisible == true)
             {
                 ResultData.Instance.input10s = Int32.Parse(Btn10s.Text);
                 ResultData.Instance.inputSum += (ResultData.Instance.input10s * 10);
             }
-            else
-            {
-                ResultData.Instance.input10s = -1;
-            }
-
+           
             if (Btn1s.IsVisible == true)
             {
                 ResultData.Instance.input1s = Int32.Parse(Btn1s.Text);
                 ResultData.Instance.inputSum += (ResultData.Instance.input1s);
             }
-            else
-            {
-                ResultData.Instance.input1s = -1;
-            }
-
+           
             if (Btn_Up100s.IsVisible == true)
             {
                 ResultData.Instance.inputUp100s = Int32.Parse(Btn_Up100s.Text);
             }
-            else
-            {
-                ResultData.Instance.inputUp100s = -1;
-            }
-
+            
             if (Btn_Up10s.IsVisible == true)
             {
                 ResultData.Instance.inputUp10s = Int32.Parse(Btn_Up10s.Text);
             }
-            else
-            {
-                ResultData.Instance.inputUp10s = -1;
-            }
+            
 
             ResultData.Instance.rightAnswer1000s = sum1000s;
             ResultData.Instance.rightAnswer100s = sum100s;
@@ -280,7 +258,9 @@ namespace forms_plus
                 AnswerSheetsData.Instance.SetAnswerSheetsData(
                                                                ConvertThreeFigure(ResultData.Instance.question_first100s, ResultData.Instance.question_first10s, ResultData.Instance.question_first1s),
                                                                ConvertThreeFigure(ResultData.Instance.question_sec100s, ResultData.Instance.question_sec10s, ResultData.Instance.question_sec1s),
+                                                               ConvertThreeFigure(0, ResultData.Instance.rightAnswerUp100s, ResultData.Instance.rightAnswerUp10s),
                                                                ResultData.Instance.rightSum,
+                                                               ConvertThreeFigure(0, ResultData.Instance.inputUp100s, ResultData.Instance.inputUp10s),
                                                                ResultData.Instance.inputSum,
                                                                PassQuestionNum);
 
@@ -441,6 +421,8 @@ namespace forms_plus
             Random rnd = new Random();
             int firstNum100s, firstNum10s, firstNum1s;
             int secNum100s, secNum10s, secNum1s;
+
+            ResultData.Instance.ClearResultData();
 
             Label_PassQNUM.Text = Convert.ToString(PassQuestionNum);
             Label_TotalQNUM.Text = Convert.ToString(LearnSetSington.Instance.setQ_Num);

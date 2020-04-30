@@ -321,12 +321,12 @@ namespace forms_plus
             if (Score == 100)
             {
                 Label_Stamp.Text = "EXCELLENT!!";
-                Label_Stamp.TextColor = Color.Green;
+                Label_Stamp.TextColor = Color.Blue;
             }
             else if ((Score < 100) && (Score >= 80))
             {
                 Label_Stamp.Text = "VERY GOOD!!";
-                Label_Stamp.TextColor = Color.ForestGreen;
+                Label_Stamp.TextColor = Color.SkyBlue;
             }
             else if ((Score < 80) && (Score >= 60))
             {
