@@ -120,7 +120,235 @@ namespace forms_plus
         private AnswerSheetsData()
         {
         }
+#if false //int를 string형태로 변경
+        public string Q_first1;
+        public string Q_first2;
+        public string Q_first3;
+        public string Q_first4;
+        public string Q_first5;
+        public string Q_first6;
+        public string Q_first7;
+        public string Q_first8;
+        public string Q_first9;
+        public string Q_first10;
 
+        public string Q_sec1;
+        public string Q_sec2;
+        public string Q_sec3;
+        public string Q_sec4;
+        public string Q_sec5;
+        public string Q_sec6;
+        public string Q_sec7;
+        public string Q_sec8;
+        public string Q_sec9;
+        public string Q_sec10;
+
+        public string Q_RightAnswer1;
+        public string Q_RightAnswer2;
+        public string Q_RightAnswer3;
+        public string Q_RightAnswer4;
+        public string Q_RightAnswer5;
+        public string Q_RightAnswer6;
+        public string Q_RightAnswer7;
+        public string Q_RightAnswer8;
+        public string Q_RightAnswer9;
+        public string Q_RightAnswer10;
+
+        public string Q_RightUp1;
+        public string Q_RightUp2;
+        public string Q_RightUp3;
+        public string Q_RightUp4;
+        public string Q_RightUp5;
+        public string Q_RightUp6;
+        public string Q_RightUp7;
+        public string Q_RightUp8;
+        public string Q_RightUp9;
+        public string Q_RightUp10;
+
+        public string MyAnswer1;
+        public string MyAnswer2;
+        public string MyAnswer3;
+        public string MyAnswer4;
+        public string MyAnswer5;
+        public string MyAnswer6;
+        public string MyAnswer7;
+        public string MyAnswer8;
+        public string MyAnswer9;
+        public string MyAnswer10;
+
+        public string MyUpAnswer1;
+        public string MyUpAnswer2;
+        public string MyUpAnswer3;
+        public string MyUpAnswer4;
+        public string MyUpAnswer5;
+        public string MyUpAnswer6;
+        public string MyUpAnswer7;
+        public string MyUpAnswer8;
+        public string MyUpAnswer9;
+        public string MyUpAnswer10;
+
+        public int DetailPageIndex;
+        public string TotalTime;
+
+        public void ClearAnswerSheetsData()
+        {
+            Q_first1 = "";
+            Q_first2 = "";
+            Q_first3 = "";
+            Q_first4 = "";
+            Q_first5 = "";
+            Q_first6 = "";
+            Q_first7 = "";
+            Q_first8 = "";
+            Q_first9 = "";
+            Q_first10 = "";
+
+            Q_sec1 = "";
+            Q_sec2 = "";
+            Q_sec3 = "";
+            Q_sec4 = "";
+            Q_sec5 = "";
+            Q_sec6 = "";
+            Q_sec7 = "";
+            Q_sec8 = "";
+            Q_sec9 = "";
+            Q_sec10 = "";
+
+            Q_RightAnswer1 = "";
+            Q_RightAnswer2 = "";
+            Q_RightAnswer3 = "";
+            Q_RightAnswer4 = "";
+            Q_RightAnswer5 = "";
+            Q_RightAnswer6 = "";
+            Q_RightAnswer7 = "";
+            Q_RightAnswer8 = "";
+            Q_RightAnswer9 = "";
+            Q_RightAnswer1 = "";
+
+            Q_RightUp1 = "";
+            Q_RightUp2 = "";
+            Q_RightUp3 = "";
+            Q_RightUp4 = "";
+            Q_RightUp5 = "";
+            Q_RightUp6 = "";
+            Q_RightUp7 = "";
+            Q_RightUp8 = "";
+            Q_RightUp9 = "";
+            Q_RightUp10 = "";
+
+            MyAnswer1 = "";
+            MyAnswer2 = "";
+            MyAnswer3 = "";
+            MyAnswer4 = "";
+            MyAnswer5 = "";
+            MyAnswer6 = "";
+            MyAnswer7 = "";
+            MyAnswer8 = "";
+            MyAnswer9 = "";
+            MyAnswer10 = "";
+
+            MyUpAnswer1 = "";
+            MyUpAnswer2 = "";
+            MyUpAnswer3 = "";
+            MyUpAnswer4 = "";
+            MyUpAnswer5 = "";
+            MyUpAnswer6 = "";
+            MyUpAnswer7 = "";
+            MyUpAnswer8 = "";
+            MyUpAnswer9 = "";
+            MyUpAnswer10 = "";
+
+            DetailPageIndex = 0;
+            TotalTime = "00:00:000";
+        }
+
+        public void SetAnswerSheetsData(string qFirst, string qSec, string qUp, string rightAnswer, string myUp, string myAnswer, int qNum)
+        {
+            switch (qNum)
+            {
+                case 1:
+                    Q_first1 = qFirst;
+                    Q_sec1 = qSec;
+                    Q_RightUp1 = qUp;
+                    MyUpAnswer1 = myUp;
+                    Q_RightAnswer1 = rightAnswer;
+                    MyAnswer1 = myAnswer;
+                    break;
+                case 2:
+                    Q_first2 = qFirst;
+                    Q_sec2 = qSec;
+                    Q_RightUp2 = qUp;
+                    MyUpAnswer2 = myUp;
+                    Q_RightAnswer2 = rightAnswer;
+                    MyAnswer2 = myAnswer;
+                    break;
+                case 3:
+                    Q_first3 = qFirst;
+                    Q_sec3 = qSec;
+                    Q_RightUp3 = qUp;
+                    MyUpAnswer3 = myUp;
+                    Q_RightAnswer3 = rightAnswer;
+                    MyAnswer3 = myAnswer;
+                    break;
+                case 4:
+                    Q_first4 = qFirst;
+                    Q_sec4 = qSec;
+                    Q_RightUp4 = qUp;
+                    MyUpAnswer4 = myUp;
+                    Q_RightAnswer4 = rightAnswer;
+                    MyAnswer4 = myAnswer;
+                    break;
+                case 5:
+                    Q_first5 = qFirst;
+                    Q_sec5 = qSec;
+                    Q_RightUp5 = qUp;
+                    MyUpAnswer5 = myUp;
+                    Q_RightAnswer5 = rightAnswer;
+                    MyAnswer5 = myAnswer;
+                    break;
+                case 6:
+                    Q_first6 = qFirst;
+                    Q_sec6 = qSec;
+                    Q_RightUp6 = qUp;
+                    MyUpAnswer6 = myUp;
+                    Q_RightAnswer6 = rightAnswer;
+                    MyAnswer6 = myAnswer;
+                    break;
+                case 7:
+                    Q_first7 = qFirst;
+                    Q_sec7 = qSec;
+                    Q_RightUp7 = qUp;
+                    MyUpAnswer7 = myUp;
+                    Q_RightAnswer7 = rightAnswer;
+                    MyAnswer7 = myAnswer;
+                    break;
+                case 8:
+                    Q_first8 = qFirst;
+                    Q_sec8 = qSec;
+                    Q_RightUp8 = qUp;
+                    MyUpAnswer8 = myUp;
+                    Q_RightAnswer8 = rightAnswer;
+                    MyAnswer8 = myAnswer;
+                    break;
+                case 9:
+                    Q_first9 = qFirst;
+                    Q_sec9 = qSec;
+                    Q_RightUp9 = qUp;
+                    MyUpAnswer9 = myUp;
+                    Q_RightAnswer9 = rightAnswer;
+                    MyAnswer9 = myAnswer;
+                    break;
+                case 10:
+                    Q_first10 = qFirst;
+                    Q_sec10 = qSec;
+                    Q_RightUp10 = qUp;
+                    MyUpAnswer10 = myUp;
+                    Q_RightAnswer10 = rightAnswer;
+                    MyAnswer10 = myAnswer;
+                    break;
+            }
+        }
+#else
         public int Q_first1;
         public int Q_first2;
         public int Q_first3;
@@ -347,5 +575,6 @@ namespace forms_plus
                     break;
             }
         }
+#endif
     }
 }

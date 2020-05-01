@@ -254,8 +254,17 @@ namespace forms_plus
             {
 
                 CalculateInputSum();
-
+#if false // int to string
                 AnswerSheetsData.Instance.SetAnswerSheetsData(
+                                                               ResultData.Instance.question_first100s.ToString()+ResultData.Instance.question_first10s.ToString()+ResultData.Instance.question_first1s.ToString(),
+                                                               ResultData.Instance.question_sec100s.ToString()+ResultData.Instance.question_sec10s.ToString()+ResultData.Instance.question_sec1s.ToString(),
+                                                               ResultData.Instance.rightAnswerUp100s.ToString()+ResultData.Instance.rightAnswerUp10s.ToString(),
+                                                               ResultData.Instance.rightSum.ToString(),
+                                                               ResultData.Instance.inputUp100s.ToString()+ResultData.Instance.inputUp10s.ToString(),
+                                                               ResultData.Instance.inputSum.ToString(),
+                                                               PassQuestionNum);
+#else
+                 AnswerSheetsData.Instance.SetAnswerSheetsData(
                                                                ConvertThreeFigure(ResultData.Instance.question_first100s, ResultData.Instance.question_first10s, ResultData.Instance.question_first1s),
                                                                ConvertThreeFigure(ResultData.Instance.question_sec100s, ResultData.Instance.question_sec10s, ResultData.Instance.question_sec1s),
                                                                ConvertThreeFigure(0, ResultData.Instance.rightAnswerUp100s, ResultData.Instance.rightAnswerUp10s),
@@ -263,7 +272,7 @@ namespace forms_plus
                                                                ConvertThreeFigure(0, ResultData.Instance.inputUp100s, ResultData.Instance.inputUp10s),
                                                                ResultData.Instance.inputSum,
                                                                PassQuestionNum);
-
+#endif
                 if (PassQuestionNum < LearnSetSington.Instance.setQ_Num)
                 {
                     PassQuestionNum++;

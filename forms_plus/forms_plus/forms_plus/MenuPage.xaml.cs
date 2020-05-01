@@ -34,6 +34,12 @@ namespace forms_plus
             LearnSetSington.Instance.IsTest = true;
             await Navigation.PushAsync(new SettingPage());
         }
+
+        private async void TestStage_Clicked(object sender, EventArgs e)
+        {
+            LearnSetSington.Instance.IsTest = true;
+            await Navigation.PushAsync(new SettingPage_Stage());
+        }
     }
     
 }

@@ -12,10 +12,6 @@ namespace forms_plus
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SettingPage_Stage : ContentPage
     {
-        private bool pickerSelectUpOnOff = false;
-        private bool pickerSelectUpDisp = false;
-        private bool pickerSelectNdigit = false;
-        private bool pickerSelectQNumf = false;
         public SettingPage_Stage()
         {
             InitializeComponent();
@@ -28,7 +24,14 @@ namespace forms_plus
             LearnSetSington.Instance.setNdigit = 1;
             LearnSetSington.Instance.setQ_Num = 10;
 
-            await Navigation.PushAsync(new LearnningMultipleChoicePage());
+            if (LearnSetSington.Instance.IsTest == true)
+            {
+                await Navigation.PushAsync(new TestPage());
+            }
+            else
+            {
+                await Navigation.PushAsync(new LearnningMultipleChoicePage());
+            }
         }
         private async void BtnStep2_Clicked(object sender, EventArgs e)
         {
@@ -37,7 +40,14 @@ namespace forms_plus
             LearnSetSington.Instance.setNdigit = 1;
             LearnSetSington.Instance.setQ_Num = 10;
 
-            await Navigation.PushAsync(new LearnningMultipleChoicePage());
+            if (LearnSetSington.Instance.IsTest == true)
+            {
+                await Navigation.PushAsync(new TestPage());
+            }
+            else
+            {
+                await Navigation.PushAsync(new LearnningMultipleChoicePage());
+            }
         }
         private async void BtnStep3_Clicked(object sender, EventArgs e)
         {
@@ -46,7 +56,14 @@ namespace forms_plus
             LearnSetSington.Instance.setNdigit = 2;
             LearnSetSington.Instance.setQ_Num = 10;
 
-            await Navigation.PushAsync(new LearnningPage());
+            if (LearnSetSington.Instance.IsTest == true)
+            {
+                await Navigation.PushAsync(new TestPage());
+            }
+            else
+            {
+                await Navigation.PushAsync(new LearnningPage());
+            }
         }
         private async void BtnStep4_Clicked(object sender, EventArgs e)
         {
@@ -55,7 +72,14 @@ namespace forms_plus
             LearnSetSington.Instance.setNdigit = 3;
             LearnSetSington.Instance.setQ_Num = 10;
 
-            await Navigation.PushAsync(new LearnningPage());
+            if (LearnSetSington.Instance.IsTest == true)
+            {
+                await Navigation.PushAsync(new TestPage());
+            }
+            else
+            {
+                await Navigation.PushAsync(new LearnningPage());
+            }
         }
         private async void BtnStep5_Clicked(object sender, EventArgs e)
         {
@@ -64,7 +88,14 @@ namespace forms_plus
             LearnSetSington.Instance.setNdigit = 3;
             LearnSetSington.Instance.setQ_Num = 10;
 
-            await Navigation.PushAsync(new LearnningPage());
+            if (LearnSetSington.Instance.IsTest == true)
+            {
+                await Navigation.PushAsync(new TestPage());
+            }
+            else
+            {
+                await Navigation.PushAsync(new LearnningPage());
+            }
         }
     }
 }
