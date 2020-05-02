@@ -706,6 +706,11 @@ namespace forms_plus
                 for (strBufIdx = RightUpString.Length - 1; strBufIdx >= 0; strBufIdx--, charBufIdx++)
                 {
                     qRightUpBuf[charBufIdx] = RightUpString[strBufIdx];
+                }
+                    
+                charBufIdx = 0;
+                for (strBufIdx = MyUpString.Length - 1; strBufIdx >= 0; strBufIdx--, charBufIdx++)
+                {
                     myAnswerUpBuf[charBufIdx] = MyUpString[strBufIdx];
                 }
             }
