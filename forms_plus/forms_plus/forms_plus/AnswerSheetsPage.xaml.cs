@@ -355,10 +355,29 @@ namespace forms_plus
 #else
         private Color Is_RightAnswer(int rightAnswer, int myAnswer, int rightUp, int myUp)
         {
-            if ((rightAnswer != myAnswer)||(rightUp != myUp))
-                return Color.Red;
+            if (LearnSetSington.Instance.setUpDispOnOff == true)
+            {
+                if ((rightAnswer != myAnswer) || (rightUp != myUp))
+                {
+                    return Color.Red;
+                }
+                else
+                {
+                    return Color.Blue;
+                }
+            }
             else
-                return Color.Blue;
+            {
+                if (rightAnswer != myAnswer)
+                {
+                    return Color.Red;
+                }
+                else
+                {
+                    return Color.Blue;
+                }
+
+            }
         }
         private void PrintData()
         {
