@@ -46,6 +46,7 @@
 
             <!--kindbiny_20200415 버튼 추가-->
             <!--jscho_20200418 Clicked 추가-->
+            <!--kindbiny_20200502 Todo Clicked 추가-->
             <Button Text="Learn  Custom" 
                     FontSize="18" BackgroundColor="Gold"
                     Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="Learn_Clicked" 
@@ -75,7 +76,7 @@
             
             <Button Text="TO DO" 
                     FontSize="18" BackgroundColor="Gold"
-                    Grid.Column="4" Grid.Row="11" Grid.ColumnSpan="2" Grid.RowSpan="4"  
+                    Grid.Column="4" Grid.Row="11" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="ToDo_Clicked" 
                     BorderColor="White" BorderWidth="3"
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
         </Grid>

@@ -149,10 +149,25 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "XamForms.Controls.Calendar/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.4.231"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/XamForms.Controls.Calendar.dll": {},
+          "lib/Xamarin.iOS10/XamForms.Controls.Calendar.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/XamForms.Controls.Calendar.dll": {},
+          "lib/Xamarin.iOS10/XamForms.Controls.Calendar.iOS.dll": {}
+        }
+      },
       "forms_plus/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "XamForms.Controls.Calendar": "1.1.1",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.4.0.991265"
         },
@@ -312,10 +327,25 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "XamForms.Controls.Calendar/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.4.231"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/XamForms.Controls.Calendar.dll": {},
+          "lib/Xamarin.iOS10/XamForms.Controls.Calendar.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/XamForms.Controls.Calendar.dll": {},
+          "lib/Xamarin.iOS10/XamForms.Controls.Calendar.iOS.dll": {}
+        }
+      },
       "forms_plus/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "XamForms.Controls.Calendar": "1.1.1",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.4.0.991265"
         },
@@ -475,10 +505,25 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "XamForms.Controls.Calendar/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.4.231"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/XamForms.Controls.Calendar.dll": {},
+          "lib/Xamarin.iOS10/XamForms.Controls.Calendar.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/XamForms.Controls.Calendar.dll": {},
+          "lib/Xamarin.iOS10/XamForms.Controls.Calendar.iOS.dll": {}
+        }
+      },
       "forms_plus/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "XamForms.Controls.Calendar": "1.1.1",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.4.0.991265"
         },
@@ -638,10 +683,25 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "XamForms.Controls.Calendar/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.4.231"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/XamForms.Controls.Calendar.dll": {},
+          "lib/Xamarin.iOS10/XamForms.Controls.Calendar.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/XamForms.Controls.Calendar.dll": {},
+          "lib/Xamarin.iOS10/XamForms.Controls.Calendar.iOS.dll": {}
+        }
+      },
       "forms_plus/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "XamForms.Controls.Calendar": "1.1.1",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.4.0.991265"
         },
@@ -1004,6 +1064,30 @@
         "xamarin.forms.nuspec"
       ]
     },
+    "XamForms.Controls.Calendar/1.1.1": {
+      "sha512": "GCydwm9HO+8V4iGVsGJZtnHJaqIpjas40BSRU+T7lIM7E4nZ7pOn2Ifzu0Y6MLrZJuqCHFeroOWjJSfOjZIyyw==",
+      "type": "package",
+      "path": "xamforms.controls.calendar/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/XamForms.Controls.Calendar.Droid.dll",
+        "lib/MonoAndroid10/XamForms.Controls.Calendar.dll",
+        "lib/MonoTouch10/XamForms.Controls.Calendar.dll",
+        "lib/MonoTouch10/XamForms.Controls.Calendar.iOS.dll",
+        "lib/UAP10/XamForms.Controls.Calendar.UWP.dll",
+        "lib/UAP10/XamForms.Controls.Calendar.dll",
+        "lib/Xamarin.iOS10/XamForms.Controls.Calendar.dll",
+        "lib/Xamarin.iOS10/XamForms.Controls.Calendar.iOS.dll",
+        "lib/portable-net45+wp8+win8+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/XamForms.Controls.Calendar.dll",
+        "lib/win81/XamForms.Controls.Calendar.Windows.dll",
+        "lib/win81/XamForms.Controls.Calendar.dll",
+        "lib/wpa81/XamForms.Controls.Calendar.WinPhone.dll",
+        "lib/wpa81/XamForms.Controls.Calendar.dll",
+        "xamforms.controls.calendar.1.1.1.nupkg.sha512",
+        "xamforms.controls.calendar.nuspec"
+      ]
+    },
     "forms_plus/1.0.0": {
       "type": "project",
       "path": "../forms_plus/forms_plus.csproj",
@@ -1012,30 +1096,31 @@
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
+      "XamForms.Controls.Calendar >= 1.1.1",
       "Xamarin.Essentials >= 1.3.1",
       "Xamarin.Forms >= 4.4.0.991265",
       "forms_plus >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dream\\.nuget\\packages\\": {},
+    "C:\\Users\\User\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dream\\Documents\\Git\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj",
+      "projectUniqueName": "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj",
       "projectName": "forms_plus.iOS",
-      "projectPath": "C:\\Users\\dream\\Documents\\Git\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj",
-      "packagesPath": "C:\\Users\\dream\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dream\\Documents\\Git\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\obj\\",
+      "projectPath": "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\dream\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1049,8 +1134,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\dream\\Documents\\Git\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj": {
-              "projectPath": "C:\\Users\\dream\\Documents\\Git\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj"
+            "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj": {
+              "projectPath": "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj"
             }
           }
         }
@@ -1059,6 +1144,10 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "XamForms.Controls.Calendar": {
+            "target": "Package",
+            "version": "[1.1.1, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.3.1, )"

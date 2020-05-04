@@ -40,6 +40,15 @@ namespace forms_plus
             LearnSetSington.Instance.IsTest = true;
             await Navigation.PushAsync(new SettingPage_Stage());
         }
+
+        /*kindbiny_20200502 Todo Clicked 추가*/
+        private async void ToDo_Clicked(object sender, EventArgs e)
+        {            
+            await Navigation.PushAsync(new TodoPage());
+        }
+
+
+        
     }
     
 }
