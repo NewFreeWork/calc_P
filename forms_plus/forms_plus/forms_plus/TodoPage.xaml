@@ -12,6 +12,8 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
+            <BoxView x:Name="boxview_todo_header1" Color="Transparent"  HeightRequest="5" />
+            <BoxView x:Name="boxview_todo_header2" Color="White"  HeightRequest="2" />
             <controls:Calendar Padding="10,0,10,0"                            
                            DisabledBorderColor="Transparent"  
                            DisabledBackgroundColor="Transparent"
@@ -41,12 +43,24 @@
                            SelectedDate="{Binding Date}"  
                            SpecialDates="{Binding Attendances}"  
                            DateCommand="{Binding DateChosen}"/>
+
+
+            <Label x:Name="label_todo_today" Text="★Today " TextColor="White" FontSize="20" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold" />
             
+            <BoxView x:Name="boxview_todo_footer" Color="White"  HeightRequest="2" />
+
             <BoxView x:Name="boxview_todo_1st" Color="DeepPink" CornerRadius="10" HeightRequest="5" />
-            <Label x:Name="label_todo_learn" Text="Learn : " TextColor="White" FontSize="20" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold" />
+            <Label x:Name="label_todo_1st" Text="Learn : " TextColor="White" FontSize="20" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold" />
             <BoxView x:Name="boxview_todo_2nd" Color="Transparent" CornerRadius="10" HeightRequest="10" />
             <BoxView x:Name="boxview_todo_3th" Color="DarkViolet" CornerRadius="10" HeightRequest="5"  />
-            <Label x:Name="label_todo_test" Text="Test : " TextColor="White" FontSize="20" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
+            <Label x:Name="label_todo_3th" Text="Test : " TextColor="White" FontSize="20" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
+
+            <Button Text="Buffer Del(Test)" 
+                    FontSize="18" BackgroundColor="Gold"
+                    Clicked="Del_Clicked" 
+                    BorderColor="White" BorderWidth="3"
+                    FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
