@@ -70,7 +70,7 @@
             
             <Button Text="RANKING" 
                     FontSize="18" BackgroundColor="Gold"
-                    Grid.Column="1" Grid.Row="11" Grid.ColumnSpan="2" Grid.RowSpan="4"  
+                    Grid.Column="1" Grid.Row="11" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="Ranking_Clicked"
                     BorderColor="White" BorderWidth="3"
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
             

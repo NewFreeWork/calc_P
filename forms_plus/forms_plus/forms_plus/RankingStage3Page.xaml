@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="forms_plus.RankingStage3Page"
+             Title="Stage3">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="15*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="15*"/>
+                    <ColumnDefinition Width="15*"/>
+                    <ColumnDefinition Width="25*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Text="RANK" FontSize="Subtitle" BackgroundColor="Green" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="1" Grid.Row="0" Text="USERS" FontSize="Subtitle" BackgroundColor="Orange" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="2" Grid.Row="0" Text="STAGE" FontSize="Subtitle" BackgroundColor="SkyBlue" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="3" Grid.Row="0" Text="SCORE" FontSize="Subtitle" BackgroundColor="Gold" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="4" Grid.Row="0" Text="TIME" FontSize="Subtitle" BackgroundColor="Pink" HorizontalTextAlignment="Center"/>
+            </Grid>
+            <ListView x:Name="listx">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="15*"/>
+                                    <ColumnDefinition Width="20*"/>
+                                    <ColumnDefinition Width="15*"/>
+                                    <ColumnDefinition Width="15*"/>
+                                    <ColumnDefinition Width="25*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding rank}"/>
+                                <Label Grid.Column="1" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding usr}"/>
+                                <Label Grid.Column="2" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding stage}"/>
+                                <Label Grid.Column="3" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding score}"/>
+                                <Label Grid.Column="4" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding time}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

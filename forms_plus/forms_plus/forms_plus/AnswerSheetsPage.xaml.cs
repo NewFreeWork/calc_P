@@ -12,12 +12,17 @@ namespace forms_plus
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AnswerSheetsPage : ContentPage
     {
+        
         public AnswerSheetsPage()
         {
             InitializeComponent();
-
-            
+                       
             PrintData();
+
+            App.Database1.SaveRankingInfo("user1",
+                                            LearnSetSington.Instance.setStage,
+                                            AnswerSheetsData.Instance.MyScore,
+                                            AnswerSheetsData.Instance.TotalTime);
         }
 
 #if false // int to string
@@ -668,6 +673,7 @@ namespace forms_plus
 
             Score = (RightCnt * 10 / TestNum) * 10;
             Label_Score.Text = Score.ToString() + "점";
+            AnswerSheetsData.Instance.MyScore = Score;
 
             if (Score == 100)
             {

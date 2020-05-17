@@ -47,8 +47,10 @@ namespace forms_plus
             await Navigation.PushAsync(new TodoPage());
         }
 
-
-        
+        private async void Ranking_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RankingPage());
+        }
     }
     
 }

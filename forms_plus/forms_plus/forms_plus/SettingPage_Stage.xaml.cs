@@ -23,6 +23,7 @@ namespace forms_plus
             LearnSetSington.Instance.setUpDispOnOff = false;
             LearnSetSington.Instance.setNdigit = 1;
             LearnSetSington.Instance.setQ_Num = 10;
+            LearnSetSington.Instance.setStage = 1;
 
             if (LearnSetSington.Instance.IsTest == true)
             {
@@ -39,6 +40,7 @@ namespace forms_plus
             LearnSetSington.Instance.setUpDispOnOff = false;
             LearnSetSington.Instance.setNdigit = 1;
             LearnSetSington.Instance.setQ_Num = 10;
+            LearnSetSington.Instance.setStage = 2;
 
             if (LearnSetSington.Instance.IsTest == true)
             {
@@ -55,6 +57,7 @@ namespace forms_plus
             LearnSetSington.Instance.setUpDispOnOff = true;
             LearnSetSington.Instance.setNdigit = 2;
             LearnSetSington.Instance.setQ_Num = 10;
+            LearnSetSington.Instance.setStage = 3;
 
             if (LearnSetSington.Instance.IsTest == true)
             {
@@ -71,6 +74,7 @@ namespace forms_plus
             LearnSetSington.Instance.setUpDispOnOff = true;
             LearnSetSington.Instance.setNdigit = 3;
             LearnSetSington.Instance.setQ_Num = 10;
+            LearnSetSington.Instance.setStage = 4;
 
             if (LearnSetSington.Instance.IsTest == true)
             {
@@ -87,6 +91,7 @@ namespace forms_plus
             LearnSetSington.Instance.setUpDispOnOff = false;
             LearnSetSington.Instance.setNdigit = 3;
             LearnSetSington.Instance.setQ_Num = 10;
+            LearnSetSington.Instance.setStage = 5;
 
             if (LearnSetSington.Instance.IsTest == true)
             {

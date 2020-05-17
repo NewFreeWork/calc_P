@@ -79,6 +79,7 @@ namespace forms_plus
             int sec = stopwatch.Elapsed.Seconds;
             int millisec = stopwatch.Elapsed.Milliseconds;
 
+            AnswerSheetsData.Instance.ElapsedTicks = stopwatch.ElapsedTicks;
             AnswerSheetsData.Instance.TotalTime = min.ToString("D2") + ":" + sec.ToString("D2") + ":" + millisec.ToString("D3");
             stopwatch.Stop();
         }

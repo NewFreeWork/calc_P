@@ -99,6 +99,7 @@ namespace forms_plus
         public bool setUpDispOnOff; 
         public int setQ_Num;
         public bool IsTest;
+        public int setStage;
     }
 
     public class AnswerSheetsData
@@ -417,6 +418,8 @@ namespace forms_plus
 
         public int DetailPageIndex;
         public string TotalTime;
+        public int MyScore;
+        public long ElapsedTicks;       
 
         public void ClearAnswerSheetsData()
         {
