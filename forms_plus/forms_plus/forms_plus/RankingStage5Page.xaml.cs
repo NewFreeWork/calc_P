@@ -20,7 +20,8 @@ namespace forms_plus
 
         public async void PrintListStage5()
         {
-            listx.ItemsSource = await App.Database5.SortScore(false);
+            listx.ItemsSource = await App.RkInfoDatabase.GetRankingsAsync("5");
+            //listx.ItemsSource = await App.RkInfoDatabase.SortScore(false);
         }
 
         private async void Btn_DeleteHistory(object sender, EventArgs e)
@@ -29,8 +30,8 @@ namespace forms_plus
 
             if (anwser == true)
             {
-                await App.Database5.DeleteItemAsync();
-                listx.ItemsSource = await App.Database5.SortScore(false);
+                await App.RkInfoDatabase.DeleteStageAsync("5");
+                listx.ItemsSource = await App.RkInfoDatabase.GetRankingsAsync("5");
             }
         }
     }

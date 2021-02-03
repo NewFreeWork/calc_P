@@ -40,12 +40,11 @@
                                     <ColumnDefinition Width="15*"/>
                                     <ColumnDefinition Width="25*"/>
                                 </Grid.ColumnDefinitions>
-                                <Label Grid.Column="0" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding rank}"/>
-                                <Label Grid.Column="1" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding usr}"/>
-                                <Label Grid.Column="2" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding stage}"/>
-                                <Label Grid.Column="3" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding score}"/>
-                                <Label Grid.Column="4" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding time}"/>
-                            </Grid>
+                                <Label Grid.Column="0" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding Rk}"/>
+                                <Label Grid.Column="1" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding Usr}"/>
+                                <Label Grid.Column="2" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding Stage}"/>
+                                <Label Grid.Column="3" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding Score}"/>
+                                <Label Grid.Column="4" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding Time}"/>                            </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

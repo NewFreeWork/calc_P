@@ -19,7 +19,7 @@ namespace forms_plus
                        
             PrintData();
 
-            App.Database1.SaveRankingInfo("user1",
+            App.RkInfoDatabase.SaveRankingInfo(UserInfo.Instance.userName,
                                             LearnSetSington.Instance.setStage,
                                             AnswerSheetsData.Instance.MyScore,
                                             AnswerSheetsData.Instance.TotalTime);
@@ -712,7 +712,12 @@ namespace forms_plus
 #endif
         private async void Home_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PopToRootAsync();
+            //await Navigation.PopToRootAsync();
+            for (int PageIdx = Navigation.NavigationStack.Count; PageIdx > 3; PageIdx--)
+            {
+                Navigation.RemovePage(Navigation.NavigationStack[PageIdx - 1]);
+            }
+            await Navigation.PopAsync();
         }
 
         private async void Detail_Answer1_Clicked(object sender, EventArgs e)

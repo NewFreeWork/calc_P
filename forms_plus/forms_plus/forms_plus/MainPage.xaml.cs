@@ -16,6 +16,7 @@ namespace forms_plus
         public MainPage()
         {
             InitializeComponent();
+            UserInfo.Instance.userName = " ";
         }
 
         private void Entry_InputUserName(object sender, TextChangedEventArgs e)
@@ -25,7 +26,14 @@ namespace forms_plus
         
         private async void Btn_Menupage_Go(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MenuPage());           
+            if (UserInfo.Instance.userName == " ")
+            {
+                await DisplayAlert("확인", "이름을 입력해주세요.", "OK");
+            }
+            else
+            {
+                await Navigation.PushAsync(new MenuPage()); 
+            }
         }
 
 

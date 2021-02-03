@@ -283,7 +283,7 @@ namespace forms_plus
                 else
                 {
                     StopTimer();
-                    
+                    //LearnSetSington.Instance.setStage = 0;
                     await Navigation.PushAsync(new AnswerSheetsPage());
                 }
             }
