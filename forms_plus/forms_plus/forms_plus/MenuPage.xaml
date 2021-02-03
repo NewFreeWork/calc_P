@@ -47,37 +47,35 @@
             <!--kindbiny_20200415 버튼 추가-->
             <!--jscho_20200418 Clicked 추가-->
             <!--kindbiny_20200502 Todo Clicked 추가-->
-            <Button Text="Learn  Custom" 
+            <Button Text="단계별로&#10;학습하기" 
                     FontSize="18" BackgroundColor="Gold"
-                    Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="Learn_Clicked" 
-                    BorderColor="White" BorderWidth="3"
+                    Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4" Clicked="LearnStage_Clicked" 
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
-            <Button Text="LEARN STAGE" 
+            <Button Text="내 맘대로&#10;학습하기" 
                     FontSize="18" BackgroundColor="Gold"
-                    Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4" Clicked="LearnStage_Clicked" 
-                    BorderColor="White" BorderWidth="3"
+                    Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="Learn_Clicked" 
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
-            <Button Text="TEST Custom" 
+            <Button Text="단계별로&#10;테스트" 
                     FontSize="18" BackgroundColor="Gold"
-                    Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4" Clicked="Test_Clicked" 
-                    BorderColor="White" BorderWidth="3"
+                    Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4" Clicked="TestStage_Clicked" 
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
-            <Button Text="TEST STAGE" 
+            <Button Text="내 맘대로&#10;테스트" 
                     FontSize="18" BackgroundColor="Gold"
-                    Grid.Column="4" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4" Clicked="TestStage_Clicked" 
-                    BorderColor="White" BorderWidth="3"
+                    Grid.Column="4" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4" Clicked="Test_Clicked" 
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
-            
-            <Button Text="RANKING" 
+            <Button Text="단계별&#10;테스트&#10;기록보기" 
                     FontSize="18" BackgroundColor="Gold"
                     Grid.Column="1" Grid.Row="11" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="Ranking_Clicked"
-                    BorderColor="White" BorderWidth="3"
-                    FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
-            
-            <Button Text="TO DO" 
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
+                    FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>            
+            <Button Text="학습 일정 확인" 
                     FontSize="18" BackgroundColor="Gold"
                     Grid.Column="4" Grid.Row="11" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="ToDo_Clicked" 
-                    BorderColor="White" BorderWidth="3"
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
         </Grid>
     </ContentPage.Content>

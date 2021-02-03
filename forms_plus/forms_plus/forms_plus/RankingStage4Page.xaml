@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="forms_plus.RankingStage4Page"
-             Title="Stage4">
+             Title="4단계">
     <ContentPage.Content>
         <StackLayout>
             <Grid>
@@ -19,11 +19,11 @@
                     <ColumnDefinition Width="15*"/>
                     <ColumnDefinition Width="25*"/>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Grid.Row="0" Text="RANK" FontSize="Subtitle" BackgroundColor="Green" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="1" Grid.Row="0" Text="USERS" FontSize="Subtitle" BackgroundColor="Orange" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="2" Grid.Row="0" Text="STAGE" FontSize="Subtitle" BackgroundColor="SkyBlue" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="3" Grid.Row="0" Text="SCORE" FontSize="Subtitle" BackgroundColor="Gold" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="4" Grid.Row="0" Text="TIME" FontSize="Subtitle" BackgroundColor="Pink" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="0" Grid.Row="0" Text="순위" FontSize="Subtitle" BackgroundColor="Green" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="1" Grid.Row="0" Text="이름" FontSize="Subtitle" BackgroundColor="Orange" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="2" Grid.Row="0" Text="단계" FontSize="Subtitle" BackgroundColor="SkyBlue" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="3" Grid.Row="0" Text="점수" FontSize="Subtitle" BackgroundColor="Gold" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="4" Grid.Row="0" Text="시간" FontSize="Subtitle" BackgroundColor="Pink" HorizontalTextAlignment="Center"/>
             </Grid>
             <ListView x:Name="listx">
                 <ListView.ItemTemplate>
