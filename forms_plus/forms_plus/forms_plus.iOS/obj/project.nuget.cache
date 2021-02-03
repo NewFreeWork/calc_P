@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "z/OcPebEqPGNljcGyaLTJwZquNetFLrNn7iyvjEuZz/rPWev/U9ZX49mhcPyS9xuFac7gzunacX9glH0lugV6g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dream\\Documents\\Git\\20200516\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dream\\.nuget\\packages\\sqlite-net-pcl\\1.6.292\\sqlite-net-pcl.1.6.292.nupkg.sha512",
+    "C:\\Users\\dream\\.nuget\\packages\\sqlitepclraw.bundle_green\\1.1.13\\sqlitepclraw.bundle_green.1.1.13.nupkg.sha512",
+    "C:\\Users\\dream\\.nuget\\packages\\sqlitepclraw.core\\1.1.13\\sqlitepclraw.core.1.1.13.nupkg.sha512",
+    "C:\\Users\\dream\\.nuget\\packages\\sqlitepclraw.provider.sqlite3.ios_unified\\1.1.13\\sqlitepclraw.provider.sqlite3.ios_unified.1.1.13.nupkg.sha512",
+    "C:\\Users\\dream\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512",
+    "C:\\Users\\dream\\.nuget\\packages\\xamforms.controls.calendar\\1.1.1\\xamforms.controls.calendar.1.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}
