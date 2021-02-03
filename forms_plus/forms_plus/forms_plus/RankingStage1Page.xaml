@@ -48,9 +48,13 @@
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-                
+                </ListView.ItemTemplate>                
             </ListView>
+            <Button Text="기록 지우기" 
+                    FontSize="18" BackgroundColor="Gold"                    
+                    BorderColor="White" BorderWidth="3"
+                    FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+                    Clicked="Btn_DeleteHistory" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

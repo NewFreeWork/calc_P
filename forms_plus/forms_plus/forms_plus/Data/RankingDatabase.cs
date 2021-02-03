@@ -50,6 +50,12 @@ namespace forms_plus.Data
         {
             return _database.DeleteAsync(info);
         }
+
+        public Task<int> DeleteItemAsync()
+        {
+            return _database.DeleteAllAsync<RankingInfo>();
+        }
+
         public async void SaveRankingInfo(string userid, int stage, int score, string time)
         {
             RankingInfo info = new RankingInfo();
