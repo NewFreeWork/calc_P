@@ -18,7 +18,11 @@ namespace forms_plus
             InitializeComponent();
         }
 
-        //kindbiny_20200415 버튼 이벤트 추가
+        private void Entry_InputUserName(object sender, TextChangedEventArgs e)
+        {
+            UserInfo.Instance.userName = e.NewTextValue;
+        }
+        
         private async void Btn_Menupage_Go(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new MenuPage());           

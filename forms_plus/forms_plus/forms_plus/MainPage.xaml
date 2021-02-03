@@ -50,8 +50,15 @@
         <Label Text="PLUS" Grid.Column="3" Grid.Row="6" Grid.ColumnSpan="4" Grid.RowSpan="4" 
                VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="60" TextColor="White" 
                FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
+
+        <Entry Placeholder="이름을 입력해주세요." PlaceholderColor="Gray"
+               Grid.Column="2" Grid.Row="11" Grid.ColumnSpan="3" Grid.RowSpan="2" 
+               TextColor="Gold"
+               TextChanged="Entry_InputUserName"
+               ></Entry>
+        
         <Button Text="시 작" 
-                Grid.Column="2" Grid.Row="12" Grid.ColumnSpan="3" Grid.RowSpan="2" 
+                Grid.Column="2" Grid.Row="14" Grid.ColumnSpan="3" Grid.RowSpan="2" 
                 FontSize="30" BackgroundColor="Gold"
                 BorderColor="White" BorderWidth="3" CornerRadius="15"
                 FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"

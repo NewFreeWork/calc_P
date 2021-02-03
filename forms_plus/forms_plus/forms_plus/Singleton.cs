@@ -74,6 +74,28 @@ namespace forms_plus
 
     }
 
+    public class UserInfo
+    {
+        private static UserInfo instance = null;
+        public static UserInfo Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new UserInfo();
+                }
+                return instance;
+            }
+        }
+
+        private UserInfo()
+        {
+        }
+
+        public string userName;
+    }
+
     public class LearnSetSington
     {
 

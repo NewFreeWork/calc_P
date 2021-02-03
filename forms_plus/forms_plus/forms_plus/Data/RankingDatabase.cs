@@ -54,7 +54,7 @@ namespace forms_plus.Data
         {
             RankingInfo info = new RankingInfo();
 
-            info.usr = userid;
+            info.usr = UserInfo.Instance.userName;
             info.stage = stage;
             info.score = score;
             info.time = time;
