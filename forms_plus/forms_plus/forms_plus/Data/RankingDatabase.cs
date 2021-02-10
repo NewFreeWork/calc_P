@@ -26,9 +26,8 @@ namespace forms_plus.Data
 
         public Task<List<RankingInfo>> GetRankingsAsync(String stage)
         {
-                       String QueryStr = "SELECT Usr, Stage, Score, Time, RANK() OVER (ORDER BY Score DESC, Time DESC) as Rk From RankingInfo Where Stage="+stage;
-                       return _database.QueryAsync<RankingInfo>(QueryStr);
-            //return _database.Table<RankingInfo>().ToListAsync();
+            String QueryStr = "SELECT Usr, Stage, Score, Time, RANK() OVER (ORDER BY Score DESC, Time ASC) as Rk From RankingInfo Where Stage="+stage;
+            return _database.QueryAsync<RankingInfo>(QueryStr);            
         }
 
 
