@@ -2152,11 +2152,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dream\\Documents\\Git\\20200516\\calc_P\\forms_plus\\forms_plus\\forms_plus.Android\\forms_plus.Android.csproj",
+      "projectUniqueName": "C:\\Users\\dream\\Documents\\Git\\20200219\\calc_P\\forms_plus\\forms_plus\\forms_plus.Android\\forms_plus.Android.csproj",
       "projectName": "forms_plus.Android",
-      "projectPath": "C:\\Users\\dream\\Documents\\Git\\20200516\\calc_P\\forms_plus\\forms_plus\\forms_plus.Android\\forms_plus.Android.csproj",
+      "projectPath": "C:\\Users\\dream\\Documents\\Git\\20200219\\calc_P\\forms_plus\\forms_plus\\forms_plus.Android\\forms_plus.Android.csproj",
       "packagesPath": "C:\\Users\\dream\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dream\\Documents\\Git\\20200516\\calc_P\\forms_plus\\forms_plus\\forms_plus.Android\\obj\\",
+      "outputPath": "C:\\Users\\dream\\Documents\\Git\\20200219\\calc_P\\forms_plus\\forms_plus\\forms_plus.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2177,8 +2177,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\dream\\Documents\\Git\\20200516\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj": {
-              "projectPath": "C:\\Users\\dream\\Documents\\Git\\20200516\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj"
+            "C:\\Users\\dream\\Documents\\Git\\20200219\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj": {
+              "projectPath": "C:\\Users\\dream\\Documents\\Git\\20200219\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj"
             }
           }
         }

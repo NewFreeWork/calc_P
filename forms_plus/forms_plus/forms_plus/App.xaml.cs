@@ -28,7 +28,8 @@ namespace forms_plus
 #if false       //kindbiny_20200415 네비게이션 페이지로 변경
             MainPage = new MainPage();
 #else
-            MainPage = new NavigationPage(new MainPage());
+            //MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new SplashPage());
 #endif
         }
 
