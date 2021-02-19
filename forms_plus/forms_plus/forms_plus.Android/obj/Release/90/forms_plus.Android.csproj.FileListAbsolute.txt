@@ -1197,3 +1197,4 @@ C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus.An
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\res\drawable\splash.jpg

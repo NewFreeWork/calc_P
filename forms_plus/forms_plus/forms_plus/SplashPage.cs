@@ -40,13 +40,16 @@ namespace forms_plus
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-
+            /*
             //2초동안 머문다.   
             await splashImage.ScaleTo(1, 2000);
             // 1.5초 동안 0.9배 작아진다.
             await splashImage.ScaleTo(0.9, 1500, Easing.Linear);
             // 1.2초 동안 150배 커진다.
             await splashImage.ScaleTo(150, 2000, Easing.CubicIn);
+            */
+            await splashImage.FadeTo(1, 1500);
+            await splashImage.FadeTo(0, 500);
             // MainPage로 이동한다.
             Application.Current.MainPage = new NavigationPage(new MainPage());
         }
