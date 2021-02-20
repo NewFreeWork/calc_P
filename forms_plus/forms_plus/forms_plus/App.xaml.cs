@@ -9,7 +9,8 @@ namespace forms_plus
     public partial class App : Application
     {
         static RankingDatabase RankingInfoDB;
-    
+        static CalendarLearnDatabase CalendarLearnInfoDB;
+        static CalendarTestDatabase CalendarTestInfoDB;
 
         public static RankingDatabase RkInfoDatabase
         {
@@ -17,11 +18,35 @@ namespace forms_plus
             {
                 if (RankingInfoDB == null)
                 {
-                    RankingInfoDB = new RankingDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "RangkingInfo.db3"));
+                    RankingInfoDB = new RankingDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "RangkingInfo1.db3"));
                 }
                 return RankingInfoDB;
             }
         }
+        public static CalendarLearnDatabase CalLearnInfoDatabase
+        {
+            get
+            {
+                if (CalendarLearnInfoDB == null)
+                {
+                    CalendarLearnInfoDB = new CalendarLearnDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "CalendarLearnInfo1.db3"));
+                }
+                return CalendarLearnInfoDB;
+            }
+        }
+
+        public static CalendarTestDatabase CalTestInfoDatabase
+        {
+            get
+            {
+                if (CalendarTestInfoDB == null)
+                {
+                    CalendarTestInfoDB = new CalendarTestDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "CalendarTestInfo1.db3"));
+                }
+                return CalendarTestInfoDB;
+            }
+        }
+
         public App()
         {
             InitializeComponent();

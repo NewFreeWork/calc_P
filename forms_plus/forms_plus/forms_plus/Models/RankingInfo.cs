@@ -10,7 +10,7 @@ namespace forms_plus.Models
         public int Rk { get; set; }
 
         [PrimaryKey, AutoIncrement]
-        public int ID { get; set; }
+        public int Idx { get; set; }
         public String Usr { get; set; }
         public String Stage { get; set; }
         public int Score { get; set; }

@@ -22,6 +22,15 @@ namespace forms_plus
         private void Entry_InputUserName(object sender, TextChangedEventArgs e)
         {
             UserInfo.Instance.userName = e.NewTextValue;
+
+            if (Entry_InsertName.Text == "")
+            {
+                Entry_InsertName.HorizontalTextAlignment = TextAlignment.Start;
+            }
+            else 
+            {
+                Entry_InsertName.HorizontalTextAlignment = TextAlignment.Center;
+            }
         }
         
         private async void Btn_Menupage_Go(object sender, EventArgs e)

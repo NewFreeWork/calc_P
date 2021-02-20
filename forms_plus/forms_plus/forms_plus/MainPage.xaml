@@ -51,7 +51,7 @@
                VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="60" TextColor="White" 
                FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
 
-        <Entry Placeholder="이름을 입력해주세요." PlaceholderColor="Gray"
+        <Entry x:Name="Entry_InsertName" Placeholder="이름을 입력해주세요." PlaceholderColor="Gray"
                Grid.Column="2" Grid.Row="11" Grid.ColumnSpan="3" Grid.RowSpan="2" 
                TextColor="Gold"
                TextChanged="Entry_InputUserName"

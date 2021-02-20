@@ -218,6 +218,13 @@ namespace forms_plus
             }
             else
             {
+                String Date = StringDate.Instance.DateYMD_to_String(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+
+                App.CalLearnInfoDatabase.SaveCalendarLearnInfo(UserInfo.Instance.userName,
+                                      LearnSetSington.Instance.setStage,
+                                      Date,
+                                      true);
+
                 await Navigation.PopAsync();
             }
             

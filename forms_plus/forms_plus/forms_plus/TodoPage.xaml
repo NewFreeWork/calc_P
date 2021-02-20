@@ -4,15 +4,17 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             xmlns:controls="clr-namespace:XamForms.Controls;assembly=XamForms.Controls.Calendar"
+             xmlns:controls="clr-namespace:XamForms.Controls;assembly=XamForms.Controls.Calendar"             
              xmlns:viewmodels="clr-namespace:forms_plus.ViewModel"  
-             x:DataType="viewmodels:TodoViewModel"  
              x:Class="forms_plus.TodoPage"
              BackgroundColor="Black"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
-            <controls:Calendar Padding="10,0,10,0"                            
+            <Grid RowSpacing="80">
+            <controls:Calendar
+                           Grid.RowSpan="5"
+                           Padding="10,0,10,0"                            
                            DisabledBorderColor="Transparent"  
                            DisabledBackgroundColor="Transparent"
                            DatesBackgroundColorOutsideMonth="Transparent"
@@ -41,12 +43,91 @@
                            SelectedDate="{Binding Date}"  
                            SpecialDates="{Binding Attendances}"  
                            DateCommand="{Binding DateChosen}"/>
+            </Grid>
+            <StackLayout Orientation="Horizontal">
+                <BoxView x:Name="boxview_todo_1st" Color="Gold" CornerRadius="10" HeightRequest="5" />
+                <Label x:Name="label_todo_learn" Text="Learn : " TextColor="White" FontSize="20" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold" />
+            </StackLayout>
+            <Grid x:Name="Grid_todo_Learn">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Text="이름" FontSize="Subtitle" BackgroundColor="Green" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="1" Grid.Row="0" Text="단계" FontSize="Subtitle" BackgroundColor="Orange" HorizontalTextAlignment="Center"/>                
+            </Grid>
+            <ListView x:Name="listLearn" SeparatorColor="White" BackgroundColor="Gold">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50*"/>
+                                    <ColumnDefinition Width="50*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding Usr}"/>
+                                <Label Grid.Column="1" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding LearnStage}"/>                                
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
             
-            <BoxView x:Name="boxview_todo_1st" Color="DeepPink" CornerRadius="10" HeightRequest="5" />
-            <Label x:Name="label_todo_learn" Text="Learn : " TextColor="White" FontSize="20" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold" />
+            
             <BoxView x:Name="boxview_todo_2nd" Color="Transparent" CornerRadius="10" HeightRequest="10" />
-            <BoxView x:Name="boxview_todo_3th" Color="DarkViolet" CornerRadius="10" HeightRequest="5"  />
-            <Label x:Name="label_todo_test" Text="Test : " TextColor="White" FontSize="20" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
+
+            <StackLayout Orientation="Horizontal">
+                <BoxView x:Name="boxview_todo_3th" Color="White" CornerRadius="10" HeightRequest="5"  />
+                <Label x:Name="label_todo_test" Text="Test : " TextColor="White" FontSize="20" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
+            </StackLayout>
+
+            <Grid x:Name="Grid_todo_Test">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="35*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="35*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Text="이름" FontSize="Subtitle" BackgroundColor="Green" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="1" Grid.Row="0" Text="단계" FontSize="Subtitle" BackgroundColor="Orange" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="2" Grid.Row="0" Text="점수" FontSize="Subtitle" BackgroundColor="Magenta" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="3" Grid.Row="0" Text="시간" FontSize="Subtitle" BackgroundColor="LightSkyBlue" HorizontalTextAlignment="Center"/>
+            </Grid>
+            <ListView x:Name="listTest" SeparatorColor="White" BackgroundColor="Gold">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="35*"/>
+                                    <ColumnDefinition Width="20*"/>
+                                    <ColumnDefinition Width="30*"/>
+                                    <ColumnDefinition Width="35*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding Usr}"/>
+                                <Label Grid.Column="1" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding TestStage}"/>
+                                <Label Grid.Column="2" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding TestScore}"/>
+                                <Label Grid.Column="3" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding TestTime}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

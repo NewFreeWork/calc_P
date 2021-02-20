@@ -859,6 +859,7 @@ C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus.An
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\res\mipmap-xxhdpi\launcher_foreground.png
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\res\mipmap-xxxhdpi\icon.png
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\res\mipmap-xxxhdpi\launcher_foreground.png
+C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\res\drawable\splash.jpg
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\uploadflags.txt
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\resolvedassemblies.hash
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\link.flag
@@ -1197,4 +1198,3 @@ C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus.An
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus.Android\obj\Release\90\res\drawable\splash.jpg

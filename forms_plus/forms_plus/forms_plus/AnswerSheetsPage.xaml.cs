@@ -23,6 +23,15 @@ namespace forms_plus
                                             LearnSetSington.Instance.setStage,
                                             AnswerSheetsData.Instance.MyScore,
                                             AnswerSheetsData.Instance.TotalTime);
+
+
+            String Date = StringDate.Instance.DateYMD_to_String(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+
+            App.CalTestInfoDatabase.SaveCalendarTestInfo(UserInfo.Instance.userName,
+                                            LearnSetSington.Instance.setStage,
+                                            Date,
+                                            AnswerSheetsData.Instance.MyScore,
+                                            AnswerSheetsData.Instance.TotalTime);
         }
 
 #if false // int to string
