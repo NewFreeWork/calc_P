@@ -93,6 +93,7 @@
                 Grid.Row="12" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"
                 Font="30" FontAttributes="Bold" TextColor="Black"           
                 BackgroundColor="Gold" ScaleX="1.1" ScaleY="0.8"
+                BorderColor="White" BorderWidth="3" CornerRadius="10"
                 FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
                 Clicked="AnswerButton1_Clicked"
                 ></Button>
@@ -102,6 +103,7 @@
                 Grid.Row="12" Grid.RowSpan="2" Grid.Column="4" Grid.ColumnSpan="2"
                 Font="30" FontAttributes="Bold" TextColor="Black"           
                 BackgroundColor="Gold" ScaleX="1.1" ScaleY="0.8"
+                BorderColor="White" BorderWidth="3" CornerRadius="10"
                 FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
                 Clicked="AnswerButton2_Clicked"
                 ></Button>
@@ -111,6 +113,7 @@
                 Grid.Row="14" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"
                 Font="30" FontAttributes="Bold" TextColor="Black"           
                 BackgroundColor="Gold" ScaleX="1.1" ScaleY="0.8"
+                BorderColor="White" BorderWidth="3" CornerRadius="10"
                 FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
                 Clicked="AnswerButton3_Clicked"
                 ></Button>
@@ -120,6 +123,7 @@
                 Grid.Row="14" Grid.RowSpan="2" Grid.Column="4" Grid.ColumnSpan="2"
                 Font="30" FontAttributes="Bold" TextColor="Black"           
                 BackgroundColor="Gold" ScaleX="1.1" ScaleY="0.8"
+                BorderColor="White" BorderWidth="3" CornerRadius="10"
                 FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
                 Clicked="AnswerButton4_Clicked"
                 ></Button>
@@ -127,7 +131,7 @@
 
             <Button
                 x:Name="ConfirmButton"
-                Grid.Row="17" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="3"
+                Grid.Row="17" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"
                 Text="정답 확인" Font="30" FontAttributes="Bold" TextColor="Black"           
                 BackgroundColor="Gold"
                 FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"

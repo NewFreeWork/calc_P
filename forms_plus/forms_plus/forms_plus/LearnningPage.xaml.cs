@@ -240,7 +240,7 @@ namespace forms_plus
         {
             Button Param = sender as Button;
             string getText;
-            int getValue = 0;            
+            int getValue = 0;
 
             getText = Param.Text.ToString();
             getValue = Convert.ToInt32(getText);
@@ -252,8 +252,16 @@ namespace forms_plus
                 Btn1s.TextColor = Color.White;
                 btn1s_flag = false;
 
-                btn10s_flag = true;
-                Btn10s.TextColor = Color.Red;
+                if ((LearnSetSington.Instance.setUpDispOnOff == true) && (LearnSetSington.Instance.setNdigit != 1))
+                {
+                    btnUp10s_flag = true;
+                    Btn_Up10s.TextColor = Color.Red;
+                }
+                else
+                {
+                    btn10s_flag = true;
+                    Btn10s.TextColor = Color.Red;
+                }
 
             }
             else if (btn10s_flag == true)
@@ -263,8 +271,16 @@ namespace forms_plus
                 Btn10s.TextColor = Color.White;
                 btn10s_flag = false;
 
-                btn100s_flag = true;
-                Btn100s.TextColor = Color.Red;
+                if (LearnSetSington.Instance.setUpDispOnOff == true && (LearnSetSington.Instance.setNdigit == 3))
+                {
+                    btnUp100s_flag = true;
+                    Btn_Up100s.TextColor = Color.Red;
+                }
+                else
+                {
+                    btn100s_flag = true;
+                    Btn100s.TextColor = Color.Red;
+                }
             }
             else if (btn100s_flag == true)
             {
@@ -289,6 +305,9 @@ namespace forms_plus
                 Btn_Up100s.Text = getText;
                 Btn_Up100s.TextColor = Color.White;
                 btnUp100s_flag = false;
+
+                btn100s_flag = true;
+                Btn100s.TextColor = Color.Red;
             }
             else if (btnUp10s_flag == true)
             {
@@ -296,6 +315,9 @@ namespace forms_plus
                 Btn_Up10s.Text = getText;
                 Btn_Up10s.TextColor = Color.White;
                 btnUp10s_flag = false;
+
+                btn10s_flag = true;
+                Btn10s.TextColor = Color.Red;
             }
             else
             {
