@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
              mc:Ignorable="d"
              x:Class="forms_plus.MenuPage"
              BackgroundColor="Black"
@@ -77,6 +78,11 @@
                     Grid.Column="4" Grid.Row="11" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="ToDo_Clicked" 
                     BorderColor="White" BorderWidth="3" CornerRadius="10"
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
+
+            <controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/3559663371"
+                               BackgroundColor="White"
+                               Grid.Column="0" Grid.Row="18" Grid.ColumnSpan="7" Grid.RowSpan="2"  />
+            
         </Grid>
     </ContentPage.Content>
 </ContentPage>

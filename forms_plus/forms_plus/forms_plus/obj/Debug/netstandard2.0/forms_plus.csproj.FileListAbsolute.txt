@@ -128,11 +128,10 @@ C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\ob
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\SettingPage_Stage.xaml.g.cs
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\TestPage.xaml.g.cs
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\TodoPage.xaml.g.cs
-C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.csproj.CoreCompileInputs.cache
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.AssemblyInfoInputs.cache
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.AssemblyInfo.cs
+C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.csproj.CoreCompileInputs.cache
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.dll
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\ref\forms_plus.dll
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.pdb
-C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.csprojAssemblyReference.cache
