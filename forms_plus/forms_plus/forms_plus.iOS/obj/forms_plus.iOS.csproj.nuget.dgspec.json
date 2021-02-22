@@ -42,17 +42,21 @@
       "frameworks": {
         "xamarinios10": {
           "dependencies": {
+            "MarcTron.Admob": {
+              "target": "Package",
+              "version": "[1.6.1, )"
+            },
             "XamForms.Controls.Calendar": {
               "target": "Package",
               "version": "[1.1.1, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.3.1, )"
+              "version": "[1.6.1, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.4.0.991265, )"
+              "version": "[5.0.0.2012, )"
             }
           }
         }
@@ -107,6 +111,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "MarcTron.Admob": {
+              "target": "Package",
+              "version": "[1.6.1, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -119,15 +127,15 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.3.1, )"
+              "version": "[1.6.1, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.4.0.991265, )"
+              "version": "[5.0.0.2012, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
-              "version": "[1.6.292, )"
+              "version": "[1.7.335, )"
             }
           },
           "imports": [
