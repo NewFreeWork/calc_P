@@ -14,7 +14,8 @@ namespace forms_plus
     {
         public RankingPage()
         {
-            //InitializeComponent();
+            InitializeComponent();
+
             Children.Add(new RankingStage1Page());
             Children.Add(new RankingStage2Page());
             Children.Add(new RankingStage3Page());

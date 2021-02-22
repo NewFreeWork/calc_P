@@ -3,8 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
              mc:Ignorable="d"
              x:Class="forms_plus.RankingStage4Page"
+             NavigationPage.HasNavigationBar="False"
              Title="4단계">
     <ContentPage.Content>
         <StackLayout>
@@ -54,6 +56,8 @@
                     BorderColor="White" BorderWidth="3"
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
                     Clicked="Btn_DeleteHistory" />
+            <!--<controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/3559663371"/>-->
+            <controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-3940256099942544/6300978111"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

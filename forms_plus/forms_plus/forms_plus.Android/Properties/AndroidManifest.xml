@@ -3,6 +3,7 @@
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="29" />
 	<application android:label="더하기" android:icon="@mipmap/icon">
 		<!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
+		<!--<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-4758870064199012~2309643966" />-->
 		<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713" />
 	</application>
 	<uses-permission android:name="android.permission.INTERNET" />
