@@ -174,6 +174,8 @@ namespace forms_plus
             AnswerButton4.BorderColor = Color.White;
             AnswerButton1.BorderWidth = 5;
 
+            Label_SelectedAnswer.Text = AnswerButton1.Text;
+
         }
         private void AnswerButton2_Clicked(object sender, EventArgs e)
         {
@@ -183,6 +185,8 @@ namespace forms_plus
             AnswerButton3.BorderColor = Color.White;
             AnswerButton4.BorderColor = Color.White;
             AnswerButton2.BorderWidth = 5;
+
+            Label_SelectedAnswer.Text = AnswerButton2.Text;
         }
         private void AnswerButton3_Clicked(object sender, EventArgs e)
         {
@@ -192,6 +196,8 @@ namespace forms_plus
             AnswerButton3.BorderColor = Color.Red;
             AnswerButton4.BorderColor = Color.White;
             AnswerButton3.BorderWidth = 5;
+
+            Label_SelectedAnswer.Text = AnswerButton3.Text;
         }
         private void AnswerButton4_Clicked(object sender, EventArgs e)
         {
@@ -201,31 +207,45 @@ namespace forms_plus
             AnswerButton3.BorderColor = Color.White;
             AnswerButton4.BorderColor = Color.Red;
             AnswerButton4.BorderWidth = 5;
+
+            Label_SelectedAnswer.Text = AnswerButton4.Text;
         }
 
         private async void Result_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new LearnResultPage());
-
-            Init_AnswerButton();
-
-            if (PassQuestionNum < LearnSetSington.Instance.setQ_Num)
+            if ((AnswerButton1.BorderColor == Color.White) 
+                && (AnswerButton2.BorderColor == Color.White)
+                && (AnswerButton3.BorderColor == Color.White)
+                && (AnswerButton4.BorderColor == Color.White))
             {
-                PassQuestionNum++;
-                Label_PassQNUM.Text = Convert.ToString(PassQuestionNum);
-                MakeQuestionMultipleChoice();
-                MakeMultipleChoice(ResultData.Instance.rightSum);
+                await DisplayAlert("알림", "정답을 선택해주세요!", "확인");
             }
-            else
+            else 
             {
-                String Date = StringDate.Instance.DateYMD_to_String(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+                await Navigation.PushModalAsync(new LearnResultPage());
 
-                App.CalLearnInfoDatabase.SaveCalendarLearnInfo(UserInfo.Instance.userName,
-                                      LearnSetSington.Instance.setStage,
-                                      Date,
-                                      true);
+                Init_AnswerButton();
 
-                await Navigation.PopAsync();
+                Label_SelectedAnswer.Text = "?";
+
+                if (PassQuestionNum < LearnSetSington.Instance.setQ_Num)
+                {
+                    PassQuestionNum++;
+                    Label_PassQNUM.Text = Convert.ToString(PassQuestionNum);
+                    MakeQuestionMultipleChoice();
+                    MakeMultipleChoice(ResultData.Instance.rightSum);
+                }
+                else
+                {
+                    String Date = StringDate.Instance.DateYMD_to_String(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+
+                    App.CalLearnInfoDatabase.SaveCalendarLearnInfo(UserInfo.Instance.userName,
+                                          LearnSetSington.Instance.setStage,
+                                          Date,
+                                          true);
+
+                    await Navigation.PopAsync();
+                }
             }
             
         }

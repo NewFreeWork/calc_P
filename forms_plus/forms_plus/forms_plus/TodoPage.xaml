@@ -20,14 +20,15 @@
                            DatesBackgroundColorOutsideMonth="Transparent"
                            DatesBackgroundColor="Transparent"
                            SelectedBackgroundColor="Transparent"
-                           SelectedTextColor="White"
-                           SelectedBorderWidth="1"
+                           SelectedTextColor="Gold"                
+                           SelectedBorderWidth="0"
                            BorderColor="Transparent"
                            DatesTextColor="White"
                            ShowNumberOfWeek="false"  
-                           StartDay="Monday"  
+                           StartDay="Sunday"  
                            TitleLabelTextColor="White"  
-                           TitleLeftArrowTextColor="Red"
+                           TitleLeftArrowTextColor="Gold"
+                           TitleRightArrowTextColor="Green"
                            BackgroundColor="Transparent"
                            DateClicked="CalrendarDate_Clicked"
                            WeekdaysTextColor="White"
@@ -97,12 +98,12 @@
                     <ColumnDefinition Width="30*"/>
                     <ColumnDefinition Width="35*"/>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Grid.Row="0" Text="이름" FontSize="Subtitle" BackgroundColor="Green" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="0" Grid.Row="0" Text="이름" FontSize="Subtitle" BackgroundColor="Gold" HorizontalTextAlignment="Center"/>
                 <Label Grid.Column="1" Grid.Row="0" Text="단계" FontSize="Subtitle" BackgroundColor="Orange" HorizontalTextAlignment="Center"/>
                 <Label Grid.Column="2" Grid.Row="0" Text="점수" FontSize="Subtitle" BackgroundColor="Magenta" HorizontalTextAlignment="Center"/>
                 <Label Grid.Column="3" Grid.Row="0" Text="시간" FontSize="Subtitle" BackgroundColor="LightSkyBlue" HorizontalTextAlignment="Center"/>
             </Grid>
-            <ListView x:Name="listTest" SeparatorColor="White" BackgroundColor="Gold">
+            <ListView x:Name="listTest" SeparatorColor="White" BackgroundColor="Green">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

@@ -26,7 +26,8 @@ namespace forms_plus
         private bool btnUp100s_flag = false;
         private bool btnUp10s_flag = false;
 
-
+        private int old_firstNum100s = 0, old_firstNum10s = 0, old_firstNum1s = 0;
+        private int old_secNum100s = 0, old_secNum10s = 0, old_secNum1s = 0;
         public LearnningPage()
         {
             InitializeComponent();
@@ -419,6 +420,18 @@ namespace forms_plus
 
             return ret;
         }
+        private int GetNewRandomNum(int startNum, int endNum, int oldNum)
+        {
+            Random rnd = new Random();
+            int newNum = 0;
+
+            do
+            {
+                newNum = rnd.Next(startNum, endNum);
+            } while (newNum == oldNum);
+
+            return newNum;
+        }
         private int GetLimitedRandomNum(int firstNum)
         {
             Random rnd = new Random();
@@ -443,13 +456,26 @@ namespace forms_plus
                 case 1:
                     if (LearnSetSington.Instance.setUpONOFF == true)
                     {
-                        firstNum1s = rnd.Next(1, 10);
-                        secNum1s = rnd.Next(1, 10);
+                        do
+                        {
+                            firstNum1s = GetNewRandomNum(1, 10, old_firstNum1s);
+                            secNum1s = GetNewRandomNum(1, 10, old_secNum1s);
+                        } while (firstNum1s + secNum1s < 10);
+                        old_firstNum1s = firstNum1s;
+                        old_secNum1s = secNum1s;
                     }
                     else
                     {
-                        firstNum1s = rnd.Next(1, 9);
+                        firstNum1s = GetNewRandomNum(1, 9, old_firstNum1s);
                         secNum1s = GetLimitedRandomNum(firstNum1s);
+
+                        if ((firstNum1s+ secNum1s) == (old_firstNum1s + old_secNum1s))
+                        {
+                            secNum1s = GetNewRandomNum(1, 9, old_firstNum1s);
+                            firstNum1s = GetLimitedRandomNum(secNum1s);
+                        }
+                        old_firstNum1s = firstNum1s;
+                        old_secNum1s = secNum1s;
                     }
                     Label_FirstNum1s.Text = Convert.ToString(firstNum1s);
                     Label_SecNum1s.Text = Convert.ToString(secNum1s);
@@ -470,17 +496,27 @@ namespace forms_plus
                 case 2:
                     if (LearnSetSington.Instance.setUpONOFF == true)
                     {
-                        firstNum10s = rnd.Next(1, 10);
-                        secNum10s = rnd.Next(1, 10);
-                        firstNum1s = rnd.Next(1, 10);
-                        secNum1s = rnd.Next(1, 10);
+                        firstNum10s = GetNewRandomNum(1, 10, old_firstNum10s);
+                        secNum10s = GetNewRandomNum(1, 10, old_secNum10s);
+                        firstNum1s = GetNewRandomNum(1, 10, old_firstNum1s);
+                        secNum1s = GetNewRandomNum(1, 10, old_secNum1s);
+
+                        old_firstNum10s = firstNum10s;
+                        old_secNum10s = secNum10s;
+                        old_firstNum1s = firstNum1s;
+                        old_secNum1s = secNum1s;
                     }
-                    else 
+                    else
                     {
-                        firstNum10s = rnd.Next(1, 9);
+                        firstNum10s = GetNewRandomNum(1, 9, old_firstNum10s);
                         secNum10s = GetLimitedRandomNum(firstNum10s);
-                        firstNum1s = rnd.Next(1, 9);
+                        firstNum1s = GetNewRandomNum(1, 9, old_firstNum1s);
                         secNum1s = GetLimitedRandomNum(firstNum1s);
+
+                        old_firstNum10s = firstNum10s;
+                        old_secNum10s = secNum10s;
+                        old_firstNum1s = firstNum1s;
+                        old_secNum1s = secNum1s;
                     }
 
                     Label_FirstNum10s.Text = Convert.ToString(firstNum10s);
@@ -517,23 +553,37 @@ namespace forms_plus
                 case 3:
                     if (LearnSetSington.Instance.setUpONOFF == true)
                     {
-                        firstNum100s = rnd.Next(1, 10);
-                        secNum100s = rnd.Next(1, 10);
-                        firstNum10s = rnd.Next(1, 10);
-                        secNum10s = rnd.Next(1, 10);
-                        firstNum1s = rnd.Next(1, 10);
-                        secNum1s = rnd.Next(1, 10);
+                        firstNum100s = GetNewRandomNum(1, 10, old_firstNum100s);
+                        secNum100s = GetNewRandomNum(1, 10, old_secNum100s);
+                        firstNum10s = GetNewRandomNum(1, 10, old_firstNum10s);
+                        secNum10s = GetNewRandomNum(1, 10, old_secNum10s);
+                        firstNum1s = GetNewRandomNum(1, 10, old_firstNum1s);
+                        secNum1s = GetNewRandomNum(1, 10, old_secNum1s);
+
+                        old_firstNum100s = firstNum100s;
+                        old_secNum100s = secNum100s;
+                        old_firstNum10s = firstNum10s;
+                        old_secNum10s = secNum10s;
+                        old_firstNum1s = firstNum1s;
+                        old_secNum1s = secNum1s;
                     }
                     else
                     {
-                        firstNum100s = rnd.Next(1, 9);
+                        firstNum100s = GetNewRandomNum(1, 9, old_firstNum100s);
                         secNum100s = GetLimitedRandomNum(firstNum100s);
-                        firstNum10s = rnd.Next(1, 9);
+                        firstNum10s = GetNewRandomNum(1, 9, old_firstNum10s);
                         secNum10s = GetLimitedRandomNum(firstNum10s);
-                        firstNum1s = rnd.Next(1, 9);
+                        firstNum1s = GetNewRandomNum(1, 9, old_firstNum1s);
                         secNum1s = GetLimitedRandomNum(firstNum1s);
+
+                        old_firstNum100s = firstNum100s;
+                        old_secNum100s = secNum100s;
+                        old_firstNum10s = firstNum10s;
+                        old_secNum10s = secNum10s;
+                        old_firstNum1s = firstNum1s;
+                        old_secNum1s = secNum1s;
                     }
-                   
+
                     Label_FirstNum100s.Text = Convert.ToString(firstNum100s);
                     Label_SecNum100s.Text = Convert.ToString(secNum100s);
                     Label_FirstNum10s.Text = Convert.ToString(firstNum10s);

@@ -208,7 +208,8 @@
             <Button
                 x:Name="ConfirmButton"
                 Grid.Row="17" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"
-                Text="정답 확인" Font="30" FontAttributes="Bold" TextColor="Black"           
+                Text="정답 확인" Font="30" FontAttributes="Bold" TextColor="Black"     
+                BorderColor="White" BorderWidth="3" CornerRadius="10"
                 BackgroundColor="Gold"
                 FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
                 Clicked="Result_Clicked"

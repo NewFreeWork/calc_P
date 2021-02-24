@@ -39,10 +39,11 @@ namespace forms_plus
 
             DateTime today = DateTime.Now.Date;
             DateTime firstDay = today.AddDays(1 - today.Day);
+            String sYear = DateTime.Now.Year.ToString();
+            String sMonth = (DateTime.Now.Month < 10) ? ("0" + DateTime.Now.Month.ToString()) : DateTime.Now.Month.ToString();
+
             for (int Day = 1; Day <= DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month); Day++)
             {
-                String sYear = DateTime.Now.Year.ToString();
-                String sMonth = (DateTime.Now.Month < 10) ? ("0" + DateTime.Now.Month.ToString()) : DateTime.Now.Month.ToString();
                 String sDay = (Day < 10) ? ("0" + Day.ToString()) : Day.ToString();
                 String Date = sYear+ "-" + sMonth + "-" + sDay;
 
@@ -96,7 +97,7 @@ namespace forms_plus
                                 new Pattern{WidthPercent = 1f, HightPercent = 0.05f, Color = Color.Transparent},
                                 new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Gold},
                                 new Pattern{WidthPercent = 1f, HightPercent = 0.05f, Color = Color.Transparent},
-                                //new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.White},
+                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
                             }
                         }
                     });
@@ -120,7 +121,7 @@ namespace forms_plus
                                 new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
                                 new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
                                 new Pattern{WidthPercent = 1f, HightPercent = 0.05f, Color = Color.Transparent},
-                                //new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Gold},
+                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
                                 new Pattern{WidthPercent = 1f, HightPercent = 0.05f, Color = Color.Transparent},
                                 new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.White},
                             }
@@ -167,7 +168,7 @@ namespace forms_plus
             {
                 boxview_todo_1st.IsVisible = true;
                 boxview_todo_2nd.IsVisible = true;
-                boxview_todo_3th.IsVisible = true;
+                //boxview_todo_3th.IsVisible = true;
 
                 label_todo_learn.IsVisible = true;
                 IsVisibleLearnOrTest = true;
@@ -180,7 +181,7 @@ namespace forms_plus
 
             if (App.CalTestInfoDatabase.getTodayTestListCount(sDate) > 0)
             {
-                boxview_todo_1st.IsVisible = true;
+                //boxview_todo_1st.IsVisible = true;
                 boxview_todo_2nd.IsVisible = true;
                 boxview_todo_3th.IsVisible = true;
 
