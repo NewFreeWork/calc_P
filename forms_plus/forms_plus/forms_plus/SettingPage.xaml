@@ -122,7 +122,7 @@
                 Clicked="Start_Clicked" CornerRadius="15"
                 FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
                 ></Button>
-        <controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/3559663371"
+        <controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/7272661182"
                                BackgroundColor="White"
                                Grid.Column="0" Grid.Row="18" Grid.ColumnSpan="7" Grid.RowSpan="2"  />
     </Grid>

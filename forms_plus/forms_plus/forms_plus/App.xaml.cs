@@ -11,7 +11,7 @@ namespace forms_plus
         static RankingDatabase RankingInfoDB;
         static CalendarLearnDatabase CalendarLearnInfoDB;
         static CalendarTestDatabase CalendarTestInfoDB;
-
+        static LoginDatabase LoginInfoDB;
         public static RankingDatabase RkInfoDatabase
         {
             get 
@@ -44,6 +44,18 @@ namespace forms_plus
                     CalendarTestInfoDB = new CalendarTestDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "CalendarTestInfo1.db3"));
                 }
                 return CalendarTestInfoDB;
+            }
+        }
+
+        public static LoginDatabase LoginInfoDatabase
+        {
+            get
+            {
+                if (LoginInfoDB == null)
+                {
+                    LoginInfoDB = new LoginDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "LoginInfo.db3"));
+                }
+                return LoginInfoDB;
             }
         }
 

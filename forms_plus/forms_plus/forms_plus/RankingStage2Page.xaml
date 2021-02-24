@@ -57,7 +57,7 @@
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
                     Clicked="Btn_DeleteHistory" />
             <!--<controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/3559663371"/>-->
-            <controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-3940256099942544/6300978111"/>
+            <controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/7272661182"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

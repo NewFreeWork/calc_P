@@ -16,7 +16,26 @@ namespace forms_plus
         public MainPage()
         {
             InitializeComponent();
+            //UserInfo.Instance.userName = " ";
+
+            Print_UserName();
+        }
+
+        private void Print_UserName()
+        {
+            String Name = App.LoginInfoDatabase.GetUserNameAsync();
+
             UserInfo.Instance.userName = " ";
+
+            if (Name == "")
+            {
+                UserInfo.Instance.userName = " ";
+            }
+            else 
+            {
+                UserInfo.Instance.userName = Name;
+                Entry_InsertName.Text = Name;
+            }
         }
 
         private void Entry_InputUserName(object sender, TextChangedEventArgs e)
@@ -41,6 +60,8 @@ namespace forms_plus
             }
             else
             {
+                App.LoginInfoDatabase.ClearAllUserName();
+                App.LoginInfoDatabase.SaveLoginUserName(UserInfo.Instance.userName);
                 await Navigation.PushAsync(new MenuPage()); 
             }
         }
