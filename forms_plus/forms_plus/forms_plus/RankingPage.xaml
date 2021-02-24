@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              xmlns:local="clr-namespace:forms_plus;assembly=forms_plus"
-             BarBackgroundColor="Gold"
+             BarBackgroundColor="Gold" BarTextColor="Black"
              NavigationPage.HasNavigationBar="False"
              x:Class="forms_plus.RankingPage">
   <!--Pages can be added as references or inline-->

@@ -25,7 +25,7 @@
                 <Label Grid.Column="0" Grid.Row="0" Text="순위" FontSize="Subtitle" BackgroundColor="Green" HorizontalTextAlignment="Center"/>
                 <Label Grid.Column="1" Grid.Row="0" Text="이름" FontSize="Subtitle" BackgroundColor="Orange" HorizontalTextAlignment="Center"/>
                 <Label Grid.Column="2" Grid.Row="0" Text="단계" FontSize="Subtitle" BackgroundColor="SkyBlue" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="3" Grid.Row="0" Text="점수" FontSize="Subtitle" BackgroundColor="Gold" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="3" Grid.Row="0" Text="점수" FontSize="Subtitle" BackgroundColor="Lime" HorizontalTextAlignment="Center"/>
                 <Label Grid.Column="4" Grid.Row="0" Text="시간" FontSize="Subtitle" BackgroundColor="Pink" HorizontalTextAlignment="Center"/>
             </Grid>
             <ListView x:Name="listx">
@@ -57,8 +57,9 @@
                     BorderColor="White" BorderWidth="3"
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
                     Clicked="Btn_DeleteHistory" />
-            <!--<controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/3559663371"/>-->
-            <controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/7272661182"/>
+            <controls:MTAdView 
+                BackgroundColor="White" WidthRequest="320" HeightRequest="50" VerticalOptions="EndAndExpand"          
+                PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/7272661182"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

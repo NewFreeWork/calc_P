@@ -64,7 +64,7 @@
                 FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
                 Clicked="Btn_Menupage_Go"/>
 
-        <Label Text="COPYRIGHT 3DL, All rights reserved" Grid.Column="0" Grid.Row="18" Grid.ColumnSpan="7" Grid.RowSpan="2" 
+        <Label Text="COPYRIGHT Code Plane, All rights reserved" Grid.Column="0" Grid.Row="18" Grid.ColumnSpan="7" Grid.RowSpan="2" 
                VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Small" TextColor="White" 
                FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
         
