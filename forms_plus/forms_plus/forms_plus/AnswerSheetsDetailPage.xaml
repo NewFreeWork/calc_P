@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             BackgroundColor="ForestGreen"
+             BackgroundColor="#272622"
              x:Class="forms_plus.AnswerSheetsDetailPage"
              NavigationPage.HasNavigationBar="False">
     <!--kindbiny_20200415 mainpage 타이틀바 삭제-->
@@ -58,7 +58,7 @@
             <Label                             
                 Text="입력한 답:"
                 Grid.Column="0"  Grid.Row="3"  Grid.ColumnSpan="2" Grid.RowSpan="2"
-                 Font="25" FontAttributes="Bold" TextColor="Black"           
+                 Font="25" FontAttributes="Bold" TextColor="White"           
                 BackgroundColor="Transparent"
                 VerticalTextAlignment="Center" HorizontalTextAlignment="End"
                 FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"                

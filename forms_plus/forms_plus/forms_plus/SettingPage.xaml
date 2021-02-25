@@ -6,7 +6,7 @@
              xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
              mc:Ignorable="d"
              x:Class="forms_plus.SettingPage"
-             BackgroundColor="Gray"
+             BackgroundColor="#272622"
              NavigationPage.HasNavigationBar="False">
     <!--kindbiny_20200415 mainpage 타이틀바 삭제-->
 
@@ -70,7 +70,7 @@
                TextColor="Gold"
                ></Label>
         <Picker x:Name="PickerUpOnOff"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold" TextColor="White"
                 Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2"
                 HorizontalTextAlignment="Center"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged_UP_OnOff">
@@ -80,7 +80,7 @@
                 </Picker.Items>
         </Picker>
         <Picker x:Name="PickerUpDisp"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold" TextColor="White"
                 Grid.Column="3" Grid.Row="5" Grid.RowSpan="2" Grid.ColumnSpan="2"
                 HorizontalTextAlignment="Center"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged_UP_Display">
@@ -90,7 +90,7 @@
             </Picker.Items>
         </Picker>
         <Picker x:Name="PickerNdigit"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold" TextColor="White"
                 Grid.Column="3" Grid.Row="8" Grid.RowSpan="2" Grid.ColumnSpan="2"
                 HorizontalTextAlignment="Center"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged_Ndigit">
@@ -101,7 +101,7 @@
             </Picker.Items>
         </Picker>
         <Picker x:Name="PickerQNum"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold" TextColor="White"
                 Grid.Column="3" Grid.Row="11" Grid.RowSpan="2" Grid.ColumnSpan="2"
                 HorizontalTextAlignment="Center"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged_QNum">
@@ -127,7 +127,7 @@
                 FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
                 ></Button>
         <controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/7272661182"
-                               BackgroundColor="Gray"
+                               BackgroundColor="#272622"
                                Grid.Column="0" Grid.Row="17" Grid.ColumnSpan="7" Grid.RowSpan="3"  />
     </Grid>
 

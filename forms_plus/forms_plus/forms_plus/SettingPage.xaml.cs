@@ -19,6 +19,8 @@ namespace forms_plus
         private bool pickerSelectNdigit = false;
         private bool pickerSelectQNum = false;
 
+        private bool accessible = true;
+
         public SettingPage()
         {
             InitializeComponent();
@@ -26,23 +28,37 @@ namespace forms_plus
 
         private async void Start_Clicked(object sender, EventArgs e)
         {
-            if ((pickerSelectUPOnOff == false)
-                || (pickerSelectUPDisp == false)
-                || (pickerSelectNdigit == false)
-                || (pickerSelectQNum == false))
+            try
             {
-                await DisplayAlert("알림","설정을 선택해 주세요.","확인");
+                if (accessible == true)
+                {
+                    accessible = false;
+
+                    if ((pickerSelectUPOnOff == false)
+                        || (pickerSelectUPDisp == false)
+                        || (pickerSelectNdigit == false)
+                        || (pickerSelectQNum == false))
+                    {
+                        await DisplayAlert("알림", "설정을 선택해 주세요.", "확인");
+                    }
+                    else
+                    {
+                        if (LearnSetSington.Instance.IsTest == true)
+                        {
+                            await Navigation.PushAsync(new TestPage());
+                        }
+                        else
+                        {
+                            await Navigation.PushAsync(new LearnningPage());
+                        }
+                    }
+                    accessible = true;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                if (LearnSetSington.Instance.IsTest == true)
-                {
-                    await Navigation.PushAsync(new TestPage());
-                }
-                else
-                {
-                    await Navigation.PushAsync(new LearnningPage());
-                }
+                Console.WriteLine(ex.Message);
+                accessible = true;
             }
         }
 

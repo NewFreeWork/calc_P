@@ -110,7 +110,6 @@ C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\bi
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\bin\Debug\netstandard2.0\forms_plus.dll
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\bin\Debug\netstandard2.0\ref\forms_plus.dll
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\bin\Debug\netstandard2.0\forms_plus.pdb
-C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.csprojAssemblyReference.cache
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\AnswerSheetsDetailPage.xaml.g.cs
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\AnswerSheetsPage.xaml.g.cs
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\App.xaml.g.cs
@@ -136,3 +135,4 @@ C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\ob
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.dll
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\ref\forms_plus.dll
 C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.pdb
+C:\Users\dream\Documents\Git\20200219\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.csprojAssemblyReference.cache

@@ -13,6 +13,7 @@ namespace forms_plus
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        private bool accessible = true;
         public MainPage()
         {
             InitializeComponent();
@@ -54,15 +55,28 @@ namespace forms_plus
         
         private async void Btn_Menupage_Go(object sender, EventArgs e)
         {
-            if (UserInfo.Instance.userName == " ")
+            try
             {
-                await DisplayAlert("확인", "이름을 입력해주세요.", "OK");
+                if (accessible == true)
+                {
+                    accessible = false;
+                    if (UserInfo.Instance.userName == " ")
+                    {
+                        await DisplayAlert("확인", "이름을 입력해주세요.", "OK");
+                    }
+                    else
+                    {
+                        App.LoginInfoDatabase.ClearAllUserName();
+                        App.LoginInfoDatabase.SaveLoginUserName(UserInfo.Instance.userName);
+                        await Navigation.PushAsync(new MenuPage());
+                    }
+                    accessible = true;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                App.LoginInfoDatabase.ClearAllUserName();
-                App.LoginInfoDatabase.SaveLoginUserName(UserInfo.Instance.userName);
-                await Navigation.PushAsync(new MenuPage()); 
+                Console.WriteLine(ex.Message);
+                accessible = true;
             }
         }
 

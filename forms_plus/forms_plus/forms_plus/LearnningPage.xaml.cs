@@ -28,6 +28,9 @@ namespace forms_plus
 
         private int old_firstNum100s = 0, old_firstNum10s = 0, old_firstNum1s = 0;
         private int old_secNum100s = 0, old_secNum10s = 0, old_secNum1s = 0;
+
+        private bool accessible = true;
+
         public LearnningPage()
         {
             InitializeComponent();
@@ -132,108 +135,143 @@ namespace forms_plus
             Btn_Up10s.TextColor = Color.Red;
         }
 
+        private int ConvertThreeFigure(int _100s, int _10s, int _1s)
+        {
+            int total = 0;
+
+            total = (_100s * 100) + (_10s * 10) + _1s;
+
+            return total;
+        }
         private async void Result_Clicked(object sender, EventArgs e)
         {
-            ResultData.Instance.inputSum = 0;
-
-            if (((Btn1000s.IsVisible == true) && (Btn1000s.Text == "?"))
-               || ((Btn100s.IsVisible == true) && (Btn100s.Text == "?"))
-               || ((Btn10s.IsVisible == true) && (Btn10s.Text == "?"))
-               || ((Btn1s.IsVisible == true) && (Btn1s.Text == "?"))
-               || ((Btn_Up100s.IsVisible == true) && (Btn_Up100s.Text == "?"))
-               || ((Btn_Up10s.IsVisible == true) && (Btn_Up10s.Text == "?"))
-                )
+            try
             {
-                await DisplayAlert("알림","숫자를 모두 입력해주세요!","확인");
+                if (accessible == true)
+                {
+                    accessible = false;
+                    ResultData.Instance.inputSum = 0;
+
+                    if (((Btn1000s.IsVisible == true) && (Btn1000s.Text == "?"))
+                       || ((Btn100s.IsVisible == true) && (Btn100s.Text == "?"))
+                       || ((Btn10s.IsVisible == true) && (Btn10s.Text == "?"))
+                       || ((Btn1s.IsVisible == true) && (Btn1s.Text == "?"))
+                       || ((Btn_Up100s.IsVisible == true) && (Btn_Up100s.Text == "?"))
+                       || ((Btn_Up10s.IsVisible == true) && (Btn_Up10s.Text == "?"))
+                        )
+                    {
+                        await DisplayAlert("알림", "숫자를 모두 입력해주세요!", "확인");
+                    }
+                    else
+                    {
+                        if (Btn1000s.IsVisible == true)
+                        {
+                            ResultData.Instance.input1000s = Int32.Parse(Btn1000s.Text);
+                            ResultData.Instance.inputSum += (ResultData.Instance.input1000s * 1000);
+                        }
+                        else
+                        {
+                            ResultData.Instance.input1000s = -1;
+                        }
+
+                        if (Btn100s.IsVisible == true)
+                        {
+                            ResultData.Instance.input100s = Int32.Parse(Btn100s.Text);
+                            ResultData.Instance.inputSum += (ResultData.Instance.input100s * 100);
+                        }
+                        else
+                        {
+                            ResultData.Instance.input100s = -1;
+                        }
+
+                        if (Btn10s.IsVisible == true)
+                        {
+                            ResultData.Instance.input10s = Int32.Parse(Btn10s.Text);
+                            ResultData.Instance.inputSum += (ResultData.Instance.input10s * 10);
+                        }
+                        else
+                        {
+                            ResultData.Instance.input10s = -1;
+                        }
+
+                        if (Btn1s.IsVisible == true)
+                        {
+                            ResultData.Instance.input1s = Int32.Parse(Btn1s.Text);
+                            ResultData.Instance.inputSum += (ResultData.Instance.input1s);
+                        }
+                        else
+                        {
+                            ResultData.Instance.input1s = -1;
+                        }
+
+                        if (Btn_Up100s.IsVisible == true)
+                        {
+                            ResultData.Instance.inputUp100s = Int32.Parse(Btn_Up100s.Text);
+                        }
+                        else
+                        {
+                            ResultData.Instance.inputUp100s = -1;
+                        }
+
+                        if (Btn_Up10s.IsVisible == true)
+                        {
+                            ResultData.Instance.inputUp10s = Int32.Parse(Btn_Up10s.Text);
+                        }
+                        else
+                        {
+                            ResultData.Instance.inputUp10s = -1;
+                        }
+
+                        ResultData.Instance.rightAnswer1000s = sum1000s;
+                        ResultData.Instance.rightAnswer100s = sum100s;
+                        ResultData.Instance.rightAnswer10s = sum10s;
+                        ResultData.Instance.rightAnswer1s = sum1s;
+                        ResultData.Instance.rightAnswerUp100s = up100s;
+                        ResultData.Instance.rightAnswerUp10s = up10s;
+
+                        ResultData.Instance.rightSum = (sum1000s * 1000) + (sum100s * 100) + (sum10s * 10) + sum1s;
+
+
+                        AnswerSheetsData.Instance.SetAnswerSheetsData(
+                                                                    ConvertThreeFigure(ResultData.Instance.question_first100s, ResultData.Instance.question_first10s, ResultData.Instance.question_first1s),
+                                                                    ConvertThreeFigure(ResultData.Instance.question_sec100s, ResultData.Instance.question_sec10s, ResultData.Instance.question_sec1s),
+                                                                    ConvertThreeFigure(0, ResultData.Instance.rightAnswerUp100s, ResultData.Instance.rightAnswerUp10s),
+                                                                    ResultData.Instance.rightSum,
+                                                                    ConvertThreeFigure(0, ResultData.Instance.inputUp100s, ResultData.Instance.inputUp10s),
+                                                                    ResultData.Instance.inputSum,
+                                                                    1);
+
+                        AnswerSheetsData.Instance.DetailPageIndex = 1;
+                        await Navigation.PushModalAsync(new AnswerSheetsDetailPage());
+
+                        //await Navigation.PushModalAsync(new LearnResultPage());
+
+                        Init_Question();
+                        if (PassQuestionNum < LearnSetSington.Instance.setQ_Num)
+                        {
+                            PassQuestionNum++;
+                            MakeQuestion();
+                        }
+                        else
+                        {
+                            String Date = StringDate.Instance.DateYMD_to_String(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+
+                            App.CalLearnInfoDatabase.SaveCalendarLearnInfo(UserInfo.Instance.userName,
+                                                                              LearnSetSington.Instance.setStage,
+                                                                              Date,
+                                                                              true);
+
+                            await Navigation.PopAsync();
+                        }
+                    }
+
+                    accessible = true;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                if (Btn1000s.IsVisible == true)
-                {
-                    ResultData.Instance.input1000s = Int32.Parse(Btn1000s.Text);
-                    ResultData.Instance.inputSum += (ResultData.Instance.input1000s * 1000);
-                }
-                else 
-                {
-                    ResultData.Instance.input1000s = -1;
-                }
-
-                if (Btn100s.IsVisible == true)
-                {
-                    ResultData.Instance.input100s = Int32.Parse(Btn100s.Text);
-                    ResultData.Instance.inputSum += (ResultData.Instance.input100s * 100);
-                }
-                else
-                {
-                    ResultData.Instance.input100s = -1;
-                }
-
-                if (Btn10s.IsVisible == true)
-                {
-                    ResultData.Instance.input10s = Int32.Parse(Btn10s.Text);
-                    ResultData.Instance.inputSum += (ResultData.Instance.input10s * 10);
-                }
-                else
-                {
-                    ResultData.Instance.input10s = -1;
-                }
-
-                if (Btn1s.IsVisible == true)
-                {
-                    ResultData.Instance.input1s = Int32.Parse(Btn1s.Text);
-                    ResultData.Instance.inputSum += (ResultData.Instance.input1s);
-                }
-                else
-                {
-                    ResultData.Instance.input1s = -1;
-                }
-
-                if (Btn_Up100s.IsVisible == true)
-                {
-                    ResultData.Instance.inputUp100s = Int32.Parse(Btn_Up100s.Text);
-                }
-                else
-                {
-                    ResultData.Instance.inputUp100s = -1;
-                }
-
-                if (Btn_Up10s.IsVisible == true)
-                {
-                    ResultData.Instance.inputUp10s = Int32.Parse(Btn_Up10s.Text);
-                }
-                else
-                {
-                    ResultData.Instance.inputUp10s = -1;
-                }
-
-                ResultData.Instance.rightAnswer1000s = sum1000s;
-                ResultData.Instance.rightAnswer100s = sum100s;
-                ResultData.Instance.rightAnswer10s = sum10s;
-                ResultData.Instance.rightAnswer1s = sum1s;
-                ResultData.Instance.rightAnswerUp100s = up100s;
-                ResultData.Instance.rightAnswerUp10s = up10s;
-
-                ResultData.Instance.rightSum = (sum1000s * 1000) + (sum100s*100) + (sum10s*10) + sum1s;
-
-                await Navigation.PushModalAsync(new LearnResultPage());
-
-                Init_Question();
-                if (PassQuestionNum < LearnSetSington.Instance.setQ_Num)
-                {
-                    PassQuestionNum++;
-                    MakeQuestion();
-                }
-                else 
-                {
-                    String Date = StringDate.Instance.DateYMD_to_String(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-
-                    App.CalLearnInfoDatabase.SaveCalendarLearnInfo(UserInfo.Instance.userName,
-                                                                      LearnSetSington.Instance.setStage,
-                                                                      Date,
-                                                                      true);
-
-                    await Navigation.PopAsync();
-                }
+                Console.WriteLine(ex);
+                accessible = true;
             }
         }
 

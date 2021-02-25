@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
              mc:Ignorable="d"
-             x:Class="forms_plus.RankingStage4Page" BackgroundColor="Green"
+             x:Class="forms_plus.RankingStage4Page" BackgroundColor="#272622"
              NavigationPage.HasNavigationBar="False"
              Title="4단계">
     <ContentPage.Content>
@@ -21,11 +21,11 @@
                     <ColumnDefinition Width="15*"/>
                     <ColumnDefinition Width="25*"/>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Grid.Row="0" Text="순위" FontSize="Subtitle"  TextColor="White" BackgroundColor="Red" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="1" Grid.Row="0" Text="이름" FontSize="Subtitle"  TextColor="White" BackgroundColor="Orange" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="2" Grid.Row="0" Text="단계" FontSize="Subtitle"  TextColor="White" BackgroundColor="Gold" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="3" Grid.Row="0" Text="점수" FontSize="Subtitle"  TextColor="White" BackgroundColor="DarkGreen" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="4" Grid.Row="0" Text="시간" FontSize="Subtitle"  TextColor="White" BackgroundColor="Blue" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="0" Grid.Row="0" Text="순위" FontSize="Subtitle" TextColor="White" BackgroundColor="#F2D749" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="1" Grid.Row="0" Text="이름" FontSize="Subtitle" TextColor="White" BackgroundColor="#9E9253" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="2" Grid.Row="0" Text="단계" FontSize="Subtitle" TextColor="White" BackgroundColor="#7B6E2A" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="3" Grid.Row="0" Text="점수" FontSize="Subtitle" TextColor="White" BackgroundColor="#9D8400" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="4" Grid.Row="0" Text="시간" FontSize="Subtitle" TextColor="White" BackgroundColor="#AD8400" HorizontalTextAlignment="Center"/>
             </Grid>
             <ListView x:Name="listx">
                 <ListView.ItemTemplate>
@@ -57,7 +57,7 @@
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
                     Clicked="Btn_DeleteHistory" />
             <controls:MTAdView 
-                BackgroundColor="Green" WidthRequest="320" HeightRequest="90" VerticalOptions="EndAndExpand"          
+                BackgroundColor="#272622" WidthRequest="320" HeightRequest="90" VerticalOptions="EndAndExpand"          
                 PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/7272661182"/>
         </StackLayout>
     </ContentPage.Content>

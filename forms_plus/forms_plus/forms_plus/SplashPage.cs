@@ -48,9 +48,9 @@ namespace forms_plus
             // 1.2초 동안 150배 커진다.
             await splashImage.ScaleTo(150, 2000, Easing.CubicIn);
             */
-            
-            await splashImage.FadeTo(1, 700, Easing.CubicIn);
-            await splashImage.FadeTo(0, 300, Easing.CubicOut);
+                       
+            await splashImage.FadeTo(1, 2000, Easing.Linear);
+            await splashImage.FadeTo(0, 500, Easing.Linear);
             // MainPage로 이동한다.
             Application.Current.MainPage = new NavigationPage(new MainPage());
         }

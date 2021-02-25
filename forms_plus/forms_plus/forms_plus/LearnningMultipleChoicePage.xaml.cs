@@ -13,6 +13,7 @@ namespace forms_plus
     public partial class LearnningMultipleChoicePage : ContentPage
     {
         private int PassQuestionNum = 1;
+        private bool accessible = true;
         public LearnningMultipleChoicePage()
         {
             InitializeComponent();
@@ -211,41 +212,74 @@ namespace forms_plus
             Label_SelectedAnswer.Text = AnswerButton4.Text;
         }
 
+        private int ConvertThreeFigure(int _100s, int _10s, int _1s)
+        {
+            int total = 0;
+
+            total = (_100s * 100) + (_10s * 10) + _1s;
+
+            return total;
+        }
         private async void Result_Clicked(object sender, EventArgs e)
         {
-            if ((AnswerButton1.BorderColor == Color.White) 
-                && (AnswerButton2.BorderColor == Color.White)
-                && (AnswerButton3.BorderColor == Color.White)
-                && (AnswerButton4.BorderColor == Color.White))
+            try
             {
-                await DisplayAlert("알림", "정답을 선택해주세요!", "확인");
+                if (accessible == true)
+                {
+                    accessible = false;
+
+                    if ((AnswerButton1.BorderColor == Color.White)
+                        && (AnswerButton2.BorderColor == Color.White)
+                        && (AnswerButton3.BorderColor == Color.White)
+                        && (AnswerButton4.BorderColor == Color.White))
+                    {
+                        await DisplayAlert("알림", "정답을 선택해주세요!", "확인");
+                    }
+                    else
+                    {
+                        AnswerSheetsData.Instance.SetAnswerSheetsData(
+                                                                      ConvertThreeFigure(ResultData.Instance.question_first100s, ResultData.Instance.question_first10s, ResultData.Instance.question_first1s),
+                                                                      ConvertThreeFigure(ResultData.Instance.question_sec100s, ResultData.Instance.question_sec10s, ResultData.Instance.question_sec1s),
+                                                                      ConvertThreeFigure(0, ResultData.Instance.rightAnswerUp100s, ResultData.Instance.rightAnswerUp10s),
+                                                                      ResultData.Instance.rightSum,
+                                                                      ConvertThreeFigure(0, ResultData.Instance.inputUp100s, ResultData.Instance.inputUp10s),
+                                                                      ResultData.Instance.inputSum,
+                                                                      1);
+                        AnswerSheetsData.Instance.DetailPageIndex = 1;
+                        await Navigation.PushModalAsync(new AnswerSheetsDetailPage());
+
+                        //await Navigation.PushModalAsync(new LearnResultPage());
+
+                        Init_AnswerButton();
+
+                        Label_SelectedAnswer.Text = "?";
+
+                        if (PassQuestionNum < LearnSetSington.Instance.setQ_Num)
+                        {
+                            PassQuestionNum++;
+                            Label_PassQNUM.Text = Convert.ToString(PassQuestionNum);
+                            MakeQuestionMultipleChoice();
+                            MakeMultipleChoice(ResultData.Instance.rightSum);
+                        }
+                        else
+                        {
+                            String Date = StringDate.Instance.DateYMD_to_String(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+
+                            App.CalLearnInfoDatabase.SaveCalendarLearnInfo(UserInfo.Instance.userName,
+                                                  LearnSetSington.Instance.setStage,
+                                                  Date,
+                                                  true);
+
+                            await Navigation.PopAsync();
+                        }
+                    }
+                    accessible = true;
+                }
             }
-            else 
+            catch (Exception ex)
             {
-                await Navigation.PushModalAsync(new LearnResultPage());
-
-                Init_AnswerButton();
-
-                Label_SelectedAnswer.Text = "?";
-
-                if (PassQuestionNum < LearnSetSington.Instance.setQ_Num)
-                {
-                    PassQuestionNum++;
-                    Label_PassQNUM.Text = Convert.ToString(PassQuestionNum);
-                    MakeQuestionMultipleChoice();
-                    MakeMultipleChoice(ResultData.Instance.rightSum);
-                }
-                else
-                {
-                    String Date = StringDate.Instance.DateYMD_to_String(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-
-                    App.CalLearnInfoDatabase.SaveCalendarLearnInfo(UserInfo.Instance.userName,
-                                          LearnSetSington.Instance.setStage,
-                                          Date,
-                                          true);
-
-                    await Navigation.PopAsync();
-                }
+                Console.WriteLine(ex.Message);
+                accessible = true;
             }
             
         }

@@ -6,7 +6,7 @@
              xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
              mc:Ignorable="d"
              x:Class="forms_plus.MenuPage"
-             BackgroundColor="Black"
+             BackgroundColor="#272622"
              NavigationPage.HasNavigationBar="False">       <!--kindbiny_20200415 mainpage 타이틀바 삭제-->
     
     <ContentPage.Content>
@@ -80,7 +80,7 @@
                     FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
 
             <controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/7272661182" 
-                               BackgroundColor="Black"
+                               BackgroundColor="#272622" 
                                Grid.Column="0" Grid.Row="17" Grid.ColumnSpan="7" Grid.RowSpan="3"  />
             <!--ca-app-pub-4758870064199012/3559663371 -->
             

@@ -216,8 +216,8 @@
 
             <Button
                 x:Name="Next"
-                Grid.Row="17" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="3"
-                Text="NEXT" Font="30" FontAttributes="Bold" TextColor="Black"           
+                Grid.Row="17" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"
+                Text="NEXT" Font="30" FontAttributes="Bold" TextColor="Black" CornerRadius="5"   
                 BackgroundColor="Gold"
                 FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
                 Clicked="Next_Clicked"

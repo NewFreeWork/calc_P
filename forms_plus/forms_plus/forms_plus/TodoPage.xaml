@@ -7,7 +7,7 @@
              xmlns:controls="clr-namespace:XamForms.Controls;assembly=XamForms.Controls.Calendar"             
              xmlns:viewmodels="clr-namespace:forms_plus.ViewModel"  
              x:Class="forms_plus.TodoPage"
-             BackgroundColor="Black"
+             BackgroundColor="#272622"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
@@ -47,7 +47,7 @@
             </Grid>
             <StackLayout Orientation="Horizontal">
                 <BoxView x:Name="boxview_todo_1st" Color="Gold" CornerRadius="10" HeightRequest="5" />
-                <Label x:Name="label_todo_learn" Text="Learn : " TextColor="White" FontSize="20" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold" />
+                <Label x:Name="label_todo_learn" Text="학습" TextColor="White" FontSize="20" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold" />
             </StackLayout>
             <Grid x:Name="Grid_todo_Learn">
                 <Grid.RowDefinitions>
@@ -57,10 +57,10 @@
                     <ColumnDefinition Width="50*"/>
                     <ColumnDefinition Width="50*"/>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Grid.Row="0" Text="이름" FontSize="Subtitle" BackgroundColor="Green" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="1" Grid.Row="0" Text="단계" FontSize="Subtitle" BackgroundColor="Orange" HorizontalTextAlignment="Center"/>                
+                <Label Grid.Column="0" Grid.Row="0" Text="이름" FontSize="Subtitle" BackgroundColor="#F2D749" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="1" Grid.Row="0" Text="단계" FontSize="Subtitle" BackgroundColor="#9E9253" HorizontalTextAlignment="Center"/>                
             </Grid>
-            <ListView x:Name="listLearn" SeparatorColor="White" BackgroundColor="Gold">
+            <ListView x:Name="listLearn" SeparatorColor="Gold" BackgroundColor="#6C674B">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -85,7 +85,7 @@
 
             <StackLayout Orientation="Horizontal">
                 <BoxView x:Name="boxview_todo_3th" Color="White" CornerRadius="10" HeightRequest="5"  />
-                <Label x:Name="label_todo_test" Text="Test : " TextColor="White" FontSize="20" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
+                <Label x:Name="label_todo_test" Text="테스트 " TextColor="White" FontSize="20" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
             </StackLayout>
 
             <Grid x:Name="Grid_todo_Test">
@@ -98,12 +98,12 @@
                     <ColumnDefinition Width="30*"/>
                     <ColumnDefinition Width="35*"/>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Grid.Row="0" Text="이름" FontSize="Subtitle" BackgroundColor="Gold" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="1" Grid.Row="0" Text="단계" FontSize="Subtitle" BackgroundColor="Orange" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="2" Grid.Row="0" Text="점수" FontSize="Subtitle" BackgroundColor="Magenta" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="3" Grid.Row="0" Text="시간" FontSize="Subtitle" BackgroundColor="LightSkyBlue" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="0" Grid.Row="0" Text="이름" FontSize="Subtitle" BackgroundColor="#F2D749" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="1" Grid.Row="0" Text="단계" FontSize="Subtitle" BackgroundColor="#9E9253" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="2" Grid.Row="0" Text="점수" FontSize="Subtitle" BackgroundColor="#7B6E2A" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="3" Grid.Row="0" Text="시간" FontSize="Subtitle" BackgroundColor="#9D8400" HorizontalTextAlignment="Center"/>
             </Grid>
-            <ListView x:Name="listTest" SeparatorColor="White" BackgroundColor="Green">
+            <ListView x:Name="listTest" SeparatorColor="Gold" BackgroundColor="#6C674B">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

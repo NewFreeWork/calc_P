@@ -24,7 +24,7 @@ namespace forms_plus.Data
 
         public int getTodayTestListCount(String TestDate)
         {
-            Task<List<CalendarTestInfo>> lists = _cal_Testdatabase.Table<CalendarTestInfo>().Where(i => i.TestDone == true).Where(i => i.TestDate == TestDate).ToListAsync();
+            Task<List<CalendarTestInfo>> lists = _cal_Testdatabase.Table<CalendarTestInfo>().Where(i => i.TestDate == TestDate).ToListAsync();
 
             return lists.Result.Count;
         }

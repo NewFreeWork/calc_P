@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             BackgroundColor="Black"
+             BackgroundColor="#272622"
              x:Class="forms_plus.LearnningPage"
              NavigationPage.HasNavigationBar="False">
     <!--kindbiny_20200415 mainpage 타이틀바 삭제-->

@@ -31,6 +31,7 @@ namespace forms_plus
         private int old_firstNum100s = 0, old_firstNum10s = 0, old_firstNum1s = 0;
         private int old_secNum100s = 0, old_secNum10s = 0, old_secNum1s = 0;
 
+        private bool accessible = true;
         public TestPage()
         {
             InitializeComponent();
@@ -242,22 +243,28 @@ namespace forms_plus
 
         private async void Next_Clicked(object sender, EventArgs e)
         {
-            ResultData.Instance.inputSum = 0;
-
-            if (((Btn1000s.IsVisible == true) && (Btn1000s.Text == "?"))
-               || ((Btn100s.IsVisible == true) && (Btn100s.Text == "?"))
-               || ((Btn10s.IsVisible == true) && (Btn10s.Text == "?"))
-               || ((Btn1s.IsVisible == true) && (Btn1s.Text == "?"))
-               || ((Btn_Up100s.IsVisible == true) && (Btn_Up100s.Text == "?"))
-               || ((Btn_Up10s.IsVisible == true) && (Btn_Up10s.Text == "?"))
-                )
+            try
             {
-                await DisplayAlert("알림", "숫자를 모두 입력해주세요!", "확인");
-            }
-            else
-            {
+                if (accessible == true)
+                {
+                    accessible = false;
 
-                CalculateInputSum();
+                    ResultData.Instance.inputSum = 0;
+
+                    if (((Btn1000s.IsVisible == true) && (Btn1000s.Text == "?"))
+                       || ((Btn100s.IsVisible == true) && (Btn100s.Text == "?"))
+                       || ((Btn10s.IsVisible == true) && (Btn10s.Text == "?"))
+                       || ((Btn1s.IsVisible == true) && (Btn1s.Text == "?"))
+                       || ((Btn_Up100s.IsVisible == true) && (Btn_Up100s.Text == "?"))
+                       || ((Btn_Up10s.IsVisible == true) && (Btn_Up10s.Text == "?"))
+                        )
+                    {
+                        await DisplayAlert("알림", "숫자를 모두 입력해주세요!", "확인");
+                    }
+                    else
+                    {
+
+                        CalculateInputSum();
 #if false // int to string
                 AnswerSheetsData.Instance.SetAnswerSheetsData(
                                                                ResultData.Instance.question_first100s.ToString()+ResultData.Instance.question_first10s.ToString()+ResultData.Instance.question_first1s.ToString(),
@@ -268,27 +275,36 @@ namespace forms_plus
                                                                ResultData.Instance.inputSum.ToString(),
                                                                PassQuestionNum);
 #else
-                 AnswerSheetsData.Instance.SetAnswerSheetsData(
-                                                               ConvertThreeFigure(ResultData.Instance.question_first100s, ResultData.Instance.question_first10s, ResultData.Instance.question_first1s),
-                                                               ConvertThreeFigure(ResultData.Instance.question_sec100s, ResultData.Instance.question_sec10s, ResultData.Instance.question_sec1s),
-                                                               ConvertThreeFigure(0, ResultData.Instance.rightAnswerUp100s, ResultData.Instance.rightAnswerUp10s),
-                                                               ResultData.Instance.rightSum,
-                                                               ConvertThreeFigure(0, ResultData.Instance.inputUp100s, ResultData.Instance.inputUp10s),
-                                                               ResultData.Instance.inputSum,
-                                                               PassQuestionNum);
+                        AnswerSheetsData.Instance.SetAnswerSheetsData(
+                                                                      ConvertThreeFigure(ResultData.Instance.question_first100s, ResultData.Instance.question_first10s, ResultData.Instance.question_first1s),
+                                                                      ConvertThreeFigure(ResultData.Instance.question_sec100s, ResultData.Instance.question_sec10s, ResultData.Instance.question_sec1s),
+                                                                      ConvertThreeFigure(0, ResultData.Instance.rightAnswerUp100s, ResultData.Instance.rightAnswerUp10s),
+                                                                      ResultData.Instance.rightSum,
+                                                                      ConvertThreeFigure(0, ResultData.Instance.inputUp100s, ResultData.Instance.inputUp10s),
+                                                                      ResultData.Instance.inputSum,
+                                                                      PassQuestionNum);
 #endif
-                if (PassQuestionNum < LearnSetSington.Instance.setQ_Num)
-                {
-                    PassQuestionNum++;
-                    Init_Question();
-                    MakeQuestion();
+                        if (PassQuestionNum < LearnSetSington.Instance.setQ_Num)
+                        {
+                            PassQuestionNum++;
+                            Init_Question();
+                            MakeQuestion();
+                        }
+                        else
+                        {
+                            StopTimer();
+                            //LearnSetSington.Instance.setStage = 0;
+                            await Navigation.PushAsync(new AnswerSheetsPage());
+                        }
+                    }
                 }
-                else
-                {
-                    StopTimer();
-                    //LearnSetSington.Instance.setStage = 0;
-                    await Navigation.PushAsync(new AnswerSheetsPage());
-                }
+
+                accessible = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                accessible = true;
             }
         }
 
