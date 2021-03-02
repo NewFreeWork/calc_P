@@ -30,6 +30,8 @@
                            TitleLeftArrowTextColor="Gold"
                            TitleRightArrowTextColor="Green"
                            BackgroundColor="Transparent"
+                           LeftArrowClicked="CalendarLeftArrow_Clicked"
+                           RightArrowClicked="CalendarRightArrow_Clicked"
                            DateClicked="CalrendarDate_Clicked"
                            WeekdaysTextColor="White"
                            DatesFontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
@@ -57,8 +59,8 @@
                     <ColumnDefinition Width="50*"/>
                     <ColumnDefinition Width="50*"/>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Grid.Row="0" Text="이름" FontSize="Subtitle" BackgroundColor="#F2D749" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="1" Grid.Row="0" Text="단계" FontSize="Subtitle" BackgroundColor="#9E9253" HorizontalTextAlignment="Center"/>                
+                <Label Grid.Column="0" Grid.Row="0" Text="이름" TextColor="Black"  FontSize="Subtitle" BackgroundColor="#F2D749" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="1" Grid.Row="0" Text="단계" TextColor="Black"  FontSize="Subtitle" BackgroundColor="#9E9253" HorizontalTextAlignment="Center"/>                
             </Grid>
             <ListView x:Name="listLearn" SeparatorColor="Gold" BackgroundColor="#6C674B">
                 <ListView.ItemTemplate>
@@ -72,8 +74,8 @@
                                     <ColumnDefinition Width="50*"/>
                                     <ColumnDefinition Width="50*"/>
                                 </Grid.ColumnDefinitions>
-                                <Label Grid.Column="0" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding Usr}"/>
-                                <Label Grid.Column="1" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding LearnStage}"/>                                
+                                <Label Grid.Column="0" FontSize="Body" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Usr}"/>
+                                <Label Grid.Column="1" FontSize="Body" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding LearnStage}"/>                                
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
@@ -98,10 +100,10 @@
                     <ColumnDefinition Width="30*"/>
                     <ColumnDefinition Width="35*"/>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Grid.Row="0" Text="이름" FontSize="Subtitle" BackgroundColor="#F2D749" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="1" Grid.Row="0" Text="단계" FontSize="Subtitle" BackgroundColor="#9E9253" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="2" Grid.Row="0" Text="점수" FontSize="Subtitle" BackgroundColor="#7B6E2A" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="3" Grid.Row="0" Text="시간" FontSize="Subtitle" BackgroundColor="#9D8400" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="0" Grid.Row="0" Text="이름" TextColor="Black" FontSize="Subtitle" BackgroundColor="#F2D749" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="1" Grid.Row="0" Text="단계" TextColor="Black" FontSize="Subtitle" BackgroundColor="#9E9253" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="2" Grid.Row="0" Text="점수" TextColor="Black" FontSize="Subtitle" BackgroundColor="#7B6E2A" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="3" Grid.Row="0" Text="시간" TextColor="Black" FontSize="Subtitle" BackgroundColor="#9D8400" HorizontalTextAlignment="Center"/>
             </Grid>
             <ListView x:Name="listTest" SeparatorColor="Gold" BackgroundColor="#6C674B">
                 <ListView.ItemTemplate>
@@ -117,10 +119,10 @@
                                     <ColumnDefinition Width="30*"/>
                                     <ColumnDefinition Width="35*"/>
                                 </Grid.ColumnDefinitions>
-                                <Label Grid.Column="0" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding Usr}"/>
-                                <Label Grid.Column="1" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding TestStage}"/>
-                                <Label Grid.Column="2" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding TestScore}"/>
-                                <Label Grid.Column="3" FontSize="Body" HorizontalTextAlignment="Center" Text="{Binding TestTime}"/>
+                                <Label Grid.Column="0" FontSize="Body" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Usr}"/>
+                                <Label Grid.Column="1" FontSize="Body" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding TestStage}"/>
+                                <Label Grid.Column="2" FontSize="Body" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding TestScore}"/>
+                                <Label Grid.Column="3" FontSize="Body" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding TestTime}"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
