@@ -19,8 +19,28 @@ namespace forms_plus.Data
 
         public Task<List<RankingInfo>> GetRankingsAsync(String stage)
         {
+
+#if true
             String QueryStr = "SELECT Usr, Stage, Score, Time, RANK() OVER (ORDER BY Score DESC, Time ASC) as Rk From RankingInfo Where Stage="+stage;
+            Task<List<RankingInfo>> list = _database.QueryAsync<RankingInfo>(QueryStr);
+
+            Task<List<RankingInfo>> DeleteQryRtn;
+            for (int i = list.Result.Count - 1; i >= 50; i--)
+            {               
+                QueryStr = "DELETE FROM RankingInfo Where Time='"+ list.Result[i].Time+"'";
+                DeleteQryRtn = _database.QueryAsync<RankingInfo>(QueryStr);
+            }
+
+            QueryStr = "SELECT Usr, Stage, Score, Time, RANK() OVER (ORDER BY Score DESC, Time ASC) as Rk From RankingInfo Where Stage=" + stage;
+            list = _database.QueryAsync<RankingInfo>(QueryStr);
+
+            return list;
+#else
+            String QueryStr = "SELECT Usr, Stage, Score, Time, RANK() OVER (ORDER BY Score DESC, Time ASC) as Rk From RankingInfo Where Stage=" + stage;
+            
             return _database.QueryAsync<RankingInfo>(QueryStr);            
+#endif
+
         }
 
 
@@ -81,7 +101,7 @@ namespace forms_plus.Data
                 case 3:
                 case 4:
                 case 5:
-                    await App.RkInfoDatabase.SaveRankingResultAsync(info);
+                    await App.RkInfoDatabase.SaveRankingResultAsync(info);                    
                     break;
               
                 default:

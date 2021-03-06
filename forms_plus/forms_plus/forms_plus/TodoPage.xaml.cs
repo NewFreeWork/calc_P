@@ -21,131 +21,15 @@ namespace forms_plus
         {
             InitializeComponent();
 
-            /*kindbiny_20200502 달력 추가(샘플) */
+           
+            ArrowPos = 0;
 
-            DrawCalendar(ArrowPos);
-            /*
-            boxview_todo_1st.IsVisible = false;
-            boxview_todo_2nd.IsVisible = false;
-            boxview_todo_3th.IsVisible = false;
-
-            label_todo_learn.IsVisible = false;
-            label_todo_test.IsVisible = false;
-
-            Grid_todo_Learn.IsVisible = false;
-            listLearn.IsVisible = false;
-            Grid_todo_Test.IsVisible = false;
-            listTest.IsVisible = false;
-
-            calendar = new XamForms.Controls.Calendar();
-
-            //DateTime today = DateTime.Now.Date;
-            DateTime today = DateTime.Now.AddMonths(ArrowPos);
-            DateTime firstDay = today.AddDays(1 - today.Day);
-            String sYear = today.Year.ToString();
-            String sMonth = (today.Month < 10) ? ("0" + today.ToString()) : today.ToString();
-            int DaysInMonth = DateTime.DaysInMonth(today.Year, today.Month);
-
-            for (int Day = 1; Day <= DaysInMonth; Day++)
-            {
-                String sDay = (Day < 10) ? ("0" + Day.ToString()) : Day.ToString();
-                String Date = sYear + "-" + sMonth + "-" + sDay;
-
-                bool LearnDone = (App.CalLearnInfoDatabase.getTodayLearnListCount(Date) > 0) ? true : false;
-                bool TestDone = (App.CalTestInfoDatabase.getTodayTestListCount(Date) > 0) ? true : false;
-
-                if ((LearnDone == true) && (TestDone == true))
-                {
-                    calendar.SpecialDates.Add(new SpecialDate(firstDay.AddDays((double)Day - 1))
-                    {
-                        TextColor = Color.White,
-                        Selectable = true,
-
-                        BackgroundPattern = new BackgroundPattern(1)
-                        {
-                            Pattern = new List<Pattern>
-                            {
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.05f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Gold},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.05f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.White},
-                            }
-                        }
-                    });
-                }
-                else if ((LearnDone == true) && (TestDone == false))
-                {
-                    calendar.SpecialDates.Add(new SpecialDate(firstDay.AddDays((double)Day - 1))
-                    {
-                        TextColor = Color.White,
-                        Selectable = true,
-
-                        BackgroundPattern = new BackgroundPattern(1)
-                        {
-                            Pattern = new List<Pattern>
-                            {
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.05f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Gold},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.05f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                            }
-                        }
-                    });
-                }
-                else if ((LearnDone == false) && (TestDone == true))
-                {
-                    calendar.SpecialDates.Add(new SpecialDate(firstDay.AddDays((double)Day - 1))
-                    {
-                        TextColor = Color.White,
-                        Selectable = true,
-
-                        BackgroundPattern = new BackgroundPattern(1)
-                        {
-                            Pattern = new List<Pattern>
-                            {
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.05f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.05f, Color = Color.Transparent},
-                                new Pattern{WidthPercent = 1f, HightPercent = 0.1f, Color = Color.White},
-                            }
-                        }
-                    });
-                }
-                else
-                {
-                    // Do nothing.
-                }
-            }
-
-            calendar.SelectedDate = DateTime.Now;
-
-            print_DetailLearnTestInfo();
-            */
+            DrawCalendar(ArrowPos);           
         }
 
         private void DrawCalendar(int arrowPos)
         {
+            /*kindbiny_20200502 달력 추가(샘플) */
             boxview_todo_1st.IsVisible = false;
             boxview_todo_2nd.IsVisible = false;
             boxview_todo_3th.IsVisible = false;
