@@ -6,10 +6,6 @@
              mc:Ignorable="d"
              x:Class="forms_plus.App">
     <Application.Resources>
-        <ResourceDictionary>        
-            <OnPlatform x:TypeArguments="x:String" x:Key="MelonaBold">
-                <On Platform="Android" Value="BinggraeMelona-Bold.ttf#Melona Bold" />
-            </OnPlatform>
-        </ResourceDictionary>
+
     </Application.Resources>
 </Application>

@@ -56,7 +56,7 @@
             <Button Text="기록 지우기" 
                     FontSize="18" BackgroundColor="Gold"                    
                     BorderColor="White" BorderWidth="3" CornerRadius="5"
-                    FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+                    FontFamily="MelonaBold"
                     Clicked="Btn_DeleteHistory"></Button>
             <controls:MTAdView 
                 BackgroundColor="#272622" WidthRequest="320" HeightRequest="90" VerticalOptions="EndAndExpand"          

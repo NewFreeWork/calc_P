@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace forms_plus
 {
@@ -39,6 +40,13 @@ namespace forms_plus
             stopwatch = new Stopwatch();
 
             AnswerSheetsData.Instance.ClearAnswerSheetsData();
+
+            var fontsize = (DeviceDisplay.MainDisplayInfo.Height > 1280) ? 22 : 18;
+
+            Label_PassQNUM.FontSize = fontsize;
+            Label_slash.FontSize = fontsize;
+            Label_TotalQNUM.FontSize = fontsize;
+            Label_Time.FontSize = fontsize;
 
             DrawLayout();
             Init_Question();

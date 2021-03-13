@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace forms_plus
 {
@@ -32,6 +33,20 @@ namespace forms_plus
                                             Date,
                                             AnswerSheetsData.Instance.MyScore,
                                             AnswerSheetsData.Instance.TotalTime);
+
+            var fontsize = (DeviceDisplay.MainDisplayInfo.Height > 1280) ? 22:15;
+
+            Button_Q1.FontSize = fontsize;
+            Button_Q2.FontSize = fontsize;
+            Button_Q3.FontSize = fontsize;
+            Button_Q4.FontSize = fontsize;
+            Button_Q5.FontSize = fontsize;
+            Button_Q6.FontSize = fontsize;
+            Button_Q7.FontSize = fontsize;
+            Button_Q8.FontSize = fontsize;
+            Button_Q9.FontSize = fontsize;
+            Button_Q10.FontSize = fontsize;
+            Button_Home.FontSize = fontsize;
         }
 
 #if false // int to string

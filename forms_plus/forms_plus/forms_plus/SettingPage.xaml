@@ -48,29 +48,29 @@
         <Label Text="받아 올림 선택:"
                Grid.Column ="0" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="3"
                VerticalTextAlignment="Center" HorizontalTextAlignment="End"
-               FontSize="Body" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+               FontSize="Body" FontFamily="MelonaBold"
                TextColor="Gold"
                ></Label>
         <Label Text="받아 올림 표시 선택:"
                Grid.Column ="0" Grid.Row="5" Grid.RowSpan="2" Grid.ColumnSpan="3"
                VerticalTextAlignment="Center" HorizontalTextAlignment="End"
-               FontSize="Body" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+               FontSize="Body" FontFamily="MelonaBold"
                TextColor="Gold"
                ></Label>
         <Label Text="자리수 선택:"
                Grid.Column ="0" Grid.Row="8" Grid.RowSpan="2" Grid.ColumnSpan="3"
                VerticalTextAlignment="Center" HorizontalTextAlignment="End"
-               FontSize="Body" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+               FontSize="Body" FontFamily="MelonaBold"
                TextColor="Gold"
                ></Label>
         <Label Text="문제수 선택:"
                Grid.Column ="0" Grid.Row="11" Grid.RowSpan="2" Grid.ColumnSpan="3"
                VerticalTextAlignment="Center" HorizontalTextAlignment="End"
-               FontSize="Body" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+               FontSize="Body" FontFamily="MelonaBold"
                TextColor="Gold"
                ></Label>
         <Picker x:Name="PickerUpOnOff"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold" TextColor="White"
+                FontFamily="MelonaBold" TextColor="White"
                 Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2"
                 HorizontalTextAlignment="Center"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged_UP_OnOff">
@@ -80,7 +80,7 @@
                 </Picker.Items>
         </Picker>
         <Picker x:Name="PickerUpDisp"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold" TextColor="White"
+                FontFamily="MelonaBold" TextColor="White"
                 Grid.Column="3" Grid.Row="5" Grid.RowSpan="2" Grid.ColumnSpan="2"
                 HorizontalTextAlignment="Center"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged_UP_Display">
@@ -90,7 +90,7 @@
             </Picker.Items>
         </Picker>
         <Picker x:Name="PickerNdigit"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold" TextColor="White"
+                FontFamily="MelonaBold" TextColor="White"
                 Grid.Column="3" Grid.Row="8" Grid.RowSpan="2" Grid.ColumnSpan="2"
                 HorizontalTextAlignment="Center"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged_Ndigit">
@@ -101,7 +101,7 @@
             </Picker.Items>
         </Picker>
         <Picker x:Name="PickerQNum"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold" TextColor="White"
+                FontFamily="MelonaBold" TextColor="White"
                 Grid.Column="3" Grid.Row="11" Grid.RowSpan="2" Grid.ColumnSpan="2"
                 HorizontalTextAlignment="Center"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged_QNum">
@@ -124,7 +124,7 @@
                 FontSize="30"
                 BackgroundColor="Gold" BorderColor="White" BorderWidth="2"
                 Clicked="Start_Clicked" CornerRadius="15"
-                FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+                FontFamily="MelonaBold"
                 ></Button>
         <controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/7272661182"
                                BackgroundColor="#272622"

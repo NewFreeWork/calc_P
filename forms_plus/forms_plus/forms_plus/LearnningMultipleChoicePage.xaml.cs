@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace forms_plus
 {
@@ -17,6 +18,14 @@ namespace forms_plus
         public LearnningMultipleChoicePage()
         {
             InitializeComponent();
+
+            var fontsize = (DeviceDisplay.MainDisplayInfo.Height > 1280) ? 25 : 20;
+
+            Label_PassQNUM.FontSize = fontsize;
+            Label_slash.FontSize = fontsize;
+            Label_TotalQNUM.FontSize = fontsize;
+            ConfirmButton.FontSize = fontsize+5;
+
             Init_AnswerButton();
             MakeQuestionMultipleChoice();
             MakeMultipleChoice(ResultData.Instance.rightSum);

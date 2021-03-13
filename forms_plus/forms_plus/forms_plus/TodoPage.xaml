@@ -34,22 +34,22 @@
                            RightArrowClicked="CalendarRightArrow_Clicked"
                            DateClicked="CalrendarDate_Clicked"
                            WeekdaysTextColor="White"
-                           DatesFontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                           DisabledFontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                           DatesFontFamilyOutsideMonth="BinggraeMelona-Bold.ttf#MelonaBold"
-                           NumberOfWeekFontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                           SelectedFontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                           TitleLabelFontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                           TitleLeftArrowFontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                           TitleRightArrowFontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                           WeekdaysFontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                           DatesFontFamily="MelonaBold"
+                           DisabledFontFamily="MelonaBold"
+                           DatesFontFamilyOutsideMonth="MelonaBold"
+                           NumberOfWeekFontFamily="MelonaBold"
+                           SelectedFontFamily="MelonaBold"
+                           TitleLabelFontFamily="MelonaBold"
+                           TitleLeftArrowFontFamily="MelonaBold"
+                           TitleRightArrowFontFamily="MelonaBold"
+                           WeekdaysFontFamily="MelonaBold"
                            SelectedDate="{Binding Date}"  
                            SpecialDates="{Binding Attendances}"  
                            DateCommand="{Binding DateChosen}"/>
             </Grid>
             <StackLayout Orientation="Horizontal">
                 <BoxView x:Name="boxview_todo_1st" Color="Gold" CornerRadius="10" HeightRequest="5" />
-                <Label x:Name="label_todo_learn" Text="학습" TextColor="White" FontSize="20" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold" />
+                <Label x:Name="label_todo_learn" Text="학습" TextColor="White" FontSize="20" FontFamily="MelonaBold" />
             </StackLayout>
             <Grid x:Name="Grid_todo_Learn">
                 <Grid.RowDefinitions>
@@ -87,7 +87,7 @@
 
             <StackLayout Orientation="Horizontal">
                 <BoxView x:Name="boxview_todo_3th" Color="White" CornerRadius="10" HeightRequest="5"  />
-                <Label x:Name="label_todo_test" Text="테스트 " TextColor="White" FontSize="20" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
+                <Label x:Name="label_todo_test" Text="테스트 " TextColor="White" FontSize="20" FontFamily="MelonaBold"/>
             </StackLayout>
 
             <Grid x:Name="Grid_todo_Test">

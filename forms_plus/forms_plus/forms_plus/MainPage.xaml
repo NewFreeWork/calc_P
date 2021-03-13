@@ -43,31 +43,31 @@
 
         <Label Text="+" Grid.Column="5" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="3" 
                VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="70" TextColor="Gold" 
-               FontFamily="{StaticResource MelonaBold}"/>
+               FontFamily="MelonaBold"/>
         <Label Text="더하기" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="5" Grid.RowSpan="4" 
                VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="80" TextColor="Gold" 
-               FontFamily="{StaticResource MelonaBold}"/>
+               FontFamily="MelonaBold"/>
         <Label Text="PLUS" Grid.Column="3" Grid.Row="6" Grid.ColumnSpan="4" Grid.RowSpan="4" 
                VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="60" TextColor="White" 
-               FontFamily="{StaticResource MelonaBold}"/>
+               FontFamily="MelonaBold"/>
 
         <Entry x:Name="Entry_InsertName" Placeholder="이름을 입력해주세요." PlaceholderColor="Gray"
                Grid.Column="2" Grid.Row="11" Grid.ColumnSpan="3" Grid.RowSpan="2" 
                TextColor="Gold"
                TextChanged="Entry_InputUserName"
-               FontFamily="{StaticResource MelonaBold}"
+               FontFamily="MelonaBold"
                ></Entry>
         
         <Button Text="시 작" 
                 Grid.Column="2" Grid.Row="14" Grid.ColumnSpan="3" Grid.RowSpan="2" 
                 FontSize="30" BackgroundColor="Gold"
                 BorderColor="White" BorderWidth="3" CornerRadius="15"
-                FontFamily="{StaticResource MelonaBold}"
+                FontFamily="MelonaBold"
                 Clicked="Btn_Menupage_Go"/>
 
         <Label Text="ⓒ 2021. Code Plane Co. all rights reserved" Grid.Column="0" Grid.Row="18" Grid.ColumnSpan="7" Grid.RowSpan="2" 
                VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Small" TextColor="White" 
-               FontFamily="{StaticResource MelonaBold}"/>
+               FontFamily="MelonaBold"/>
         
     </Grid>
 

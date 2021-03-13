@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace forms_plus
 {
@@ -16,6 +17,11 @@ namespace forms_plus
         public AnswerSheetsDetailPage()
         {
             InitializeComponent();
+
+            var fontsize = (DeviceDisplay.MainDisplayInfo.Height > 1280) ? 25 : 20;
+
+            Label_Input.FontSize = fontsize;
+
 
             DrawLayout();
             PrintDetailData();

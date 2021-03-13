@@ -49,19 +49,19 @@
                    Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="7" Grid.RowSpan="2"
                    FontSize="40" TextColor="Gold"
                    VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                   FontFamily="MelonaBold"
                    ></Label>
             <BoxView BackgroundColor="Gold"
                      Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="7" ScaleY="0.5"
                      ></BoxView>
 
-            <Label                             
+            <Label x:Name="Label_Input"                           
                 Text="입력한 답:"
                 Grid.Column="0"  Grid.Row="3"  Grid.ColumnSpan="2" Grid.RowSpan="2"
-                 Font="25" FontAttributes="Bold" TextColor="White"           
+                FontSize="25" FontAttributes="Bold" TextColor="White"           
                 BackgroundColor="Transparent"
                 VerticalTextAlignment="Center" HorizontalTextAlignment="End"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"                
+                FontFamily="MelonaBold"                
                 ></Label>
 
             <Label 
@@ -71,7 +71,7 @@
                 FontSize="25" FontAttributes="Bold"
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                 BackgroundColor="Transparent"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"                
+                FontFamily="MelonaBold"                
                 ></Label>
             <Label 
                 x:Name="Label_Up10s"
@@ -80,7 +80,7 @@
                 FontSize="25" FontAttributes="Bold"
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                 BackgroundColor="Transparent"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"                
+                FontFamily="MelonaBold"                
                 ></Label>
             <Label 
                 x:Name="Label_FirstNum100s"
@@ -88,7 +88,7 @@
                 Grid.Column="3" Grid.Row="4" Grid.RowSpan="2" 
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                 FontSize="40" FontAttributes="Bold"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                FontFamily="MelonaBold"
                 ></Label>
             <Label 
                 x:Name="Label_FirstNum10s"
@@ -96,7 +96,7 @@
                 Grid.Row="4" Grid.RowSpan="2" Grid.Column="4" 
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                 FontSize="40" FontAttributes="Bold"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                FontFamily="MelonaBold"
                 ></Label>
             <Label 
                 x:Name="Label_FirstNum1s"
@@ -104,7 +104,7 @@
                 Grid.Row="4" Grid.RowSpan="2" Grid.Column="5" 
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                 FontSize="40" FontAttributes="Bold"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                FontFamily="MelonaBold"
                 ></Label>
             <Label 
                 x:Name="Label_SecNum100s"
@@ -112,7 +112,7 @@
                 Grid.Row="6" Grid.RowSpan="2" Grid.Column="3" 
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                 FontSize="40" FontAttributes="Bold"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                FontFamily="MelonaBold"
                 ></Label>
             <Label 
                 x:Name="Label_SecNum10s"
@@ -120,7 +120,7 @@
                 Grid.Row="6" Grid.RowSpan="2" Grid.Column="4" 
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                 FontSize="40" FontAttributes="Bold"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                FontFamily="MelonaBold"
                 ></Label>
             <Label 
                 x:Name="Label_SecNum1s"
@@ -128,7 +128,7 @@
                 Grid.Row="6" Grid.RowSpan="2" Grid.Column="5" 
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                 FontSize="40" FontAttributes="Bold"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                FontFamily="MelonaBold"
                 ></Label>
             <Label 
                 x:Name="Lable_Plus"
@@ -136,7 +136,7 @@
                 Grid.Row="6" Grid.RowSpan="2" Grid.Column="2"
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                 FontSize="40" FontAttributes="Bold"      
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                FontFamily="MelonaBold"
                 ></Label>
             <BoxView 
                 Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="4"                 
@@ -148,7 +148,7 @@
                 Text="?" Font="40" FontAttributes="Bold" TextColor="White"              
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                 BackgroundColor="Transparent"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"                
+                FontFamily="MelonaBold"                
                 ></Label>
             <Label
                 x:Name="Label_100s"
@@ -156,7 +156,7 @@
                 Text="?" Font="40" FontAttributes="Bold"  TextColor="White"             
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                 BackgroundColor="Transparent"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"                
+                FontFamily="MelonaBold"                
                 ></Label>
             <Label
                 x:Name="Label_10s"
@@ -164,7 +164,7 @@
                 Text="?" Font="40" FontAttributes="Bold"  TextColor="White"             
                 BackgroundColor="Transparent"                
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"                
+                FontFamily="MelonaBold"                
                 ></Label>
             <Label
                 x:Name="Label_1s"
@@ -172,7 +172,7 @@
                 Text="?" Font="40" FontAttributes="Bold" TextColor="White"           
                 BackgroundColor="Transparent"
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"                
+                FontFamily="MelonaBold"                
                 ></Label>
             <BoxView Grid.Column="0" Grid.Row="11" Grid.ColumnSpan="7" Grid.RowSpan="7"
                      BackgroundColor="Gold"></BoxView>
@@ -183,7 +183,7 @@
                  Font="25" FontAttributes="Bold" TextColor="Black"           
                 BackgroundColor="Transparent"
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"                
+                FontFamily="MelonaBold"                
                 ></Label>
             <Label             
                 x:Name="Label_UpName"
@@ -192,7 +192,7 @@
                  Font="25" FontAttributes="Bold" TextColor="Black"           
                 BackgroundColor="Transparent"
                 VerticalTextAlignment="Center" HorizontalTextAlignment="End"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"                
+                FontFamily="MelonaBold"                
                 ></Label>
             <Label             
                 x:Name="Label_RightUp100s"
@@ -201,7 +201,7 @@
                 FontSize="25" FontAttributes="Bold"
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                 BackgroundColor="Transparent"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"           
+                FontFamily="MelonaBold"           
                 ></Label>
             <Label             
                 x:Name="Label_RightUp10s"
@@ -210,7 +210,7 @@
                 FontSize="25" FontAttributes="Bold"
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                 BackgroundColor="Transparent"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"           
+                FontFamily="MelonaBold"           
                 ></Label>
             <Label                             
                 Text="합:"
@@ -218,7 +218,7 @@
                  Font="25" FontAttributes="Bold" TextColor="Black"           
                 BackgroundColor="Transparent"
                 VerticalTextAlignment="Center" HorizontalTextAlignment="End"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"                
+                FontFamily="MelonaBold"                
                 ></Label>
 
 
@@ -228,7 +228,7 @@
                 Text="?" Font="40" FontAttributes="Bold" TextColor="Blue"              
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                 BackgroundColor="Transparent"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"                
+                FontFamily="MelonaBold"                
                 ></Label>
             <Label
                 x:Name="Label_Right100s"
@@ -236,7 +236,7 @@
                 Text="?" Font="40" FontAttributes="Bold"  TextColor="Blue"             
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                 BackgroundColor="Transparent"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"                
+                FontFamily="MelonaBold"                
                 ></Label>
             <Label
                 x:Name="Label_Right10s"
@@ -244,7 +244,7 @@
                 Text="?" Font="40" FontAttributes="Bold"  TextColor="Blue"             
                 BackgroundColor="Transparent"
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"                
+                FontFamily="MelonaBold"                
                 ></Label>
             <Label
                 x:Name="Label_Right1s"
@@ -252,7 +252,7 @@
                 Text="?" Font="40" FontAttributes="Bold" TextColor="Blue"           
                 BackgroundColor="Transparent"
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"                
+                FontFamily="MelonaBold"                
                 ></Label>
 
 
@@ -262,7 +262,7 @@
                     Grid.Row="18"  Grid.ColumnSpan="7" Grid.RowSpan="2"
                     BackgroundColor="Gold" TextColor="Black" FontSize="25" 
                     BorderColor="White" BorderWidth="3"
-                    FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"   
+                    FontFamily="MelonaBold"   
                     Clicked="Button_Back_Clicked"
                     ></Button>
             
