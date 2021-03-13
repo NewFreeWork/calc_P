@@ -688,6 +688,7 @@ namespace forms_plus
         }
 
 
+
         private void DrawLayout()
         {
             switch (LearnSetSington.Instance.setNdigit)

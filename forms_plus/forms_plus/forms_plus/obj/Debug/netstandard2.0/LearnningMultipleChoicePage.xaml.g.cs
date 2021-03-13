@@ -50,7 +50,7 @@ namespace forms_plus {
         private global::Xamarin.Forms.Button AnswerButton4;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Button ConfirmButton;
+        private global::Xamarin.Forms.Label Label_RightOrWrong;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
@@ -66,7 +66,7 @@ namespace forms_plus {
             AnswerButton2 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "AnswerButton2");
             AnswerButton3 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "AnswerButton3");
             AnswerButton4 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "AnswerButton4");
-            ConfirmButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "ConfirmButton");
+            Label_RightOrWrong = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "Label_RightOrWrong");
         }
     }
 }

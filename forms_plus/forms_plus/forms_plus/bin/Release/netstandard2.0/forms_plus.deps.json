@@ -11,6 +11,7 @@
         "dependencies": {
           "MarcTron.Admob": "1.6.1",
           "NETStandard.Library": "2.0.3",
+          "Xam.Plugin.SimpleAudioPlayer": "1.4.0",
           "XamForms.Controls.Calendar": "1.1.1",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
@@ -119,6 +120,21 @@
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
             "assemblyVersion": "4.0.4.1",
             "fileVersion": "4.6.26919.2"
+          }
+        }
+      },
+      "Xam.Plugin.SimpleAudioPlayer/1.4.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Plugin.SimpleAudioPlayer.Abstractions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netstandard1.0/Plugin.SimpleAudioPlayer.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -252,6 +268,13 @@
       "sha512": "sha512-wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
       "path": "system.runtime.compilerservices.unsafe/4.5.2",
       "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+    },
+    "Xam.Plugin.SimpleAudioPlayer/1.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QzfFZhmebaNBdQ0o2XcMLKKUsdxYpIZd50qOUuuls1zIj2ixudS3QoYOp9v27Fwa0CL1e9jEeAMgyBH7Qpimlw==",
+      "path": "xam.plugin.simpleaudioplayer/1.4.0",
+      "hashPath": "xam.plugin.simpleaudioplayer.1.4.0.nupkg.sha512"
     },
     "Xamarin.Build.Download/0.10.0": {
       "type": "package",

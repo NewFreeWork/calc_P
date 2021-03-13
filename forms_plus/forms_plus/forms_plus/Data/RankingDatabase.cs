@@ -85,27 +85,31 @@ namespace forms_plus.Data
 
 
 
-        public async void SaveRankingInfo(String userName, int stage, int score, String time)
+        public async void SaveRankingInfo(String userName, int stage, int score, String time, int Qnum)
         {
             RankingInfo info = new RankingInfo();
 
-            info.Usr = userName;
-            info.Stage = stage.ToString();
-            info.Score = score;
-            info.Time = time;
-                        
-            switch (stage)
+            if (Qnum >= 10)
             {
-                case 1:
-                case 2:
-                case 3:
-                case 4:
-                case 5:
-                    await App.RkInfoDatabase.SaveRankingResultAsync(info);                    
-                    break;
-              
-                default:
-                    break;
+
+                info.Usr = userName;
+                info.Stage = stage.ToString();
+                info.Score = score;
+                info.Time = time;
+
+                switch (stage)
+                {
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                    case 5:
+                        await App.RkInfoDatabase.SaveRankingResultAsync(info);
+                        break;
+
+                    default:
+                        break;
+                }
             }
         }
     }

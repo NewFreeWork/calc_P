@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aTbDxRGHbQb2Es8ni5bUXxR2Ji7B6ipiu0hNRiz/P0nSQ5vjAH6PqsE+3/O31aLVqPyFDIak7038O7YLWRyO1w==",
+  "dgSpecHash": "/TW+fFF7TnMvcO/CXSTib8mFlFnjuM7pKS/PrFl19Iiv4evp9zPcf56vm6JNfoKfGC0Il2FxKcHhHAixRwox8Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\dream\\Documents\\Git\\20200219\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,7 @@
     "C:\\Users\\dream\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\dream\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\dream\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\dream\\.nuget\\packages\\xam.plugin.simpleaudioplayer\\1.4.0\\xam.plugin.simpleaudioplayer.1.4.0.nupkg.sha512",
     "C:\\Users\\dream\\.nuget\\packages\\xamarin.build.download\\0.10.0\\xamarin.build.download.0.10.0.nupkg.sha512",
     "C:\\Users\\dream\\.nuget\\packages\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
     "C:\\Users\\dream\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",

@@ -93,10 +93,12 @@
                    VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                    FontSize="40" FontFamily="MelonaBold"></Label>
 
+           
+
             <Button
                 x:Name="AnswerButton1"
                 Text="1234"
-                Grid.Row="12" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"
+                Grid.Row="12" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="2"
                 Font="30" FontAttributes="Bold" TextColor="Black"           
                 BackgroundColor="Gold" ScaleX="1.1" ScaleY="0.8"
                 BorderColor="White" BorderWidth="3" CornerRadius="10"
@@ -106,7 +108,7 @@
             <Button
                 x:Name="AnswerButton2"
                 Text="5678"
-                Grid.Row="12" Grid.RowSpan="2" Grid.Column="4" Grid.ColumnSpan="2"
+                Grid.Row="12" Grid.RowSpan="3" Grid.Column="4" Grid.ColumnSpan="2"
                 Font="30" FontAttributes="Bold" TextColor="Black"           
                 BackgroundColor="Gold" ScaleX="1.1" ScaleY="0.8"
                 BorderColor="White" BorderWidth="3" CornerRadius="10"
@@ -116,7 +118,7 @@
             <Button
                 x:Name="AnswerButton3"
                 Text="4321"
-                Grid.Row="14" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"
+                Grid.Row="15" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="2"
                 Font="30" FontAttributes="Bold" TextColor="Black"           
                 BackgroundColor="Gold" ScaleX="1.1" ScaleY="0.8"
                 BorderColor="White" BorderWidth="3" CornerRadius="10"
@@ -126,7 +128,7 @@
             <Button
                 x:Name="AnswerButton4"
                 Text="0000"
-                Grid.Row="14" Grid.RowSpan="2" Grid.Column="4" Grid.ColumnSpan="2"
+                Grid.Row="15" Grid.RowSpan="3" Grid.Column="4" Grid.ColumnSpan="2"
                 Font="30" FontAttributes="Bold" TextColor="Black"           
                 BackgroundColor="Gold" ScaleX="1.1" ScaleY="0.8"
                 BorderColor="White" BorderWidth="3" CornerRadius="10"
@@ -134,8 +136,16 @@
                 Clicked="AnswerButton4_Clicked"
                 ></Button>
 
+            <Label x:Name="Label_RightOrWrong"
+                   Text="O" TextColor="Red"
+                   Grid.Column="1" Grid.ColumnSpan="6" Grid.Row="2" Grid.RowSpan="10"
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                   Opacity="80"
+                   FontSize="160" FontFamily="MelonaBold"></Label>
 
-            <Button
+            
+
+            <!--<Button
                 x:Name="ConfirmButton"
                 Grid.Row="17" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"
                 Text="정답 확인" Font="30" FontAttributes="Bold" TextColor="Black"   
@@ -144,6 +154,7 @@
                 FontFamily="MelonaBold"
                 Clicked="Result_Clicked"
                 ></Button>
+            -->
         </Grid>
     </ContentPage.Content>
 </ContentPage>

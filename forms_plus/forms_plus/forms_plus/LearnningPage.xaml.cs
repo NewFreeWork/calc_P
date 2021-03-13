@@ -34,10 +34,13 @@ namespace forms_plus
         public LearnningPage()
         {
             InitializeComponent();
+            accessible = true;
+
             DrawLayout();
             Init_Question();
             MakeQuestion();
         }
+      
         private void Btn1000s_Clicked(object sender, EventArgs e)
         {
             btn1000s_flag = true;
@@ -143,6 +146,21 @@ namespace forms_plus
 
             return total;
         }
+
+        private void PlayRightMusic()
+        {
+            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load("Sounds/Right.wav");
+            player.Play();
+        }
+
+        private void PlayWrongMusic()
+        {
+            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load("Sounds/Wrong.wav");
+            player.Play();
+        }
+
         private async void Result_Clicked(object sender, EventArgs e)
         {
             try
@@ -210,7 +228,8 @@ namespace forms_plus
                         }
                         else
                         {
-                            ResultData.Instance.inputUp100s = -1;
+                            //ResultData.Instance.inputUp100s = -1;
+                            ResultData.Instance.inputUp100s = 0;
                         }
 
                         if (Btn_Up10s.IsVisible == true)
@@ -219,7 +238,8 @@ namespace forms_plus
                         }
                         else
                         {
-                            ResultData.Instance.inputUp10s = -1;
+                            //ResultData.Instance.inputUp10s = -1;
+                            ResultData.Instance.inputUp100s = 0;
                         }
 
                         ResultData.Instance.rightAnswer1000s = sum1000s;
@@ -242,9 +262,25 @@ namespace forms_plus
                                                                     1);
 
                         AnswerSheetsData.Instance.DetailPageIndex = 1;
+
+                        if ((ResultData.Instance.rightSum == ResultData.Instance.inputSum)
+                           // && (ResultData.Instance.rightAnswerUp100s == ResultData.Instance.inputUp100s)
+                           // && (ResultData.Instance.rightAnswerUp10s == ResultData.Instance.inputUp10s)
+                           )
+                        {
+                            PlayRightMusic();
+                        }
+                        else
+                        {
+                            PlayWrongMusic();
+                        }
+
+
                         await Navigation.PushModalAsync(new AnswerSheetsDetailPage());
 
                         //await Navigation.PushModalAsync(new LearnResultPage());
+
+                      
 
                         Init_Question();
                         if (PassQuestionNum < LearnSetSington.Instance.setQ_Num)

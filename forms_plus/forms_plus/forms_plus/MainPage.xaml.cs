@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
+
 namespace forms_plus
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
@@ -20,8 +21,18 @@ namespace forms_plus
             //UserInfo.Instance.userName = " ";
 
             Print_UserName();
+           
+
         }
 
+        private void PlayStartMusic()
+        {
+            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load("Sounds/Start.wav");
+            player.Play();
+        }
+
+       
         private void Print_UserName()
         {
             String Name = App.LoginInfoDatabase.GetUserNameAsync();
@@ -62,12 +73,14 @@ namespace forms_plus
                     accessible = false;
                     if (UserInfo.Instance.userName == " ")
                     {
+                        
                         await DisplayAlert("확인", "이름을 입력해주세요.", "OK");
                     }
                     else
                     {
                         App.LoginInfoDatabase.ClearAllUserName();
                         App.LoginInfoDatabase.SaveLoginUserName(UserInfo.Instance.userName);
+                        PlayStartMusic();
                         await Navigation.PushAsync(new MenuPage());
                     }
                     accessible = true;

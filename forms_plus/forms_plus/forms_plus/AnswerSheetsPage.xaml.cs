@@ -23,7 +23,8 @@ namespace forms_plus
             App.RkInfoDatabase.SaveRankingInfo(UserInfo.Instance.userName,
                                             LearnSetSington.Instance.setStage,
                                             AnswerSheetsData.Instance.MyScore,
-                                            AnswerSheetsData.Instance.TotalTime);
+                                            AnswerSheetsData.Instance.TotalTime,
+                                            LearnSetSington.Instance.setQ_Num);
 
 
             String Date = StringDate.Instance.DateYMD_to_String(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
