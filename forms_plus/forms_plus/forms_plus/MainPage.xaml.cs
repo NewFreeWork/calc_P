@@ -5,7 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-
+using forms_plus.Controls;
+using Plugin.SimpleAudioPlayer;
 
 namespace forms_plus
 {
@@ -15,24 +16,29 @@ namespace forms_plus
     public partial class MainPage : ContentPage
     {
         private bool accessible = true;
+        ISimpleAudioPlayer player;
+
         public MainPage()
         {
             InitializeComponent();
             //UserInfo.Instance.userName = " ";
-
+            InitSound();
             Print_UserName();
            
 
         }
-
-        private void PlayStartMusic()
+        private void InitSound()
         {
-            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+           // player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+           // player.Load("Sounds/Start.wav");
+        }
+        private void PlayBtnSound()
+        {
+            player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
             player.Load("Sounds/Start.wav");
             player.Play();
         }
 
-       
         private void Print_UserName()
         {
             String Name = App.LoginInfoDatabase.GetUserNameAsync();
@@ -71,6 +77,7 @@ namespace forms_plus
                 if (accessible == true)
                 {
                     accessible = false;
+                    PlayBtnSound();
                     if (UserInfo.Instance.userName == " ")
                     {
                         
@@ -80,7 +87,7 @@ namespace forms_plus
                     {
                         App.LoginInfoDatabase.ClearAllUserName();
                         App.LoginInfoDatabase.SaveLoginUserName(UserInfo.Instance.userName);
-                        PlayStartMusic();
+
                         await Navigation.PushAsync(new MenuPage());
                     }
                     accessible = true;

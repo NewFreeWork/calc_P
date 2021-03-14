@@ -121,6 +121,9 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\Wrong.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\Typing.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>

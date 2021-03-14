@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using forms_plus.Controls;
+using Plugin.SimpleAudioPlayer;
 
 namespace forms_plus
 {
@@ -20,10 +22,23 @@ namespace forms_plus
         private bool pickerSelectQNum = false;
 
         private bool accessible = true;
+        ISimpleAudioPlayer player;
 
         public SettingPage()
         {
             InitializeComponent();
+            InitSound();
+        }
+        private void InitSound()
+        {
+            // player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            // player.Load("Sounds/Start.wav");
+        }
+        private void PlayBtnSound()
+        {
+            player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load("Sounds/Start.wav");
+            player.Play();
         }
 
         private void SetStage()
@@ -84,6 +99,8 @@ namespace forms_plus
                     else
                     {
                         SetStage();
+
+                        PlayBtnSound();
 
                         if (LearnSetSington.Instance.IsTest == true)
                         {

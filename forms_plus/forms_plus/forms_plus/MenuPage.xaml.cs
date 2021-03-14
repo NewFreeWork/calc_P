@@ -7,17 +7,32 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using forms_plus.Controls;
+using Plugin.SimpleAudioPlayer;
+
 namespace forms_plus
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenuPage : ContentPage
     {
         private bool accessible = true;
+        ISimpleAudioPlayer player;
         public MenuPage()
         {
             InitializeComponent();
+            InitSound();
         }
-
+        private void InitSound()
+        {
+            // player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            // player.Load("Sounds/Start.wav");
+        }
+        private void PlayBtnSound()
+        {
+            player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load("Sounds/Start.wav");
+            player.Play();
+        }
         private async void Learn_Clicked(object sender, EventArgs e)
         {
             try
@@ -26,6 +41,7 @@ namespace forms_plus
                 {
                     accessible = false;
                     LearnSetSington.Instance.IsTest = false;
+                    PlayBtnSound();
                     await Navigation.PushAsync(new SettingPage());
                     accessible = true;
                 }
@@ -45,6 +61,7 @@ namespace forms_plus
                 {
                     accessible = false;
                     LearnSetSington.Instance.IsTest = false;
+                    PlayBtnSound();
                     await Navigation.PushAsync(new SettingPage_Stage());
                     accessible = true;
                 }
@@ -64,6 +81,7 @@ namespace forms_plus
                 {
                     accessible = false;
                     LearnSetSington.Instance.IsTest = true;
+                    PlayBtnSound();
                     await Navigation.PushAsync(new SettingPage());
                     accessible = true;
                 }
@@ -83,6 +101,7 @@ namespace forms_plus
                 {
                     accessible = false;
                     LearnSetSington.Instance.IsTest = true;
+                    PlayBtnSound();
                     await Navigation.PushAsync(new SettingPage_Stage());
                     accessible = true;
                 }
@@ -102,6 +121,7 @@ namespace forms_plus
                 if (accessible == true)
                 {
                     accessible = false;
+                    PlayBtnSound();
                     await Navigation.PushAsync(new TodoPage());
                     accessible = true;
                 }
@@ -120,6 +140,7 @@ namespace forms_plus
                 if (accessible == true)
                 {
                     accessible = false;
+                    PlayBtnSound();
                     await Navigation.PushAsync(new RankingPage());
                     accessible = true;
                 }

@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using forms_plus.Data;
 using System.IO;
+using forms_plus.Controls;
 
 namespace forms_plus
 {

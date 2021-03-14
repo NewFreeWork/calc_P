@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
+using Plugin.SimpleAudioPlayer;
 
 namespace forms_plus
 {
@@ -33,6 +34,9 @@ namespace forms_plus
         private int old_secNum100s = 0, old_secNum10s = 0, old_secNum1s = 0;
 
         private bool accessible = true;
+        ISimpleAudioPlayer player;
+
+
         public TestPage()
         {
             InitializeComponent();
@@ -51,9 +55,20 @@ namespace forms_plus
             DrawLayout();
             Init_Question();
             MakeQuestion();
-
+            InitSound();
             StartTimer();
 
+        }
+        private void InitSound()
+        {
+            // player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            // player.Load("Sounds/Start.wav");
+        }
+        private void PlayBtnSound()
+        {
+            player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load("Sounds/Start.wav");
+            player.Play();
         }
 
         private void StartTimer()
@@ -256,6 +271,8 @@ namespace forms_plus
                 if (accessible == true)
                 {
                     accessible = false;
+
+                    PlayBtnSound();
 
                     ResultData.Instance.inputSum = 0;
 

@@ -25,7 +25,7 @@ namespace forms_plus.Data
             Task<List<RankingInfo>> list = _database.QueryAsync<RankingInfo>(QueryStr);
 
             Task<List<RankingInfo>> DeleteQryRtn;
-            for (int i = list.Result.Count - 1; i >= 50; i--)
+            for (int i = list.Result.Count - 1; i >= 30; i--)
             {               
                 QueryStr = "DELETE FROM RankingInfo Where Time='"+ list.Result[i].Time+"'";
                 DeleteQryRtn = _database.QueryAsync<RankingInfo>(QueryStr);

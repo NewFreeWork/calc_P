@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
+using Plugin.SimpleAudioPlayer;
 
 namespace forms_plus
 {
@@ -14,10 +15,14 @@ namespace forms_plus
     public partial class AnswerSheetsPage : ContentPage
     {
         private bool accessible = true;
+        ISimpleAudioPlayer player;
+
         public AnswerSheetsPage()
         {
             InitializeComponent();
-                       
+
+            InitSound();
+
             PrintData();
 
             App.RkInfoDatabase.SaveRankingInfo(UserInfo.Instance.userName,
@@ -735,6 +740,18 @@ namespace forms_plus
 
         }
 #endif
+        private void InitSound()
+        {
+            // player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            // player.Load("Sounds/Start.wav");
+        }
+        private void PlayBtnSound()
+        {
+            player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load("Sounds/Start.wav");
+            player.Play();
+        }
+
         private async void Home_Clicked(object sender, EventArgs e)
         {
             try
@@ -742,6 +759,7 @@ namespace forms_plus
                 if (accessible == true)
                 {
                     accessible = false;
+                    PlayBtnSound();
 
                     for (int PageIdx = Navigation.NavigationStack.Count; PageIdx > 3; PageIdx--)
                     {
@@ -767,7 +785,7 @@ namespace forms_plus
                 if (accessible == true)
                 {
                     accessible = false;
-
+                    PlayBtnSound();
                     AnswerSheetsData.Instance.DetailPageIndex = 1;
                     await Navigation.PushModalAsync(new AnswerSheetsDetailPage());
                     accessible = true;
@@ -786,7 +804,7 @@ namespace forms_plus
                 if (accessible == true)
                 {
                     accessible = false;
-
+                    PlayBtnSound();
                     AnswerSheetsData.Instance.DetailPageIndex = 2;
                     await Navigation.PushModalAsync(new AnswerSheetsDetailPage());
                     accessible = true;
@@ -806,6 +824,7 @@ namespace forms_plus
                 if (accessible == true)
                 {
                     accessible = false;
+                    PlayBtnSound();
                     AnswerSheetsData.Instance.DetailPageIndex = 3;
                     await Navigation.PushModalAsync(new AnswerSheetsDetailPage());
                     accessible = true;
@@ -824,6 +843,7 @@ namespace forms_plus
                 if (accessible == true)
                 {
                     accessible = false;
+                    PlayBtnSound();
                     AnswerSheetsData.Instance.DetailPageIndex = 4;
                     await Navigation.PushModalAsync(new AnswerSheetsDetailPage());
                     accessible = true;
@@ -842,6 +862,7 @@ namespace forms_plus
                 if (accessible == true)
                 {
                     accessible = false;
+                    PlayBtnSound();
                     AnswerSheetsData.Instance.DetailPageIndex = 5;
                     await Navigation.PushModalAsync(new AnswerSheetsDetailPage());
                     accessible = true;
@@ -860,6 +881,7 @@ namespace forms_plus
                 if (accessible == true)
                 {
                     accessible = false;
+                    PlayBtnSound();
                     AnswerSheetsData.Instance.DetailPageIndex = 6;
                     await Navigation.PushModalAsync(new AnswerSheetsDetailPage());
                     accessible = true;
@@ -878,6 +900,7 @@ namespace forms_plus
                 if (accessible == true)
                 {
                     accessible = false;
+                    PlayBtnSound();
                     AnswerSheetsData.Instance.DetailPageIndex = 7;
                     await Navigation.PushModalAsync(new AnswerSheetsDetailPage());
                     accessible = true;
@@ -896,6 +919,7 @@ namespace forms_plus
                 if (accessible == true)
                 {
                     accessible = false;
+                    PlayBtnSound();
                     AnswerSheetsData.Instance.DetailPageIndex = 8;
                     await Navigation.PushModalAsync(new AnswerSheetsDetailPage());
                     accessible = true;
@@ -914,6 +938,7 @@ namespace forms_plus
                 if (accessible == true)
                 {
                     accessible = false;
+                    PlayBtnSound();
                     AnswerSheetsData.Instance.DetailPageIndex = 9;
                     await Navigation.PushModalAsync(new AnswerSheetsDetailPage());
                     accessible = true;
@@ -932,6 +957,7 @@ namespace forms_plus
                 if (accessible == true)
                 {
                     accessible = false;
+                    PlayBtnSound();
                     AnswerSheetsData.Instance.DetailPageIndex = 10;
                     await Navigation.PushModalAsync(new AnswerSheetsDetailPage());
                     accessible = true;
