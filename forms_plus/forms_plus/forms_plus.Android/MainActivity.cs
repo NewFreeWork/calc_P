@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Content.Res;
 
 namespace forms_plus.Droid
 {
@@ -29,5 +30,18 @@ namespace forms_plus.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
+        public override Resources Resources
+        {
+            get
+            {
+                Resources res = base.Resources;
+                Configuration config = new Configuration();
+                config.SetToDefaults();
+                res.UpdateConfiguration(config, res.DisplayMetrics);
+                return res;
+            }
+        }
+
     }
 }
