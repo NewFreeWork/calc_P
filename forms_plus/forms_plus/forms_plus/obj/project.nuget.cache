@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/TW+fFF7TnMvcO/CXSTib8mFlFnjuM7pKS/PrFl19Iiv4evp9zPcf56vm6JNfoKfGC0Il2FxKcHhHAixRwox8Q==",
+  "dgSpecHash": "mb1SJawM+wAHCs0m5DVHjANAU88xNLRR9wctaghgEfvz3u3tByrUnEiMdGayAzIHx9Phgcjh4A/tGQSV7UCUhw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dream\\Documents\\Git\\20200219\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
+  "projectFilePath": "D:\\test\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dream\\.nuget\\packages\\marctron.admob\\1.6.1\\marctron.admob.1.6.1.nupkg.sha512",
     "C:\\Users\\dream\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

@@ -26,6 +26,46 @@ namespace forms_plus
             InitializeComponent();
         }
 
+        private void SetStage()
+        {
+            try
+            {
+                switch (LearnSetSington.Instance.setNdigit)
+                {
+                    case 1:
+                        if (LearnSetSington.Instance.setUpONOFF == false)
+                        {
+                            LearnSetSington.Instance.setStage = 1;
+                        }
+                        else 
+                        {
+                            LearnSetSington.Instance.setStage = 2;
+                        }
+                        break;
+                    case 2:                    
+                            LearnSetSington.Instance.setStage = 3;
+                        break;
+                    case 3:
+                        if (LearnSetSington.Instance.setUpONOFF == true)
+                        {
+                            LearnSetSington.Instance.setStage = 4;
+                        }
+                        else 
+                        {
+                            LearnSetSington.Instance.setStage = 5;
+                        }
+                        break;
+                    default:                    
+                            LearnSetSington.Instance.setStage = 0;
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
         private async void Start_Clicked(object sender, EventArgs e)
         {
             try
@@ -43,6 +83,8 @@ namespace forms_plus
                     }
                     else
                     {
+                        SetStage();
+
                         if (LearnSetSington.Instance.IsTest == true)
                         {
                             await Navigation.PushAsync(new TestPage());

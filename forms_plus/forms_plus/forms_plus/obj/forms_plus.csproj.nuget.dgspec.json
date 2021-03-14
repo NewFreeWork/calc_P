@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dream\\Documents\\Git\\20200219\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj": {}
+    "D:\\test\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dream\\Documents\\Git\\20200219\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj": {
+    "D:\\test\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dream\\Documents\\Git\\20200219\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
+        "projectUniqueName": "D:\\test\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
         "projectName": "forms_plus",
-        "projectPath": "C:\\Users\\dream\\Documents\\Git\\20200219\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
+        "projectPath": "D:\\test\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
         "packagesPath": "C:\\Users\\dream\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dream\\Documents\\Git\\20200219\\calc_P\\forms_plus\\forms_plus\\forms_plus\\obj\\",
+        "outputPath": "D:\\test\\calc_P\\forms_plus\\forms_plus\\forms_plus\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

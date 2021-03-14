@@ -68,7 +68,7 @@
                     Grid.Column="4" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4" Clicked="Test_Clicked" 
                     BorderColor="White" BorderWidth="3" CornerRadius="10"
                     FontFamily="MelonaBold"/>
-            <Button Text="단계별&#10;테스트&#10;기록보기" 
+            <Button Text="테스트&#10;기록보기" 
                     FontSize="18" BackgroundColor="Gold"
                     Grid.Column="1" Grid.Row="11" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="Ranking_Clicked"
                     BorderColor="White" BorderWidth="3" CornerRadius="10"
