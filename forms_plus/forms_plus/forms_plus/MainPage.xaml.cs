@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using forms_plus.Controls;
 using Plugin.SimpleAudioPlayer;
+using MarcTron.Plugin;
 
 namespace forms_plus
 {
@@ -17,21 +18,66 @@ namespace forms_plus
     {
         private bool accessible = true;
         ISimpleAudioPlayer player;
-
+        private bool isDoubleClicked = false;
+        private bool _shouldSetEvents = true;
         public MainPage()
         {
             InitializeComponent();
-            //UserInfo.Instance.userName = " ";
-            InitSound();
-            Print_UserName();
-           
+            //UserInfo.Instance.userName = " ";           
 
+            accessible = true;
+            isDoubleClicked = false;
+            //Ctr_Ad.IsVisible = false;
+
+            InitSound();
+            SetEvents();
+            Print_UserName();
+            
         }
         private void InitSound()
         {
            // player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
            // player.Load("Sounds/Start.wav");
         }
+
+        void SetEvents()
+        {
+            if (_shouldSetEvents)
+            {
+                _shouldSetEvents = false;
+#if false
+                CrossMTAdmob.Current.OnRewardedVideoStarted += Current_OnRewardedVideoStarted;
+                CrossMTAdmob.Current.OnRewarded += Current_OnRewarded;
+                CrossMTAdmob.Current.OnRewardedVideoAdClosed += Current_OnRewardedVideoAdClosed;
+                CrossMTAdmob.Current.OnRewardedVideoAdFailedToLoad += Current_OnRewardedVideoAdFailedToLoad;
+                CrossMTAdmob.Current.OnRewardedVideoAdLeftApplication += Current_OnRewardedVideoAdLeftApplication;
+                CrossMTAdmob.Current.OnRewardedVideoAdLoaded += Current_OnRewardedVideoAdLoaded;
+                CrossMTAdmob.Current.OnRewardedVideoAdOpened += Current_OnRewardedVideoAdOpened;
+                CrossMTAdmob.Current.OnRewardedVideoAdCompleted += Current_OnRewardedVideoAdCompleted;
+#endif
+                CrossMTAdmob.Current.OnInterstitialLoaded += Current_OnInterstitialLoaded;
+                CrossMTAdmob.Current.OnInterstitialOpened += Current_OnInterstitialOpened;
+                CrossMTAdmob.Current.OnInterstitialClosed += Current_OnInterstitialClosed;
+            }
+        }
+
+        private void Current_OnInterstitialClosed(object sender, EventArgs e)
+        {
+            //Debug.WriteLine("OnInterstitialClosed");
+            System.Diagnostics.Process.GetCurrentProcess().CloseMainWindow();
+        }
+
+        private void Current_OnInterstitialOpened(object sender, EventArgs e)
+        {
+            //Debug.WriteLine("OnInterstitialOpened");
+        }
+
+        private void Current_OnInterstitialLoaded(object sender, EventArgs e)
+        {
+            //Debug.WriteLine("OnInterstitialLoaded");
+        }
+
+
         private void PlayBtnSound()
         {
             player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
@@ -100,6 +146,49 @@ namespace forms_plus
             }
         }
 
+        protected override bool OnBackButtonPressed()
+        {
+            try
+            {
+                if (isDoubleClicked == false)
+                {
+                    isDoubleClicked = true;
+                    Label_Copyright.IsVisible = false;
+                    Label_PlusEng.IsVisible = false;
+                    Label_PlusKr.IsVisible = false;
+                    Label_Plus.IsVisible = false;
+                    Btn_Start.IsVisible = false;
+                    Entry_InsertName.IsVisible = false;
+                    //Ctr_Ad.IsVisible = true;
+                    CrossMTAdmob.Current.ShowInterstitial();
+
+                    Device.StartTimer(TimeSpan.FromSeconds(5), () =>
+                    {
+                    // called every 1 second
+                    // do stuff here
+                    System.Diagnostics.Process.GetCurrentProcess().CloseMainWindow();
+
+                        return false; // return true to repeat counting, false to stop timer
+                });
+                }
+                else
+                {
+                    return base.OnBackButtonPressed();
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return true;
+            }
+
+
+
+        }
+
+       
 
     }
 }

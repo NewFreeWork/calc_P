@@ -59,6 +59,11 @@ namespace forms_plus
                 bool LearnDone = (App.CalLearnInfoDatabase.getTodayLearnListCount(Date) > 0) ? true : false;
                 bool TestDone = (App.CalTestInfoDatabase.getTodayTestListCount(Date) > 0) ? true : false;
 
+                if (Day == DateTime.Now.Day)
+                {
+                    continue;
+                }
+
                 if ((LearnDone == true) && (TestDone == true))
                 {
                     calendar.SpecialDates.Add(new SpecialDate(firstDay.AddDays((double)Day - 1))

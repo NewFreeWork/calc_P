@@ -4,6 +4,7 @@ using Xamarin.Forms.Xaml;
 using forms_plus.Data;
 using System.IO;
 using forms_plus.Controls;
+using MarcTron.Plugin;
 
 namespace forms_plus
 {
@@ -67,6 +68,8 @@ namespace forms_plus
             MainPage = new MainPage();
 #else
             //MainPage = new NavigationPage(new MainPage());
+            CrossMTAdmob.Current.LoadInterstitial("ca-app-pub-4758870064199012/3940279621");
+
             MainPage = new NavigationPage(new SplashPage());
 #endif
         }
