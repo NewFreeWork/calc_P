@@ -67,10 +67,15 @@ namespace forms_plus
         private void PlayBtnSound()
         {
             player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
-            player.Load("Sounds/Start.wav");
+            player.Load("Sounds/SubBtn.wav");           
             player.Play();
         }
-
+        private void PlayTinyBtnMusic()
+        {
+            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load("Sounds/TinyBtn.mp3");
+            player.Play();
+        }
         private void StartTimer()
         {
             int min = 0;
@@ -113,6 +118,7 @@ namespace forms_plus
 
         private void Btn1000s_Clicked(object sender, EventArgs e)
         {
+            PlayTinyBtnMusic();
             btn1000s_flag = true;
             btn100s_flag = false;
             btn10s_flag = false;
@@ -125,10 +131,11 @@ namespace forms_plus
             Btn10s.TextColor = Color.White;
             Btn1s.TextColor = Color.White;
             Btn_Up100s.TextColor = Color.White;
-            Btn_Up10s.TextColor = Color.White;
+            Btn_Up10s.TextColor = Color.White; 
         }
         private void Btn100s_Clicked(object sender, EventArgs e)
         {
+            PlayTinyBtnMusic();
             btn1000s_flag = false;
             btn100s_flag = true;
             btn10s_flag = false;
@@ -145,6 +152,7 @@ namespace forms_plus
         }
         private void Btn10s_Clicked(object sender, EventArgs e)
         {
+            PlayTinyBtnMusic();
             btn1000s_flag = false;
             btn100s_flag = false;
             btn10s_flag = true;
@@ -161,6 +169,7 @@ namespace forms_plus
         }
         private void Btn1s_Clicked(object sender, EventArgs e)
         {
+            PlayTinyBtnMusic();
             btn1000s_flag = false;
             btn100s_flag = false;
             btn10s_flag = false;
@@ -177,6 +186,7 @@ namespace forms_plus
         }
         private void BtnUp100s_Clicked(object sender, EventArgs e)
         {
+            PlayTinyBtnMusic();
             btn1000s_flag = false;
             btn100s_flag = false;
             btn10s_flag = false;
@@ -193,6 +203,7 @@ namespace forms_plus
         }
         private void BtnUp10s_Clicked(object sender, EventArgs e)
         {
+            PlayTinyBtnMusic();
             btn1000s_flag = false;
             btn100s_flag = false;
             btn10s_flag = false;
@@ -338,6 +349,8 @@ namespace forms_plus
             Button Param = sender as Button;
             string getText;
             int getValue = 0;
+
+            PlayTinyBtnMusic();
 
             getText = Param.Text.ToString();
             getValue = Convert.ToInt32(getText);

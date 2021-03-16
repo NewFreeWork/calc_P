@@ -25,6 +25,12 @@ namespace forms_plus
             //listx.ItemsSource = await App.RkInfoDatabase.SortScore(false); 
         }
 
+        private void PlayBtnSound()
+        {
+            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load("Sounds/Blop.mp3");
+            player.Play();
+        }
         private async void Btn_DeleteHistory(object sender, EventArgs e)
         {
             try
@@ -32,6 +38,7 @@ namespace forms_plus
                 if (accessible == true)
                 {
                     accessible = false;
+                    PlayBtnSound();
                     bool anwser = await DisplayAlert("기록 지우기", "기록을 모두 지우시겠습니까?", "네", "아니오");
 
                     if (anwser == true)

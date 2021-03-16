@@ -30,7 +30,7 @@ namespace forms_plus
         private void PlayBtnSound()
         {
             player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
-            player.Load("Sounds/Start.wav");
+            player.Load("Sounds/Blop.mp3");
             player.Play();
         }
         private async void BtnStep1_Clicked(object sender, EventArgs e)

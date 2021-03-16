@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 using forms_plus.Controls;
-using Plugin.SimpleAudioPlayer;
+//using Plugin.SimpleAudioPlayer;
 
 namespace forms_plus
 {
     public class SplashPage : ContentPage
     {
         Image splashImage;
-        ISimpleAudioPlayer player;
+        //ISimpleAudioPlayer player;
 
         public SplashPage()
         {
@@ -40,6 +40,7 @@ namespace forms_plus
             this.Content = sub;
         }
 
+#if false
         private void PlayTypingSound()
         {
             player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
@@ -51,10 +52,11 @@ namespace forms_plus
         {
            player.Stop();            
         }
+#endif
         //사라질때 크기 효과
         protected override async void OnAppearing()
         {
-            PlayTypingSound();
+            //PlayTypingSound();
 
             base.OnAppearing();
             //2초동안 머문다.   
@@ -69,7 +71,7 @@ namespace forms_plus
             await splashImage.FadeTo(1, 1500, Easing.Linear);
             await splashImage.FadeTo(0, 500, Easing.Linear);
             // MainPage로 이동한다.
-            StopTypingSound();
+            //StopTypingSound();
             Application.Current.MainPage = new NavigationPage(new MainPage());
         }
     }

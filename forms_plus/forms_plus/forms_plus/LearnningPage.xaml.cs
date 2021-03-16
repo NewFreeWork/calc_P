@@ -43,6 +43,7 @@ namespace forms_plus
       
         private void Btn1000s_Clicked(object sender, EventArgs e)
         {
+            PlayTinyBtnMusic();
             btn1000s_flag = true;
             btn100s_flag = false;
             btn10s_flag = false;
@@ -56,9 +57,11 @@ namespace forms_plus
             Btn1s.TextColor = Color.White;
             Btn_Up100s.TextColor = Color.White;
             Btn_Up10s.TextColor = Color.White;
+         
         }
         private void Btn100s_Clicked(object sender, EventArgs e)
         {
+            PlayTinyBtnMusic();
             btn1000s_flag = false;
             btn100s_flag = true;
             btn10s_flag = false;
@@ -72,9 +75,11 @@ namespace forms_plus
             Btn1s.TextColor = Color.White;
             Btn_Up100s.TextColor = Color.White;
             Btn_Up10s.TextColor = Color.White;
+
         }
         private void Btn10s_Clicked(object sender, EventArgs e)
         {
+            PlayTinyBtnMusic();
             btn1000s_flag = false;
             btn100s_flag = false;
             btn10s_flag = true;
@@ -88,9 +93,11 @@ namespace forms_plus
             Btn1s.TextColor = Color.White;
             Btn_Up100s.TextColor = Color.White;
             Btn_Up10s.TextColor = Color.White;
+
         }
         private void Btn1s_Clicked(object sender, EventArgs e)
         {
+            PlayTinyBtnMusic();
             btn1000s_flag = false;
             btn100s_flag = false;
             btn10s_flag = false;
@@ -104,9 +111,11 @@ namespace forms_plus
             Btn1s.TextColor = Color.Red;
             Btn_Up100s.TextColor = Color.White;
             Btn_Up10s.TextColor = Color.White;
+
         }
         private void BtnUp100s_Clicked(object sender, EventArgs e)
         {
+            PlayTinyBtnMusic();
             btn1000s_flag = false;
             btn100s_flag = false;
             btn10s_flag = false;
@@ -120,9 +129,11 @@ namespace forms_plus
             Btn1s.TextColor = Color.White;
             Btn_Up100s.TextColor = Color.Red;
             Btn_Up10s.TextColor = Color.White;
+
         }
         private void BtnUp10s_Clicked(object sender, EventArgs e)
         {
+            PlayTinyBtnMusic();
             btn1000s_flag = false;
             btn100s_flag = false;
             btn10s_flag = false;
@@ -136,6 +147,7 @@ namespace forms_plus
             Btn1s.TextColor = Color.White;
             Btn_Up100s.TextColor = Color.White;
             Btn_Up10s.TextColor = Color.Red;
+
         }
 
         private int ConvertThreeFigure(int _100s, int _10s, int _1s)
@@ -158,6 +170,13 @@ namespace forms_plus
         {
             var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
             player.Load("Sounds/Wrong.wav");
+            player.Play();
+        }
+
+        private void PlayTinyBtnMusic()
+        {
+            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load("Sounds/TinyBtn.mp3");
             player.Play();
         }
 
@@ -297,6 +316,7 @@ namespace forms_plus
                                                                               Date,
                                                                               true);
 
+                            //await DisplayAlert("멋져요", LearnSetSington.Instance.setStage.ToString()+"단계 성공!!", "확인");
                             await Navigation.PopAsync();
                         }
                     }
@@ -316,6 +336,8 @@ namespace forms_plus
             Button Param = sender as Button;
             string getText;
             int getValue = 0;
+
+            PlayTinyBtnMusic();
 
             getText = Param.Text.ToString();
             getValue = Convert.ToInt32(getText);
