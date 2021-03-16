@@ -35,9 +35,6 @@ namespace forms_plus {
         private global::Xamarin.Forms.Label Label_Copyright;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::MarcTron.Plugin.Controls.MTAdView Ctr_Ad;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(MainPage));
             Label_Plus = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "Label_Plus");
@@ -46,7 +43,6 @@ namespace forms_plus {
             Entry_InsertName = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Entry_InsertName");
             Btn_Start = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "Btn_Start");
             Label_Copyright = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "Label_Copyright");
-            Ctr_Ad = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MarcTron.Plugin.Controls.MTAdView>(this, "Ctr_Ad");
         }
     }
 }
