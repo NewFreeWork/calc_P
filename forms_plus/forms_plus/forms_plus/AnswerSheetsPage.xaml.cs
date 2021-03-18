@@ -55,6 +55,37 @@ namespace forms_plus
             Button_Home.FontSize = fontsize;
         }
 
+        protected override bool OnBackButtonPressed()
+        {
+            try
+            {
+
+                Delete_CurrentPage();
+
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return true;
+            }
+        }
+        private async void Delete_CurrentPage()
+        {
+            try
+            {
+                Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 1]);
+                Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 2]);
+                await Navigation.PopAsync();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+        }
+
 #if false // int to string
         private Color Is_RightAnswer(string rightAnswer, string myAnswer, string rightUp, string myUp)
         {
