@@ -3,7 +3,8 @@
   <PropertyGroup>
     <SelectedDevice>Samsung SM-N976N</SelectedDevice>
     <DefaultDevice>nexus_4_pie_9_0_-_api_28</DefaultDevice>
-    <AndroidDesignerPreferredTheme>Theme.AppCompat.Light.NoActionBar</AndroidDesignerPreferredTheme>
+    <AndroidDesignerPreferredTheme>MainTheme</AndroidDesignerPreferredTheme>
     <ActiveDebugProfile>Samsung SM-N976N</ActiveDebugProfile>
+    <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
   </PropertyGroup>
 </Project>

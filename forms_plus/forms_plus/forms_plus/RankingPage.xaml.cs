@@ -10,8 +10,10 @@ using Xamarin.Forms.Xaml;
 namespace forms_plus
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+    //public partial class RankingPage : TabbedPage
     public partial class RankingPage : TabbedPage
     {
+       
         public RankingPage()
         {
             InitializeComponent();
@@ -20,6 +22,9 @@ namespace forms_plus
             Children.Add(new RankingStage2Page());
             Children.Add(new RankingStage3Page());
             Children.Add(new RankingStage4Page());
+            Children.Add(new RankingStage5Page());
+            Children.Add(new RankingStage5Page());
+            Children.Add(new RankingStage5Page());
             Children.Add(new RankingStage5Page());
         }
     }

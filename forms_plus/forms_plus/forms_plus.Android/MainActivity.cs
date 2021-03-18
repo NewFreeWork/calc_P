@@ -8,6 +8,13 @@ using Android.Widget;
 using Android.OS;
 using Android.Content.Res;
 
+using Android.Support.Design.Widget;
+using forms_plus;
+using forms_plus.Droid;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.Android.AppCompat;
+
+[assembly: ExportRenderer(typeof(TabbedPage), typeof(forms_plus.Droid.MainActivity.RankingPageRenderer))]
 namespace forms_plus.Droid
 {
     [Activity(Label = "더하기", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation =ScreenOrientation.Portrait)]
@@ -23,6 +30,19 @@ namespace forms_plus.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
+        }
+        public class RankingPageRenderer : TabbedPageRenderer
+        {
+            public override void OnViewAdded(Android.Views.View child)
+            {
+                base.OnViewAdded(child);
+                var tabLayout = child as TabLayout;
+                if (tabLayout != null)
+                {
+                    tabLayout.TabMode = TabLayout.ModeScrollable;
+                }
+            }
+
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
