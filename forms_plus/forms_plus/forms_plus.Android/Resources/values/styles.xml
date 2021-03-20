@@ -23,8 +23,23 @@
     <item name="android:statusBarColor">#2c2b29</item>
 
     <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
+	<item name="alertDialogTheme">@style/AppCompatAlertDialogStyle</item>
   </style>
+	<!--AlertDialog Colors-->
+	<style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Dialog.Alert">
+		<!--buttons-->
+		<item name="colorAccent">#f3ce02</item>
+		<!--title-->
+		<item name="android:textColor">#f3ce02</item>
+		<!--text-->
+		<item name="android:textColorPrimary">#fafafa</item>
+		<!--selection list-->
+		<item name="android:textColorTertiary">#fafafa</item>
+		<!--background-->
+		<item name="android:background">#756b45</item>
+	</style>
 
+	
   <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
     <item name="colorAccent">#FF4081</item>
   </style>
