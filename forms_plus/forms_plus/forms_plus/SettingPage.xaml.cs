@@ -104,11 +104,11 @@ namespace forms_plus
 
                         if (LearnSetSington.Instance.IsTest == true)
                         {
-                            await Navigation.PushAsync(new TestPage());
+                            await Navigation.PushAsync(new TestPage(), false);
                         }
                         else
                         {
-                            await Navigation.PushAsync(new LearnningPage());
+                            await Navigation.PushAsync(new LearnningPage(), false);
                         }
                     }
                     accessible = true;

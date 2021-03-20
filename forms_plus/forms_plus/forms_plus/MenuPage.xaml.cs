@@ -42,7 +42,7 @@ namespace forms_plus
                     accessible = false;
                     LearnSetSington.Instance.IsTest = false;
                     PlayBtnSound();
-                    await Navigation.PushAsync(new SettingPage());
+                    await Navigation.PushAsync(new SettingPage(), false);
                     accessible = true;
                 }
             }
@@ -62,7 +62,7 @@ namespace forms_plus
                     accessible = false;
                     LearnSetSington.Instance.IsTest = false;
                     PlayBtnSound();
-                    await Navigation.PushAsync(new SettingPage_Stage());
+                    await Navigation.PushAsync(new SettingPage_Stage(), false);
                     accessible = true;
                 }
             }
@@ -82,7 +82,7 @@ namespace forms_plus
                     accessible = false;
                     LearnSetSington.Instance.IsTest = true;
                     PlayBtnSound();
-                    await Navigation.PushAsync(new SettingPage());
+                    await Navigation.PushAsync(new SettingPage(), false);
                     accessible = true;
                 }
             }
@@ -102,7 +102,7 @@ namespace forms_plus
                     accessible = false;
                     LearnSetSington.Instance.IsTest = true;
                     PlayBtnSound();
-                    await Navigation.PushAsync(new SettingPage_Stage());
+                    await Navigation.PushAsync(new SettingPage_Stage(), false);
                     accessible = true;
                 }
             }
@@ -122,7 +122,7 @@ namespace forms_plus
                 {
                     accessible = false;
                     PlayBtnSound();
-                    await Navigation.PushAsync(new TodoPage());
+                    await Navigation.PushAsync(new TodoPage(), false);
                     accessible = true;
                 }
             }
@@ -141,7 +141,7 @@ namespace forms_plus
                 {
                     accessible = false;
                     PlayBtnSound();
-                    await Navigation.PushAsync(new RankingPage());
+                    await Navigation.PushAsync(new RankingPage(), false);
                     accessible = true;
                 }
             }

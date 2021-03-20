@@ -56,10 +56,10 @@ namespace forms_plus
             await Label_PlusEng.FadeTo(0, 0);
             await Label_Plus.FadeTo(0, 0);
             SetTextIsVisible(true);
-            await Label_PlusKr.FadeTo(1, 1200);
-            await Label_PlusEng.FadeTo(1, 700);
-            await Label_Plus.FadeTo(1, 600);
-            await Label_Plus.FadeTo(1, 600);
+            await Label_PlusKr.FadeTo(1, 1000);
+            await Label_PlusEng.FadeTo(1, 600);
+            await Label_Plus.FadeTo(1, 500);
+            await Label_Plus.FadeTo(1, 500);
 
             SetBtnEntryIsVisible(true);
         }
@@ -158,7 +158,7 @@ namespace forms_plus
                         App.LoginInfoDatabase.ClearAllUserName();
                         App.LoginInfoDatabase.SaveLoginUserName(UserInfo.Instance.userName);
 
-                        await Navigation.PushAsync(new MenuPage());
+                        await Navigation.PushAsync(new MenuPage(), false);
                     }
                     accessible = true;
                 }

@@ -330,7 +330,7 @@ namespace forms_plus
                         {
                             StopTimer();
                             //LearnSetSington.Instance.setStage = 0;
-                            await Navigation.PushAsync(new AnswerSheetsPage());
+                            await Navigation.PushAsync(new AnswerSheetsPage(), false);
                         }
                     }
                 }
