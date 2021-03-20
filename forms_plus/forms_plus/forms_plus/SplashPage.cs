@@ -59,15 +59,7 @@ namespace forms_plus
             //PlayTypingSound();
 
             base.OnAppearing();
-            //2초동안 머문다.   
-            //await splashImage.ScaleTo(1, 300);
-            /*
-            // 1.5초 동안 0.9배 작아진다.
-            await splashImage.ScaleTo(0.9, 1500, Easing.Linear);
-            // 1.2초 동안 150배 커진다.
-            await splashImage.ScaleTo(150, 2000, Easing.CubicIn);
-            */
-                       
+            await splashImage.FadeTo(0, 0);
             await splashImage.FadeTo(1, 1500, Easing.Linear);
             await splashImage.FadeTo(0, 500, Easing.Linear);
             // MainPage로 이동한다.
