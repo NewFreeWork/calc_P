@@ -18,7 +18,7 @@ namespace forms_plus
     {
         private bool accessible = true;
         ISimpleAudioPlayer player;
-        private bool isDoubleClicked = false;
+        private int isDoubleClicked = 0;
         private bool _shouldSetEvents = true;
         public MainPage()
         {
@@ -26,18 +26,42 @@ namespace forms_plus
             //UserInfo.Instance.userName = " ";           
 
             accessible = true;
-            isDoubleClicked = false;
+            isDoubleClicked = 0;
             //Ctr_Ad.IsVisible = false;
 
-            InitSound();
+            IntroEffect();
             SetEvents();
             Print_UserName();
             
         }
-        private void InitSound()
+        private void SetBtnEntryIsVisible(bool set)
         {
-           // player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
-           // player.Load("Sounds/Start.wav");
+            Entry_InsertName.IsVisible = set;
+            Btn_Start.IsVisible = set;
+            Label_Copyright.IsVisible = set;
+        }
+
+        private void SetTextIsVisible(bool set)
+        {
+            Label_Plus.IsVisible = set;
+            Label_PlusEng.IsVisible = set;
+            Label_PlusKr.IsVisible = set;
+        }
+
+        private async Task IntroEffect()
+        {
+            SetBtnEntryIsVisible(false);
+            SetTextIsVisible(false);
+            await Label_PlusKr.FadeTo(0, 0);
+            await Label_PlusEng.FadeTo(0, 0);
+            await Label_Plus.FadeTo(0, 0);
+            SetTextIsVisible(true);
+            await Label_PlusKr.FadeTo(1, 1200);
+            await Label_PlusEng.FadeTo(1, 700);
+            await Label_Plus.FadeTo(1, 600);
+            await Label_Plus.FadeTo(1, 600);
+
+            SetBtnEntryIsVisible(true);
         }
 
         void SetEvents()
@@ -150,9 +174,15 @@ namespace forms_plus
         {
             try
             {
-                if (isDoubleClicked == false)
+                if (isDoubleClicked == 0)
                 {
-                    isDoubleClicked = true;
+                    isDoubleClicked = 1;
+
+                    DependencyService.Get<Toast>().Show("'뒤로가기' 버튼을 한번 더 누르시면 앱이 종료됩니다. 다음에 또 만나요:)");                    
+                }
+                else if (isDoubleClicked == 1)
+                {
+                    isDoubleClicked = 2;
                     Label_Copyright.IsVisible = false;
                     Label_PlusEng.IsVisible = false;
                     Label_PlusKr.IsVisible = false;
@@ -164,15 +194,16 @@ namespace forms_plus
 
                     Device.StartTimer(TimeSpan.FromSeconds(5), () =>
                     {
-                    // called every 1 second
-                    // do stuff here
-                    System.Diagnostics.Process.GetCurrentProcess().CloseMainWindow();
+                        // called every 1 second
+                        // do stuff here
+                        System.Diagnostics.Process.GetCurrentProcess().CloseMainWindow();
 
                         return false; // return true to repeat counting, false to stop timer
-                });
+                    });
                 }
                 else
                 {
+                    isDoubleClicked = 0;
                     return base.OnBackButtonPressed();
                 }
 
@@ -180,6 +211,7 @@ namespace forms_plus
             }
             catch (Exception ex)
             {
+                isDoubleClicked = 0;
                 Console.WriteLine(ex.Message);
                 return true;
             }
