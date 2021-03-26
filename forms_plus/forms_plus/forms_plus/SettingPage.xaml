@@ -84,7 +84,7 @@
                 Grid.Column="3" Grid.Row="5" Grid.RowSpan="2" Grid.ColumnSpan="2"
                 HorizontalTextAlignment="Center"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged_UP_Display">
-            <Picker.Items>
+            <Picker.Items>                
                 <x:String>ON</x:String>
                 <x:String>OFF</x:String>
             </Picker.Items>

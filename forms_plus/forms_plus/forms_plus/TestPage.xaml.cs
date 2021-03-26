@@ -36,6 +36,7 @@ namespace forms_plus
         private bool accessible = true;
         ISimpleAudioPlayer player;
 
+        int[] arr = new int[10];
 
         public TestPage()
         {
@@ -51,6 +52,17 @@ namespace forms_plus
             Label_slash.FontSize = fontsize;
             Label_TotalQNUM.FontSize = fontsize;
             Label_Time.FontSize = fontsize;
+
+            arr[0] = 1;
+            arr[1] = 2;
+            arr[2] = 3;
+            arr[3] = 4;
+            arr[4] = 5;
+            arr[5] = 6;
+            arr[6] = 7;
+            arr[7] = 8;
+            arr[8] = 3;
+            arr[9] = 4;
 
             DrawLayout();
             Init_Question();
@@ -472,6 +484,9 @@ namespace forms_plus
             iuputSum1s = 0;            
             inputUp100s = 0;
             inputUp10s = 0;
+
+           
+           
         }
         private int GetNewRandomNum(int startNum, int endNum, int oldNum)
         {
@@ -498,7 +513,7 @@ namespace forms_plus
         }
         private void MakeQuestion()
         {
-            Random rnd = new Random();
+            Random rnd = new Random(DateTime.Now.Millisecond);
             int firstNum100s, firstNum10s, firstNum1s;
             int secNum100s, secNum10s, secNum1s;
 
@@ -514,23 +529,37 @@ namespace forms_plus
                 case 1:
                     if (LearnSetSington.Instance.setUpONOFF == true)
                     {
+                        firstNum1s = 0;
                         do
                         {
-                            firstNum1s = GetNewRandomNum(1, 10, old_firstNum1s);
-                            secNum1s = GetNewRandomNum(1, 10, old_secNum1s);
+                            int temp = rnd.Next(0, 10);
+                            if (arr[temp] != 0)
+                            {
+                                firstNum1s = arr[temp];
+                                arr[temp] = 0;
+                            }
+                        } while (firstNum1s == 0);
+                        do
+                        {
+                            secNum1s = GetNewRandomNum(1, 10, firstNum1s);
                         } while (firstNum1s + secNum1s < 10);
                         old_firstNum1s = firstNum1s;
                         old_secNum1s = secNum1s;
                     }
                     else
                     {
-                        firstNum1s = GetNewRandomNum(1, 9, old_firstNum1s);
+                        firstNum1s = 0;
+                        do {
+                            int temp = rnd.Next(0, 10);
+                            if (arr[temp] != 0)
+                            {
+                                firstNum1s = arr[temp];
+                                arr[temp] = 0;
+                            }
+                        } while (firstNum1s == 0);
+
                         secNum1s = GetLimitedRandomNum(firstNum1s);
-                        if ((firstNum1s + secNum1s) == (old_firstNum1s + old_secNum1s))
-                        {
-                            secNum1s = GetNewRandomNum(1, 9, old_firstNum1s);
-                            firstNum1s = GetLimitedRandomNum(secNum1s);
-                        }
+
                         old_firstNum1s = firstNum1s;
                         old_secNum1s = secNum1s;
                     }

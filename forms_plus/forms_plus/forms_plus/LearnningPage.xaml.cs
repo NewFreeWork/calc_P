@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using forms_plus.ViewModel;
 
 namespace forms_plus
 {
@@ -31,11 +32,13 @@ namespace forms_plus
 
         private bool accessible = true;
 
+
         public LearnningPage()
         {
             InitializeComponent();
             accessible = true;
-
+            BindingContext = this;
+            this.BindingContext = new FontSizeViewModel();
             DrawLayout();
             Init_Question();
             MakeQuestion();
@@ -179,7 +182,23 @@ namespace forms_plus
             player.Load("Sounds/TinyBtn.mp3");
             player.Play();
         }
+        private async void stage_finish()
+        {
+            await Navigation.PopAsync();
+        }
 
+        public async Task ShowMessage(string message,
+            string title,
+            string buttonText,
+            Action afterHideCallback)
+        {
+            await DisplayAlert(
+                title,
+                message,
+                buttonText);
+
+            afterHideCallback?.Invoke();
+        }
         private async void Result_Clicked(object sender, EventArgs e)
         {
             try
@@ -316,8 +335,9 @@ namespace forms_plus
                                                                               Date,
                                                                               true);
 
+                            await ShowMessage(LearnSetSington.Instance.setStage.ToString() + "단계 끝", "참 잘했어요!", "확인", stage_finish);
                             //await DisplayAlert("멋져요", LearnSetSington.Instance.setStage.ToString()+"단계 성공!!", "확인");
-                            await Navigation.PopAsync();
+                            //await Navigation.PopAsync();
                         }
                     }
 

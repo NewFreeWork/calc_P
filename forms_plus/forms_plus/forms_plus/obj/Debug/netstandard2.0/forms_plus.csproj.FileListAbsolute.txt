@@ -32,7 +32,6 @@ D:\test\calc_P\forms_plus\forms_plus\forms_plus\bin\Debug\netstandard2.0\forms_p
 D:\test\calc_P\forms_plus\forms_plus\forms_plus\bin\Debug\netstandard2.0\forms_plus.dll
 D:\test\calc_P\forms_plus\forms_plus\forms_plus\bin\Debug\netstandard2.0\ref\forms_plus.dll
 D:\test\calc_P\forms_plus\forms_plus\forms_plus\bin\Debug\netstandard2.0\forms_plus.pdb
-D:\test\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.csprojAssemblyReference.cache
 D:\test\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\AnswerSheetsDetailPage.xaml.g.cs
 D:\test\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\AnswerSheetsPage.xaml.g.cs
 D:\test\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\App.xaml.g.cs
@@ -58,3 +57,4 @@ D:\test\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\XamlC.s
 D:\test\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.dll
 D:\test\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\ref\forms_plus.dll
 D:\test\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.pdb
+D:\test\calc_P\forms_plus\forms_plus\forms_plus\obj\Debug\netstandard2.0\forms_plus.csprojAssemblyReference.cache

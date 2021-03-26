@@ -20,11 +20,25 @@ namespace forms_plus
         private int old_secNum1s = 0;
 
         private bool accessible = true;
+
+        int[] arr = new int[10];
+
         public LearnningMultipleChoicePage()
         {
             InitializeComponent();
 
             var fontsize = (DeviceDisplay.MainDisplayInfo.Height > 1280) ? 25 : 20;
+
+            arr[0] = 1;
+            arr[1] = 2;
+            arr[2] = 3;
+            arr[3] = 4;
+            arr[4] = 5;
+            arr[5] = 6;
+            arr[6] = 7;
+            arr[7] = 8;
+            arr[8] = 3;
+            arr[9] = 4;
 
             Label_PassQNUM.FontSize = fontsize;
             Label_slash.FontSize = fontsize;
@@ -93,11 +107,19 @@ namespace forms_plus
 
             if (LearnSetSington.Instance.setUpONOFF == true)
             {
+                question_first1s = 0;
                 do
                 {
-                    question_first1s = GetNewRandomNum(1, 10, old_firstNum1s);
-                    question_sec1s = GetNewRandomNum(1, 10, old_secNum1s);
-
+                    int temp = rnd.Next(0, 10);
+                    if (arr[temp] != 0)
+                    {
+                        question_first1s = arr[temp];
+                        arr[temp] = 0;
+                    }
+                } while (question_first1s == 0);
+                do
+                {
+                    question_sec1s = GetNewRandomNum(1, 10, question_first1s);
                 } while (question_first1s + question_sec1s < 10);
 
                 old_firstNum1s = question_first1s;
@@ -105,14 +127,18 @@ namespace forms_plus
             }
             else
             {
-                question_first1s = GetNewRandomNum(1, 9, old_firstNum1s);
-                question_sec1s = GetLimitedRandomNum(question_first1s);
-                
-                while ((question_first1s + question_sec1s) == (old_firstNum1s + old_secNum1s))
+                question_first1s = 0;
+                do
                 {
-                    question_first1s = GetNewRandomNum(1, 9, old_firstNum1s);
-                    question_sec1s = GetLimitedRandomNum(question_first1s);
-                }
+                    int temp = rnd.Next(0, 10);
+                    if (arr[temp] != 0)
+                    {
+                        question_first1s = arr[temp];
+                        arr[temp] = 0;
+                    }
+                } while (question_first1s == 0);
+
+                question_sec1s = GetLimitedRandomNum(question_first1s);
 
                 old_firstNum1s = question_first1s;
                 old_secNum1s = question_sec1s;
@@ -334,7 +360,9 @@ namespace forms_plus
                                                   Date,
                                                   true);
 
-                            await Navigation.PopAsync();
+                            await ShowMessage(LearnSetSington.Instance.setStage.ToString() + "단계 끝", "참 잘했어요!", "확인", stage_finish);
+                           
+                            //await Navigation.PopAsync();
                         }
                     }
                     else
@@ -369,6 +397,23 @@ namespace forms_plus
             total = (_100s * 100) + (_10s * 10) + _1s;
 
             return total;
+        }
+        private async void stage_finish()
+        {
+            await Navigation.PopAsync();
+        }
+
+        public async Task ShowMessage(string message,
+            string title,
+            string buttonText,
+            Action afterHideCallback)
+        {
+            await DisplayAlert(
+                title,
+                message,
+                buttonText);
+
+            afterHideCallback?.Invoke();
         }
         private async void Result_Clicked(object sender, EventArgs e)
         {
@@ -420,7 +465,16 @@ namespace forms_plus
                                                   Date,
                                                   true);
 
-                            await Navigation.PopAsync();
+                           // await DisplayAlert(LearnSetSington.Instance.setStage.ToString() + "단계 끝", "참 잘했어요!", "확인");
+
+                            await ShowMessage(LearnSetSington.Instance.setStage.ToString() + "단계 끝", "참 잘했어요!", "확인", async () =>
+                            {
+                                await ShowMessage("OK was pressed", "Message", "OK", stage_finish);
+                            });
+
+                            //stage_finish();
+                            
+                            //await Navigation.PopAsync();
                         }
                     }
                     accessible = true;
