@@ -43,16 +43,17 @@
         </Grid.RowDefinitions>
 
         <Label x:Name="Label_Plus" Text="+" Grid.Column="5" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="3" 
-               VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="70" TextColor="Gold" 
+               VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="{Binding MainTitleFontSize_M}" TextColor="Gold" 
                FontFamily="MelonaBold"/>
         <Label x:Name="Label_PlusKr" Text="더하기" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="5" Grid.RowSpan="4" 
-               VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="80" TextColor="Gold" 
+               VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="{Binding MainTitleFontSize_L}" TextColor="Gold" 
                FontFamily="MelonaBold"/>
         <Label x:Name="Label_PlusEng" Text="PLUS" Grid.Column="3" Grid.Row="6" Grid.ColumnSpan="4" Grid.RowSpan="4" 
-               VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="60" TextColor="White" 
+               VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="{Binding MainTitleFontSize_S}" TextColor="White" 
                FontFamily="MelonaBold"/>
 
         <Entry x:Name="Entry_InsertName" Placeholder="이름을 입력해주세요." PlaceholderColor="Gray"
+               FontSize="{Binding EntryTextSize}" 
                Grid.Column="2" Grid.Row="11" Grid.ColumnSpan="3" Grid.RowSpan="2" 
                TextColor="Gold"
                TextChanged="Entry_InputUserName"
@@ -61,7 +62,7 @@
 
         <Button x:Name="Btn_Start" Text="시 작" 
                 Grid.Column="2" Grid.Row="14" Grid.ColumnSpan="3" Grid.RowSpan="2" 
-                FontSize="30" BackgroundColor="Gold"
+                FontSize="{Binding NaviButtonFontSize}" BackgroundColor="Gold"
                 BorderColor="White" BorderWidth="3" CornerRadius="15"
                 FontFamily="MelonaBold"
                 Clicked="Btn_Menupage_Go"/>

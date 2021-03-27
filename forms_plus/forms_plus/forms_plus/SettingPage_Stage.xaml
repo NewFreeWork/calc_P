@@ -48,7 +48,7 @@
         <Button x:Name="BtnStep1"
                 Text="1단계" BackgroundColor="Gold"
                 Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="5" Grid.RowSpan="2"
-                FontSize="28" FontFamily="MelonaBold"
+                FontSize="{Binding NaviButtonFontSize}" FontFamily="MelonaBold"
                 CornerRadius="15" BorderColor="White" BorderWidth="3"
                 Clicked="BtnStep1_Clicked"
                 ></Button>
@@ -56,7 +56,7 @@
         <Button x:Name="BtnStep2"
                 Text="2단계" BackgroundColor="Gold"
                 Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="5" Grid.RowSpan="2"
-                FontSize="28" FontFamily="MelonaBold"
+                FontSize="{Binding NaviButtonFontSize}" FontFamily="MelonaBold"
                 CornerRadius="15" BorderColor="White" BorderWidth="3"
                 Clicked="BtnStep2_Clicked"
                 ></Button>
@@ -64,7 +64,7 @@
         <Button x:Name="BtnStep3"
                 Text="3단계" BackgroundColor="Gold"
                 Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="5" Grid.RowSpan="2"
-                FontSize="28" FontFamily="MelonaBold"
+                FontSize="{Binding NaviButtonFontSize}" FontFamily="MelonaBold"
                 CornerRadius="15" BorderColor="White" BorderWidth="3"
                 Clicked="BtnStep3_Clicked"
                 ></Button>
@@ -72,7 +72,7 @@
         <Button x:Name="BtnStep4"
                 Text="4단계" BackgroundColor="Gold"
                 Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="5" Grid.RowSpan="2"
-                FontSize="28" FontFamily="MelonaBold"
+                FontSize="{Binding NaviButtonFontSize}" FontFamily="MelonaBold"
                 CornerRadius="15" BorderColor="White" BorderWidth="3"
                 Clicked="BtnStep4_Clicked"
                 ></Button>
@@ -80,7 +80,7 @@
         <Button x:Name="BtnStep5"
                 Text="5단계" BackgroundColor="Gold"
                 Grid.Column="1" Grid.Row="13" Grid.ColumnSpan="5" Grid.RowSpan="2"
-                FontSize="28" FontFamily="MelonaBold"
+                FontSize="{Binding NaviButtonFontSize}" FontFamily="MelonaBold"
                 CornerRadius="15" BorderColor="White" BorderWidth="3"
                 Clicked="BtnStep5_Clicked"
                 ></Button>

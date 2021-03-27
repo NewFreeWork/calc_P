@@ -52,14 +52,14 @@
                 Text="1"  TextColor="LightGreen"
                 Grid.Column="0" Grid.Row="0" Grid.RowSpan="1" 
                 VerticalTextAlignment="Center" HorizontalTextAlignment="End"
-                FontSize="Large" FontAttributes="Bold"
+                FontSize="{Binding QuestionNumFontSize}" FontAttributes="Bold"
                 FontFamily="MelonaBold"
                 ></Label>
             <Label x:Name="Label_slash"
                 Text="/"  TextColor="Gold"
                 Grid.Column="1" Grid.Row="0" Grid.RowSpan="1" 
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                FontSize="Large" FontAttributes="Bold"
+                FontSize="{Binding QuestionNumFontSize}" FontAttributes="Bold"
                 FontFamily="MelonaBold"
                 ></Label>
             <Label 
@@ -67,7 +67,7 @@
                 Text="10"  TextColor="Gold"
                 Grid.Column="2" Grid.Row="0" Grid.RowSpan="1" 
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
-                FontSize="Large" FontAttributes="Bold"
+                FontSize="{Binding QuestionNumFontSize}" FontAttributes="Bold"
                 FontFamily="MelonaBold"
                 ></Label>
 
@@ -76,7 +76,7 @@
                 Text="00:00:000"  TextColor="White"
                 Grid.Column="3" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="1" 
                 VerticalTextAlignment="Center" HorizontalTextAlignment="End"
-                FontSize="Large" FontAttributes="Bold"
+                FontSize="{Binding QuestionNumFontSize}" FontAttributes="Bold"
                 FontFamily="MelonaBold"
                 ></Label>
             
@@ -84,7 +84,7 @@
                 x:Name="Btn_Up100s"
                 Text="0" TextColor="White"
                 Grid.Column="3" Grid.Row="2" Grid.RowSpan="2"                  
-                FontSize="20" FontAttributes="Bold"
+                FontSize="{Binding QuestionUpBtnfontSize}" FontAttributes="Bold"
                 BackgroundColor="Transparent"
                 FontFamily="MelonaBold"
                 Clicked="BtnUp100s_Clicked"
@@ -93,7 +93,7 @@
                 x:Name="Btn_Up10s"
                 Text="0" TextColor="White"
                 Grid.Column="4" Grid.Row="2" Grid.RowSpan="2"                  
-                FontSize="20" FontAttributes="Bold"
+                FontSize="{Binding QuestionUpBtnfontSize}" FontAttributes="Bold"
                 BackgroundColor="Transparent"
                 FontFamily="MelonaBold"
                 Clicked="BtnUp10s_Clicked"
@@ -103,7 +103,7 @@
                 Text="3" TextColor="Gold"
                 Grid.Row="4" Grid.RowSpan="2" Grid.Column="3"
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                FontSize="35" FontAttributes="Bold"
+                FontSize="{Binding QuestionFontSize}" FontAttributes="Bold"
                 FontFamily="MelonaBold"
                 ></Label>
             <Label 
@@ -111,7 +111,7 @@
                 Text="2" TextColor="Gold"
                 Grid.Row="4" Grid.RowSpan="2" Grid.Column="4" 
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                FontSize="35" FontAttributes="Bold"
+                FontSize="{Binding QuestionFontSize}" FontAttributes="Bold"
                 FontFamily="MelonaBold"
                 ></Label>
             <Label 
@@ -119,7 +119,7 @@
                 Text="1" TextColor="Gold"
                 Grid.Row="4" Grid.RowSpan="2" Grid.Column="5" 
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                FontSize="35" FontAttributes="Bold"
+                FontSize="{Binding QuestionFontSize}" FontAttributes="Bold"
                 FontFamily="MelonaBold"
                 ></Label>
             <Label 
@@ -127,7 +127,7 @@
                 Text="6" TextColor="Gold"
                 Grid.Row="6" Grid.RowSpan="2" Grid.Column="3" 
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                FontSize="35" FontAttributes="Bold"
+                FontSize="{Binding QuestionFontSize}" FontAttributes="Bold"
                 FontFamily="MelonaBold"
                 ></Label>
             <Label 
@@ -135,7 +135,7 @@
                 Text="5" TextColor="Gold"
                 Grid.Row="6" Grid.RowSpan="2" Grid.Column="4" 
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                FontSize="35" FontAttributes="Bold"
+                FontSize="{Binding QuestionFontSize}" FontAttributes="Bold"
                 FontFamily="MelonaBold"
                 ></Label>
             <Label 
@@ -143,7 +143,7 @@
                 Text="4" TextColor="Gold"
                 Grid.Row="6" Grid.RowSpan="2" Grid.Column="5" 
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                FontSize="35" FontAttributes="Bold"
+                FontSize="{Binding QuestionFontSize}" FontAttributes="Bold"
                 FontFamily="MelonaBold"
                 ></Label>
             <Label 
@@ -151,7 +151,7 @@
                 Text="+" TextColor="Gold"
                 Grid.Row="6" Grid.RowSpan="2" Grid.Column="2"
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                FontSize="35" FontAttributes="Bold"      
+                FontSize="{Binding QuestionFontSize}" FontAttributes="Bold"      
                 FontFamily="MelonaBold"
                 ></Label>
             <BoxView 
@@ -161,7 +161,7 @@
             <Button
                 x:Name="Btn1000s"
                 Grid.Row="9" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="1"
-                Text="?" Font="30" FontAttributes="Bold" TextColor="White"              
+                Text="?" FontSize="{Binding QuestionBtnfontSize}" FontAttributes="Bold" TextColor="White"              
                 BackgroundColor="Transparent"
                 FontFamily="MelonaBold"
                 Clicked="Btn1000s_Clicked" 
@@ -169,7 +169,7 @@
             <Button
                 x:Name="Btn100s"
                 Grid.Row="9" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="1"
-                Text="?" Font="30" FontAttributes="Bold"  TextColor="White"             
+                Text="?" FontSize="{Binding QuestionBtnfontSize}" FontAttributes="Bold"  TextColor="White"             
                 BackgroundColor="Transparent"
                 FontFamily="MelonaBold"
                 Clicked="Btn100s_Clicked" 
@@ -177,7 +177,7 @@
             <Button
                 x:Name="Btn10s"
                 Grid.Row="9" Grid.RowSpan="2" Grid.Column="4" Grid.ColumnSpan="1"
-                Text="?" Font="30" FontAttributes="Bold"  TextColor="White"             
+                Text="?" FontSize="{Binding QuestionBtnfontSize}" FontAttributes="Bold"  TextColor="White"             
                 BackgroundColor="Transparent"
                 FontFamily="MelonaBold"
                 Clicked="Btn10s_Clicked"
@@ -185,7 +185,7 @@
             <Button
                 x:Name="Btn1s"
                 Grid.Row="9" Grid.RowSpan="2" Grid.Column="5" Grid.ColumnSpan="1"
-                Text="?" Font="30" FontAttributes="Bold" TextColor="Red"           
+                Text="?" FontSize="{Binding QuestionBtnfontSize}" FontAttributes="Bold" TextColor="Red"           
                 BackgroundColor="Transparent"
                 FontFamily="MelonaBold"
                 Clicked="Btn1s_Clicked"
@@ -193,31 +193,31 @@
 
 
             <Button x:Name="AnswerButton1" Clicked="AnswerButton_Clicked" FontFamily="MelonaBold"
-                Grid.Row="12" Grid.RowSpan="2" Grid.Column="1"  BackgroundColor="Gold" Text="1" TextColor="Black" FontSize="Title" FontAttributes="Bold" ></Button>
+                Grid.Row="12" Grid.RowSpan="2" Grid.Column="1"  BackgroundColor="Gold" Text="1" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
             <Button x:Name="AnswerButton2" Clicked="AnswerButton_Clicked" FontFamily="MelonaBold"
-                Grid.Row="12" Grid.RowSpan="2"  Grid.Column="2" BackgroundColor="DarkGray" Text="2" TextColor="Black" FontSize="Title" FontAttributes="Bold" ></Button>
+                Grid.Row="12" Grid.RowSpan="2"  Grid.Column="2" BackgroundColor="DarkGray" Text="2" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
             <Button x:Name="AnswerButton3" Clicked="AnswerButton_Clicked" FontFamily="MelonaBold"
-                Grid.Row="12" Grid.RowSpan="2" Grid.Column="3"  BackgroundColor="Gold" Text="3" TextColor="Black" FontSize="Title" FontAttributes="Bold" ></Button>
+                Grid.Row="12" Grid.RowSpan="2" Grid.Column="3"  BackgroundColor="Gold" Text="3" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
             <Button x:Name="AnswerButton4" Clicked="AnswerButton_Clicked" FontFamily="MelonaBold"
-                Grid.Row="12" Grid.RowSpan="2"  Grid.Column="4" BackgroundColor="DarkGray" Text="4" TextColor="Black" FontSize="Title" FontAttributes="Bold" ></Button>
+                Grid.Row="12" Grid.RowSpan="2"  Grid.Column="4" BackgroundColor="DarkGray" Text="4" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
             <Button x:Name="AnswerButton5" Clicked="AnswerButton_Clicked" FontFamily="MelonaBold"
-                Grid.Row="12" Grid.RowSpan="2"  Grid.Column="5" BackgroundColor="Gold" Text="5" TextColor="Black" FontSize="Title" FontAttributes="Bold" ></Button>
+                Grid.Row="12" Grid.RowSpan="2"  Grid.Column="5" BackgroundColor="Gold" Text="5" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
 
             <Button x:Name="AnswerButton6" Clicked="AnswerButton_Clicked" FontFamily="MelonaBold"
-                Grid.Row="14" Grid.RowSpan="2" Grid.Column="1"  BackgroundColor="DarkGray" Text="6" TextColor="Black" FontSize="Title" FontAttributes="Bold" ></Button>
+                Grid.Row="14" Grid.RowSpan="2" Grid.Column="1"  BackgroundColor="DarkGray" Text="6" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
             <Button x:Name="AnswerButton7" Clicked="AnswerButton_Clicked" FontFamily="MelonaBold"
-                Grid.Row="14" Grid.RowSpan="2"  Grid.Column="2" BackgroundColor="Gold" Text="7" TextColor="Black" FontSize="Title" FontAttributes="Bold" ></Button>
+                Grid.Row="14" Grid.RowSpan="2"  Grid.Column="2" BackgroundColor="Gold" Text="7" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
             <Button x:Name="AnswerButton8" Clicked="AnswerButton_Clicked"  FontFamily="MelonaBold"
-                Grid.Row="14" Grid.RowSpan="2" Grid.Column="3"  BackgroundColor="DarkGray" Text="8" TextColor="Black" FontSize="Title" FontAttributes="Bold" ></Button>
+                Grid.Row="14" Grid.RowSpan="2" Grid.Column="3"  BackgroundColor="DarkGray" Text="8" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
             <Button x:Name="AnswerButton9" Clicked="AnswerButton_Clicked" FontFamily="MelonaBold"
-                Grid.Row="14" Grid.RowSpan="2"  Grid.Column="4" BackgroundColor="Gold" Text="9" TextColor="Black" FontSize="Title" FontAttributes="Bold" ></Button>
+                Grid.Row="14" Grid.RowSpan="2"  Grid.Column="4" BackgroundColor="Gold" Text="9" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
             <Button x:Name="AnswerButton0" Clicked="AnswerButton_Clicked" FontFamily="MelonaBold"
-                Grid.Row="14" Grid.RowSpan="2"  Grid.Column="5" BackgroundColor="DarkGray" Text="0" TextColor="Black" FontSize="Title" FontAttributes="Bold" ></Button>
+                Grid.Row="14" Grid.RowSpan="2"  Grid.Column="5" BackgroundColor="DarkGray" Text="0" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
 
             <Button
                 x:Name="Next"
                 Grid.Row="17" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"
-                Text="다 음" FontSize="Title"  FontAttributes="Bold" TextColor="Black" CornerRadius="5"   
+                Text="다 음" FontSize="{Binding AnsButtonFontSize}"  FontAttributes="Bold" TextColor="Black" CornerRadius="5"   
                 BackgroundColor="Gold"
                 FontFamily="MelonaBold"
                 Clicked="Next_Clicked"

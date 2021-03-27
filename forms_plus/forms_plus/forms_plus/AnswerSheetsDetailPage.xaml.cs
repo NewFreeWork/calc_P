@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
+using forms_plus.ViewModel;
 
 namespace forms_plus
 {
@@ -18,9 +19,7 @@ namespace forms_plus
         {
             InitializeComponent();
 
-            var fontsize = (DeviceDisplay.MainDisplayInfo.Height > 1280) ? 25 : 20;
-
-            Label_Input.FontSize = fontsize;
+            this.BindingContext = new FontSizeViewModel();
 
 
             DrawLayout();

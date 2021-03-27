@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using forms_plus.Controls;
+using forms_plus.ViewModel;
 using Plugin.SimpleAudioPlayer;
 using MarcTron.Plugin;
 
@@ -27,6 +28,7 @@ namespace forms_plus
 
             accessible = true;
             isDoubleClicked = 0;
+            this.BindingContext = new FontSizeViewModel();
             //Ctr_Ad.IsVisible = false;
 
             IntroEffect();

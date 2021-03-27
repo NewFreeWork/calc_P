@@ -121,7 +121,7 @@
         <Button x:Name="BtnStart"
                 Text="시 작"
                 Grid.Column="2" Grid.Row="15" Grid.RowSpan="2" Grid.ColumnSpan="3"
-                FontSize="30"
+                FontSize="{Binding NaviButtonFontSize}"
                 BackgroundColor="Gold" BorderColor="White" BorderWidth="2"
                 Clicked="Start_Clicked" CornerRadius="15"
                 FontFamily="MelonaBold"

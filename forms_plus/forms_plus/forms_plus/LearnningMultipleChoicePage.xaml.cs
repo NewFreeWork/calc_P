@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
 using System.Threading;
+using forms_plus.ViewModel;
 
 namespace forms_plus
 {
@@ -27,7 +28,7 @@ namespace forms_plus
         {
             InitializeComponent();
 
-            var fontsize = (DeviceDisplay.MainDisplayInfo.Height > 1280) ? 25 : 20;
+            this.BindingContext = new FontSizeViewModel();
 
             arr[0] = 1;
             arr[1] = 2;
@@ -40,10 +41,6 @@ namespace forms_plus
             arr[8] = 3;
             arr[9] = 4;
 
-            Label_PassQNUM.FontSize = fontsize;
-            Label_slash.FontSize = fontsize;
-            Label_TotalQNUM.FontSize = fontsize;
-            //ConfirmButton.FontSize = fontsize+5;
             accessible = true;
 
             Init_AnswerButton();

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using forms_plus.Controls;
+using forms_plus.ViewModel;
 using Plugin.SimpleAudioPlayer;
 
 namespace forms_plus
@@ -28,6 +29,7 @@ namespace forms_plus
         {
             InitializeComponent();
             InitSound();
+            this.BindingContext = new FontSizeViewModel();
         }
         private void InitSound()
         {

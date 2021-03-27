@@ -37,7 +37,7 @@ namespace forms_plus
         {
             InitializeComponent();
             accessible = true;
-            BindingContext = this;
+            //BindingContext = this;
             this.BindingContext = new FontSizeViewModel();
             DrawLayout();
             Init_Question();

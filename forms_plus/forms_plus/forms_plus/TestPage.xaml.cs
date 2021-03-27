@@ -9,6 +9,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
 using Plugin.SimpleAudioPlayer;
+using forms_plus.ViewModel;
 
 namespace forms_plus
 {
@@ -46,12 +47,7 @@ namespace forms_plus
 
             AnswerSheetsData.Instance.ClearAnswerSheetsData();
 
-            var fontsize = (DeviceDisplay.MainDisplayInfo.Height > 1280) ? 22 : 18;
-
-            Label_PassQNUM.FontSize = fontsize;
-            Label_slash.FontSize = fontsize;
-            Label_TotalQNUM.FontSize = fontsize;
-            Label_Time.FontSize = fontsize;
+            this.BindingContext = new FontSizeViewModel();
 
             arr[0] = 1;
             arr[1] = 2;
