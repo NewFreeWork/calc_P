@@ -20,7 +20,28 @@ namespace forms_plus.ViewModel
     {
         public FontSizeViewModel()
        {
-            if (DeviceDisplay.MainDisplayInfo.Height > 1280)
+            if (DeviceDisplay.MainDisplayInfo.Height >= 2000)
+            {
+                _questionUpBtnfontSize = 25;
+                _questionBtnfontSize = 37;
+                _questionNumFontSize = 30;
+                _questionFontSize = 45;
+                _naviButtonFontSize = 27;
+                _ansAnsButtonFontSize = 37;
+                _detailSheetTextSize = 30;
+
+                _mainTitleFontSize_S = 80;
+                _mainTitleFontSize_M = 90;
+                _mainTitleFontSize_L = 100;
+                _entryTextSize = 23;
+
+                _answerSheetTitleSize = 50;
+                _answerSheetQ_Size = 30;
+                _answerSheetScoreSize = 30;
+                _answerSheetTimeSize = 25;
+                _answerSheetBackBtnSize = 21;
+            }
+            else if (DeviceDisplay.MainDisplayInfo.Height > 1280)
             {
                 _questionUpBtnfontSize = 22;
                 _questionBtnfontSize = 32;

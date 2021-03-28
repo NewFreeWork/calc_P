@@ -313,9 +313,8 @@
             <Button x:Name="Button_Home"
                     Text="메뉴로 돌아가기"
                     Grid.Column="5" Grid.Row="26" Grid.ColumnSpan="5" Grid.RowSpan="2"
-                    FontSize="{Binding AnswerSheetBackBtnSize}" TextColor="Black" VerticalOptions="Center"
-                    BorderColor="White" BorderWidth="3" BackgroundColor="Gold"                   
-               
+                    FontSize="{Binding AnswerSheetBackBtnSize}" TextColor="Black" VerticalOptions="FillAndExpand"
+                    BorderColor="White" BorderWidth="3" BackgroundColor="Gold" 
                     FontFamily="MelonaBold"
                     Clicked="Home_Clicked"
                     ></Button>
