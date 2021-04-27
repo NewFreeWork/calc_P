@@ -193,33 +193,44 @@
 
 
             <Button x:Name="AnswerButton1" Clicked="AnswerButton_Clicked" FontFamily="MelonaBold"
-                Grid.Row="12" Grid.RowSpan="2" Grid.Column="1"  BackgroundColor="Gold" Text="1" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
+                    Grid.Row="12" Grid.RowSpan="2" Grid.Column="1"  BackgroundColor="Gold" Text="1" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
             <Button x:Name="AnswerButton2" Clicked="AnswerButton_Clicked" FontFamily="MelonaBold"
-                Grid.Row="12" Grid.RowSpan="2"  Grid.Column="2" BackgroundColor="DarkGray" Text="2" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
+                    Grid.Row="12" Grid.RowSpan="2"  Grid.Column="2" BackgroundColor="DarkGray" Text="2" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
             <Button x:Name="AnswerButton3" Clicked="AnswerButton_Clicked" FontFamily="MelonaBold"
-                Grid.Row="12" Grid.RowSpan="2" Grid.Column="3"  BackgroundColor="Gold" Text="3" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
+                    Grid.Row="12" Grid.RowSpan="2" Grid.Column="3"  BackgroundColor="Gold" Text="3" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
             <Button x:Name="AnswerButton4" Clicked="AnswerButton_Clicked" FontFamily="MelonaBold"
-                Grid.Row="12" Grid.RowSpan="2"  Grid.Column="4" BackgroundColor="DarkGray" Text="4" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
+                    Grid.Row="12" Grid.RowSpan="2"  Grid.Column="4" BackgroundColor="DarkGray" Text="4" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
             <Button x:Name="AnswerButton5" Clicked="AnswerButton_Clicked" FontFamily="MelonaBold"
-                Grid.Row="12" Grid.RowSpan="2"  Grid.Column="5" BackgroundColor="Gold" Text="5" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
+                    Grid.Row="12" Grid.RowSpan="2"  Grid.Column="5" BackgroundColor="Gold" Text="5" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
 
             <Button x:Name="AnswerButton6" Clicked="AnswerButton_Clicked" FontFamily="MelonaBold"
-                Grid.Row="14" Grid.RowSpan="2" Grid.Column="1"  BackgroundColor="DarkGray" Text="6" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
+                    Grid.Row="14" Grid.RowSpan="2" Grid.Column="1"  BackgroundColor="DarkGray" Text="6" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
             <Button x:Name="AnswerButton7" Clicked="AnswerButton_Clicked" FontFamily="MelonaBold"
-                Grid.Row="14" Grid.RowSpan="2"  Grid.Column="2" BackgroundColor="Gold" Text="7" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
+                    Grid.Row="14" Grid.RowSpan="2"  Grid.Column="2" BackgroundColor="Gold" Text="7" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
             <Button x:Name="AnswerButton8" Clicked="AnswerButton_Clicked"  FontFamily="MelonaBold"
-                Grid.Row="14" Grid.RowSpan="2" Grid.Column="3"  BackgroundColor="DarkGray" Text="8" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
+                    Grid.Row="14" Grid.RowSpan="2" Grid.Column="3"  BackgroundColor="DarkGray" Text="8" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
             <Button x:Name="AnswerButton9" Clicked="AnswerButton_Clicked" FontFamily="MelonaBold"
-                Grid.Row="14" Grid.RowSpan="2"  Grid.Column="4" BackgroundColor="Gold" Text="9" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
+                    Grid.Row="14" Grid.RowSpan="2"  Grid.Column="4" BackgroundColor="Gold" Text="9" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
             <Button x:Name="AnswerButton0" Clicked="AnswerButton_Clicked" FontFamily="MelonaBold"
-                Grid.Row="14" Grid.RowSpan="2"  Grid.Column="5" BackgroundColor="DarkGray" Text="0" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
+                    Grid.Row="14" Grid.RowSpan="2"  Grid.Column="5" BackgroundColor="DarkGray" Text="0" TextColor="Black" FontSize="{Binding AnsButtonFontSize}" FontAttributes="Bold" ></Button>
 
             <Button
                 x:Name="Next"
                 Grid.Row="17" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"
-                Text="다 음" FontSize="{Binding AnsButtonFontSize}"  FontAttributes="Bold" TextColor="Black" CornerRadius="5"   
+                Text="다 음" FontSize="{Binding AnsButtonFontSize}"  FontAttributes="Bold" TextColor="Black"
                 BackgroundColor="Gold"
                 FontFamily="MelonaBold"
+                BorderColor="White" BorderWidth="3" CornerRadius="10"
                 Clicked="Next_Clicked"
                 ></Button>
         </Grid>

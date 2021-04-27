@@ -21,11 +21,11 @@
                     <ColumnDefinition Width="15*"/>
                     <ColumnDefinition Width="25*"/>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Grid.Row="0" Text="순위" FontSize="Subtitle" TextColor="White" BackgroundColor="#F2D749" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="1" Grid.Row="0" Text="이름" FontSize="Subtitle" TextColor="White" BackgroundColor="#9E9253" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="2" Grid.Row="0" Text="단계" FontSize="Subtitle" TextColor="White" BackgroundColor="#7B6E2A" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="3" Grid.Row="0" Text="점수" FontSize="Subtitle" TextColor="White" BackgroundColor="#9D8400" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="4" Grid.Row="0" Text="시간" FontSize="Subtitle" TextColor="White" BackgroundColor="#AD8400" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="0" Grid.Row="0" Text="순위" FontFamily="MelonaBold" FontSize="Subtitle" TextColor="White" BackgroundColor="#F2D749" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="1" Grid.Row="0" Text="이름" FontFamily="MelonaBold" FontSize="Subtitle" TextColor="White" BackgroundColor="#9E9253" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="2" Grid.Row="0" Text="단계" FontFamily="MelonaBold" FontSize="Subtitle" TextColor="White" BackgroundColor="#7B6E2A" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="3" Grid.Row="0" Text="점수" FontFamily="MelonaBold" FontSize="Subtitle" TextColor="White" BackgroundColor="#9D8400" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="4" Grid.Row="0" Text="시간" FontFamily="MelonaBold" FontSize="Subtitle" TextColor="White" BackgroundColor="#AD8400" HorizontalTextAlignment="Center"/>
             </Grid>
             <ListView x:Name="listx" >
                 <ListView.ItemTemplate>
@@ -42,11 +42,11 @@
                                     <ColumnDefinition Width="15*"/>
                                     <ColumnDefinition Width="25*"/>
                                 </Grid.ColumnDefinitions>
-                                <Label Grid.Column="0" FontSize="Body" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Rk}"/>
-                                <Label Grid.Column="1" FontSize="Body" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Usr}"/>
-                                <Label Grid.Column="2" FontSize="Body" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Stage}"/>
-                                <Label Grid.Column="3" FontSize="Body" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Score}"/>
-                                <Label Grid.Column="4" FontSize="Body" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Time}"/>
+                                <Label Grid.Column="0" FontSize="Body" FontFamily="MelonaBold" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Rk}"/>
+                                <Label Grid.Column="1" FontSize="Body" FontFamily="MelonaBold" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Usr}"/>
+                                <Label Grid.Column="2" FontSize="Body" FontFamily="MelonaBold" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Stage}"/>
+                                <Label Grid.Column="3" FontSize="Body" FontFamily="MelonaBold" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Score}"/>
+                                <Label Grid.Column="4" FontSize="Body" FontFamily="MelonaBold" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Time}"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
@@ -54,7 +54,7 @@
             </ListView>
 
             <Button Text="기록 지우기" 
-                    FontSize="18" BackgroundColor="Gold"                    
+                    FontSize="{Binding NaviButtonFontSize}" BackgroundColor="Gold"                    
                     BorderColor="White" BorderWidth="3" CornerRadius="5"
                     FontFamily="MelonaBold"
                     Clicked="Btn_DeleteHistory"></Button>

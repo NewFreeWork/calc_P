@@ -47,7 +47,7 @@
 
             <Label Text="Detail Sheets"
                    Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="7" Grid.RowSpan="2"
-                   FontSize="40" TextColor="Gold"
+                   FontSize="{Binding AnswerSheetTitleSize}" TextColor="Gold"
                    VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                    FontFamily="MelonaBold"
                    ></Label>

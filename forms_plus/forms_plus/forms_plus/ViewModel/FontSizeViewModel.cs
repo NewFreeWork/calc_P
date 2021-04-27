@@ -20,90 +20,35 @@ namespace forms_plus.ViewModel
     {
         public FontSizeViewModel()
        {
-            if (DeviceDisplay.MainDisplayInfo.Height >= 2000)
-            {
-                _questionUpBtnfontSize = 25;
-                _questionBtnfontSize = 37;
-                _questionNumFontSize = 30;
-                _questionFontSize = 45;
-                _naviButtonFontSize = 27;
-                _ansAnsButtonFontSize = 37;
-                _detailSheetTextSize = 30;
 
-                _mainTitleFontSize_S = 80;
-                _mainTitleFontSize_M = 90;
-                _mainTitleFontSize_L = 100;
-                _entryTextSize = 23;
+            double density = DeviceDisplay.MainDisplayInfo.Density;
+            double width = DeviceDisplay.MainDisplayInfo.Width;
+            double height = DeviceDisplay.MainDisplayInfo.Height;
 
-                _answerSheetTitleSize = 50;
-                _answerSheetQ_Size = 30;
-                _answerSheetScoreSize = 30;
-                _answerSheetTimeSize = 25;
-                _answerSheetBackBtnSize = 21;
-            }
-            else if (DeviceDisplay.MainDisplayInfo.Height > 1280)
-            {
-                _questionUpBtnfontSize = 22;
-                _questionBtnfontSize = 32;
-                _questionNumFontSize = 25;
-                _questionFontSize = 40;
-                _naviButtonFontSize = 22;
-                _ansAnsButtonFontSize = 32;
-                _detailSheetTextSize = 23;
+            int standardSize_X = (int)(width / density);
+            int standardSize_Y = (int)(height / density);
 
-                _mainTitleFontSize_S = 60;
-                _mainTitleFontSize_M = 70;
-                _mainTitleFontSize_L = 80;
-                _entryTextSize = 18;
 
-                _answerSheetTitleSize = 40;
-                _answerSheetQ_Size = 25;
-                _answerSheetScoreSize = 25;
-                _answerSheetTimeSize = 20;
-                _answerSheetBackBtnSize = 16;
-            }
-            else if (DeviceDisplay.MainDisplayInfo.Height > 800)
-            {
-                _questionUpBtnfontSize = 20;
-                _questionBtnfontSize = 32;
-                _questionNumFontSize = 20;
-                _questionFontSize = 35;
-                _naviButtonFontSize = 18;
-                _ansAnsButtonFontSize = 27;
-                _detailSheetTextSize = 20;
+            _questionUpBtnfontSize = (standardSize_X / 16);
+            _questionBtnfontSize = (standardSize_X / 14);
+            _questionNumFontSize = (standardSize_X / 16);
+            _questionFontSize = (standardSize_X / 12);
+            _naviButtonFontSize = (standardSize_X / 18);
+            _ansAnsButtonFontSize = (standardSize_X / 16);
+            _detailSheetTextSize = (standardSize_X / 16);
 
-                _mainTitleFontSize_S = 50;
-                _mainTitleFontSize_M = 60;
-                _mainTitleFontSize_L = 70;
-                _entryTextSize = 16;
+            _mainTitleFontSize_S = (standardSize_X / 12);
+            _mainTitleFontSize_M = (standardSize_X / 10);
+            _mainTitleFontSize_L = (standardSize_X / 8);
+            _entryTextSize = (standardSize_X / 22);
+            _copyrightTextSize = (standardSize_X / 26);
 
-                _answerSheetTitleSize = 35;
-                _answerSheetQ_Size = 25;
-                _answerSheetScoreSize = 25;
-                _answerSheetTimeSize = 20;
-                _answerSheetBackBtnSize = 13;
-            }
-            else
-            {
-                _questionUpBtnfontSize = 20;
-                _questionBtnfontSize = 25;
-                _questionNumFontSize = 18;
-                _questionFontSize = 30;
-                _naviButtonFontSize = 16;
-                _ansAnsButtonFontSize = 20;
-                _detailSheetTextSize = 18;
+            _answerSheetTitleSize = (standardSize_X / 12);
+            _answerSheetQ_Size = (standardSize_X / 14);
+            _answerSheetScoreSize = (standardSize_X / 14);
+            _answerSheetTimeSize = (standardSize_X / 14);
+            _answerSheetBackBtnSize = (standardSize_X / 22);
 
-                _mainTitleFontSize_S = 40;
-                _mainTitleFontSize_M = 50;
-                _mainTitleFontSize_L = 60;
-                _entryTextSize = 15;
-
-                _answerSheetTitleSize = 30;
-                _answerSheetQ_Size = 20;
-                _answerSheetScoreSize = 22;
-                _answerSheetTimeSize = 18;
-                _answerSheetBackBtnSize = 11;
-            }
         }
 
         private int? _answerSheetTitleSize;
@@ -322,6 +267,20 @@ namespace forms_plus.ViewModel
             {
                 _entryTextSize = value;
                 FontNotifyPropertyChanged(nameof(EntryTextSize));
+            }
+        }
+
+        private int? _copyrightTextSize;
+        public int? CopyRightTextSize
+        {
+            get
+            {
+                return _copyrightTextSize;
+            }
+            set
+            {
+                _copyrightTextSize = value;
+                FontNotifyPropertyChanged(nameof(CopyRightTextSize));
             }
         }
     }

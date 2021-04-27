@@ -176,7 +176,8 @@ namespace forms_plus
             Grid_todo_Test.IsVisible = false;
             listTest.IsVisible = false;
 
-
+            boxview_todo_1st.IsVisible = false;
+            boxview_todo_3th.IsVisible = false;
 
             if (App.CalLearnInfoDatabase.getTodayLearnListCount(sDate) > 0)
             {
