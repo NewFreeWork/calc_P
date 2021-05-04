@@ -21,7 +21,7 @@ namespace forms_plus.Data
         {
 
 #if true
-            String QueryStr = "SELECT Usr, Stage, Score, Time, RANK() OVER (ORDER BY Score DESC, Time ASC) as Rk From RankingInfo Where Stage="+stage;
+            String QueryStr = "SELECT Usr, Score, Time, Date, RANK() OVER (ORDER BY Score DESC, Time ASC) as Rk From RankingInfo Where Stage="+stage;
             Task<List<RankingInfo>> list = _database.QueryAsync<RankingInfo>(QueryStr);
 
             Task<List<RankingInfo>> DeleteQryRtn;
@@ -31,7 +31,7 @@ namespace forms_plus.Data
                 DeleteQryRtn = _database.QueryAsync<RankingInfo>(QueryStr);
             }
 
-            QueryStr = "SELECT Usr, Stage, Score, Time, RANK() OVER (ORDER BY Score DESC, Time ASC) as Rk From RankingInfo Where Stage=" + stage;
+            QueryStr = "SELECT Usr, Score, Time, Date, RANK() OVER (ORDER BY Score DESC, Time ASC) as Rk From RankingInfo Where Stage=" + stage;
             list = _database.QueryAsync<RankingInfo>(QueryStr);
 
             return list;
@@ -85,7 +85,7 @@ namespace forms_plus.Data
 
 
 
-        public async void SaveRankingInfo(String userName, int stage, int score, String time, int Qnum)
+        public async void SaveRankingInfo(String userName, int stage, int score, String time, int Qnum, String date)
         {
             RankingInfo info = new RankingInfo();
 
@@ -96,6 +96,7 @@ namespace forms_plus.Data
                 info.Stage = stage.ToString();
                 info.Score = score;
                 info.Time = time;
+                info.Date = date;
 
                 switch (stage)
                 {

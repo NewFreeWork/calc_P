@@ -58,7 +58,7 @@ namespace forms_plus.Data
             info.TestScore = score;
             info.TestDate = date;
             info.TestDone = true;
-            info.TestTime = time;
+            info.TestTime = time;            
 
             switch (stage)
             {

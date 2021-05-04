@@ -72,8 +72,8 @@
                     FontSize="{Binding NaviButtonFontSize}" BackgroundColor="Gold"
                     Grid.Column="1" Grid.Row="11" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="Ranking_Clicked"
                     BorderColor="White" BorderWidth="3" CornerRadius="10"
-                    FontFamily="MelonaBold"/>            
-            <Button Text="학습 일정 확인" 
+                    FontFamily="MelonaBold"/>
+            <Button Text="학습 일정&#10;확인" 
                     FontSize="{Binding NaviButtonFontSize}" BackgroundColor="Gold"
                     Grid.Column="4" Grid.Row="11" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="ToDo_Clicked" 
                     BorderColor="White" BorderWidth="3" CornerRadius="10"

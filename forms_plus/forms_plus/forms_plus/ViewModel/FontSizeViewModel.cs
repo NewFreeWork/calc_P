@@ -29,12 +29,12 @@ namespace forms_plus.ViewModel
             int standardSize_Y = (int)(height / density);
 
 
-            _questionUpBtnfontSize = (standardSize_X / 16);
-            _questionBtnfontSize = (standardSize_X / 14);
-            _questionNumFontSize = (standardSize_X / 16);
+            _questionUpBtnfontSize = (standardSize_X / 18);
+            _questionBtnfontSize = (standardSize_X / 12);
+            _questionNumFontSize = (standardSize_X / 22);
             _questionFontSize = (standardSize_X / 12);
-            _naviButtonFontSize = (standardSize_X / 18);
-            _ansAnsButtonFontSize = (standardSize_X / 16);
+            _naviButtonFontSize = (standardSize_X / 22);
+            _ansAnsButtonFontSize = (standardSize_X / 20);
             _detailSheetTextSize = (standardSize_X / 16);
 
             _mainTitleFontSize_S = (standardSize_X / 12);
@@ -42,12 +42,13 @@ namespace forms_plus.ViewModel
             _mainTitleFontSize_L = (standardSize_X / 8);
             _entryTextSize = (standardSize_X / 22);
             _copyrightTextSize = (standardSize_X / 26);
+            _settingTextSize = (standardSize_X / 24);
 
-            _answerSheetTitleSize = (standardSize_X / 12);
-            _answerSheetQ_Size = (standardSize_X / 14);
-            _answerSheetScoreSize = (standardSize_X / 14);
-            _answerSheetTimeSize = (standardSize_X / 14);
-            _answerSheetBackBtnSize = (standardSize_X / 22);
+            _answerSheetTitleSize = (standardSize_X / 15);
+            _answerSheetQ_Size = (standardSize_X / 16);
+            _answerSheetScoreSize = (standardSize_X / 16);
+            _answerSheetTimeSize = (standardSize_X / 16);
+            _answerSheetBackBtnSize = (standardSize_X / 18);
 
         }
 
@@ -281,6 +282,20 @@ namespace forms_plus.ViewModel
             {
                 _copyrightTextSize = value;
                 FontNotifyPropertyChanged(nameof(CopyRightTextSize));
+            }
+        }
+
+        private int? _settingTextSize;
+        public int? SettingTextSize
+        {
+            get
+            {
+                return _settingTextSize;
+            }
+            set
+            {
+                _settingTextSize = value;
+                FontNotifyPropertyChanged(nameof(SettingTextSize));
             }
         }
     }

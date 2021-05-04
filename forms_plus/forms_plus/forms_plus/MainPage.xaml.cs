@@ -115,11 +115,11 @@ namespace forms_plus
         {
             String Name = App.LoginInfoDatabase.GetUserNameAsync();
 
-            UserInfo.Instance.userName = " ";
+            UserInfo.Instance.userName = "";
 
             if (Name == "")
             {
-                UserInfo.Instance.userName = " ";
+                UserInfo.Instance.userName = "";
             }
             else 
             {
@@ -150,7 +150,7 @@ namespace forms_plus
                 {
                     accessible = false;
                     PlayBtnSound();
-                    if (UserInfo.Instance.userName == " ")
+                    if (UserInfo.Instance.userName == "")
                     {
                         
                         await DisplayAlert("확인", "이름을 입력해주세요.", "OK");

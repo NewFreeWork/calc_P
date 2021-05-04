@@ -15,5 +15,6 @@ namespace forms_plus.Models
         public String Stage { get; set; }
         public int Score { get; set; }
         public String Time { get; set; }
+        public String Date { get; set; }
     }
 }

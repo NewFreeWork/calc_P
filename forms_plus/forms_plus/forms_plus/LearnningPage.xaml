@@ -153,7 +153,7 @@
                 ScaleY="0.5"></BoxView>
             <Button
                 x:Name="Btn1000s"
-                Grid.Row="9" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="1"
+                Grid.Row="9" Grid.RowSpan="3" Grid.Column="2" Grid.ColumnSpan="1"
                 Text="?" FontSize="{Binding QuestionBtnfontSize}" FontAttributes="Bold" TextColor="White"              
                 BackgroundColor="Transparent"
                 FontFamily="MelonaBold"
@@ -161,7 +161,7 @@
                 ></Button>
             <Button
                 x:Name="Btn100s"
-                Grid.Row="9" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="1"
+                Grid.Row="9" Grid.RowSpan="3" Grid.Column="3" Grid.ColumnSpan="1"
                 Text="?" FontSize="{Binding QuestionBtnfontSize}" FontAttributes="Bold"  TextColor="White"             
                 BackgroundColor="Transparent"
                 FontFamily="MelonaBold"
@@ -169,7 +169,7 @@
                 ></Button>
             <Button
                 x:Name="Btn10s"
-                Grid.Row="9" Grid.RowSpan="2" Grid.Column="4" Grid.ColumnSpan="1"
+                Grid.Row="9" Grid.RowSpan="3" Grid.Column="4" Grid.ColumnSpan="1"
                 Text="?" FontSize="{Binding QuestionBtnfontSize}" FontAttributes="Bold"  TextColor="White"             
                 BackgroundColor="Transparent"
                 FontFamily="MelonaBold"
@@ -177,7 +177,7 @@
                 ></Button>
             <Button
                 x:Name="Btn1s"
-                Grid.Row="9" Grid.RowSpan="2" Grid.Column="5" Grid.ColumnSpan="1"
+                Grid.Row="9" Grid.RowSpan="3" Grid.Column="5" Grid.ColumnSpan="1"
                 Text="?" FontSize="{Binding QuestionBtnfontSize}" FontAttributes="Bold" TextColor="Red"           
                 BackgroundColor="Transparent"
                 FontFamily="MelonaBold"

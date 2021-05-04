@@ -27,14 +27,13 @@ namespace forms_plus
 
             PrintData();
 
+            String Date = StringDate.Instance.DateYMD_to_String(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
             App.RkInfoDatabase.SaveRankingInfo(UserInfo.Instance.userName,
                                             LearnSetSington.Instance.setStage,
                                             AnswerSheetsData.Instance.MyScore,
                                             AnswerSheetsData.Instance.TotalTime,
-                                            LearnSetSington.Instance.setQ_Num);
-
-
-            String Date = StringDate.Instance.DateYMD_to_String(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+                                            LearnSetSington.Instance.setQ_Num,
+                                            Date);           
 
             App.CalTestInfoDatabase.SaveCalendarTestInfo(UserInfo.Instance.userName,
                                             LearnSetSington.Instance.setStage,
@@ -446,13 +445,13 @@ namespace forms_plus
                 Label_Q1.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer1, AnswerSheetsData.Instance.MyAnswer1, AnswerSheetsData.Instance.Q_RightUp1, AnswerSheetsData.Instance.MyUpAnswer1);
                 if (Label_Q1.TextColor == Color.FromHex("5151FD"))
                 {
-                    Button_Q1.Text = "O";
+                    Button_Q1.Text = "정답확인";
                     Button_Q1.TextColor = Color.FromHex("5151FD");
                     RightCnt++;
                 }
                 else
                 {
-                    Button_Q1.Text = "X";
+                    Button_Q1.Text = "오답확인";
                     Button_Q1.TextColor = Color.Red;
                 }
                 Label_Q1.IsVisible = true;
@@ -474,13 +473,13 @@ namespace forms_plus
                 Label_Q2.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer2, AnswerSheetsData.Instance.MyAnswer2, AnswerSheetsData.Instance.Q_RightUp2, AnswerSheetsData.Instance.MyUpAnswer2);
                 if (Label_Q2.TextColor == Color.FromHex("5151FD"))
                 {
-                    Button_Q2.Text = "O";
+                    Button_Q2.Text = "정답확인";
                     Button_Q2.TextColor = Color.FromHex("5151FD");
                     RightCnt++;
                 }
                 else
                 {
-                    Button_Q2.Text = "X";
+                    Button_Q2.Text = "오답확인";
                     Button_Q2.TextColor = Color.Red;
                 }
                 Label_Q2.IsVisible = true;
@@ -502,13 +501,13 @@ namespace forms_plus
                 Label_Q3.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer3, AnswerSheetsData.Instance.MyAnswer3, AnswerSheetsData.Instance.Q_RightUp3, AnswerSheetsData.Instance.MyUpAnswer3);
                 if (Label_Q3.TextColor == Color.FromHex("5151FD"))
                 {
-                    Button_Q3.Text = "O";
+                    Button_Q3.Text = "정답확인";
                     Button_Q3.TextColor = Color.FromHex("5151FD");
                     RightCnt++;
                 }
                 else
                 {
-                    Button_Q3.Text = "X";
+                    Button_Q3.Text = "오답확인";
                     Button_Q3.TextColor = Color.Red;
                 }
                 Label_Q3.IsVisible = true;
@@ -530,13 +529,13 @@ namespace forms_plus
                 Label_Q4.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer4, AnswerSheetsData.Instance.MyAnswer4, AnswerSheetsData.Instance.Q_RightUp4, AnswerSheetsData.Instance.MyUpAnswer4);
                 if (Label_Q4.TextColor == Color.FromHex("5151FD"))
                 {
-                    Button_Q4.Text = "O";
+                    Button_Q4.Text = "정답확인";
                     Button_Q4.TextColor = Color.FromHex("5151FD");
                     RightCnt++;
                 }
                 else
                 {
-                    Button_Q4.Text = "X";
+                    Button_Q4.Text = "오답확인";
                     Button_Q4.TextColor = Color.Red;
                 }
                 Label_Q4.IsVisible = true;
@@ -558,13 +557,13 @@ namespace forms_plus
                 Label_Q5.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer5, AnswerSheetsData.Instance.MyAnswer5, AnswerSheetsData.Instance.Q_RightUp5, AnswerSheetsData.Instance.MyUpAnswer5);
                 if (Label_Q5.TextColor == Color.FromHex("5151FD"))
                 {
-                    Button_Q5.Text = "O";
+                    Button_Q5.Text = "정답확인";
                     Button_Q5.TextColor = Color.FromHex("5151FD");
                     RightCnt++;
                 }
                 else
                 {
-                    Button_Q5.Text = "X";
+                    Button_Q5.Text = "오답확인";
                     Button_Q5.TextColor = Color.Red;
                 }
                 Label_Q5.IsVisible = true;
@@ -586,13 +585,13 @@ namespace forms_plus
                 Label_Q6.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer6, AnswerSheetsData.Instance.MyAnswer6, AnswerSheetsData.Instance.Q_RightUp6, AnswerSheetsData.Instance.MyUpAnswer6);
                 if (Label_Q6.TextColor == Color.FromHex("5151FD"))
                 {
-                    Button_Q6.Text = "O";
+                    Button_Q6.Text = "정답확인";
                     Button_Q6.TextColor = Color.FromHex("5151FD");
                     RightCnt++;
                 }
                 else
                 {
-                    Button_Q6.Text = "X";
+                    Button_Q6.Text = "오답확인";
                     Button_Q6.TextColor = Color.Red;
                 }
                 Label_Q6.IsVisible = true;
@@ -614,13 +613,13 @@ namespace forms_plus
                 Label_Q7.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer7, AnswerSheetsData.Instance.MyAnswer7, AnswerSheetsData.Instance.Q_RightUp7, AnswerSheetsData.Instance.MyUpAnswer7);
                 if (Label_Q7.TextColor == Color.FromHex("5151FD"))
                 {
-                    Button_Q7.Text = "O";
+                    Button_Q7.Text = "정답확인";
                     Button_Q7.TextColor = Color.FromHex("5151FD");
                     RightCnt++;
                 }
                 else
                 {
-                    Button_Q7.Text = "X";
+                    Button_Q7.Text = "오답확인";
                     Button_Q7.TextColor = Color.Red;
                 }
                 Label_Q7.IsVisible = true;
@@ -642,13 +641,13 @@ namespace forms_plus
                 Label_Q8.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer8, AnswerSheetsData.Instance.MyAnswer8, AnswerSheetsData.Instance.Q_RightUp8, AnswerSheetsData.Instance.MyUpAnswer8);
                 if (Label_Q8.TextColor == Color.FromHex("5151FD"))
                 {
-                    Button_Q8.Text = "O";
+                    Button_Q8.Text = "정답확인";
                     Button_Q8.TextColor = Color.FromHex("5151FD");
                     RightCnt++;
                 }
                 else
                 {
-                    Button_Q8.Text = "X";
+                    Button_Q8.Text = "오답확인";
                     Button_Q8.TextColor = Color.Red;
                 }
                 Label_Q8.IsVisible = true;
@@ -670,13 +669,13 @@ namespace forms_plus
                 Label_Q9.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer9, AnswerSheetsData.Instance.MyAnswer9, AnswerSheetsData.Instance.Q_RightUp9, AnswerSheetsData.Instance.MyUpAnswer9);
                 if (Label_Q9.TextColor == Color.FromHex("5151FD"))
                 {
-                    Button_Q9.Text = "O";
+                    Button_Q9.Text = "정답확인";
                     Button_Q9.TextColor = Color.FromHex("5151FD");
                     RightCnt++;
                 }
                 else
                 {
-                    Button_Q9.Text = "X";
+                    Button_Q9.Text = "오답확인";
                     Button_Q9.TextColor = Color.Red;
                 }
                 Label_Q9.IsVisible = true;
@@ -698,13 +697,13 @@ namespace forms_plus
                 Label_Q10.TextColor = Is_RightAnswer(AnswerSheetsData.Instance.Q_RightAnswer10, AnswerSheetsData.Instance.MyAnswer10, AnswerSheetsData.Instance.Q_RightUp10, AnswerSheetsData.Instance.MyUpAnswer10);
                 if (Label_Q10.TextColor == Color.FromHex("5151FD"))
                 {
-                    Button_Q10.Text = "O";
+                    Button_Q10.Text = "정답확인";
                     Button_Q10.TextColor = Color.FromHex("5151FD");
                     RightCnt++;
                 }
                 else
                 {
-                    Button_Q10.Text = "X";
+                    Button_Q10.Text = "오답확인";
                     Button_Q10.TextColor = Color.Red;
                 }
                 Label_Q10.IsVisible = true;
@@ -724,37 +723,6 @@ namespace forms_plus
             Score = (RightCnt * 10 / TestNum) * 10;
             Label_Score.Text = Score.ToString() + "점";
             AnswerSheetsData.Instance.MyScore = Score;
-
-            if (Score == 100)
-            {
-                Label_Stamp.Text = "EXCELLENT!!";
-                Label_Stamp.TextColor = Color.Blue;
-            }
-            else if ((Score < 100) && (Score >= 80))
-            {
-                Label_Stamp.Text = "VERY GOOD!!";
-                Label_Stamp.TextColor = Color.SkyBlue;
-            }
-            else if ((Score < 80) && (Score >= 60))
-            {
-                Label_Stamp.Text = " GOOD!! ";
-                Label_Stamp.TextColor = Color.Gold;
-            }
-            else if ((Score < 60) && (Score >= 40))
-            {
-                Label_Stamp.Text = " FAIR!! ";
-                Label_Stamp.TextColor = Color.Orange;
-            }
-            else if ((Score < 40) && (Score >= 20))
-            {
-                Label_Stamp.Text = " POOR!! ";
-                Label_Stamp.TextColor = Color.OrangeRed;
-            }
-            else 
-            {
-                Label_Stamp.Text = "VERY BAD!! ";
-                Label_Stamp.TextColor = Color.Red;
-            }
 
             Label_Time.Text = AnswerSheetsData.Instance.TotalTime;
 

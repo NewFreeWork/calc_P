@@ -16,17 +16,17 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="15*"/>
+                    <ColumnDefinition Width="10*"/>
                     <ColumnDefinition Width="20*"/>
                     <ColumnDefinition Width="15*"/>
-                    <ColumnDefinition Width="15*"/>
+                    <ColumnDefinition Width="20*"/>
                     <ColumnDefinition Width="25*"/>
                 </Grid.ColumnDefinitions>
                 <Label Grid.Column="0" Grid.Row="0" Text="순위" FontFamily="MelonaBold" FontSize="Subtitle" TextColor="White" BackgroundColor="#F2D749" HorizontalTextAlignment="Center"/>
                 <Label Grid.Column="1" Grid.Row="0" Text="이름" FontFamily="MelonaBold" FontSize="Subtitle" TextColor="White" BackgroundColor="#9E9253" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="2" Grid.Row="0" Text="단계" FontFamily="MelonaBold" FontSize="Subtitle" TextColor="White" BackgroundColor="#7B6E2A" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="3" Grid.Row="0" Text="점수" FontFamily="MelonaBold" FontSize="Subtitle" TextColor="White" BackgroundColor="#9D8400" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="4" Grid.Row="0" Text="시간" FontFamily="MelonaBold" FontSize="Subtitle" TextColor="White" BackgroundColor="#AD8400" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="2" Grid.Row="0" Text="점수" FontFamily="MelonaBold" FontSize="Subtitle" TextColor="White" BackgroundColor="#7B6E2A" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="3" Grid.Row="0" Text="시간" FontFamily="MelonaBold" FontSize="Subtitle" TextColor="White" BackgroundColor="#9D8400" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="4" Grid.Row="0" Text="날짜" FontFamily="MelonaBold" FontSize="Subtitle" TextColor="White" BackgroundColor="#AD8400" HorizontalTextAlignment="Center"/>
             </Grid>
             <ListView x:Name="listx" >
                 <ListView.ItemTemplate>
@@ -37,17 +37,17 @@
                                     <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="15*"/>
+                                    <ColumnDefinition Width="10*"/>
                                     <ColumnDefinition Width="20*"/>
                                     <ColumnDefinition Width="15*"/>
-                                    <ColumnDefinition Width="15*"/>
+                                    <ColumnDefinition Width="20*"/>
                                     <ColumnDefinition Width="25*"/>
                                 </Grid.ColumnDefinitions>
                                 <Label Grid.Column="0" FontSize="Body" FontFamily="MelonaBold" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Rk}"/>
                                 <Label Grid.Column="1" FontSize="Body" FontFamily="MelonaBold" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Usr}"/>
-                                <Label Grid.Column="2" FontSize="Body" FontFamily="MelonaBold" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Stage}"/>
-                                <Label Grid.Column="3" FontSize="Body" FontFamily="MelonaBold" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Score}"/>
-                                <Label Grid.Column="4" FontSize="Body" FontFamily="MelonaBold" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Time}"/>
+                                <Label Grid.Column="2" FontSize="Body" FontFamily="MelonaBold" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Score}"/>
+                                <Label Grid.Column="3" FontSize="Body" FontFamily="MelonaBold" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Time}"/>
+                                <Label Grid.Column="4" FontSize="Body" FontFamily="MelonaBold" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Date}"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

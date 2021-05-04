@@ -48,28 +48,28 @@
         <Label Text="받아 올림 선택:"
                Grid.Column ="0" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="3"
                VerticalTextAlignment="Center" HorizontalTextAlignment="End"
-               FontSize="Body" FontFamily="MelonaBold"
+               FontSize="{Binding SettingTextSize}" FontFamily="MelonaBold"
                TextColor="Gold"
                ></Label>
         <Label Text="받아 올림 표시 선택:"
                Grid.Column ="0" Grid.Row="5" Grid.RowSpan="2" Grid.ColumnSpan="3"
                VerticalTextAlignment="Center" HorizontalTextAlignment="End"
-               FontSize="Body" FontFamily="MelonaBold"
+               FontSize="{Binding SettingTextSize}" FontFamily="MelonaBold"
                TextColor="Gold"
                ></Label>
         <Label Text="자리수 선택:"
                Grid.Column ="0" Grid.Row="8" Grid.RowSpan="2" Grid.ColumnSpan="3"
                VerticalTextAlignment="Center" HorizontalTextAlignment="End"
-               FontSize="Body" FontFamily="MelonaBold"
+               FontSize="{Binding SettingTextSize}" FontFamily="MelonaBold"
                TextColor="Gold"
                ></Label>
         <Label Text="문제수 선택:"
                Grid.Column ="0" Grid.Row="11" Grid.RowSpan="2" Grid.ColumnSpan="3"
                VerticalTextAlignment="Center" HorizontalTextAlignment="End"
-               FontSize="Body" FontFamily="MelonaBold"
+               FontSize="{Binding SettingTextSize}" FontFamily="MelonaBold"
                TextColor="Gold"
                ></Label>
-        <Picker x:Name="PickerUpOnOff"
+        <Picker x:Name="PickerUpOnOff" FontSize="{Binding SettingTextSize}"
                 FontFamily="MelonaBold" TextColor="White"
                 Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2"
                 HorizontalTextAlignment="Center"
@@ -79,7 +79,7 @@
                     <x:String>OFF</x:String>
                 </Picker.Items>
         </Picker>
-        <Picker x:Name="PickerUpDisp"
+        <Picker x:Name="PickerUpDisp" FontSize="{Binding SettingTextSize}"
                 FontFamily="MelonaBold" TextColor="White"
                 Grid.Column="3" Grid.Row="5" Grid.RowSpan="2" Grid.ColumnSpan="2"
                 HorizontalTextAlignment="Center"
@@ -89,7 +89,7 @@
                 <x:String>OFF</x:String>
             </Picker.Items>
         </Picker>
-        <Picker x:Name="PickerNdigit"
+        <Picker x:Name="PickerNdigit" FontSize="{Binding SettingTextSize}"
                 FontFamily="MelonaBold" TextColor="White"
                 Grid.Column="3" Grid.Row="8" Grid.RowSpan="2" Grid.ColumnSpan="2"
                 HorizontalTextAlignment="Center"
@@ -100,7 +100,7 @@
                 <x:String>3</x:String>
             </Picker.Items>
         </Picker>
-        <Picker x:Name="PickerQNum"
+        <Picker x:Name="PickerQNum" FontSize="{Binding SettingTextSize}"
                 FontFamily="MelonaBold" TextColor="White"
                 Grid.Column="3" Grid.Row="11" Grid.RowSpan="2" Grid.ColumnSpan="2"
                 HorizontalTextAlignment="Center"
