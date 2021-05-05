@@ -28,19 +28,23 @@ namespace forms_plus
             PrintData();
 
             String Date = StringDate.Instance.DateYMD_to_String(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-            App.RkInfoDatabase.SaveRankingInfo(UserInfo.Instance.userName,
-                                            LearnSetSington.Instance.setStage,
-                                            AnswerSheetsData.Instance.MyScore,
-                                            AnswerSheetsData.Instance.TotalTime,
-                                            LearnSetSington.Instance.setQ_Num,
-                                            Date);           
 
-            App.CalTestInfoDatabase.SaveCalendarTestInfo(UserInfo.Instance.userName,
-                                            LearnSetSington.Instance.setStage,
-                                            Date,
-                                            AnswerSheetsData.Instance.MyScore,
-                                            AnswerSheetsData.Instance.TotalTime);
-           
+            if (AnswerSheetsData.Instance.OldTotalTime != AnswerSheetsData.Instance.TotalTime)
+            {
+                AnswerSheetsData.Instance.OldTotalTime = AnswerSheetsData.Instance.TotalTime;
+                App.RkInfoDatabase.SaveRankingInfo(UserInfo.Instance.userName,
+                                                LearnSetSington.Instance.setStage,
+                                                AnswerSheetsData.Instance.MyScore,
+                                                AnswerSheetsData.Instance.TotalTime,
+                                                LearnSetSington.Instance.setQ_Num,
+                                                Date);
+
+                App.CalTestInfoDatabase.SaveCalendarTestInfo(UserInfo.Instance.userName,
+                                                LearnSetSington.Instance.setStage,
+                                                Date,
+                                                AnswerSheetsData.Instance.MyScore,
+                                                AnswerSheetsData.Instance.TotalTime);
+            }
         }
 
         protected override bool OnBackButtonPressed()

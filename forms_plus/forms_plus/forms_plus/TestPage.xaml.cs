@@ -32,7 +32,7 @@ namespace forms_plus
         private bool btnUp10s_flag = false;
 
         private int old_firstNum100s = 0, old_firstNum10s = 0, old_firstNum1s = 0;
-        private int old_secNum100s = 0, old_secNum10s = 0, old_secNum1s = 0;
+        private int old_secNum100s = 0, old_secNum10s = 0, old_secNum1s = 0, old_sum_flag = 10;
 
         private bool accessible = true;
         ISimpleAudioPlayer player;
@@ -528,6 +528,7 @@ namespace forms_plus
                     if (LearnSetSington.Instance.setUpONOFF == true)
                     {
                         firstNum1s = 0;
+#if false
                         do
                         {
                             int temp = rnd.Next(0, 10);
@@ -539,10 +540,27 @@ namespace forms_plus
                         } while (firstNum1s == 0);
                         do
                         {
-                            secNum1s = GetNewRandomNum(1, 10, firstNum1s);
-                        } while (firstNum1s + secNum1s < 10);
+                            secNum1s = GetNewRandomNum(1, 10, firstNum1s);   
+                        } while ((firstNum1s + secNum1s < 10));
                         old_firstNum1s = firstNum1s;
                         old_secNum1s = secNum1s;
+#else
+                        if ((old_sum_flag < 10) && (old_sum_flag > 18))
+                        {
+                            old_sum_flag = 10;
+                        }
+
+                        do
+                        {
+                            firstNum1s = rnd.Next(1, 10);
+                            secNum1s = GetNewRandomNum(1, 10, old_secNum1s);
+                        } while (firstNum1s + secNum1s < old_sum_flag);
+                        old_firstNum1s = firstNum1s;
+                        old_secNum1s = secNum1s;
+
+                        old_sum_flag = rnd.Next(10,18);
+                        
+#endif
                     }
                     else
                     {

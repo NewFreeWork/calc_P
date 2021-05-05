@@ -464,6 +464,7 @@ namespace forms_plus
 
         public int DetailPageIndex;
         public string TotalTime;
+        public string OldTotalTime;
         public int MyScore;
         public long ElapsedTicks;       
 
@@ -537,6 +538,7 @@ namespace forms_plus
 
             DetailPageIndex = 0;
             TotalTime = "00:00:000";
+            OldTotalTime = "00:00:000";
         }
         public void SetAnswerSheetsData(int qFirst, int qSec, int qUp, int rightAnswer, int myUp, int myAnswer, int qNum)
         {
