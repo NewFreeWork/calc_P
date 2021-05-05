@@ -304,6 +304,7 @@ namespace forms_plus
                         )
                     {
                         await DisplayAlert("알림", "숫자를 모두 입력해주세요!", "확인");
+                        accessible = true;
                     }
                     else
                     {
@@ -340,10 +341,11 @@ namespace forms_plus
                             //LearnSetSington.Instance.setStage = 0;
                             await Navigation.PushAsync(new AnswerSheetsPage(), false);
                         }
+                        accessible = true;
                     }
                 }
 
-                accessible = true;
+                
             }
             catch (Exception ex)
             {
