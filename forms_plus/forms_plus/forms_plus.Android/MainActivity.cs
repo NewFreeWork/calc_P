@@ -6,10 +6,18 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Content.Res;
 
+using Android.Support.Design.Widget;
+using forms_plus;
+using forms_plus.Droid;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.Android.AppCompat;
+
+//[assembly: ExportRenderer(typeof(TabbedPage), typeof(forms_plus.Droid.MainActivity.RankingPageRenderer))]
 namespace forms_plus.Droid
 {
-    [Activity(Label = "forms_plus", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "더하기", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation =ScreenOrientation.Portrait)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -29,5 +37,33 @@ namespace forms_plus.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
+        public override Resources Resources
+        {
+            get
+            {
+                Resources res = base.Resources;
+                Configuration config = new Configuration();
+                config.SetToDefaults();
+                res.UpdateConfiguration(config, res.DisplayMetrics);
+                return res;
+            }
+        }
+#if false
+        public class RankingPageRenderer : TabbedPageRenderer
+        {
+            public override void OnViewAdded(Android.Views.View child)
+            {
+                base.OnViewAdded(child);
+                var tabLayout = child as TabLayout;
+                if (tabLayout != null)
+                {
+                    tabLayout.TabMode = TabLayout.ModeScrollable;
+                }
+            }
+
+        }
+#endif
+
     }
 }

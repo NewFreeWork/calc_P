@@ -4,329 +4,257 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             BackgroundColor="ForestGreen"
+             BackgroundColor="#272622"
              x:Class="forms_plus.AnswerSheetsPage"
              NavigationPage.HasNavigationBar="False">
     <!--kindbiny_20200415 mainpage 타이틀바 삭제-->
 
     <ContentPage.Content>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <!--kindbiny_20200415 grid column 10 생성-->
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <!--kindbiny_20200415 grid row 20 생성-->
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
 
-            <Label Text="Answer Sheets"
-                   Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="10" Grid.RowSpan="2"
-                   FontSize="35" TextColor="Gold"
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Answer Sheets"                   
+                   FontSize="{Binding AnswerSheetTitleSize}" TextColor="Gold"
                    VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                   FontFamily="MelonaBold"
                    ></Label>
-            <BoxView BackgroundColor="Gold"
-                     Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="10" ScaleY="0.5"
-                     ></BoxView>
-            <Label x:Name="Label_Idx1" Text="Q1. "
-                   Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                   FontSize="22" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Label x:Name="Label_Q1" Text="123 + 123 = 1111"
-                   Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="6" Grid.RowSpan="2"
-                   FontSize="22" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Button x:Name="Button_Q1"
-                    Text="O"
-                    Grid.Column="8" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                    FontSize="22" TextColor="Blue"
-                    BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
-                    VerticalOptions="Center" HorizontalOptions="Center"
-                    FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                    Clicked="Detail_Answer1_Clicked"
-                    ></Button>
+                <BoxView BackgroundColor="Gold" ScaleY="0.5"></BoxView>
+                
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label x:Name="Label_Idx1" Text="Q1. "                      
+                       FontSize="{Binding AnswerSheetQ_Size}" TextColor="White"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       FontFamily="MelonaBold"
+                       ></Label>
+                    <Label x:Name="Label_Q1" Text="123 + 123 = 1111"                      
+                       FontSize="{Binding AnswerSheetQ_Size}" TextColor="White"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                       FontFamily="MelonaBold"
+                       ></Label>
+                    <Button x:Name="Button_Q1"
+                        Text="O"                        
+                        FontSize="{Binding AnswerSheetBackBtnSize}" TextColor="Blue" 
+                        BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
+                        VerticalOptions="Center" HorizontalOptions="EndAndExpand"
+                        FontFamily="MelonaBold"
+                        Clicked="Detail_Answer1_Clicked"
+                        ></Button>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label x:Name="Label_Idx2" Text="Q2. "
+                       FontSize="{Binding AnswerSheetQ_Size}" TextColor="White"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       FontFamily="MelonaBold"
+                       ></Label>
+                    <Label x:Name="Label_Q2" Text="123 + 123 = 1111"
+                       FontSize="{Binding AnswerSheetQ_Size}" TextColor="White"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                       FontFamily="MelonaBold"
+                       ></Label>
+                    <Button x:Name="Button_Q2"
+                        Text="O"
+                        FontSize="{Binding AnswerSheetBackBtnSize}" TextColor="Blue"
+                        BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
+                        VerticalOptions="Center" HorizontalOptions="EndAndExpand"
+                        FontFamily="MelonaBold"
+                        Clicked="Detail_Answer2_Clicked"
+                        ></Button>
+                    </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label x:Name="Label_Idx3" Text="Q3. "
+                       FontSize="{Binding AnswerSheetQ_Size}" TextColor="White"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       FontFamily="MelonaBold"
+                       ></Label>
+                    <Label x:Name="Label_Q3" Text="123 + 123 = 1111"
+                       FontSize="{Binding AnswerSheetQ_Size}" TextColor="White"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                       FontFamily="MelonaBold"
+                       ></Label>
+                    <Button x:Name="Button_Q3"
+                        Text="O"
+                        FontSize="{Binding AnswerSheetBackBtnSize}" TextColor="Blue"
+                        BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
+                        VerticalOptions="Center" HorizontalOptions="EndAndExpand"
+                        FontFamily="MelonaBold"
+                        Clicked="Detail_Answer3_Clicked"
+                        ></Button>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label x:Name="Label_Idx4" Text="Q4. "
+                       FontSize="{Binding AnswerSheetQ_Size}" TextColor="White"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       FontFamily="MelonaBold"
+                       ></Label>
+                    <Label x:Name="Label_Q4" Text="123 + 123 = 1111"
+                       FontSize="{Binding AnswerSheetQ_Size}" TextColor="White"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                       FontFamily="MelonaBold"
+                       ></Label>
+                    <Button x:Name="Button_Q4"
+                        Text="O"
+                        FontSize="{Binding AnswerSheetBackBtnSize}" TextColor="Blue"
+                        BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
+                        VerticalOptions="Center" HorizontalOptions="EndAndExpand"
+                        FontFamily="MelonaBold"
+                        Clicked="Detail_Answer4_Clicked"
+                        ></Button>
+                </StackLayout>
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Label x:Name="Label_Idx5" Text="Q5. "
+                           FontSize="{Binding AnswerSheetQ_Size}" TextColor="White"
+                           VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                           FontFamily="MelonaBold"
+                           ></Label>
+                        <Label x:Name="Label_Q5" Text="123 + 123 = 1111"
+                           FontSize="{Binding AnswerSheetQ_Size}" TextColor="White"
+                           VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                           FontFamily="MelonaBold"
+                           ></Label>
+                        <Button x:Name="Button_Q5"
+                            Text="O"
+                            FontSize="{Binding AnswerSheetBackBtnSize}" TextColor="Blue"
+                            BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
+                            VerticalOptions="Center" HorizontalOptions="EndAndExpand"
+                            FontFamily="MelonaBold"
+                            Clicked="Detail_Answer5_Clicked"
+                            ></Button>
+                </StackLayout>    
+                            
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label x:Name="Label_Idx6" Text="Q6. "
+                       FontSize="{Binding AnswerSheetQ_Size}" TextColor="White"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       FontFamily="MelonaBold"
+                       ></Label>
+                    <Label x:Name="Label_Q6" Text="123 + 123 = 1111"
+                       FontSize="{Binding AnswerSheetQ_Size}" TextColor="White"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                       FontFamily="MelonaBold"
+                       ></Label>
+                    <Button x:Name="Button_Q6"
+                        Text="O"
+                        FontSize="{Binding AnswerSheetBackBtnSize}" TextColor="Blue"
+                        BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
+                        VerticalOptions="Center" HorizontalOptions="EndAndExpand"
+                        FontFamily="MelonaBold"
+                        Clicked="Detail_Answer6_Clicked"
+                        ></Button>
+                </StackLayout>
+                
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label x:Name="Label_Idx7" Text="Q7. "
+                       FontSize="{Binding AnswerSheetQ_Size}" TextColor="White"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       FontFamily="MelonaBold"
+                       ></Label>
+                    <Label x:Name="Label_Q7" Text="123 + 123 = 1111"
+                       FontSize="{Binding AnswerSheetQ_Size}" TextColor="White"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                       FontFamily="MelonaBold"
+                       ></Label>
+                    <Button x:Name="Button_Q7"
+                        Text="O"
+                        FontSize="{Binding AnswerSheetBackBtnSize}" TextColor="Blue"
+                        BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
+                        VerticalOptions="Center" HorizontalOptions="EndAndExpand"
+                        FontFamily="MelonaBold"
+                        Clicked="Detail_Answer7_Clicked"
+                        ></Button>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label x:Name="Label_Idx8" Text="Q8. "
+                       FontSize="{Binding AnswerSheetQ_Size}" TextColor="White"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       FontFamily="MelonaBold"
+                       ></Label>
+                    <Label x:Name="Label_Q8" Text="123 + 123 = 1111"
+                       FontSize="{Binding AnswerSheetQ_Size}" TextColor="White"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                       FontFamily="MelonaBold"
+                       ></Label>
+                    <Button x:Name="Button_Q8"
+                        Text="O"
+                        FontSize="{Binding AnswerSheetBackBtnSize}" TextColor="Blue"
+                        BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
+                        VerticalOptions="Center" HorizontalOptions="EndAndExpand"
+                        FontFamily="MelonaBold"
+                        Clicked="Detail_Answer8_Clicked"
+                        ></Button>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label x:Name="Label_Idx9" Text="Q9. "
+                       FontSize="{Binding AnswerSheetQ_Size}" TextColor="White"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       FontFamily="MelonaBold"
+                       ></Label>
+                    <Label x:Name="Label_Q9" Text="123 + 123 = 1111"
+                       FontSize="{Binding AnswerSheetQ_Size}" TextColor="White"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                       FontFamily="MelonaBold"
+                       ></Label>
+                    <Button x:Name="Button_Q9"
+                        Text="O"
+                        FontSize="{Binding AnswerSheetBackBtnSize}" TextColor="Blue"
+                        BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
+                        VerticalOptions="Center" HorizontalOptions="EndAndExpand"
+                        FontFamily="MelonaBold"
+                        Clicked="Detail_Answer9_Clicked"
+                        ></Button>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label x:Name="Label_Idx10" Text="Q10. "
+                       FontSize="{Binding AnswerSheetQ_Size}" TextColor="White"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       FontFamily="MelonaBold"
+                       ></Label>
+                    <Label x:Name="Label_Q10" Text="123 + 123 = 1111"
+                       FontSize="{Binding AnswerSheetQ_Size}" TextColor="White"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                       FontFamily="MelonaBold"
+                       ></Label>
+                    <Button x:Name="Button_Q10"
+                        Text="O"
+                        FontSize="{Binding AnswerSheetBackBtnSize}" TextColor="Blue"
+                        BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
+                        VerticalOptions="Center" HorizontalOptions="EndAndExpand"
+                        FontFamily="MelonaBold"
+                        Clicked="Detail_Answer10_Clicked"
+                        ></Button>
+                </StackLayout>
+                <BoxView BackgroundColor="Gold" ScaleY="0.5"></BoxView>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    
+                    <Label Text=" 점수: "
+                       FontSize="{Binding AnswerSheetScoreSize}" TextColor="White" HorizontalOptions="StartAndExpand"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       FontFamily="MelonaBold"
+                       ></Label>
+                    <Label x:Name="Label_Score" Text="100점"
+                       FontSize="{Binding AnswerSheetScoreSize}" TextColor="White"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                       FontFamily="MelonaBold"
+                       ></Label>
+                </StackLayout>
 
-            <Label x:Name="Label_Idx2" Text="Q2. "
-                   Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                   FontSize="22" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Label x:Name="Label_Q2" Text="123 + 123 = 1111"
-                   Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="6" Grid.RowSpan="2"
-                   FontSize="22" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Button x:Name="Button_Q2"
-                    Text="O"
-                    Grid.Column="8" Grid.Row="5" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                    FontSize="22" TextColor="Blue"
-                    BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
-                    VerticalOptions="Center" HorizontalOptions="Center"
-                    FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                    Clicked="Detail_Answer2_Clicked"
-                    ></Button>
-
-            <Label x:Name="Label_Idx3" Text="Q3. "
-                   Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                   FontSize="22" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Label x:Name="Label_Q3" Text="123 + 123 = 1111"
-                   Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="6" Grid.RowSpan="2"
-                   FontSize="22" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Button x:Name="Button_Q3"
-                    Text="O"
-                    Grid.Column="8" Grid.Row="7" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                    FontSize="22" TextColor="Blue"
-                    BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
-                    VerticalOptions="Center" HorizontalOptions="Center"
-                    FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                    Clicked="Detail_Answer3_Clicked"
-                    ></Button>
-
-            <Label x:Name="Label_Idx4" Text="Q4. "
-                   Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                   FontSize="22" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Label x:Name="Label_Q4" Text="123 + 123 = 1111"
-                   Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="6" Grid.RowSpan="2"
-                   FontSize="22" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Button x:Name="Button_Q4"
-                    Text="O"
-                    Grid.Column="8" Grid.Row="9" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                    FontSize="22" TextColor="Blue"
-                    BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
-                    VerticalOptions="Center" HorizontalOptions="Center"
-                    FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                    Clicked="Detail_Answer4_Clicked"
-                    ></Button>
-
-            <Label x:Name="Label_Idx5" Text="Q5. "
-                   Grid.Column="0" Grid.Row="11" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                   FontSize="22" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Label x:Name="Label_Q5" Text="123 + 123 = 1111"
-                   Grid.Column="2" Grid.Row="11" Grid.ColumnSpan="6" Grid.RowSpan="2"
-                   FontSize="22" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Button x:Name="Button_Q5"
-                    Text="O"
-                    Grid.Column="8" Grid.Row="11" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                    FontSize="22" TextColor="Blue"
-                    BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
-                    VerticalOptions="Center" HorizontalOptions="Center"
-                    FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                    Clicked="Detail_Answer5_Clicked"
-                    ></Button>
-
-            <Label x:Name="Label_Idx6" Text="Q6. "
-                   Grid.Column="0" Grid.Row="13" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                   FontSize="22" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Label x:Name="Label_Q6" Text="123 + 123 = 1111"
-                   Grid.Column="2" Grid.Row="13" Grid.ColumnSpan="6" Grid.RowSpan="2"
-                   FontSize="22" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Button x:Name="Button_Q6"
-                    Text="O"
-                    Grid.Column="8" Grid.Row="13" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                    FontSize="22" TextColor="Blue"
-                    BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
-                    VerticalOptions="Center" HorizontalOptions="Center"
-                    FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                    Clicked="Detail_Answer6_Clicked"
-                    ></Button>
-
-            <Label x:Name="Label_Idx7" Text="Q7. "
-                   Grid.Column="0" Grid.Row="15" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                   FontSize="22" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Label x:Name="Label_Q7" Text="123 + 123 = 1111"
-                   Grid.Column="2" Grid.Row="15" Grid.ColumnSpan="6" Grid.RowSpan="2"
-                   FontSize="22" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Button x:Name="Button_Q7"
-                    Text="O"
-                    Grid.Column="8" Grid.Row="15" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                    FontSize="22" TextColor="Blue"
-                    BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
-                    VerticalOptions="Center" HorizontalOptions="Center"
-                    FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                    Clicked="Detail_Answer7_Clicked"
-                    ></Button>
-
-            <Label x:Name="Label_Idx8" Text="Q8. "
-                   Grid.Column="0" Grid.Row="17" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                   FontSize="22" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Label x:Name="Label_Q8" Text="123 + 123 = 1111"
-                   Grid.Column="2" Grid.Row="17" Grid.ColumnSpan="6" Grid.RowSpan="2"
-                   FontSize="22" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Button x:Name="Button_Q8"
-                    Text="O"
-                    Grid.Column="8" Grid.Row="17" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                    FontSize="22" TextColor="Blue"
-                    BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
-                    VerticalOptions="Center" HorizontalOptions="Center"
-                    FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                    Clicked="Detail_Answer8_Clicked"
-                    ></Button>
-
-            <Label x:Name="Label_Idx9" Text="Q9. "
-                   Grid.Column="0" Grid.Row="19" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                   FontSize="22" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Label x:Name="Label_Q9" Text="123 + 123 = 1111"
-                   Grid.Column="2" Grid.Row="19" Grid.ColumnSpan="6" Grid.RowSpan="2"
-                   FontSize="22" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Button x:Name="Button_Q9"
-                    Text="O"
-                    Grid.Column="8" Grid.Row="19" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                    FontSize="22" TextColor="Blue"
-                    BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
-                    VerticalOptions="Center" HorizontalOptions="Center"
-                    FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                    Clicked="Detail_Answer9_Clicked"
-                    ></Button>
-
-            <Label x:Name="Label_Idx10" Text="Q10. "
-                   Grid.Column="0" Grid.Row="21" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                   FontSize="22" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Label x:Name="Label_Q10" Text="123 + 123 = 1111"
-                   Grid.Column="2" Grid.Row="21" Grid.ColumnSpan="6" Grid.RowSpan="2"
-                   FontSize="22" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Button x:Name="Button_Q10"
-                    Text="O"
-                    Grid.Column="8" Grid.Row="21" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                    FontSize="22" TextColor="Blue"
-                    BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
-                    VerticalOptions="Center" HorizontalOptions="Center"
-                    FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                    Clicked="Detail_Answer10_Clicked"
-                    ></Button>
-
-            <BoxView BackgroundColor="Gold"
-                     Grid.Column="0" Grid.Row="23" Grid.ColumnSpan="10" ScaleY="0.5"
-                     ></BoxView>
-
-            <Label Text=" 점수: "
-                   Grid.Column="5" Grid.Row="24" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                   FontSize="25" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            <Label x:Name="Label_Score" Text="100점"
-                   Grid.Column="7" Grid.Row="24" Grid.ColumnSpan="3" Grid.RowSpan="2"
-                   FontSize="25" TextColor="White"
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
-                   FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-            
-            <Label x:Name="Label_Time"
-                   Text="00:00:000" FontSize="20"
-                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-                   Grid.Column="0" Grid.Row="26" Grid.ColumnSpan="5" Grid.RowSpan="2"
-                   TextColor="Black" BackgroundColor="Gold"
-                    FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-
-            <Button x:Name="Button_Home"
-                    Text="처음으로 돌아가기"
-                    Grid.Column="5" Grid.Row="26" Grid.ColumnSpan="5" Grid.RowSpan="2"
-                    FontSize="20" TextColor="Blue"
-                    BorderColor="White" BorderWidth="3" BackgroundColor="Gold"
-                    FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                    Clicked="Home_Clicked"
-                    ></Button>
-
-            <Label x:Name="Label_Stamp"
-                   Text="VERY GOOD!!"
-                   Rotation="350" FontSize="23"
-                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-                   Grid.Column="1" Grid.Row="23" Grid.ColumnSpan="4" Grid.RowSpan="2"
-                   TextColor="Green" BackgroundColor="White"
-                    FontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                   ></Label>
-        </Grid>
+                <StackLayout Orientation="Horizontal" Spacing="10" VerticalOptions="FillAndExpand">
+                    <Label x:Name="Label_Time"
+                       Text="00:00:000" FontSize="{Binding AnswerSheetTimeSize}"
+                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                       HorizontalOptions="FillAndExpand"
+                       TextColor="Black" BackgroundColor="Gold"
+                        FontFamily="MelonaBold"
+                       ></Label>
+                    <Button x:Name="Button_Home"
+                        Text="메뉴로 돌아가기"
+                        FontSize="{Binding AnswerSheetBackBtnSize}" TextColor="Black" 
+                        HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                        BorderColor="White" BorderWidth="3" BackgroundColor="Gold" 
+                        FontFamily="MelonaBold"
+                        Clicked="Home_Clicked"
+                        ></Button>
+                </StackLayout>               
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

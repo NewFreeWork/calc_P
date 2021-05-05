@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
              mc:Ignorable="d"
              x:Class="forms_plus.MenuPage"
-             BackgroundColor="Black"
+             BackgroundColor="#272622"
              NavigationPage.HasNavigationBar="False">       <!--kindbiny_20200415 mainpage 타이틀바 삭제-->
     
     <ContentPage.Content>
@@ -47,38 +48,42 @@
             <!--kindbiny_20200415 버튼 추가-->
             <!--jscho_20200418 Clicked 추가-->
             <!--kindbiny_20200502 Todo Clicked 추가-->
-            <Button Text="Learn  Custom" 
-                    FontSize="18" BackgroundColor="Gold"
-                    Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="Learn_Clicked" 
-                    BorderColor="White" BorderWidth="3"
-                    FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
-            <Button Text="LEARN STAGE" 
-                    FontSize="18" BackgroundColor="Gold"
-                    Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4" Clicked="LearnStage_Clicked" 
-                    BorderColor="White" BorderWidth="3"
-                    FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
-            <Button Text="TEST Custom" 
-                    FontSize="18" BackgroundColor="Gold"
-                    Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4" Clicked="Test_Clicked" 
-                    BorderColor="White" BorderWidth="3"
-                    FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
-            <Button Text="TEST STAGE" 
-                    FontSize="18" BackgroundColor="Gold"
-                    Grid.Column="4" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4" Clicked="TestStage_Clicked" 
-                    BorderColor="White" BorderWidth="3"
-                    FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
-            
-            <Button Text="RANKING" 
-                    FontSize="18" BackgroundColor="Gold"
-                    Grid.Column="1" Grid.Row="11" Grid.ColumnSpan="2" Grid.RowSpan="4"  
-                    BorderColor="White" BorderWidth="3"
-                    FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
-            
-            <Button Text="TO DO" 
-                    FontSize="18" BackgroundColor="Gold"
+            <Button Text="단계별로&#10;학습하기" 
+                    FontSize="{Binding NaviButtonFontSize}" BackgroundColor="Gold"
+                    Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4" Clicked="LearnStage_Clicked" 
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
+                    FontFamily="MelonaBold"/>
+            <Button Text="내 맘대로&#10;학습하기" 
+                    FontSize="{Binding NaviButtonFontSize}" BackgroundColor="Gold"
+                    Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="Learn_Clicked" 
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
+                    FontFamily="MelonaBold"/>
+            <Button Text="단계별로&#10;테스트" 
+                    FontSize="{Binding NaviButtonFontSize}" BackgroundColor="Gold"
+                    Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4" Clicked="TestStage_Clicked" 
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
+                    FontFamily="MelonaBold"/>
+            <Button Text="내 맘대로&#10;테스트" 
+                    FontSize="{Binding NaviButtonFontSize}" BackgroundColor="Gold"
+                    Grid.Column="4" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4" Clicked="Test_Clicked" 
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
+                    FontFamily="MelonaBold"/>
+            <Button Text="테스트&#10;기록보기" 
+                    FontSize="{Binding NaviButtonFontSize}" BackgroundColor="Gold"
+                    Grid.Column="1" Grid.Row="11" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="Ranking_Clicked"
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
+                    FontFamily="MelonaBold"/>
+            <Button Text="학습 일정&#10;확인" 
+                    FontSize="{Binding NaviButtonFontSize}" BackgroundColor="Gold"
                     Grid.Column="4" Grid.Row="11" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="ToDo_Clicked" 
-                    BorderColor="White" BorderWidth="3"
-                    FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
+                    BorderColor="White" BorderWidth="3" CornerRadius="10"
+                    FontFamily="MelonaBold"/>
+
+            <controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/7272661182" 
+                               BackgroundColor="#272622" 
+                               Grid.Column="0" Grid.Row="17" Grid.ColumnSpan="7" Grid.RowSpan="3"  />
+            <!--ca-app-pub-4758870064199012/3559663371 -->
+            
         </Grid>
     </ContentPage.Content>
 </ContentPage>

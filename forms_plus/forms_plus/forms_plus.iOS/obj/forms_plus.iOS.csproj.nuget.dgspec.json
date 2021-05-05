@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj": {}
+    "D:\\test\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj": {}
   },
   "projects": {
-    "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj": {
+    "D:\\test\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj",
+        "projectUniqueName": "D:\\test\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj",
         "projectName": "forms_plus.iOS",
-        "projectPath": "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\obj\\",
+        "projectPath": "D:\\test\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\forms_plus.iOS.csproj",
+        "packagesPath": "C:\\Users\\dream\\.nuget\\packages\\",
+        "outputPath": "D:\\test\\calc_P\\forms_plus\\forms_plus\\forms_plus.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dream\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +34,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj": {
-                "projectPath": "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj"
+              "D:\\test\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj": {
+                "projectPath": "D:\\test\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj"
               }
             }
           }
@@ -42,17 +44,21 @@
       "frameworks": {
         "xamarinios10": {
           "dependencies": {
+            "MarcTron.Admob": {
+              "target": "Package",
+              "version": "[1.6.1, )"
+            },
             "XamForms.Controls.Calendar": {
               "target": "Package",
               "version": "[1.1.1, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.3.1, )"
+              "version": "[1.6.1, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.4.0.991265, )"
+              "version": "[5.0.0.2012, )"
             }
           }
         }
@@ -69,20 +75,22 @@
         }
       }
     },
-    "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj": {
+    "D:\\test\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
+        "projectUniqueName": "D:\\test\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
         "projectName": "forms_plus",
-        "projectPath": "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Work\\Github\\calc_P\\forms_plus\\forms_plus\\forms_plus\\obj\\",
+        "projectPath": "D:\\test\\calc_P\\forms_plus\\forms_plus\\forms_plus\\forms_plus.csproj",
+        "packagesPath": "C:\\Users\\dream\\.nuget\\packages\\",
+        "outputPath": "D:\\test\\calc_P\\forms_plus\\forms_plus\\forms_plus\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dream\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -95,6 +103,7 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -106,12 +115,21 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
+            "MarcTron.Admob": {
+              "target": "Package",
+              "version": "[1.6.1, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Xam.Plugin.SimpleAudioPlayer": {
+              "target": "Package",
+              "version": "[1.4.0, )"
             },
             "XamForms.Controls.Calendar": {
               "target": "Package",
@@ -119,11 +137,15 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.3.1, )"
+              "version": "[1.6.1, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.4.0.991265, )"
+              "version": "[5.0.0.2012, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.7.335, )"
             }
           },
           "imports": [
@@ -136,7 +158,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -3,64 +3,63 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
              mc:Ignorable="d"
              x:Class="forms_plus.MainPage"
-             BackgroundColor="Black"
+             BackgroundColor="#272622"
              NavigationPage.HasNavigationBar="False">   <!--kindbiny_20200415 mainpage 타이틀바 삭제-->
 
-    <Grid>
-        <Grid.ColumnDefinitions>            <!--kindbiny_20200415 grid column 7 생성-->
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>               <!--kindbiny_20200415 grid row 20 생성-->
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+    <AbsoluteLayout Margin="20">
 
-        <Label Text="+" Grid.Column="5" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="3" 
-               VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="70" TextColor="Gold" 
-               FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
-        <Label Text="더하기" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="5" Grid.RowSpan="4" 
-               VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="80" TextColor="Gold" 
-               FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
-        <Label Text="PLUS" Grid.Column="3" Grid.Row="6" Grid.ColumnSpan="4" Grid.RowSpan="4" 
-               VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="60" TextColor="White" 
-               FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
-        <Button Text="시 작" 
-                Grid.Column="2" Grid.Row="12" Grid.ColumnSpan="3" Grid.RowSpan="2" 
-                FontSize="30" BackgroundColor="Gold"
+        <Label x:Name="Label_Plus" Text="+" 
+               AbsoluteLayout.LayoutFlags="All"
+               AbsoluteLayout.LayoutBounds="0.9,0.12,0.5,0.2"
+               VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="{Binding MainTitleFontSize_M}" TextColor="Gold" 
+               FontFamily="MelonaBold"/>
+        <Label x:Name="Label_PlusKr" Text="더하기" 
+               AbsoluteLayout.LayoutFlags="All"
+               AbsoluteLayout.LayoutBounds="0.42,0.2,0.5,0.2"
+               VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="{Binding MainTitleFontSize_L}" TextColor="Gold" 
+               FontFamily="MelonaBold"/>
+        <Label x:Name="Label_PlusEng" Text="PLUS" 
+               AbsoluteLayout.LayoutFlags="All"
+               AbsoluteLayout.LayoutBounds="0.8,0.3,0.5,0.2"
+               VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="{Binding MainTitleFontSize_S}" TextColor="White" 
+               FontFamily="MelonaBold"/>
+
+        <Entry x:Name="Entry_InsertName" Placeholder="이름을 입력해주세요." PlaceholderColor="Gray"
+               FontSize="{Binding EntryTextSize}" 
+               AbsoluteLayout.LayoutFlags="All"
+               AbsoluteLayout.LayoutBounds="0.5,0.65,0.5,0.1"
+               TextColor="Gold"
+               TextChanged="Entry_InputUserName"
+               FontFamily="MelonaBold"
+               ></Entry>
+
+        <Button x:Name="Btn_Start" Text="시 작" 
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0.5,0.85,0.5,0.1"
+                FontSize="{Binding NaviButtonFontSize}" BackgroundColor="Gold"
                 BorderColor="White" BorderWidth="3" CornerRadius="15"
-                FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+                FontFamily="MelonaBold"
                 Clicked="Btn_Menupage_Go"/>
 
-        <Label Text="COPYRIGHT ES, All rights reserved" Grid.Column="0" Grid.Row="18" Grid.ColumnSpan="7" Grid.RowSpan="2" 
-               VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Small" TextColor="White" 
-               FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
-        
-    </Grid>
+        <Label x:Name="Label_Copyright" Text="ⓒ 2021. Code Plane Co. all rights reserved"
+               AbsoluteLayout.LayoutFlags="All"
+               AbsoluteLayout.LayoutBounds="0.5,1,15,0.1"
+               VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="{Binding CopyRightTextSize}" TextColor="White" 
+               FontFamily="MelonaBold"/>
 
+        <!-- test id: ca-app-pub-3940256099942544/1033173712 
+        my id: ca-app-pub-4758870064199012/3940279621
+        BackgroundColor="#272622" 
+        -->
+
+        <!-- 
+        <controls:MTAdView x:Name="Ctr_Ad" PersonalizedAds="true" AdsId="ca-app-pub-3940256099942544/1033173712" 
+                            BackgroundColor="White" 
+                            Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="7" Grid.RowSpan="20" />
+        -->
+
+    </AbsoluteLayout>
 </ContentPage>

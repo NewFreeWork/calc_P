@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using forms_plus.Controls;
+using forms_plus.ViewModel;
+using Plugin.SimpleAudioPlayer;
 
 namespace forms_plus
 {
@@ -19,30 +22,104 @@ namespace forms_plus
         private bool pickerSelectNdigit = false;
         private bool pickerSelectQNum = false;
 
+        private bool accessible = true;
+        ISimpleAudioPlayer player;
+
         public SettingPage()
         {
             InitializeComponent();
+            InitSound();
+            this.BindingContext = new FontSizeViewModel();
+        }
+        private void InitSound()
+        {
+            // player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            // player.Load("Sounds/Start.wav");
+        }
+        private void PlayBtnSound()
+        {
+            player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load("Sounds/Blop.mp3");
+            player.Play();
+        }
+
+        private void SetStage()
+        {
+            try
+            {
+                switch (LearnSetSington.Instance.setNdigit)
+                {
+                    case 1:
+                        if (LearnSetSington.Instance.setUpONOFF == false)
+                        {
+                            LearnSetSington.Instance.setStage = 1;
+                        }
+                        else 
+                        {
+                            LearnSetSington.Instance.setStage = 2;
+                        }
+                        break;
+                    case 2:                    
+                            LearnSetSington.Instance.setStage = 3;
+                        break;
+                    case 3:
+                        if (LearnSetSington.Instance.setUpONOFF == true)
+                        {
+                            LearnSetSington.Instance.setStage = 4;
+                        }
+                        else 
+                        {
+                            LearnSetSington.Instance.setStage = 5;
+                        }
+                        break;
+                    default:                    
+                            LearnSetSington.Instance.setStage = 0;
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private async void Start_Clicked(object sender, EventArgs e)
         {
-            if ((pickerSelectUPOnOff == false)
-                || (pickerSelectUPDisp == false)
-                || (pickerSelectNdigit == false)
-                || (pickerSelectQNum == false))
+            try
             {
-                await DisplayAlert("알림","설정을 선택해 주세요.","확인");
+                if (accessible == true)
+                {
+                    accessible = false;
+
+                    if ((pickerSelectUPOnOff == false)
+                        || (pickerSelectUPDisp == false)
+                        || (pickerSelectNdigit == false)
+                        || (pickerSelectQNum == false))
+                    {
+                        await DisplayAlert("알림", "설정을 선택해 주세요.", "확인");
+                    }
+                    else
+                    {
+                        SetStage();
+
+                        PlayBtnSound();
+
+                        if (LearnSetSington.Instance.IsTest == true)
+                        {
+                            await Navigation.PushAsync(new TestPage(), false);
+                        }
+                        else
+                        {
+                            await Navigation.PushAsync(new LearnningPage(), false);
+                        }
+                    }
+                    accessible = true;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                if (LearnSetSington.Instance.IsTest == true)
-                {
-                    await Navigation.PushAsync(new TestPage());
-                }
-                else
-                {
-                    await Navigation.PushAsync(new LearnningPage());
-                }
+                Console.WriteLine(ex.Message);
+                accessible = true;
             }
         }
 

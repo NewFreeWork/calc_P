@@ -12,6 +12,7 @@ namespace forms_plus
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LearnResultPage : ContentPage
     {
+        private bool accessible = true;
         public LearnResultPage()
         {
             InitializeComponent();
@@ -22,7 +23,21 @@ namespace forms_plus
 
         private async void Next_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PopModalAsync();
+            try 
+            {
+                if(accessible == true)
+                {
+                    accessible = false;
+                    await Navigation.PopModalAsync();
+                    accessible = true;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                accessible = true;
+            }
         }
 
         private void DrawLayout()

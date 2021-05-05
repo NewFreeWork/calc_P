@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
+using Plugin.SimpleAudioPlayer;
+using forms_plus.ViewModel;
 
 namespace forms_plus
 {
@@ -28,6 +31,14 @@ namespace forms_plus
         private bool btnUp100s_flag = false;
         private bool btnUp10s_flag = false;
 
+        private int old_firstNum100s = 0, old_firstNum10s = 0, old_firstNum1s = 0;
+        private int old_secNum100s = 0, old_secNum10s = 0, old_secNum1s = 0;
+
+        private bool accessible = true;
+        ISimpleAudioPlayer player;
+
+        int[] arr = new int[10];
+
         public TestPage()
         {
             InitializeComponent();
@@ -36,14 +47,43 @@ namespace forms_plus
 
             AnswerSheetsData.Instance.ClearAnswerSheetsData();
 
+            this.BindingContext = new FontSizeViewModel();
+
+            arr[0] = 1;
+            arr[1] = 2;
+            arr[2] = 3;
+            arr[3] = 4;
+            arr[4] = 5;
+            arr[5] = 6;
+            arr[6] = 7;
+            arr[7] = 8;
+            arr[8] = 3;
+            arr[9] = 4;
+
             DrawLayout();
             Init_Question();
             MakeQuestion();
-
+            InitSound();
             StartTimer();
 
         }
-
+        private void InitSound()
+        {
+            // player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            // player.Load("Sounds/Start.wav");
+        }
+        private void PlayBtnSound()
+        {
+            player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load("Sounds/SubBtn.wav");           
+            player.Play();
+        }
+        private void PlayTinyBtnMusic()
+        {
+            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load("Sounds/TinyBtn.mp3");
+            player.Play();
+        }
         private void StartTimer()
         {
             int min = 0;
@@ -79,12 +119,14 @@ namespace forms_plus
             int sec = stopwatch.Elapsed.Seconds;
             int millisec = stopwatch.Elapsed.Milliseconds;
 
+            AnswerSheetsData.Instance.ElapsedTicks = stopwatch.ElapsedTicks;
             AnswerSheetsData.Instance.TotalTime = min.ToString("D2") + ":" + sec.ToString("D2") + ":" + millisec.ToString("D3");
             stopwatch.Stop();
         }
 
         private void Btn1000s_Clicked(object sender, EventArgs e)
         {
+            PlayTinyBtnMusic();
             btn1000s_flag = true;
             btn100s_flag = false;
             btn10s_flag = false;
@@ -97,10 +139,11 @@ namespace forms_plus
             Btn10s.TextColor = Color.White;
             Btn1s.TextColor = Color.White;
             Btn_Up100s.TextColor = Color.White;
-            Btn_Up10s.TextColor = Color.White;
+            Btn_Up10s.TextColor = Color.White; 
         }
         private void Btn100s_Clicked(object sender, EventArgs e)
         {
+            PlayTinyBtnMusic();
             btn1000s_flag = false;
             btn100s_flag = true;
             btn10s_flag = false;
@@ -117,6 +160,7 @@ namespace forms_plus
         }
         private void Btn10s_Clicked(object sender, EventArgs e)
         {
+            PlayTinyBtnMusic();
             btn1000s_flag = false;
             btn100s_flag = false;
             btn10s_flag = true;
@@ -133,6 +177,7 @@ namespace forms_plus
         }
         private void Btn1s_Clicked(object sender, EventArgs e)
         {
+            PlayTinyBtnMusic();
             btn1000s_flag = false;
             btn100s_flag = false;
             btn10s_flag = false;
@@ -149,6 +194,7 @@ namespace forms_plus
         }
         private void BtnUp100s_Clicked(object sender, EventArgs e)
         {
+            PlayTinyBtnMusic();
             btn1000s_flag = false;
             btn100s_flag = false;
             btn10s_flag = false;
@@ -165,6 +211,7 @@ namespace forms_plus
         }
         private void BtnUp10s_Clicked(object sender, EventArgs e)
         {
+            PlayTinyBtnMusic();
             btn1000s_flag = false;
             btn100s_flag = false;
             btn10s_flag = false;
@@ -238,22 +285,31 @@ namespace forms_plus
 
         private async void Next_Clicked(object sender, EventArgs e)
         {
-            ResultData.Instance.inputSum = 0;
-
-            if (((Btn1000s.IsVisible == true) && (Btn1000s.Text == "?"))
-               || ((Btn100s.IsVisible == true) && (Btn100s.Text == "?"))
-               || ((Btn10s.IsVisible == true) && (Btn10s.Text == "?"))
-               || ((Btn1s.IsVisible == true) && (Btn1s.Text == "?"))
-               || ((Btn_Up100s.IsVisible == true) && (Btn_Up100s.Text == "?"))
-               || ((Btn_Up10s.IsVisible == true) && (Btn_Up10s.Text == "?"))
-                )
+            try
             {
-                await DisplayAlert("알림", "숫자를 모두 입력해주세요!", "확인");
-            }
-            else
-            {
+                if (accessible == true)
+                {
+                    accessible = false;
 
-                CalculateInputSum();
+                    PlayBtnSound();
+
+                    ResultData.Instance.inputSum = 0;
+
+                    if (((Btn1000s.IsVisible == true) && (Btn1000s.Text == "?"))
+                       || ((Btn100s.IsVisible == true) && (Btn100s.Text == "?"))
+                       || ((Btn10s.IsVisible == true) && (Btn10s.Text == "?"))
+                       || ((Btn1s.IsVisible == true) && (Btn1s.Text == "?"))
+                       || ((Btn_Up100s.IsVisible == true) && (Btn_Up100s.Text == "?"))
+                       || ((Btn_Up10s.IsVisible == true) && (Btn_Up10s.Text == "?"))
+                        )
+                    {
+                        await DisplayAlert("알림", "숫자를 모두 입력해주세요!", "확인");
+                        accessible = true;
+                    }
+                    else
+                    {
+
+                        CalculateInputSum();
 #if false // int to string
                 AnswerSheetsData.Instance.SetAnswerSheetsData(
                                                                ResultData.Instance.question_first100s.ToString()+ResultData.Instance.question_first10s.ToString()+ResultData.Instance.question_first1s.ToString(),
@@ -264,27 +320,37 @@ namespace forms_plus
                                                                ResultData.Instance.inputSum.ToString(),
                                                                PassQuestionNum);
 #else
-                 AnswerSheetsData.Instance.SetAnswerSheetsData(
-                                                               ConvertThreeFigure(ResultData.Instance.question_first100s, ResultData.Instance.question_first10s, ResultData.Instance.question_first1s),
-                                                               ConvertThreeFigure(ResultData.Instance.question_sec100s, ResultData.Instance.question_sec10s, ResultData.Instance.question_sec1s),
-                                                               ConvertThreeFigure(0, ResultData.Instance.rightAnswerUp100s, ResultData.Instance.rightAnswerUp10s),
-                                                               ResultData.Instance.rightSum,
-                                                               ConvertThreeFigure(0, ResultData.Instance.inputUp100s, ResultData.Instance.inputUp10s),
-                                                               ResultData.Instance.inputSum,
-                                                               PassQuestionNum);
+                        AnswerSheetsData.Instance.SetAnswerSheetsData(
+                                                                      ConvertThreeFigure(ResultData.Instance.question_first100s, ResultData.Instance.question_first10s, ResultData.Instance.question_first1s),
+                                                                      ConvertThreeFigure(ResultData.Instance.question_sec100s, ResultData.Instance.question_sec10s, ResultData.Instance.question_sec1s),
+                                                                      ConvertThreeFigure(0, ResultData.Instance.rightAnswerUp100s, ResultData.Instance.rightAnswerUp10s),
+                                                                      ResultData.Instance.rightSum,
+                                                                      ConvertThreeFigure(0, ResultData.Instance.inputUp100s, ResultData.Instance.inputUp10s),
+                                                                      ResultData.Instance.inputSum,
+                                                                      PassQuestionNum);
 #endif
-                if (PassQuestionNum < LearnSetSington.Instance.setQ_Num)
-                {
-                    PassQuestionNum++;
-                    Init_Question();
-                    MakeQuestion();
+                        if (PassQuestionNum < LearnSetSington.Instance.setQ_Num)
+                        {
+                            PassQuestionNum++;
+                            Init_Question();
+                            MakeQuestion();
+                        }
+                        else
+                        {
+                            StopTimer();
+                            //LearnSetSington.Instance.setStage = 0;
+                            await Navigation.PushAsync(new AnswerSheetsPage(), false);
+                        }
+                        accessible = true;
+                    }
                 }
-                else
-                {
-                    StopTimer();
-                    
-                    await Navigation.PushAsync(new AnswerSheetsPage());
-                }
+
+                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                accessible = true;
             }
         }
 
@@ -293,6 +359,8 @@ namespace forms_plus
             Button Param = sender as Button;
             string getText;
             int getValue = 0;
+
+            PlayTinyBtnMusic();
 
             getText = Param.Text.ToString();
             getValue = Convert.ToInt32(getText);
@@ -414,7 +482,23 @@ namespace forms_plus
             iuputSum1s = 0;            
             inputUp100s = 0;
             inputUp10s = 0;
+
+           
+           
         }
+        private int GetNewRandomNum(int startNum, int endNum, int oldNum)
+        {
+            Random rnd = new Random();
+            int newNum = 0;
+
+            do
+            {
+                newNum = rnd.Next(startNum, endNum);
+            } while (newNum == oldNum);
+
+            return newNum;            
+        }
+
         private int GetLimitedRandomNum(int firstNum)
         {
             Random rnd = new Random();
@@ -427,9 +511,11 @@ namespace forms_plus
         }
         private void MakeQuestion()
         {
-            Random rnd = new Random();
+            Random rnd = new Random(DateTime.Now.Millisecond);
             int firstNum100s, firstNum10s, firstNum1s;
             int secNum100s, secNum10s, secNum1s;
+
+
 
             ResultData.Instance.ClearResultData();
 
@@ -441,13 +527,39 @@ namespace forms_plus
                 case 1:
                     if (LearnSetSington.Instance.setUpONOFF == true)
                     {
-                        firstNum1s = rnd.Next(1, 10);
-                        secNum1s = rnd.Next(1, 10);
+                        firstNum1s = 0;
+                        do
+                        {
+                            int temp = rnd.Next(0, 10);
+                            if (arr[temp] != 0)
+                            {
+                                firstNum1s = arr[temp];
+                                arr[temp] = 0;
+                            }
+                        } while (firstNum1s == 0);
+                        do
+                        {
+                            secNum1s = GetNewRandomNum(1, 10, firstNum1s);
+                        } while (firstNum1s + secNum1s < 10);
+                        old_firstNum1s = firstNum1s;
+                        old_secNum1s = secNum1s;
                     }
                     else
                     {
-                        firstNum1s = rnd.Next(1, 9);
+                        firstNum1s = 0;
+                        do {
+                            int temp = rnd.Next(0, 10);
+                            if (arr[temp] != 0)
+                            {
+                                firstNum1s = arr[temp];
+                                arr[temp] = 0;
+                            }
+                        } while (firstNum1s == 0);
+
                         secNum1s = GetLimitedRandomNum(firstNum1s);
+
+                        old_firstNum1s = firstNum1s;
+                        old_secNum1s = secNum1s;
                     }
                     Label_FirstNum1s.Text = Convert.ToString(firstNum1s);
                     Label_SecNum1s.Text = Convert.ToString(secNum1s);
@@ -468,17 +580,28 @@ namespace forms_plus
                 case 2:
                     if (LearnSetSington.Instance.setUpONOFF == true)
                     {
-                        firstNum10s = rnd.Next(1, 10);
-                        secNum10s = rnd.Next(1, 10);
-                        firstNum1s = rnd.Next(1, 10);
-                        secNum1s = rnd.Next(1, 10);
+                        firstNum10s = GetNewRandomNum(1, 10 , old_firstNum10s);
+                        secNum10s = GetNewRandomNum(1, 10, old_secNum10s);
+                        firstNum1s = GetNewRandomNum(1, 10, old_firstNum1s);
+                        secNum1s = GetNewRandomNum(1, 10, old_secNum1s);
+
+                        old_firstNum10s = firstNum10s;
+                        old_secNum10s = secNum10s;
+                        old_firstNum1s = firstNum1s;
+                        old_secNum1s = secNum1s;
                     }
                     else
                     {
-                        firstNum10s = rnd.Next(1, 9);
+                        firstNum10s = GetNewRandomNum(1, 9, old_firstNum10s);
                         secNum10s = GetLimitedRandomNum(firstNum10s);
-                        firstNum1s = rnd.Next(1, 9);
+                        firstNum1s = GetNewRandomNum(1, 9, old_firstNum1s);
                         secNum1s = GetLimitedRandomNum(firstNum1s);
+
+                        old_firstNum10s = firstNum10s;
+                        old_secNum10s = secNum10s;
+                        old_firstNum1s = firstNum1s;
+                        old_secNum1s = secNum1s;
+
                     }
 
                     Label_FirstNum10s.Text = Convert.ToString(firstNum10s);
@@ -515,21 +638,35 @@ namespace forms_plus
                 case 3:
                     if (LearnSetSington.Instance.setUpONOFF == true)
                     {
-                        firstNum100s = rnd.Next(1, 10);
-                        secNum100s = rnd.Next(1, 10);
-                        firstNum10s = rnd.Next(1, 10);
-                        secNum10s = rnd.Next(1, 10);
-                        firstNum1s = rnd.Next(1, 10);
-                        secNum1s = rnd.Next(1, 10);
+                        firstNum100s = GetNewRandomNum(1, 10, old_firstNum100s);
+                        secNum100s = GetNewRandomNum(1, 10, old_secNum100s);
+                        firstNum10s = GetNewRandomNum(1, 10, old_firstNum10s);
+                        secNum10s = GetNewRandomNum(1, 10, old_secNum10s);
+                        firstNum1s = GetNewRandomNum(1, 10, old_firstNum1s);
+                        secNum1s = GetNewRandomNum(1, 10, old_secNum1s);
+
+                        old_firstNum100s = firstNum100s;
+                        old_secNum100s = secNum100s;
+                        old_firstNum10s = firstNum10s;
+                        old_secNum10s = secNum10s;
+                        old_firstNum1s = firstNum1s;
+                        old_secNum1s = secNum1s;
                     }
                     else
                     {
-                        firstNum100s = rnd.Next(1, 9);
+                        firstNum100s = GetNewRandomNum(1, 9, old_firstNum100s);
                         secNum100s = GetLimitedRandomNum(firstNum100s);
-                        firstNum10s = rnd.Next(1, 9);
+                        firstNum10s = GetNewRandomNum(1, 9, old_firstNum10s);
                         secNum10s = GetLimitedRandomNum(firstNum10s);
-                        firstNum1s = rnd.Next(1, 9);
+                        firstNum1s = GetNewRandomNum(1, 9, old_firstNum1s);
                         secNum1s = GetLimitedRandomNum(firstNum1s);
+
+                        old_firstNum100s = firstNum100s;
+                        old_secNum100s = secNum100s;
+                        old_firstNum10s = firstNum10s;
+                        old_secNum10s = secNum10s;
+                        old_firstNum1s = firstNum1s;
+                        old_secNum1s = secNum1s;
                     }
 
                     Label_FirstNum100s.Text = Convert.ToString(firstNum100s);
@@ -606,6 +743,7 @@ namespace forms_plus
                 Btn1000s.IsVisible = false;
             }
         }
+
 
 
         private void DrawLayout()

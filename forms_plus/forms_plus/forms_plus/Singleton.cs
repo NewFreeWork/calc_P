@@ -74,6 +74,52 @@ namespace forms_plus
 
     }
 
+    public class StringDate
+    {
+        private static StringDate instance = null;
+
+        public static StringDate Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new StringDate();
+                }
+                return instance;
+            }
+        }
+
+        public String DateYMD_to_String(int Year, int Month, int Day)
+        {
+            String sYear = Year.ToString();
+            String sMonth = (Month < 10) ? ("0" + Month.ToString()) : Month.ToString();
+            String sDay = (Day < 10) ? ("0" + Day.ToString()) : Day.ToString();
+            String Date = sYear + "-" + sMonth + "-" + sDay;
+
+            return Date;
+        }
+    }
+
+    public class UserInfo
+    {
+        private static UserInfo instance = null;
+        public static UserInfo Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new UserInfo();
+                }
+                return instance;
+            }
+        }
+
+
+        public string userName;
+    }
+
     public class LearnSetSington
     {
 
@@ -99,6 +145,7 @@ namespace forms_plus
         public bool setUpDispOnOff; 
         public int setQ_Num;
         public bool IsTest;
+        public int setStage;
     }
 
     public class AnswerSheetsData
@@ -417,6 +464,8 @@ namespace forms_plus
 
         public int DetailPageIndex;
         public string TotalTime;
+        public int MyScore;
+        public long ElapsedTicks;       
 
         public void ClearAnswerSheetsData()
         {

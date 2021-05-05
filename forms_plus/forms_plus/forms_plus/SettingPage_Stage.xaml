@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
              mc:Ignorable="d"
              x:Class="forms_plus.SettingPage_Stage"
-             BackgroundColor="Black"
+             BackgroundColor="#272622"
              NavigationPage.HasNavigationBar="False">
     <!--kindbiny_20200415 mainpage 타이틀바 삭제-->
 
@@ -47,7 +48,7 @@
         <Button x:Name="BtnStep1"
                 Text="1단계" BackgroundColor="Gold"
                 Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="5" Grid.RowSpan="2"
-                FontSize="28" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+                FontSize="{Binding NaviButtonFontSize}" FontFamily="MelonaBold"
                 CornerRadius="15" BorderColor="White" BorderWidth="3"
                 Clicked="BtnStep1_Clicked"
                 ></Button>
@@ -55,7 +56,7 @@
         <Button x:Name="BtnStep2"
                 Text="2단계" BackgroundColor="Gold"
                 Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="5" Grid.RowSpan="2"
-                FontSize="28" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+                FontSize="{Binding NaviButtonFontSize}" FontFamily="MelonaBold"
                 CornerRadius="15" BorderColor="White" BorderWidth="3"
                 Clicked="BtnStep2_Clicked"
                 ></Button>
@@ -63,7 +64,7 @@
         <Button x:Name="BtnStep3"
                 Text="3단계" BackgroundColor="Gold"
                 Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="5" Grid.RowSpan="2"
-                FontSize="28" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+                FontSize="{Binding NaviButtonFontSize}" FontFamily="MelonaBold"
                 CornerRadius="15" BorderColor="White" BorderWidth="3"
                 Clicked="BtnStep3_Clicked"
                 ></Button>
@@ -71,7 +72,7 @@
         <Button x:Name="BtnStep4"
                 Text="4단계" BackgroundColor="Gold"
                 Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="5" Grid.RowSpan="2"
-                FontSize="28" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+                FontSize="{Binding NaviButtonFontSize}" FontFamily="MelonaBold"
                 CornerRadius="15" BorderColor="White" BorderWidth="3"
                 Clicked="BtnStep4_Clicked"
                 ></Button>
@@ -79,10 +80,13 @@
         <Button x:Name="BtnStep5"
                 Text="5단계" BackgroundColor="Gold"
                 Grid.Column="1" Grid.Row="13" Grid.ColumnSpan="5" Grid.RowSpan="2"
-                FontSize="28" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"
+                FontSize="{Binding NaviButtonFontSize}" FontFamily="MelonaBold"
                 CornerRadius="15" BorderColor="White" BorderWidth="3"
                 Clicked="BtnStep5_Clicked"
                 ></Button>
+        <controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/7272661182"
+                               BackgroundColor="#272622"
+                               Grid.Column="0" Grid.Row="17" Grid.ColumnSpan="7" Grid.RowSpan="3"  />
     </Grid>
 
 </ContentPage>

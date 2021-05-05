@@ -4,63 +4,135 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             xmlns:controls="clr-namespace:XamForms.Controls;assembly=XamForms.Controls.Calendar"
+             xmlns:controls="clr-namespace:XamForms.Controls;assembly=XamForms.Controls.Calendar"             
              xmlns:viewmodels="clr-namespace:forms_plus.ViewModel"  
-             x:DataType="viewmodels:TodoViewModel"  
              x:Class="forms_plus.TodoPage"
-             BackgroundColor="Black"
+             BackgroundColor="#272622"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout>
-            <BoxView x:Name="boxview_todo_header1" Color="Transparent"  HeightRequest="5" />
-            <BoxView x:Name="boxview_todo_header2" Color="White"  HeightRequest="2" />
-            <controls:Calendar Padding="10,0,10,0"                            
+            <Grid RowSpacing="70">
+            <controls:Calendar
+                           Grid.RowSpan="5"
+                           Padding="10,0,10,0"                            
                            DisabledBorderColor="Transparent"  
                            DisabledBackgroundColor="Transparent"
                            DatesBackgroundColorOutsideMonth="Transparent"
                            DatesBackgroundColor="Transparent"
                            SelectedBackgroundColor="Transparent"
-                           SelectedTextColor="White"
-                           SelectedBorderWidth="1"
+                           SelectedTextColor="Gold"                
+                           SelectedBorderWidth="0"
                            BorderColor="Transparent"
                            DatesTextColor="White"
                            ShowNumberOfWeek="false"  
-                           StartDay="Monday"  
+                           StartDay="Sunday"  
                            TitleLabelTextColor="White"  
-                           TitleLeftArrowTextColor="Red"
+                           TitleLeftArrowTextColor="Gold"
+                           TitleRightArrowTextColor="Green"
                            BackgroundColor="Transparent"
+                           LeftArrowClicked="CalendarLeftArrow_Clicked"
+                           RightArrowClicked="CalendarRightArrow_Clicked"
                            DateClicked="CalrendarDate_Clicked"
                            WeekdaysTextColor="White"
-                           DatesFontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                           DisabledFontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                           DatesFontFamilyOutsideMonth="BinggraeMelona-Bold.ttf#MelonaBold"
-                           NumberOfWeekFontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                           SelectedFontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                           TitleLabelFontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                           TitleLeftArrowFontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                           TitleRightArrowFontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
-                           WeekdaysFontFamily="BinggraeMelona-Bold.ttf#MelonaBold"
+                           DatesFontFamily="MelonaBold"
+                           DisabledFontFamily="MelonaBold"
+                           DatesFontFamilyOutsideMonth="MelonaBold"
+                           NumberOfWeekFontFamily="MelonaBold"
+                           SelectedFontFamily="MelonaBold"
+                           TitleLabelFontFamily="MelonaBold"
+                           TitleLeftArrowFontFamily="MelonaBold"
+                           TitleRightArrowFontFamily="MelonaBold"
+                           WeekdaysFontFamily="MelonaBold"
                            SelectedDate="{Binding Date}"  
                            SpecialDates="{Binding Attendances}"  
                            DateCommand="{Binding DateChosen}"/>
-
-
-            <Label x:Name="label_todo_today" Text="★Today " TextColor="White" FontSize="20" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold" />
+            </Grid>
+            <StackLayout Orientation="Horizontal">
+                <BoxView x:Name="boxview_todo_1st" Color="Gold" CornerRadius="10" HeightRequest="5" />
+                <Label x:Name="label_todo_learn" Text="학습" TextColor="White" FontSize="20" FontFamily="MelonaBold" />
+            </StackLayout>
+            <Grid x:Name="Grid_todo_Learn">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Text="이름" TextColor="Black"  FontSize="Subtitle" BackgroundColor="#F2D749" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="1" Grid.Row="0" Text="단계" TextColor="Black"  FontSize="Subtitle" BackgroundColor="#9E9253" HorizontalTextAlignment="Center"/>                
+            </Grid>
+            <ListView x:Name="listLearn" SeparatorColor="Gold" BackgroundColor="#6C674B" HeightRequest="100">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50*"/>
+                                    <ColumnDefinition Width="50*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" FontSize="Body" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Usr}"/>
+                                <Label Grid.Column="1" FontSize="Body" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding LearnStage}"/>                                
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
             
-            <BoxView x:Name="boxview_todo_footer" Color="White"  HeightRequest="2" />
-
-            <BoxView x:Name="boxview_todo_1st" Color="DeepPink" CornerRadius="10" HeightRequest="5" />
-            <Label x:Name="label_todo_1st" Text="Learn : " TextColor="White" FontSize="20" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold" />
+            
             <BoxView x:Name="boxview_todo_2nd" Color="Transparent" CornerRadius="10" HeightRequest="10" />
-            <BoxView x:Name="boxview_todo_3th" Color="DarkViolet" CornerRadius="10" HeightRequest="5"  />
-            <Label x:Name="label_todo_3th" Text="Test : " TextColor="White" FontSize="20" FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
 
-            <Button Text="Buffer Del(Test)" 
-                    FontSize="18" BackgroundColor="Gold"
-                    Clicked="Del_Clicked" 
-                    BorderColor="White" BorderWidth="3"
-                    FontFamily ="BinggraeMelona-Bold.ttf#MelonaBold"/>
-            
+            <StackLayout Orientation="Horizontal">
+                <BoxView x:Name="boxview_todo_3th" Color="White" CornerRadius="10" HeightRequest="5"  />
+                <Label x:Name="label_todo_test" Text="테스트 " TextColor="White" FontSize="20" FontFamily="MelonaBold"/>
+            </StackLayout>
+
+            <Grid x:Name="Grid_todo_Test">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="35*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="35*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Text="이름" TextColor="Black" FontSize="Subtitle" BackgroundColor="#F2D749" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="1" Grid.Row="0" Text="단계" TextColor="Black" FontSize="Subtitle" BackgroundColor="#9E9253" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="2" Grid.Row="0" Text="점수" TextColor="Black" FontSize="Subtitle" BackgroundColor="#7B6E2A" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="3" Grid.Row="0" Text="시간" TextColor="Black" FontSize="Subtitle" BackgroundColor="#9D8400" HorizontalTextAlignment="Center"/>
+            </Grid>
+                <ListView x:Name="listTest" SeparatorColor="Gold" BackgroundColor="#6C674B" HeightRequest="100">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="35*"/>
+                                    <ColumnDefinition Width="20*"/>
+                                    <ColumnDefinition Width="30*"/>
+                                    <ColumnDefinition Width="35*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" FontSize="Body" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding Usr}"/>
+                                <Label Grid.Column="1" FontSize="Body" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding TestStage}"/>
+                                <Label Grid.Column="2" FontSize="Body" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding TestScore}"/>
+                                <Label Grid.Column="3" FontSize="Body" TextColor="White" HorizontalTextAlignment="Center" Text="{Binding TestTime}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
