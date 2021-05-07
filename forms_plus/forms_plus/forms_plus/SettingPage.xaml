@@ -124,6 +124,7 @@
                 FontSize="{Binding NaviButtonFontSize}"
                 BackgroundColor="Gold" BorderColor="White" BorderWidth="2"
                 Clicked="Start_Clicked" CornerRadius="15"
+                MinimumHeightRequest="48" MinimumWidthRequest="48"
                 FontFamily="MelonaBold"
                 ></Button>
         <controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/7272661182"

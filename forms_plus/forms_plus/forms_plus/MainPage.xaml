@@ -29,6 +29,8 @@
 
         <Entry x:Name="Entry_InsertName" Placeholder="이름을 입력해주세요." PlaceholderColor="Gray"
                FontSize="{Binding EntryTextSize}" 
+               AutomationProperties.IsInAccessibleTree="True"
+               AutomationProperties.HelpText="이름을 입력해주세요"
                AbsoluteLayout.LayoutFlags="All"
                AbsoluteLayout.LayoutBounds="0.5,0.65,0.5,0.1"
                TextColor="Gold"
@@ -38,6 +40,8 @@
 
         <Button x:Name="Btn_Start" Text="시 작" 
                 AbsoluteLayout.LayoutFlags="All"
+                AutomationProperties.IsInAccessibleTree="True" AutomationProperties.HelpText="시작 버튼"
+                MinimumHeightRequest="48" MinimumWidthRequest="48"
                 AbsoluteLayout.LayoutBounds="0.5,0.85,0.5,0.1"
                 FontSize="{Binding NaviButtonFontSize}" BackgroundColor="Gold"
                 BorderColor="White" BorderWidth="3" CornerRadius="15"

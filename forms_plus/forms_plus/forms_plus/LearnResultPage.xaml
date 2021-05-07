@@ -201,6 +201,7 @@
                     Text="정답! 계속하시려면 여기를 눌러주세요."
                     Grid.Column="0" Grid.Row="18" Grid.RowSpan="2" Grid.ColumnSpan="7"
                     FontSize="18" BackgroundColor="Gold" BorderColor="White" BorderWidth="3"
+                    MinimumHeightRequest="48" MinimumWidthRequest="48"
                     FontFamily="MelonaBold"
                     Clicked="Next_Clicked"
                     ></Button>

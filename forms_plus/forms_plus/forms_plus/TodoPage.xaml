@@ -12,7 +12,7 @@
     <ContentPage.Content>
         <ScrollView>
         <StackLayout>
-            <Grid RowSpacing="70">
+            <Grid RowSpacing="80">
             <controls:Calendar
                            Grid.RowSpan="5"
                            Padding="10,0,10,0"                            

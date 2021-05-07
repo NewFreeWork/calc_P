@@ -23,9 +23,10 @@
     <item name="android:statusBarColor">#2c2b29</item>
   
 	<item name="android:windowBackground">#2c2b29</item>
-
-    <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
 	<item name="alertDialogTheme">@style/AppCompatAlertDialogStyle</item>
+	<item name="android:alertDialogTheme">@style/AppCompatAlertDialogStyle</item>
+    <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
+
   </style>
 
 	<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -59,12 +60,12 @@
 		<!--selection list-->
 		<item name="android:textColorTertiary">#fafafa</item>
 		<!--background-->
-		<item name="android:background">#756b45</item>
+		<item name="android:background">#4f4d48</item>
 	</style>
 
 	
   <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
-    <item name="colorAccent">#FF4081</item>
+    <item name="colorAccent">#f3ce02</item>
 
 	<!--title-->
 	<item name="android:textColor">#f3ce02</item>
@@ -73,7 +74,7 @@
 	<!--selection list-->
 	<item name="android:textColorTertiary">#fafafa</item>
 	<!--background-->
-	<item name="android:background">#756b45</item>
+	<item name="android:background">#4f4d48</item>
   
   </style>
 </resources>

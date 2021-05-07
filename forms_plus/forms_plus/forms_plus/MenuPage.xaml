@@ -51,36 +51,54 @@
             <Button Text="단계별로&#10;학습하기" 
                     FontSize="{Binding NaviButtonFontSize}" BackgroundColor="Gold"
                     Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4" Clicked="LearnStage_Clicked" 
+                    AutomationProperties.IsInAccessibleTree="True" AutomationProperties.HelpText="단계별로 학습하기"
+                    MinimumHeightRequest="48" MinimumWidthRequest="48"
                     BorderColor="White" BorderWidth="3" CornerRadius="10"
                     FontFamily="MelonaBold"/>
             <Button Text="내 맘대로&#10;학습하기" 
                     FontSize="{Binding NaviButtonFontSize}" BackgroundColor="Gold"
                     Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="Learn_Clicked" 
+                    AutomationProperties.IsInAccessibleTree="True" AutomationProperties.HelpText="내 맘대로 학습하기"
+                    MinimumHeightRequest="48" MinimumWidthRequest="48"
                     BorderColor="White" BorderWidth="3" CornerRadius="10"
                     FontFamily="MelonaBold"/>
             <Button Text="단계별로&#10;테스트" 
                     FontSize="{Binding NaviButtonFontSize}" BackgroundColor="Gold"
                     Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4" Clicked="TestStage_Clicked" 
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.HelpText="단계별로 테스트"
+                    MinimumHeightRequest="48" MinimumWidthRequest="48"
                     BorderColor="White" BorderWidth="3" CornerRadius="10"
                     FontFamily="MelonaBold"/>
             <Button Text="내 맘대로&#10;테스트" 
                     FontSize="{Binding NaviButtonFontSize}" BackgroundColor="Gold"
                     Grid.Column="4" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="4" Clicked="Test_Clicked" 
                     BorderColor="White" BorderWidth="3" CornerRadius="10"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.HelpText="내 맘대로 테스트"
+                    MinimumHeightRequest="48" MinimumWidthRequest="48"
                     FontFamily="MelonaBold"/>
             <Button Text="테스트&#10;기록보기" 
                     FontSize="{Binding NaviButtonFontSize}" BackgroundColor="Gold"
                     Grid.Column="1" Grid.Row="11" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="Ranking_Clicked"
                     BorderColor="White" BorderWidth="3" CornerRadius="10"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.HelpText="테스트 기록보기"
+                    MinimumHeightRequest="48" MinimumWidthRequest="48"
                     FontFamily="MelonaBold"/>
             <Button Text="학습 일정&#10;확인" 
                     FontSize="{Binding NaviButtonFontSize}" BackgroundColor="Gold"
                     Grid.Column="4" Grid.Row="11" Grid.ColumnSpan="2" Grid.RowSpan="4"  Clicked="ToDo_Clicked" 
                     BorderColor="White" BorderWidth="3" CornerRadius="10"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.HelpText="학습 일정 확인"
+                    MinimumHeightRequest="48" MinimumWidthRequest="48"
                     FontFamily="MelonaBold"/>
 
             <controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/7272661182" 
                                BackgroundColor="#272622" 
+                               AutomationProperties.IsInAccessibleTree="True"
+                               AutomationProperties.HelpText="광고"
                                Grid.Column="0" Grid.Row="17" Grid.ColumnSpan="7" Grid.RowSpan="3"  />
             <!--ca-app-pub-4758870064199012/3559663371 -->
             

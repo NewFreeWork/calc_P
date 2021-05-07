@@ -58,6 +58,7 @@
                     FontSize="{Binding NaviButtonFontSize}" BackgroundColor="Gold"                    
                     BorderColor="White" BorderWidth="3" CornerRadius="5"
                     FontFamily="MelonaBold"
+                    MinimumHeightRequest="48" MinimumWidthRequest="48"
                     Clicked="Btn_DeleteHistory"></Button>
             <controls:MTAdView 
                 BackgroundColor="#272622" WidthRequest="320" HeightRequest="90" VerticalOptions="EndAndExpand"          
