@@ -196,7 +196,7 @@
                 ></Label>
             <Label             
                 x:Name="Label_RightUp100s"
-                Text="0" TextColor="Blue"
+                Text="0" TextColor="#5151FD"
                 Grid.Column="3" Grid.Row="12" Grid.RowSpan="2"                  
                 FontSize="{Binding QuestionUpBtnfontSize}" FontAttributes="Bold"
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
@@ -205,7 +205,7 @@
                 ></Label>
             <Label             
                 x:Name="Label_RightUp10s"
-                Text="0" TextColor="Blue"
+                Text="0" TextColor="#5151FD"
                 Grid.Column="4" Grid.Row="12" Grid.RowSpan="2"                  
                 FontSize="{Binding QuestionUpBtnfontSize}" FontAttributes="Bold"
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
@@ -225,7 +225,7 @@
             <Label
                 x:Name="Label_Right1000s"
                  Grid.Column="2" Grid.Row="14"  Grid.ColumnSpan="1" Grid.RowSpan="2"
-                Text="?" FontSize="{Binding QuestionFontSize}" FontAttributes="Bold" TextColor="Blue"              
+                Text="?" FontSize="{Binding QuestionFontSize}" FontAttributes="Bold" TextColor="#5151FD"              
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                 BackgroundColor="Transparent"
                 FontFamily="MelonaBold"                
@@ -233,7 +233,7 @@
             <Label
                 x:Name="Label_Right100s"
                 Grid.Column="3" Grid.Row="14" Grid.ColumnSpan="1" Grid.RowSpan="2" 
-                Text="?" FontSize="{Binding QuestionFontSize}" FontAttributes="Bold"  TextColor="Blue"             
+                Text="?" FontSize="{Binding QuestionFontSize}" FontAttributes="Bold"  TextColor="#5151FD"             
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                 BackgroundColor="Transparent"
                 FontFamily="MelonaBold"                
@@ -241,7 +241,7 @@
             <Label
                 x:Name="Label_Right10s"
                 Grid.Column="4" Grid.Row="14" Grid.ColumnSpan="1"  Grid.RowSpan="2" 
-                Text="?" FontSize="{Binding QuestionFontSize}" FontAttributes="Bold"  TextColor="Blue"             
+                Text="?" FontSize="{Binding QuestionFontSize}" FontAttributes="Bold"  TextColor="#5151FD"             
                 BackgroundColor="Transparent"
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                 FontFamily="MelonaBold"                
@@ -249,7 +249,7 @@
             <Label
                 x:Name="Label_Right1s"
                 Grid.Column="5"  Grid.Row="14"  Grid.ColumnSpan="1" Grid.RowSpan="2"
-                Text="?" FontSize="{Binding QuestionFontSize}" FontAttributes="Bold" TextColor="Blue"           
+                Text="?" FontSize="{Binding QuestionFontSize}" FontAttributes="Bold" TextColor="#5151FD"           
                 BackgroundColor="Transparent"
                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                 FontFamily="MelonaBold"                

@@ -353,7 +353,7 @@ namespace forms_plus
             {
                 if (Label_RightUp10s.Text == Label_Up10s.Text)
                 {
-                    Label_Up10s.TextColor = Color.Blue;
+                    Label_Up10s.TextColor = Color.FromHex("5151FD");
                 }
                 else
                 {
@@ -362,7 +362,7 @@ namespace forms_plus
 
                 if (Label_RightUp100s.Text == Label_Up100s.Text)
                 {
-                    Label_Up100s.TextColor = Color.Blue;
+                    Label_Up100s.TextColor = Color.FromHex("5151FD"); ;
                 }
                 else
                 {
@@ -372,7 +372,7 @@ namespace forms_plus
 
             if (Label_Right1s.Text == Label_1s.Text)
             {
-                Label_1s.TextColor = Color.Blue;
+                Label_1s.TextColor = Color.FromHex("5151FD"); ;
             }
             else
             {
@@ -381,7 +381,7 @@ namespace forms_plus
 
             if (Label_Right10s.Text == Label_10s.Text)
             {
-                Label_10s.TextColor = Color.Blue;
+                Label_10s.TextColor = Color.FromHex("5151FD"); ;
             }
             else
             {
@@ -390,7 +390,7 @@ namespace forms_plus
 
             if (Label_Right100s.Text == Label_100s.Text)
             {
-                Label_100s.TextColor = Color.Blue;
+                Label_100s.TextColor = Color.FromHex("5151FD"); ;
             }
             else
             {
@@ -399,7 +399,7 @@ namespace forms_plus
 
             if (Label_Right1000s.Text == Label_1000s.Text)
             {
-                Label_1000s.TextColor = Color.Blue;
+                Label_1000s.TextColor = Color.FromHex("5151FD"); ;
             }
             else
             {
