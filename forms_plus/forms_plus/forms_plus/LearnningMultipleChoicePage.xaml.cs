@@ -335,7 +335,7 @@ namespace forms_plus
                         Label_RightOrWrong.TextColor = Color.Blue;
                         Label_RightOrWrong.IsVisible = true;
                         PlayRightMusic();
-                        await Label_RightOrWrong.FadeTo(0, 2000, Easing.SinOut);
+                        await Label_RightOrWrong.FadeTo(0, 1500, Easing.SinOut);
 
                         Init_AnswerButton();
 

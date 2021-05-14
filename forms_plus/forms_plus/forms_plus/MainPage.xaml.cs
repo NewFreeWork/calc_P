@@ -194,7 +194,7 @@ namespace forms_plus
                     //Ctr_Ad.IsVisible = true;
                     CrossMTAdmob.Current.ShowInterstitial();
 
-                    Device.StartTimer(TimeSpan.FromSeconds(5), () =>
+                    Device.StartTimer(TimeSpan.FromSeconds(10), () =>
                     {
                         // called every 1 second
                         // do stuff here

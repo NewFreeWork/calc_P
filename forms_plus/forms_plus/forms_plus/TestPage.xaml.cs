@@ -528,7 +528,7 @@ namespace forms_plus
                     if (LearnSetSington.Instance.setUpONOFF == true)
                     {
                         firstNum1s = 0;
-#if false
+#if true
                         do
                         {
                             int temp = rnd.Next(0, 10);
