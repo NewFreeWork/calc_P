@@ -61,7 +61,7 @@
                     Clicked="Btn_DeleteHistory"></Button>
             <controls:MTAdView 
                 BackgroundColor="#272622" WidthRequest="320" HeightRequest="90" VerticalOptions="EndAndExpand"          
-                PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/7272661182"/>
+                PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/1232605638"/>
 
         </StackLayout>
     </ContentPage.Content>

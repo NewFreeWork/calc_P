@@ -95,7 +95,7 @@
                     MinimumHeightRequest="48" MinimumWidthRequest="48"
                     FontFamily="MelonaBold"/>
 
-            <controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/7272661182" 
+            <controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/4672129525" 
                                BackgroundColor="#272622" 
                                AutomationProperties.IsInAccessibleTree="True"
                                AutomationProperties.HelpText="광고"

@@ -127,7 +127,7 @@
                 MinimumHeightRequest="48" MinimumWidthRequest="48"
                 FontFamily="MelonaBold"
                 ></Button>
-        <controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/7272661182"
+        <controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-4758870064199012/1922870770"
                                BackgroundColor="#272622"
                                Grid.Column="0" Grid.Row="17" Grid.ColumnSpan="7" Grid.RowSpan="3"  />
     </Grid>
